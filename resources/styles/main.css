@@ -126,3 +126,65 @@ ul.leftNav li a {
 ul.leftNav li a:hover {
 	background:url(../images/arrow.png) no-repeat 95% 50% #444444;
 }
+
+
+.newsSection {
+	width:100%;
+	overflow:auto;	
+}
+.newsSection li {
+	width:50%;
+	float:left;
+	overflow:auto;	
+	border-bottom: 1px dashed #666666;
+	padding:20px 0;
+}
+.newsSection li.large {
+	width:100%;
+}
+.newsSection li h1 {
+	width:95%;
+	color:#ee383a;
+	font-size:18px;
+	margin-bottom:10px;
+}
+.newsSection li h1 a {
+	color:#ee383a;
+}
+.newsSection li h1 a:hover {
+	color:#b61214;
+}
+.newsSection li h6 {
+	text-align:right;
+	color:#3299CC;
+	width:95%;
+}
+.newsSection li.large h6 {
+	width:98%;
+}
+.newsSection li h6 a {
+	color:#3299CC;
+}
+.newsSection li h6 a:hover {
+	text-decoration:underline;
+}
+.newsSection li p {
+	width:95%;
+	text-align:justify;
+}
+.newsSection li.large p {
+	width:98%;
+}
+.newsSection li img {
+	width:100px;
+	height:75px;
+	padding:4px;
+	border:1px solid #3299CC;
+	font-size:16px;
+	float:left;
+	margin: 0 15px 10px 0;
+}
+.newsSection li.large img {
+	width:200px;
+	height:150px;
+}
