@@ -1,0 +1,128 @@
+@charset "utf-8";
+body {
+	font:13px/20px Arial, Helvetica, sans-serif;
+	color:#666;
+}
+a {
+	color:inherit;
+	text-decoration:none;	
+}
+a img {
+	outline:none;	
+}
+.topStrip {
+	width:100%;
+	background:#3299CC;
+	height:5px;	
+}
+.topStrip.gray {
+	background:#666666;
+}
+.topStrip.blue {
+	background:#3299CC;
+}
+.header {
+	width:100%;
+	height: 80px;
+	border-bottom: 1px dashed #999999;
+	background: rgb(234,234,234); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(234,234,234,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(234,234,234,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(234,234,234,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(234,234,234,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(234,234,234,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(234,234,234,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=0 ); /* IE6-9 */
+}
+.logo {
+	float:left;
+	padding:10px 0 0 10px;
+}
+.topAd {
+	float:right;	
+}
+.topAd img {
+	float:left;
+	padding:10px 10px 0 0;
+}
+.topNav {
+	background:	#3299CC;
+	width:100%;
+	overflow:auto;
+}
+.topNav li {
+	float:left;
+}
+.topNav li a {
+	float:left;
+	padding: 5px 20px;
+	text-decoration: none;
+	font-size:11px;
+	color:#FFFFFF;
+	border-right: 1px solid #2f8fbe;
+	border-left: 1px solid #37a5db;
+}
+.topNav li a:hover {
+	background:	#37a5db;
+}
+.smallAdContainer {
+	width:100%;
+	padding:10px 0;
+	background:#EAEAEA;	
+}
+.smallAd {
+	width:870px;
+	margin:0 auto;	
+	overflow:auto;
+}
+.smallAd li {
+	width:135px;
+	height:54px;
+	border:5px solid #FFFFFF;
+	float:left;
+}
+.wrapper {
+	width:100%;
+	overflow:auto;
+}
+.left {
+	float:left;
+	width:180px;	
+	margin-right:20px;
+}
+.right {
+	float:right;
+	width:250px;	
+}
+.center {
+	float:left;	
+	margin-right:20px;
+}
+h1.newsHead {
+	color:#FFFFFF;
+	font-size:16px;
+	background:#3299CC;
+	padding:3px 0 3px 10px;
+}
+ul.leftNav {
+	width:180px;
+	float:left;	
+	overflow:auto;
+	background:#666666;
+}
+ul.leftNav li {
+	border-bottom:1px solid #555555;
+	border-top:1px solid #777777;	
+	float:left;
+}
+ul.leftNav li a {
+	width:160px;
+	float:left;
+	padding:5px 10px;
+	color:#FFF;
+	font-size:11px;
+	background:url(../images/arrow.png) no-repeat 95% 50% #666666;
+}
+ul.leftNav li a:hover {
+	background:url(../images/arrow.png) no-repeat 95% 50% #444444;
+}
