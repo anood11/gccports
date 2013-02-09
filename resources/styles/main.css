@@ -108,6 +108,9 @@ h1.newsHead {
 	background:#3299CC;
 	padding:3px 0 3px 10px;
 }
+h1.newsHead.marginTop {
+	margin-top:20px;
+}
 ul.leftNav {
 	width:180px;
 	float:left;	
@@ -191,4 +194,26 @@ ul.leftNav li a:hover {
 .newsSection li.large img {
 	width:200px;
 	height:150px;
+}
+.center table {
+	background:#FCFCFC;
+}
+.center table tr.stripe {
+	background:#F2F2F2;
+}
+.footer {
+	width:100%;
+	padding:10px 0;
+	overflow:auto;
+}
+.footer span.left{
+	width:45%;
+	float:left;
+	padding:0 0 0 15px;
+}
+.footer span.right{
+	width:45%;
+	float:right;
+	padding:0 15px 0 0;
+	text-align:right;
 }
