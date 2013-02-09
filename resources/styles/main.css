@@ -81,6 +81,10 @@ a img {
 	border:5px solid #FFFFFF;
 	float:left;
 }
+.smallAd li a img {
+	width:135px;
+	height:54px;
+}
 .wrapper {
 	width:100%;
 	overflow:auto;
