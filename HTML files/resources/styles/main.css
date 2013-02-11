@@ -98,6 +98,17 @@ a img {
 	float:right;
 	width:250px;	
 }
+.sideInner {
+	float:left;
+	overflow:auto;
+	margin-bottom:25px;	
+}
+.sideInner.right {
+	width:250px;
+}
+.sideInner.left {
+	width:200px;
+}
 .center {
 	float:left;	
 	margin-right:20px;
