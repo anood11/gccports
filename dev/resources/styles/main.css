@@ -1,0 +1,219 @@
+@charset "utf-8";
+body {
+	font:13px/20px Arial, Helvetica, sans-serif;
+	color:#666;
+}
+a {
+	color:inherit;
+	text-decoration:none;	
+}
+a img {
+	outline:none;	
+}
+.topStrip {
+	width:100%;
+	background:#3299CC;
+	height:5px;	
+}
+.topStrip.gray {
+	background:#666666;
+}
+.topStrip.blue {
+	background:#3299CC;
+}
+.header {
+	width:100%;
+	height: 80px;
+	border-bottom: 1px dashed #999999;
+	background: rgb(234,234,234); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(234,234,234,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(234,234,234,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(234,234,234,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(234,234,234,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(234,234,234,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(234,234,234,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=0 ); /* IE6-9 */
+}
+.logo {
+	float:left;
+	padding:10px 0 0 10px;
+}
+.topAd {
+	float:right;	
+}
+.topAd img {
+	float:left;
+	padding:10px 10px 0 0;
+}
+.topNav {
+	background:	#3299CC;
+	width:100%;
+	overflow:auto;
+}
+.topNav li {
+	float:left;
+}
+.topNav li a {
+	float:left;
+	padding: 5px 20px;
+	text-decoration: none;
+	font-size:11px;
+	color:#FFFFFF;
+	border-right: 1px solid #2f8fbe;
+	border-left: 1px solid #37a5db;
+}
+.topNav li a:hover {
+	background:	#37a5db;
+}
+.smallAdContainer {
+	width:100%;
+	padding:10px 0;
+	background:#EAEAEA;	
+}
+.smallAd {
+	width:870px;
+	margin:0 auto;	
+	overflow:auto;
+}
+.smallAd li {
+	width:135px;
+	height:54px;
+	border:5px solid #FFFFFF;
+	float:left;
+}
+.smallAd li a img {
+	width:135px;
+	height:54px;
+}
+.wrapper {
+	width:100%;
+	overflow:auto;
+}
+.left {
+	float:left;
+	width:180px;	
+	margin-right:20px;
+}
+.right {
+	float:right;
+	width:250px;	
+}
+.center {
+	float:left;	
+	margin-right:20px;
+}
+h1.newsHead {
+	color:#FFFFFF;
+	font-size:16px;
+	background:#3299CC;
+	padding:3px 0 3px 10px;
+}
+h1.newsHead.marginTop {
+	margin-top:20px;
+}
+ul.leftNav {
+	width:180px;
+	float:left;	
+	overflow:auto;
+	background:#666666;
+}
+ul.leftNav li {
+	border-bottom:1px solid #555555;
+	border-top:1px solid #777777;	
+	float:left;
+}
+ul.leftNav li a {
+	width:160px;
+	float:left;
+	padding:5px 10px;
+	color:#FFF;
+	font-size:11px;
+	background:url(../images/arrow.png) no-repeat 95% 50% #666666;
+}
+ul.leftNav li a:hover {
+	background:url(../images/arrow.png) no-repeat 95% 50% #444444;
+}
+
+
+.newsSection {
+	width:100%;
+	overflow:auto;	
+}
+.newsSection li {
+	width:50%;
+	float:left;
+	overflow:auto;	
+	border-bottom: 1px dashed #666666;
+	padding:20px 0;
+}
+.newsSection li.large {
+	width:100%;
+}
+.newsSection li h1 {
+	width:95%;
+	color:#ee383a;
+	font-size:18px;
+	margin-bottom:10px;
+}
+.newsSection li h1 a {
+	color:#ee383a;
+}
+.newsSection li h1 a:hover {
+	color:#b61214;
+}
+.newsSection li h6 {
+	text-align:right;
+	color:#3299CC;
+	width:95%;
+}
+.newsSection li.large h6 {
+	width:98%;
+}
+.newsSection li h6 a {
+	color:#3299CC;
+}
+.newsSection li h6 a:hover {
+	text-decoration:underline;
+}
+.newsSection li p {
+	width:95%;
+	text-align:justify;
+}
+.newsSection li.large p {
+	width:98%;
+}
+.newsSection li img {
+	width:100px;
+	height:75px;
+	padding:4px;
+	border:1px solid #3299CC;
+	font-size:16px;
+	float:left;
+	margin: 0 15px 10px 0;
+}
+.newsSection li.large img {
+	width:200px;
+	height:150px;
+}
+.center table {
+	background:#FCFCFC;
+}
+.center table tr.stripe {
+	background:#F2F2F2;
+}
+.footer {
+	width:100%;
+	padding:10px 0;
+	overflow:auto;
+}
+.footer span.left{
+	width:45%;
+	float:left;
+	padding:0 0 0 15px;
+}
+.footer span.right{
+	width:45%;
+	float:right;
+	padding:0 15px 0 0;
+	text-align:right;
+}
