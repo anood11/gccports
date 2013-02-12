@@ -4,23 +4,30 @@ include("../../includes/lib/db_users.php");
 include("login_action.php");
 include("../includes/header.php");
 ?>
+<div class="left">&nbsp; </div>
 <div class="center">
+<h1 class="newsHead">Login here</h1>
+		<form name="formLogin" action="login.php" method="post">
 		<ul class="newsSection">
+			<li class="large displayMessage">
+			<?php echo $display_message;?>
+			</li>
 			<li class="large">
-			<form name="formLogin" action="login.php" method="post">
-		    <ul class="adminCentre">
-				<li class="adminCentreHead">Login here</li>
-				<li class="displayMesg"><?php echo $display_message;?></li>
-				<li class="adminFields">User name</li>
-				<li class="adminInput"><input type="text" name="user_name" value="<?php echo $user_name;?>"></li>
-				<li class="adminFields">Password</li>
-				<li class="adminInput"><input type="password" name="password" value="<?php echo $password;?>"></li>
-				<li class="adminInput"><input type="submit" name="btnLogin" value="Login" class="button"></li>
-			</ul>
-			</form>
+			<label>User name</label>
+			<input type="text" name="user_name" value="<?php echo $user_name;?>">
+			</li>
+			<li class="large">
+			<label>Password</label>
+			<input type="password" name="password" value="<?php echo $password;?>">
+			</li>
+			<li class="large">
+			<label>&nbsp;</label>
+			<input type="submit" name="btnLogin" value="Login" class="button">
 			</li>
 		</ul>
+		</form>
 	</div>
+<div class="right">&nbsp; </div>
 <?php
 include("../includes/footer.php");
 ?>
