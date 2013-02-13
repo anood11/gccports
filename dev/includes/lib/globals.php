@@ -8,7 +8,7 @@
  Date Modified 		: 
  Page Action 		: Declare /Initialise global variables
  ----------------------------------------------------------------------------*/
-$http_path = "http://localhost:8080/gccports/";
+$http_path = "http://localhost:8080/gccports/trunk/";
 $http_path_admin = $http_path."admin/";
 $http_path_site = $http_path."dev/";
 define('BEGIN_TRANSACTION', 1);

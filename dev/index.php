@@ -51,8 +51,87 @@ include("includes/left_submenu.php");
 				</span> </li>
 		</ul>
 		
-		<h1 class="newsHead marginTop">Currency Exchange</h1>
-		<a href=http://www.gocurrency.com/ id=gocurrencytable>Currency Converter</a><script src=http://gocurrency.com/v2/table_t.php?cur=USD;EUR;GBP;JPY;CAD;AUD&v=1> </script> 
+	
+		<ul class="categorySection">
+			<li><h1 class="newsHead marginTop">Container</h1></li>
+			<li><img src="resources/images/noImage.png" alt="" width="100%" /></li>
+			<li>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+			</li>
+		</ul> 
+		<ul class="categorySection">
+			<li><h1 class="newsHead marginTop">Ship Operation</h1></li>
+			<li><img src="resources/images/noImage.png" alt="" width="100%" /></li>
+			<li>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+			</li>
+		</ul> 
+		<ul class="categorySection">
+			<li><h1 class="newsHead marginTop">Port and Terminals</h1></li>
+			<li><img src="resources/images/noImage.png" alt="" width="100%" /></li>
+			<li>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+			</li>
+		</ul> 
+		<ul class="categorySection">
+			<li><h1 class="newsHead marginTop">Aviation</h1></li>
+			<li><img src="resources/images/noImage.png" alt="" width="100%" /></li>
+			<li>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+			</li>
+		</ul> 
+		<ul class="categorySection">
+			<li><h1 class="newsHead marginTop">Freight &amp; Logistics</h1></li>
+			<li><img src="resources/images/noImage.png" alt="" width="100%" /></li>
+			<li>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+			</li>
+		</ul> 
+		<ul class="categorySection">
+			<li><h1 class="newsHead marginTop">Bulk / Tanker</h1></li>
+			<li><img src="resources/images/noImage.png" alt="" width="100%" /></li>
+			<li>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+			</li>
+		</ul> 
+		<ul class="categorySection">
+			<li><h1 class="newsHead marginTop">Sea Saftey</h1></li>
+			<li><img src="resources/images/noImage.png" alt="" width="100%" /></li>
+			<li>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+			</li>
+		</ul> 
+		<ul class="categorySection">
+			<li><h1 class="newsHead marginTop">Oil &amp; Gas</h1></li>
+			<li><img src="resources/images/noImage.png" alt="" width="100%" /></li>
+			<li>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+				<a href="#">"K" Line and Noble form Joint Venture</a>
+			</li>
+		</ul> 
 	</div>
 <?php 
 include("includes/right_submenu.php");

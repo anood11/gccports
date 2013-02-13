@@ -30,5 +30,18 @@
 	<li><a href="">USEFUL LINKS</a></li>
 	<li><a href="">JOBS</a></li>
 	<li><a href="">CONTACT US</a></li>
+	<li class="topSearch">
+		<select name="">
+			<option>Select Category</option>
+			<option>Container</option>
+			<option>Ship Operation</option>
+			<option>Port and Terminals</option>
+			<option>Aviation</option>
+			<option>Freight &amp; Logistics</option>
+			<option>Bulk / Tanker</option>
+			<option>Sea Saftey</option>
+			<option>Oil &amp; Gas</option>
+		</select>
+	</li>
 </ul>
 <!-- HEADER ENDS --> 
