@@ -208,7 +208,10 @@ ul.leftNav li a:hover {
 	padding:20px 0;
 }
 .newsSection li.large {
-	width:100%;
+	width:50%;
+}
+.newsSection li.small {
+	padding:20px 0 5px 0;
 }
 .newsSection li h1 {
 	width:95%;
@@ -240,12 +243,10 @@ ul.leftNav li a:hover {
 	width:95%;
 	text-align:justify;
 }
-.newsSection li.large p {
-	width:98%;
-}
+
 .newsSection li img {
 	width:100px;
-	height:75px;
+	/*height:75px;*/
 	padding:4px;
 	border:1px solid #3299CC;
 	font-size:16px;
@@ -256,6 +257,10 @@ ul.leftNav li a:hover {
 	width:200px;
 	height:150px;
 }
+.newsSection li.small img {
+	width:50px;
+}
+
 .center table {
 	background:#FCFCFC;
 }
