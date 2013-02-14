@@ -20,6 +20,19 @@
 
 <!-- HEADER STARTS -->
 <div class="header"> <img src="<?php echo $http_path_site;?>resources/images/logo.png" class="logo" alt="" />
+	
+	
+	<!-- SOCIAL MEDIA STARTS -->
+	<div class="social">
+		<p>Find us on:</p>
+		<a href="#"><img src="<?php echo $http_path_site;?>resources/images/facebook.png" alt="" /></a>
+		<a href="#"><img src="<?php echo $http_path_site;?>resources/images/twitter.png" alt="" /></a>
+		<a href="#"><img src="<?php echo $http_path_site;?>resources/images/linkedin.png" alt="" /></a>
+		<a href="#"><img src="<?php echo $http_path_site;?>resources/images/rss.png" alt="" /></a>
+		
+	</div>
+	<!-- SOCIAL MEDIA ENDS -->	
+	
 	<div class="topAd"> <img src="<?php echo $http_path_site;?>resources/images/ad1.gif" alt="" /> </div>
 </div>
 <ul class="topNav">

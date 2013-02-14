@@ -12,7 +12,7 @@
 		</ul>
 		<!-- LEFTSIDE NAVIGATION ENDS --> 
 		<div class="sideInner left">
-		<h1 class="newsHead">Airport Search</h1>
+		<h1 class="newsHead marginTop">Airport Search</h1>
 		<ul>
 			<li><label>Airport Name</label></li>
 			<li><input type="text" /></li>
