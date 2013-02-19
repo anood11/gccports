@@ -1,5 +1,7 @@
 <?php
 include("includes/lib/globals.php");
+include("includes/lib/db_news.php");
+include("index_action.php");
 include("includes/header.php");
 include("includes/ads.php");
 include("includes/left_submenu.php");
@@ -7,74 +9,33 @@ include("includes/left_submenu.php");
 	<div class="center">
 		<h1 class="newsHead">Latest News &raquo;</h1>
 		<ul class="newsSection">
+			<?php while($main=$db->sql_fetchrow($mainNews)){?>
 			<li class="large">
-				<h1><a href="">OOCL hits milestone with double christening at Geoje Island Shipyard</a></h1>
-				<span> <img src="<?php echo $http_path_site;?>resources/images/media.jpg" alt="" />
-				<p>OOCL is proud to announce the christening of two 13,208-TEU mega vessels at a ceremonial event held at the Geoje Island Shipyard in Korea, the first time the company is taking delivery of newbuilds of this size. The first vessel was christened the m.v. OOCL Brussels by Sponsor Mrs. Hsu Lai, Chao-Yin, the wife of Mr. Shiu, Kuang-Si, President of Mega International Commercial Bank, Taiwan. The second vessel was christened the m.v. NYK Helios by Sponsor Mrs. Nintira Sophonpanich, the wife of Mr. Chartsiri Sophonpanich, President of Bangkok Bank. Mr Andy Tung, Chief Executive Officer of OOCL, hosted the naming ceremony and thanked the Sponsors for gracing the stage to perform the formalities and in thanking Mega International Commercial Bank and Bangkok Bank for their support </p>
+				<h1><a href=""><?php echo $main['newsHeading'];?></a></h1>
+				<span> <img src="<?php echo $httpPathSite;?>resources/news_images/<?php echo $main['newsImage'];?>.jpg" alt="" />
+				<p><?php echo substr($main['newsMatter'],0,250);?></p>
 				<h6><a href="">read more &raquo;</a></h6>
 				</span> </li>
+				<?php } while($bottom=$db->sql_fetchrow($bottonSmallNews)){?>
 			<li class="small">
-				<h1><a href="">OOCL hits milestone with double christening at Geoje</a></h1>
-				<span> <img src="resources/images/media.jpg" alt="" />
-				<p>OOCL is proud to announce the christening of two 13,208-TEU mega vessels at a ceremonial event held at the Geoje Island Shipyard in Korea</p>
+				<h1><a href=""><?php echo $bottom['newsHeading'];?></a></h1>
+				<span> <img src="resources/news_images/<?php echo $bottom['newsImage'];?>.jpg" alt="" />
+				<p><?php echo substr($bottom['newsMatter'],0,200);?></p>
 				<h6><a href="">read more &raquo;</a></h6>
 				</span> </li>
-			
-			<li class="small">
-				<h1><a href="">OOCL hits milestone with double christening at Geoje</a></h1>
-				<span> <img src="resources/images/media.jpg" alt="" />
-				<p>OOCL is proud to announce the christening of two 13,208-TEU mega vessels at a ceremonial event held at the Geoje Island Shipyard in Korea</p>
+			<?php } ?>
+		 </ul>
+		<ul class="newsSection">
+			<?php while($right=$db->sql_fetchrow($rightSmallNews)){?>
+			<li>
+				<h1><a href=""><?php echo $right['newsHeading'];?></a></h1>
+				<span> <img src="resources/news_images/<?php echo $right['newsImage'];?>.jpg" alt="" />
+				<p><?php echo substr($right['newsMatter'],0,100);?> </p>
 				<h6><a href="">read more &raquo;</a></h6>
-				</span> </li>
-			
-			<li class="small">
-				<h1><a href="">OOCL hits milestone with double christening at Geoje</a></h1>
-				<span> <img src="resources/images/media.jpg" alt="" />
-				<p>OOCL is proud to announce the christening of two 13,208-TEU mega vessels at a ceremonial event held at the Geoje Island Shipyard in Korea</p>
-				<h6><a href="">read more &raquo;</a></h6>
-				</span> </li>
-			
+				</span> 
+			</li>
+			<?php } ?>
 		</ul>
-			<ul class="newsSection">
-			<li>
-				<h1><a href="">OOCL hits milestone with double christening at Geoje Island Shipyard</a></h1>
-				<span> <img src="resources/images/media.jpg" alt="" />
-				<p>OOCL is proud to announce the christening of two 13,208-TEU mega vessels at a ceremonial event held at the Geoje Island Shipyard in Korea, the first time the company is taking delivery of newbuilds of this size. </p>
-				<h6><a href="">read more &raquo;</a></h6>
-				</span> </li>
-			<li>
-				<h1><a href="">OOCL hits milestone with double christening at Geoje Island Shipyard</a></h1>
-				<span> <img src="<?php echo $http_path_site;?>resources/images/media.jpg" alt="" />
-				<p>OOCL is proud to announce the christening of two 13,208-TEU mega vessels at a ceremonial event held at the Geoje Island Shipyard in Korea, the first time the company is taking delivery of newbuilds of this size. </p>
-				<h6><a href="">read more &raquo;</a></h6>
-				</span> </li>
-			<li>
-				<h1><a href="">OOCL hits milestone with double christening at Geoje Island Shipyard</a></h1>
-				<span> <img src="<?php echo $http_path_site;?>resources/images/media.jpg" alt="" />
-				<p>OOCL is proud to announce the christening of two 13,208-TEU mega vessels at a ceremonial event held at the Geoje Island Shipyard in Korea, the first time the company is taking delivery of newbuilds of this size.</p>
-				<h6><a href="">read more &raquo;</a></h6>
-				</span> </li>
-			<li>
-				<h1><a href="">OOCL hits milestone with double christening at Geoje Island Shipyard</a></h1>
-				<span> <img src="<?php echo $http_path_site;?>resources/images/media.jpg" alt="" />
-				<p>OOCL is proud to announce the christening of two 13,208-TEU mega vessels at a ceremonial event held at the Geoje Island Shipyard in Korea, the first time the company is taking delivery of newbuilds of this size.</p>
-				<h6><a href="">read more &raquo;</a></h6>
-				</span> </li>
-			<li>
-				<h1><a href="">OOCL hits milestone with double christening at Geoje Island Shipyard</a></h1>
-				<span> <img src="<?php echo $http_path_site;?>resources/images/media.jpg" alt="" />
-				<p>OOCL is proud to announce the christening of two 13,208-TEU mega vessels at a ceremonial event held at the Geoje Island Shipyard in Korea, the first time the company is taking delivery of newbuilds of this size.</p>
-				<h6><a href="">read more &raquo;</a></h6>
-				</span> </li>
-			<li>
-				<h1><a href="">OOCL hits milestone with double christening at Geoje Island Shipyard</a></h1>
-				<span> <img src="<?php echo $http_path_site;?>resources/images/media.jpg" alt="" />
-				<p>OOCL is proud to announce the christening of two 13,208-TEU mega vessels at a ceremonial event held at the Geoje Island Shipyard in Korea, the first time the company is taking delivery of newbuilds of this size.</p>
-				<h6><a href="">read more &raquo;</a></h6>
-				</span> </li>
-		</ul>
-		
-	
 		<ul class="categorySection">
 			<li><h1 class="newsHead marginTop">Container</h1></li>
 			<li><img src="resources/images/noImage.png" alt="" width="100%" /></li>

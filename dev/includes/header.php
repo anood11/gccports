@@ -3,15 +3,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>GCC Ports</title>
-<link href="<?php echo $http_path_site;?>resources/styles/reset.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo $http_path_site;?>resources/styles/main.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo $http_path_site;?>resources/styles/currency.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo $httpPathSite;?>resources/styles/reset.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo $httpPathSite;?>resources/styles/main.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo $httpPathSite;?>resources/styles/currency.css" rel="stylesheet" type="text/css" />
 <!--[if IE 7]>
 	<link href="resources/styles/IE7.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 
-<script src="<?php echo $http_path_site;?>resources/scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="<?php echo $http_path_site;?>resources/scripts/basicScript.js" type="text/javascript"></script>
+<script src="<?php echo $httpPathSite;?>resources/scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="<?php echo $httpPathSite;?>resources/scripts/basicScript.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -19,21 +19,21 @@
 <div class="topStrip blue"></div>
 
 <!-- HEADER STARTS -->
-<div class="header"> <img src="<?php echo $http_path_site;?>resources/images/logo.png" class="logo" alt="" />
+<div class="header"> <img src="<?php echo $httpPathSite;?>resources/images/logo.png" class="logo" alt="" />
 	
 	
 	<!-- SOCIAL MEDIA STARTS -->
 	<div class="social">
 		<p>Find us on:</p>
-		<a href="#"><img src="<?php echo $http_path_site;?>resources/images/facebook.png" alt="" /></a>
-		<a href="#"><img src="<?php echo $http_path_site;?>resources/images/twitter.png" alt="" /></a>
-		<a href="#"><img src="<?php echo $http_path_site;?>resources/images/linkedin.png" alt="" /></a>
-		<a href="#"><img src="<?php echo $http_path_site;?>resources/images/rss.png" alt="" /></a>
+		<a href="#"><img src="<?php echo $httpPathSite;?>resources/images/facebook.png" alt="" /></a>
+		<a href="#"><img src="<?php echo $httpPathSite;?>resources/images/twitter.png" alt="" /></a>
+		<a href="#"><img src="<?php echo $httpPathSite;?>resources/images/linkedin.png" alt="" /></a>
+		<a href="#"><img src="<?php echo $httpPathSite;?>resources/images/rss.png" alt="" /></a>
 		
 	</div>
 	<!-- SOCIAL MEDIA ENDS -->	
 	
-	<div class="topAd"> <img src="<?php echo $http_path_site;?>resources/images/ad1.gif" alt="" /> </div>
+	<div class="topAd"> <img src="<?php echo $httpPathSite;?>resources/images/ad1.gif" alt="" /> </div>
 </div>
 <ul class="topNav">
 	<li><a href="">HOME</a></li>
