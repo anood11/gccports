@@ -46,7 +46,7 @@ a img {
 	padding:10px 10px 0 0;
 }
 .topNav {
-	background:	#3299CC;
+	background:	#333;
 	width:100%;
 	overflow:auto;
 }
@@ -59,11 +59,11 @@ a img {
 	text-decoration: none;
 	font-size:11px;
 	color:#FFFFFF;
-	border-right: 1px solid #2f8fbe;
-	border-left: 1px solid #37a5db;
+	border-right: 1px solid #222;
+	border-left: 1px solid #444;
 }
 .topNav li a:hover {
-	background:	#37a5db;
+	background:	#666;
 }
 .topSearch {
 	float:right !important;
@@ -83,7 +83,7 @@ a img {
 .smallAd li {
 	width:135px;
 	height:54px;
-	border:5px solid #FFFFFF;
+	border:5px solid #666;
 	float:left;
 }
 .smallAd li a img {
@@ -141,11 +141,12 @@ a img {
 .sideInner li label {
 	padding:5px 0 0 10px;
 }
-.sideInner li input[type="button"], .sideInner li input[type="submit"] {
+input[type="button"], input[type="submit"] {
 	padding:3px 15px;
 	border: 1px solid #A82A28;
 	margin:10px 5px 0 10px;
 	color:#FFFFFF;
+	cursor:pointer;
 	background: rgb(238,56,58); /* Old browsers */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
 	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIyJSIgc3RvcC1jb2xvcj0iI2VlMzgzYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNhODJhMjgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -206,6 +207,9 @@ ul.leftNav li a:hover {
 	overflow:auto;
 	border-bottom: 1px dashed #666666;
 	padding:20px 0;
+}
+.newsSection li.full {
+	width:100%;
 }
 .newsSection li.large {
 	width:50%;
@@ -309,4 +313,22 @@ ul.leftNav li a:hover {
 .social a {
 	float:left;
 	margin-right:10px;
+}
+
+.modifySearch {
+	background:#333;
+	overflow:auto;
+	padding:5px 10px;
+	color:#FFF;	
+}
+.modifySearch li {
+	float:left;
+	padding:10px 10px;	
+}
+.modifySearch li label {
+	float:left;
+	text-align:left;
+}
+.modifySearch li input[type="submit"] {
+	margin:0;
 }
