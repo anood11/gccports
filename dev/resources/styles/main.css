@@ -232,6 +232,11 @@ ul.leftNav li a:hover {
 }
 .newsSection td.full {
 	width:100%;
+	border-bottom:none;
+}
+.newsSection td.full span img {
+	width:250px;
+	height:200px;
 }
 .newsSection td.large {
 	width:70%;
