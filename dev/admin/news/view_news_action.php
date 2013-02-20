@@ -17,12 +17,12 @@ if(isset($_REQUEST['delId'])){
     }
 	$page_count=getCountPages();
 	$start_row=getPageStart();
-	$news_list = getNews($start_row,$page_limit);
+	$news_list = getNewsList($start_row,$page_limit);
 }else{
     getValuesFromForm();
     $page_count=getCountPages();
 	$start_row=getPageStart();
-    $news_list = getNews($start_row,$page_limit);
+    $news_list = getNewsList($start_row,$page_limit);
 }
 
 /******************************************* Control flow ends ****************************************************************/
