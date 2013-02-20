@@ -1,6 +1,6 @@
 <div class="wrapper">
 	<div class="left"> 
-		<!-- LEFTSIDE NAVIGATION ENDS -->
+		<!-- LEFTSIDE NAVIGATION ENDS
 		<ul class="leftNav">
 			<li><a href="">HOME</a></li>
 			<li><a href="">DIRECTORY</a></li>
@@ -10,9 +10,9 @@
 			<li><a href="">JOBS</a></li>
 			<li><a href="">CONTACT US</a></li>
 		</ul>
-		<!-- LEFTSIDE NAVIGATION ENDS --> 
+	 LEFTSIDE NAVIGATION ENDS --> 
 		<div class="sideInner left">
-		<h1 class="newsHead marginTop">Airport Search</h1>
+		<h1 class="newsHead">Airport Search</h1>
 		<ul>
 			<li><label>Airport Name</label></li>
 			<li><input type="text" /></li>
