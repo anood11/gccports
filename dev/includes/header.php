@@ -11,7 +11,8 @@
 <![endif]-->
 
 <script src="<?php echo $httpPathSite;?>resources/scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="<?php echo $httpPathSite;?>resources/scripts/basicScript.js" type="text/javascript"></script>
+<script src="<?php echo $httpPathSite;?>resources/scripts/basic_script.js" type="text/javascript"></script>
+<script src="<?php echo $httpPathSite;?>resources/scripts/basic_script.js" type="text/javascript"></script>
 </head>
 
 <body>
