@@ -39,8 +39,54 @@
 	<li><a href="">HOME</a></li>
 	<li><a href="">DIRECTORY</a></li>
 	<li><a href="">PORTS</a></li>
-	<li><a href="">ASSOCIATIONS</a></li>
-	<li><a href="">USEFUL LINKS</a></li>
+	<li><a href="">ASSOCIATIONS</a>
+		<ul>
+			<li><a href="">Associations in GCC Countries</a></li>
+			<li><a href="">International Associations</a></li>
+			<li><a href="">Official Bodies</a></li>
+		</ul>
+	</li>
+	<li><a href="">USEFUL LINKS</a>
+		<ul class="wide">
+			
+			<li><a href="">Container Specification</a></li>
+			<li><a href="">Unit Converter</a></li>
+			<li><a href="">World Currency Details</a></li>
+			<li><a href="">Shipping Glossary</a></li>
+			<li><a href="">Shipping Abbreviations</a></li>
+			<li><a href="">Vessel Size Groups (DWT)</a></li>
+			<li><a href="">Maritime Signal Flags</a></li>
+			<li><a href="">Dangerous Goods</a></li>
+			<li><a href="">Liner Operators Abbreviations</a></li>
+			<li><a href="">Ship Structure</a></li>
+			<li><a href="">General Types of Ships</a></li>
+			<li><a href="">Ship Engine Type & Speed</a></li>
+			<li><a href="">Service and Vessel Routes</a></li>
+			<li><a href="">Flags of Registry</a></li>
+			<li><a href="">HS Code Reference</a></li>
+			<li><a href="">Ship Documents</a></li>
+			<li><a href="">BIC Codes</a></li>
+			<li><a href="">Ship Motions in Heavy Seaway</a></li>
+			<li><a href="">Ship Tonnage</a></li>
+			<li><a href="">Ship Load Line</a></li>
+			<li><a href="">Ship Nationality & Flag</a></li>
+			<li><a href="">Ship Classification</a></li>
+			<li><a href="">Unit Load Data</a></li>
+			<li><a href="">Hull Shapes</a></li>
+			<li><a href="">Ships Float	</a></li>
+			<li><a href="">Whether Symbols	</a></li>
+			<li><a href="">Pressure Conversion Table</a></li>
+			<li><a href="">Types Barges</a></li>
+			<li><a href="">Types of Charter</a></li>
+			<li><a href="">Types of Fumigants</a></li>
+			<li><a href="">Types of Sampling</a></li>
+			<li><a href="">Table of Packaging</a></li>
+			<li><a href="">Types Tug Boats</a></li>
+			<li><a href="">Container Parts</a></li>
+			<li><a href="">International Paper Sizes</a></li>
+		</ul>
+		
+	</li>
 	<li><a href="">JOBS</a></li>
 	<li><a href="">CONTACT US</a></li>
 	<li class="topSearch">

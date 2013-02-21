@@ -1,4 +1,7 @@
 	<div class="right"> 
+	<div class="sideInner right">
+		<img src="<?php echo $httpPathSite;?>resources/images/track-and-trace.png" width="100%" alt="" />
+	</div>
 		<div class="sideInner right">
 		<h1 class="newsHead">Subscribe News</h1>
 		<ul>

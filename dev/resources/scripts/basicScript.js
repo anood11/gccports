@@ -14,6 +14,9 @@ $(document).ready(function() {
 		$('.moreOptions strong').text(' more options');
 	});
 	
+	 $(".searchResult tr:even").css("background", "#EEE");
+	 $(".searchResult tr:odd").css("background", "#DDD");
+	
 	$("#toinfo").parent("td").parent("tr").css("display","none");
 	$("#toinfo").parent("td").parent("tr").next("tr").css("display","none");
 	$("#frominfo").parent("td").parent("tr").css("display","none");
