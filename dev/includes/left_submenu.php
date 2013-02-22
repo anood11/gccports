@@ -15,14 +15,21 @@
 		<h1 class="newsHead">Airport Search</h1>
 		<ul>
 			<li><label>Airport Name</label></li>
-			<li><input type="text" /></li>
+			
+			<li><input type="text" id="airportName" value="<?php echo $airportName;?>"/></li>
 			<li><label>Country</label></li>
-			<li><select><option>Select Country</option></select></li>
+			<li><select id="airportCountry">
+					<option value="-1">Select Country</option>
+					<?php while($airport=$db->sql_fetchrow($airportCountryList)){?>
+					<option value="<?php echo $airport['countryAbbreviation'];?>" <?php if($airportCountry==$airport['countryAbbreviation']) echo "selected";?>><?php echo $airport['country'];?></option>
+					<?php } ?>
+				</select>
+			</li>
 			<li><label>IATA Code</label></li>
-			<li><input type="text" /></li>
+			<li><input type="text" id="airportIATA" value="<?php echo $airportIATA;?>" /></li>
 			<li><label>ICAO</label></li>
-			<li><input type="text" /></li>
-			<li><input type="submit" value="Airport Search" /></li>
+			<li><input type="text" id="airportICAO" value="<?php echo $airportICAO;?>"/></li>
+			<li><input type="submit" value="Airport Search" id="airportSearch" onclick="airportSearch();"/></li>
 		</ul>
 	</div>
 	<div class="sideInner left">

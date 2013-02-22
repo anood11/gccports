@@ -12,7 +12,11 @@
 
 <script src="<?php echo $httpPathSite;?>resources/scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
 <script src="<?php echo $httpPathSite;?>resources/scripts/basic_script.js" type="text/javascript"></script>
-<script src="<?php echo $httpPathSite;?>resources/scripts/basic_script.js" type="text/javascript"></script>
+<script src="<?php echo $httpPathSite;?>resources/scripts/functions.js" type="text/javascript"></script>
+<script type="text/javascript">
+var baseURLsite='<?php echo $httpPathSite;?>';
+var baseURLadmin='<?php echo $httpPathAdmin;?>';
+</script>
 </head>
 
 <body>
@@ -34,10 +38,13 @@
 	</div>
 	<!-- SOCIAL MEDIA ENDS -->	
 	
-	<div class="topAd"> <img src="<?php echo $httpPathSite;?>resources/images/ad1.gif" alt="" /> </div>
+	<div class="topAd"> 
+		<img src="<?php echo $httpPathSite;?>resources/images/ad1.gif" alt="" />
+		<img src="<?php echo $httpPathSite;?>resources/images/ad2.jpg" alt="" /> 
+	</div>
 </div>
 <ul class="topNav">
-	<li><a href="">HOME</a></li>
+	<li><a href="<?php echo $httpPathSite;?>">HOME</a></li>
 	<li><a href="">DIRECTORY</a></li>
 	<li><a href="">PORTS</a></li>
 	<li><a href="">ASSOCIATIONS</a>

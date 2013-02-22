@@ -1,19 +1,33 @@
 <?php
 /******************************************* Initialise/Declare variables *****************************************************/
 global $displayMessage;
+global $airportName;
+global $airportCountry;
+global $airportIATA;
+global $airportICAO;
+global $airlineName;
+global $airlineCountry;
+global $airlineIATA;
+global $airlineICAO;
+global $awbPrefix;
 global $db;
 
 $displayMessage="";
+$airportName="";
+$airportCountry="-1";
+$airportIATA="";
+$airportICAO="";
+$airlineName="";
+$airlineCountry="-1";
+$airlineIATA="";
+$airlineICAO="";
+$awbPrefix="";
 /******************************************* Control flow starts **************************************************************/
-$mainNews=getNewsList(0,1);
-$bottonSmallNews1=getNewsList(3,3);
-$bottonSmallNews2=getNewsList(6,3);
-$rightSmallNews=getNewsList(1,2);
-$headLineNews=getNewsList(7,4);
+
+$airportCountryList=getCountryList('airport');
+$airlineCountryList=getCountryList('airline');
 /******************************************* Control flow ends ****************************************************************/
 /******************************************* Page level functions starts ******************************************************/
 
 /******************************************* Page level functions ends ********************************************************/
-
-
 ?>

@@ -20,16 +20,23 @@
 		<h1 class="newsHead">Airline Search</h1>
 		<ul>
 			<li><label>Airline Name</label></li>
-			<li><input type="text" /></li>
+			<li><input type="text" id="airlineName" value="<?php echo $airlineName; ?>"/></li>
 			<li><label>Country</label></li>
-			<li><select><option>Select Country</option></select></li>
+			<li>
+				<select id="airlineCountry">
+					<option value="-1">Select Country</option>
+					<?php while($airline=$db->sql_fetchrow($airlineCountryList)){?>
+					<option value="<?php echo $airline['country'];?>" <?php if($airlineCountry==$airline['country']) echo "selected";?>><?php echo $airline['country'];?></option>
+					<?php } ?>
+				</select>
+			</li>
 			<li><label>IATA Code</label></li>
-			<li><input type="text" /></li>
+			<li><input type="text"id="airlineIATA" value="<?php echo $airlineIATA;?>"/></li>
 			<li><label>ICAO</label></li>
-			<li><input type="text" /></li>
+			<li><input type="text" id="airlineICAO" value="<?php echo $airlineICAO;?>"/></li>
 			<li><label>AWB Prefix</label></li>
-			<li><input type="text" /></li>
-			<li><input type="submit" value="Airline Search" /></li>
+			<li><input type="text" id="awbPrefix" value="<?php echo $awbPrefix;?>"/></li>
+			<li><input type="button" value="Airline Search" name="airlineSearch" onclick="airlineSearch();"/></li>
 		</ul>
 	</div>
 	<div class="sideInner right"> 

@@ -45,4 +45,5 @@ if (isset($_SESSION['timeout'])) {
     }
 }
 $_SESSION['timeout'] = time();*/
+include("db_sidebar.php");
 ?>
