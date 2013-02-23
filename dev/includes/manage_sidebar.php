@@ -10,6 +10,9 @@ global $airlineCountry;
 global $airlineIATA;
 global $airlineICAO;
 global $awbPrefix;
+global $seaportName;
+global $seaportCountry;
+global $seaportCode;
 global $db;
 
 $displayMessage="";
@@ -22,10 +25,14 @@ $airlineCountry="-1";
 $airlineIATA="";
 $airlineICAO="";
 $awbPrefix="";
+$seaportName="";
+$seaportCountry="-1";
+$seaportCode="";
 /******************************************* Control flow starts **************************************************************/
 
 $airportCountryList=getCountryList('airport');
 $airlineCountryList=getCountryList('airline');
+$seaportCountryList=getCountryList('seaport');
 /******************************************* Control flow ends ****************************************************************/
 /******************************************* Page level functions starts ******************************************************/
 

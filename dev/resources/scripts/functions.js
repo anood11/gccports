@@ -25,3 +25,13 @@ function airlineSearch(){
 		window.location.href=baseURLsite+'search/airline_search.php'+queryString;
 	}
 }
+function seaportSearch(){
+	var name=$('#seaportName').val();
+	var country=$('#seaportCountry').val();
+	var code=$('#seaportCode').val();
+	if((name=="")&&(country=="-1")&&(code==""))alert('Please enter atleast one search key');
+	else {
+		var queryString="?seaportSearch=1&name="+name+"&country="+country+"&code="+code;
+		window.location.href=baseURLsite+'search/seaport_search.php'+queryString;
+	}
+}

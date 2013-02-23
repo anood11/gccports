@@ -39,12 +39,17 @@
 		<h1 class="newsHead">Seaport Search</h1>
 		<ul>
 			<li><label>Seaport Name</label></li>
-			<li><input type="text" /></li>
+			<li><input type="text" name="seaportName" value="<?php echo $seaportName;?>" id="seaportName"/></li>
 			<li><label>Country</label></li>
-			<li><select><option>Select Country</option></select></li>
+			<li><select id="seaportCountry">
+					<option value="-1">Select Country</option>
+					<?php while($seaport=$db->sql_fetchrow($seaportCountryList)){?>
+					<option value="<?php echo $seaport['country'];?>" <?php if($seaportCountry==$seaport['country']) echo "selected";?>><?php echo $seaport['country'];?></option>
+					<?php } ?>
+				</select></li>
 			<li><label>Port Code</label></li>
-			<li><input type="text" /></li>
-			<li><input type="submit" value="Seaport Search" /></li>
+			<li><input type="text" name="seaportCode" id="seaportCode" value="<?php echo $seaportCode;?>"/></li>
+			<li><input type="button" value="Seaport Search" onclick="seaportSearch();"/></li>
 		</ul>
 	</div>
 	</div>

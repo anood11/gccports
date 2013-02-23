@@ -8,11 +8,6 @@ global $airportCode;
 global $db;
 
 $displayMessage="";
-$resultHead_1="";
-$resultHead_2="";
-$resultHead_3="";
-$resultHead_4="";
-$resultHead_5="";
 /******************************************* Control flow starts **************************************************************/
 getAirportKeys();
 $airportSearchResults=getAirportSearchResults($airportName,$airportCountry,$airportCity,$airportCode,$airportSort);	
