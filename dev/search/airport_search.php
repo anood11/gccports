@@ -12,13 +12,13 @@ include("../includes/left_submenu.php");
 	<ul class="modifySearch">
 		<li><label>Airport Name</label></li>
 		<li><input type="text" name="name" value="<?php echo $airportName;?>"/></li>
-		<li><label>IATA Code</label></li>
-		<li><input type="text" name="iata" value="<?php echo $airportIATA;?>"/></li>
-		<li><label>ICAO</label></li>
-		<li><input type="text" name="icao" value="<?php echo $airportICAO;?>" /></li>
+		<li><label>City Name</label></li>
+		<li><input type="text" name="city" value="<?php echo $airportCity;?>"/></li>
+		<li><label>Airport Code</label></li>
+		<li><input type="text" name="code" value="<?php echo $airportCode;?>" /></li>
 		<li><label>Country</label></li>
 		<li><select name="countryAb">
-			<option>Select Country</option>
+			<option value="-1">Select Country</option>
 			<?php while($airport=$db->sql_fetchrow($airportCountryList1)){?>
 					<option value="<?php echo $airport['countryAbbreviation'];?>" <?php if($airportCountry==$airport['countryAbbreviation']) echo "selected";?>><?php echo $airport['country'];?></option>
 					<?php } ?>

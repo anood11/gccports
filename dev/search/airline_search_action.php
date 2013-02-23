@@ -14,20 +14,9 @@ $resultHead_3="";
 $resultHead_4="";
 $resultHead_5="";
 /******************************************* Control flow starts **************************************************************/
-if((isset($_REQUEST['airlineSearch']))&&($_REQUEST['airlineSearch']==1)){
 	getairlineKeys();
 	$airlineSearchResults=getairlineSearchResults($airlineName,$airlineCountry,$airlineIATA,$airlineICAO,$awbPrefix,$airlineSort);	
 	$airlineCountryList1=getCountryList('airline');
-}else if(isset($_REQUEST['btnairlineSearch'])){
-	getairlineKeys();
-	$airlineSearchResults=getairlineSearchResults($airlineName,$airlineCountry,$airlineIATA,$airlineICAO,$awbPrefix,$airlineSort);	
-	$airlineCountryList1=getCountryList('airline');
-}else{
-	getairlineKeys();
-	$airlineSearchResults=getairlineSearchResults($airlineName,$airlineCountry,$airlineIATA,$airlineICAO,$awbPrefix,$airlineSort);	
-	$airlineCountryList1=getCountryList('airline');
-}
-
 /******************************************* Control flow ends ****************************************************************/
 /******************************************* Page level functions starts ******************************************************/
 function getairlineKeys(){
@@ -37,7 +26,7 @@ function getairlineKeys(){
 	global $airlineICAO;
 	global $awbPrefix;
 	global $airlineSort;
-	$airlineName=(isset($_REQUEST['name']))?trim($_REQUEST['name']):"";
+	$airlineName=(isset($_REQUEST['name']))?($_REQUEST['name']):"";
 	$airlineCountry=(isset($_REQUEST['country']))?trim($_REQUEST['country']):"-1";
 	$airlineIATA=(isset($_REQUEST['iata']))?trim($_REQUEST['iata']):"";
 	$airlineICAO=(isset($_REQUEST['icao']))?trim($_REQUEST['icao']):"";

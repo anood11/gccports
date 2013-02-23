@@ -25,10 +25,10 @@
 					<?php } ?>
 				</select>
 			</li>
-			<li><label>IATA Code</label></li>
-			<li><input type="text" id="airportIATA" value="<?php echo $airportIATA;?>" /></li>
-			<li><label>ICAO</label></li>
-			<li><input type="text" id="airportICAO" value="<?php echo $airportICAO;?>"/></li>
+			<li><label>City Name</label></li>
+			<li><input type="text" id="airportCity" value="<?php echo $airportCity;?>" /></li>
+			<li><label>Airport Code</label></li>
+			<li><input type="text" id="airportCode" value="<?php echo $airportCode;?>"/></li>
 			<li><input type="submit" value="Airport Search" id="airportSearch" onclick="airportSearch();"/></li>
 		</ul>
 	</div>

@@ -5,7 +5,14 @@ function getNewsList($start,$end){
 						   GetSQLValueString($start, "int"),
 						   GetSQLValueString($end, "int"));		 
 	$rsResult = $db->sql_query($newsDetails);
+	
 	return $rsResult;
 }
-
+function getNewsDetails($id){
+	global $db;
+  	$newsDetails =sprintf("SELECT newsDate,newsHeading,newsMatter,newsImage FROM tblnews WHERE newsID=%s",
+						   GetSQLValueString($id, "int"));		 
+	$rsResult = $db->sql_query($newsDetails); 
+	return $rsResult;
+}
 ?>

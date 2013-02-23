@@ -20,7 +20,7 @@ include("../includes/left_submenu.php");
 		<li><input type="text" name="awb" value="<?php echo $awbPrefix;?>" /></li>
 		<li><label>Country</label></li>
 		<li><select name="country">
-			<option>Select Country</option>
+			<option value="-1">Select Country</option>
 			<?php while($airline=$db->sql_fetchrow($airlineCountryList1)){?>
 					<option value="<?php echo $airline['country'];?>" <?php if($airlineCountry==$airline['country']) echo "selected";?>><?php echo $airline['country'];?></option>
 					<?php } ?>

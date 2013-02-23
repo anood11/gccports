@@ -13,18 +13,18 @@ include("includes/left_submenu.php");
 	<table class="newsSection">
 		<tr>
 			<td class="large" rowspan="2"><?php while($main=$db->sql_fetchrow($mainNews)){?>
-				<h1><a href=""><?php echo $main['newsHeading'];?></a></h1>
+				<h1><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $main['newsID'];?>"><?php echo $main['newsHeading'];?></a></h1>
 				<h5><?php echo $main['newsDate'];?></h5>
 				<span> <img src="<?php echo $httpPathSite;?>resources/news_images/<?php echo $main['newsImage'];?>.jpg" alt="" />
 				<p><?php echo substr($main['newsMatter'],0,1000);?></p>
-				<h6><a href="">read more &raquo;</a></h6>
+				<h6><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $main['newsID'];?>">read more &raquo;</a></h6>
 				</span></td>
 			<?php while($right=$db->sql_fetchrow($rightSmallNews)){?>
-			<td class="small"><h1><a href=""><?php echo $right['newsHeading'];?></a></h1>
+			<td class="small"><h1><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $right['newsID'];?>"><?php echo $right['newsHeading'];?></a></h1>
 				<h5><?php echo $right['newsDate'];?></h5>
 				<span> <img src="<?php echo $httpPathSite;?>resources/news_images/<?php echo $right['newsImage'];?>.jpg" alt="" />
 				<p><?php echo substr($right['newsMatter'],0,120);?> </p>
-				<h6><a href="">read more &raquo;</a></h6>
+				<h6><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $right['newsID'];?>">read more &raquo;</a></h6>
 				</span></td>
 			<?php } ?>
 		</tr>
@@ -32,21 +32,21 @@ include("includes/left_submenu.php");
 	<table class="newsSection">
 		<tr>
 			<?php } while($bottom=$db->sql_fetchrow($bottonSmallNews1)){?>
-			<td class="small"><h1><a href=""><?php echo $bottom['newsHeading'];?></a></h1>
+			<td class="small"><h1><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $bottom['newsID'];?>"><?php echo $bottom['newsHeading'];?></a></h1>
 				<h5><?php echo $bottom['newsDate'];?></h5>
 				<span> <img src="<?php echo $httpPathSite;?>resources/news_images/<?php echo $bottom['newsImage'];?>.jpg" alt="" />
 				<p><?php echo substr($bottom['newsMatter'],0,100);?></p>
-				<h6><a href="">read more &raquo;</a></h6>
+				<h6><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $bottom['newsID'];?>">read more &raquo;</a></h6>
 				</span></td>
 			<?php } ?>
 		</tr>
 		<tr>
 			<?php  while($bottom1=$db->sql_fetchrow($bottonSmallNews2)){?>
-			<td class="small"><h1><a href=""><?php echo $bottom1['newsHeading'];?></a></h1>
+			<td class="small"><h1><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $bottom1['newsID'];?>"><?php echo $bottom1['newsHeading'];?></a></h1>
 				<h5><?php echo $bottom1['newsDate'];?></h5>
 				<span> <img src="<?php echo $httpPathSite;?>resources/news_images/<?php echo $bottom1['newsImage'];?>.jpg" alt="" />
 				<p><?php echo substr($bottom1['newsMatter'],0,100);?></p>
-				<h6><a href="">read more &raquo;</a></h6>
+				<h6><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $bottom1['newsID'];?>">read more &raquo;</a></h6>
 				</span></td>
 			<?php } ?>
 		</tr>
