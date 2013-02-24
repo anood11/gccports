@@ -8,26 +8,26 @@
  Date Modified 		: 
  Page Action 		: Declare /Initialise global variables
  ----------------------------------------------------------------------------*/
-$http_path = "http://localhost:8080/gccports/trunk/";
-$http_path_site = $http_path."dev/";
-$http_path_admin = $http_path_site."admin/";
+$httpPath = "http://localhost:8080/gccports/trunk/";
+$httpPathSite = $httpPath."dev/";
+$httpPathAdmin = $httpPathSite."admin/";
 define('BEGIN_TRANSACTION', 1);
 define('END_TRANSACTION', 2);
 $global_error = '';
-$page_limit = 10;
+$pageLimit = 10;
 /*
  * DB Connection
  */ 
-$database_host_name = "localhost";
-$database_user = "root";
-$database_password = "";
-$database_name = "db_gccports";
+$databaseHostName = "localhost";
+$databaseUser = "root";
+$databasePassword = "";
+$databaseName = "db_gccports";
 
 include('../../includes/lib/db_class.php');
 include('../../includes/lib/lib.php');
 
 // Make the non persistant database connection.
-$db = new db($database_host_name, $database_user, $database_password, $database_name, false);
+$db = new db($databaseHostName, $databaseUser, $databasePassword, $databaseName, false);
 if(!$db->db_connect_id)
    $global_error = "Could not connect to the database";
 /* End Connect to database */
@@ -41,9 +41,9 @@ if (isset($_SESSION['timeout'])) {
     $session_life = time() - $_SESSION['timeout'];
     if ($session_life > $inactive) {
             session_destroy();
-            header("Location:$http_path_admin");
+            header("Location:$httpPathAdmin");
     }
 }
 $_SESSION['timeout'] = time();
-$login_user=isset($_SESSION['admin'])?$_SESSION['admin']:0;
+$loginUser=isset($_SESSION['admin'])?$_SESSION['admin']:0;
 ?>

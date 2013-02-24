@@ -201,8 +201,17 @@ h1.newsHead {
 .newsSection li.large table tr td {
 	padding:5px 0;
 }
-
-
+.adminFields{
+	width: 100px;
+	float: left;
+}
+.adminInput{
+	width:200px;
+	float: right;
+}
+.adminCentre{
+	width: 400px;
+}
 
 /*.smallAdContainer {
 	width:100%;

@@ -3,6 +3,7 @@
 global $displayMessage;
 global $airportName;
 global $airportCountry;
+global $airportCountryAbbreviation;
 global $airportCity;
 global $airportCode;
 global $airlineName;
@@ -13,11 +14,14 @@ global $awbPrefix;
 global $seaportName;
 global $seaportCountry;
 global $seaportCode;
+global $seaportLongitude;
+global $seaportLatitude;
 global $db;
 
 $displayMessage="";
 $airportName="";
 $airportCountry="-1";
+$airportCountryAbbreviation="-1";
 $airportCity="";
 $airportCode="";
 $airlineName="";
@@ -28,11 +32,16 @@ $awbPrefix="";
 $seaportName="";
 $seaportCountry="-1";
 $seaportCode="";
+$seaportLongitude="";
+$seaportLatitude="";
+
 /******************************************* Control flow starts **************************************************************/
 
 $airportCountryList=getCountryList('airport');
+$airportCountryAbbreviations=getCountryAbbreviations('airport');
 $airlineCountryList=getCountryList('airline');
 $seaportCountryList=getCountryList('seaport');
+
 /******************************************* Control flow ends ****************************************************************/
 /******************************************* Page level functions starts ******************************************************/
 

@@ -17,10 +17,17 @@ include("../includes/left_submenu.php");
 		<li><label>Airport Code</label></li>
 		<li><input type="text" name="code" value="<?php echo $airportCode;?>" /></li>
 		<li><label>Country</label></li>
-		<li><select name="countryAb">
+		<li><select name="country">
 			<option value="-1">Select Country</option>
 			<?php while($airport=$db->sql_fetchrow($airportCountryList1)){?>
-					<option value="<?php echo $airport['countryAbbreviation'];?>" <?php if($airportCountry==$airport['countryAbbreviation']) echo "selected";?>><?php echo $airport['country'];?></option>
+					<option value="<?php echo $airport['country'];?>" <?php if($airportCountry==$airport['country']) echo "selected";?>><?php echo $airport['country'];?></option>
+					<?php } ?>
+		</select></li>
+		<li><label>Country Abbreviation</label></li>
+		<li><select name="abbrv">
+			<option value="-1">Select Abbreviation</option>
+			<?php while($abbrv=$db->sql_fetchrow($airportCountryAbbreviations1)){?>
+					<option value="<?php echo $abbrv['countryAbbreviation'];?>" <?php if($airportCountryAbbreviation==$abbrv['countryAbbreviation']) echo "selected";?>><?php echo $abbrv['countryAbbreviation'];?></option>
 					<?php } ?>
 		</select></li>
 		<li><label>Sort By</label></li>
@@ -30,7 +37,7 @@ include("../includes/left_submenu.php");
 			<option value="airportCode"  <?php if($airportSort=='airportCode') echo "selected";?>>Airport Code</option>
 			<option value="cityName"  <?php if($airportSort=='cityName') echo "selected";?> >City Name</option>
 			<option value="country"  <?php if($airportSort=='country') echo "selected";?>>Country</option>
-			<option value="countryAbbreviation"  <?php if($airportSort=='countryAbbreviation') echo "selected";?>>Country Code</option>
+			<option value="countryAbbreviation"  <?php if($airportSort=='countryAbbreviation') echo "selected";?>>Country Abbreviation</option>
 			</select>
 		</li>
 		<li><input type="submit" value="Modify" name="btnAirPortSearch"/></li>

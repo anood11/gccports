@@ -1,4 +1,4 @@
-<?php<?php
+<?php
 /******************************************* Initialise/Declare variables *****************************************************/
 global $displayMessage;
 global $airlineName;

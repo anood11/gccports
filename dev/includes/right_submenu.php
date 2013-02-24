@@ -2,18 +2,23 @@
 	<div class="sideInner right">
 		<img src="<?php echo $httpPathSite;?>resources/images/track-and-trace.png" width="100%" alt="" />
 	</div>
-		<div class="sideInner right">
+	<div class="sideInner right">
 		<h1 class="newsHead">Subscribe News</h1>
 		<ul>
+			<li class="displayMessage" id="subscrbeRes">	</li>	
 			<li><label>Name</label></li>
-			<li><input type="text" /></li>
+			<li><input type="text" name="subscribeName" id="subscribeName" value=""/></li>
 			<li><label>Company</label></li>
-			<li><input type="text" /></li>
+			<li><input type="text" name="subscribeCompany" id="subscribeCompany" value="" /></li>
 			<li><label>Country</label></li>
-			<li><select><option>Select Country</option></select></li>
+			<li><select name="subscribeCountry" id="subscribeCountry">
+				<option value="-1">Select Country</option>
+				<option value="1">India</option>
+				</select>
+			</li>
 			<li><label>Email</label></li>
-			<li><input type="text" /></li>
-			<li><input type="submit" value="Subscribe" /></li>
+			<li><input type="text" id="subscribeEmail" value=""/></li>
+			<li><input type="button" name="btnSubscribe" value="Subscribe" onclick="subscribeNews();"/></li>
 		</ul>
 	</div>
 	<div class="sideInner right">

@@ -406,3 +406,6 @@ ul.leftNav li a:hover {
 .searchResult td {
 	color:#333;
 }
+.displayMessage{
+	color: red;
+}

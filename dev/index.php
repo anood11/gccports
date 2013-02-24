@@ -54,7 +54,7 @@ include("includes/left_submenu.php");
 	<table class="newsSection">
 		<tr>
 			<td class="large"><?php while($headLine=$db->sql_fetchrow($headLineNews)){?>
-				<h1><a href=""><?php echo $headLine['newsHeading'];?></a></h1>
+				<h1><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $headLine['newsID'];?>"><?php echo $headLine['newsHeading'];?></a></h1>
 				<?php } ?></td>
 			<td class="small imageHolder"><img src="<?php echo $httpPathSite;?>resources/images/freeListing.png" alt="" /></td>
 		</tr>

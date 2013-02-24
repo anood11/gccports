@@ -10,11 +10,11 @@ include("../includes/header.php");
 		<form name="formLogin" action="login.php" method="post">
 		<ul class="newsSection">
 			<li class="large displayMessage">
-			<?php echo $display_message;?>
+			<?php echo $displayMessage;?>
 			</li>
 			<li class="large">
 			<label>User name</label>
-			<input type="text" name="user_name" value="<?php echo $user_name;?>">
+			<input type="text" name="user_name" value="<?php echo $userName;?>">
 			</li>
 			<li class="large">
 			<label>Password</label>

@@ -1,28 +1,28 @@
 <?php
 /******************************************* Initialise/Declare variables *****************************************************/
-global $display_message;
-global $page_limit;
+global $displayMessage;
+global $pageLimit;
 
-$display_message = "";
-$start_row = 0;
+$displayMessage = "";
+$startRow = 0;
 
 /******************************************* Control flow starts **************************************************************/
 if(isset($_REQUEST['delId'])){
     getValuesFromForm();
-    $delete_id=deleteNews($news_id);
-    if($delete_id==1){
-        $display_message="News successfully deleted";
+    $deleteId=deleteNews($newsId);
+    if($deleteId==1){
+        $displayMessage="News successfully deleted";
     }else{
-        $display_message="Failed to delete News";
+        $displayMessage="Failed to delete News";
     }
-	$page_count=getCountPages();
-	$start_row=getPageStart();
-	$news_list = getNewsList($start_row,$page_limit);
+	$pageCount=getCountPages();
+	$startRow=getPageStart();
+	$newsList = getNewsList($startRow,$pageLimit);
 }else{
     getValuesFromForm();
-    $page_count=getCountPages();
-	$start_row=getPageStart();
-    $news_list = getNewsList($start_row,$page_limit);
+    $pageCount=getCountPages();
+	$startRow=getPageStart();
+    $newsList = getNewsList($startRow,$pageLimit);
 }
 
 /******************************************* Control flow ends ****************************************************************/
@@ -32,10 +32,10 @@ if(isset($_REQUEST['delId'])){
  */
 function getValuesFromForm(){
 
-    global $news_id;
+    global $newsId;
 	global $page;
 
-    $news_id=isset($_REQUEST['delId'])?$_REQUEST['delId']:0;
+    $newsId=isset($_REQUEST['delId'])?$_REQUEST['delId']:0;
     $page=isset($_REQUEST['page'])?$_REQUEST['page']:1;
 	if($page==1)$page=isset($_REQUEST['pageNumber'])?$_REQUEST['pageNumber']:1;
  }
@@ -44,22 +44,22 @@ function getValuesFromForm(){
  */
 function getPageStart(){
     
-    global $page_limit;
+    global $pageLimit;
     global $page; 
 	
-	$page_start=($page*$page_limit)-$page_limit;
-    return $page_start;
+	$pageStart=($page*$pageLimit)-$pageLimit;
+    return $pageStart;
 }
 /*
  * Function to get row count
  */
 function getCountPages(){
     
-    global $page_limit;
+    global $pageLimit;
    
     $count=getTotalNews();
-    $pages=round($count/$page_limit);
-      if($count > ($pages*$page_limit))
+    $pages=round($count/$pageLimit);
+      if($count > ($pages*$pageLimit))
       $pages+=1;
       if($pages<1)$pages=1;
     return $pages;

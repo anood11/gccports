@@ -1,29 +1,29 @@
 <?php
 /******************************************* Initialise/Declare variables *****************************************************/
-global $display_message;
+global $displayMessage;
 
-$display_message = "";
+$displayMessage = "";
 
 /******************************************* Control flow starts **************************************************************/
 if(isset($_REQUEST['btnUpdate'])){
     getValuesFromForm();
-    $display_message=validateForm();
-	if($display_message==""){
-		$user_count=getUserCount();
-		if($user_count==0){
-			$insert_id=addAdminSettings($user_name,encryptPassword($password),$email_id);
-			if($insert_id==1){
-				$display_message="Settings added Successfully";	
+    $displayMessage=validateForm();
+	if($displayMessage==""){
+		$userCount=getUserCount();
+		if($userCount==0){
+			$insertId=addAdminSettings($userName,encryptPassword($password),$emailId);
+			if($insertId==1){
+				$displayMessage="Settings added Successfully";	
 			}else{
-				$display_message="Unable to add details. Please try again later.";
+				$displayMessage="Unable to add details. Please try again later.";
 				setValuesToForm();	
 			}
 		}else{
-			$update_id=updateAdminSettings($user_name,encryptPassword($password),$email_id);
-			if($update_id==1){
-				$display_message="Update Successful";
+			$updateId=updateAdminSettings($userName,encryptPassword($password),$emailId);
+			if($updateId==1){
+				$displayMessage="Update Successful";
 			}else{
-				$display_message="Unable to update. Please try again later.";
+				$displayMessage="Unable to update. Please try again later.";
 				setValuesToForm();
 			}
 		}
@@ -34,8 +34,8 @@ if(isset($_REQUEST['btnUpdate'])){
 }else{
 	//Default Event
 	getValuesFromForm();
-	$admin_details=getAdminDetails();
-	assignDBValuesToForm($admin_details);
+	$adminDetails=getAdminDetails();
+	assignDBValuesToForm($adminDetails);
 	setValuesToForm();
 }
 /******************************************* Control flow ends ****************************************************************/
@@ -45,66 +45,66 @@ if(isset($_REQUEST['btnUpdate'])){
  * Function to get values from form
  */
 function getValuesFromForm(){    
-    global $user_name;
+    global $userName;
 	global $password;
-	global $confirm_password;
-	global $email_id;
+	global $confirmPassword;
+	global $emailId;
 	
-	$user_name=isset($_REQUEST['user_name'])?$_REQUEST['user_name']:"";
+	$userName=isset($_REQUEST['user_name'])?$_REQUEST['user_name']:"";
 	$password=isset($_REQUEST['password'])?$_REQUEST['password']:"";
-	$confirm_password=isset($_REQUEST['confirm_password'])?$_REQUEST['confirm_password']:"";
-	$email_id=isset($_REQUEST['email_id'])?$_REQUEST['email_id']:"";
+	$confirmPassword=isset($_REQUEST['confirm_password'])?$_REQUEST['confirm_password']:"";
+	$emailId=isset($_REQUEST['email_id'])?$_REQUEST['email_id']:"";
 }
 /*
  * Function to assign DB values to form
  */
-function assignDBValuesToForm($admin_details){
-	global $user_name;
+function assignDBValuesToForm($adminDetails){
+	global $userName;
 	global $password;
-	global $confirm_password;
-	global $email_id;
+	global $confirmPassword;
+	global $emailId;
 	global $db;
 	
-	$rowRes=$db->sql_fetchrow($admin_details);
-	$user_name=$rowRes['userName'];
+	$rowRes=$db->sql_fetchrow($adminDetails);
+	$userName=$rowRes['userName'];
 	$password=decryptPassword($rowRes['password']);
-	$confirm_password=decryptPassword($rowRes['password']);
-	$email_id=$rowRes['email'];
+	$confirmPassword=decryptPassword($rowRes['password']);
+	$emailId=$rowRes['email'];
 }
 /*
  * Function to set values to form
  */
  function setValuesToForm(){
- 	global $user_name;
+ 	global $userName;
 	global $password;
-	global $confirm_password;
-	global $email_id;
+	global $confirmPassword;
+	global $emailId;
 	
-	$user_name=formatDisplayText($user_name);
+	$userName=formatDisplayText($userName);
 	$password=formatDisplayText($password);
-	$confirm_password=formatDisplayText($confirm_password);
-	$email_id=formatDisplayText($email_id); 	
+	$confirmPassword=formatDisplayText($confirmPassword);
+	$emailId=formatDisplayText($emailId); 	
  }
  /*
   * Function to set values to form
   */
  function validateForm(){
- 	global $user_name;
+ 	global $userName;
 	global $password;
-	global $confirm_password;
-	global $email_id;
+	global $confirmPassword;
+	global $emailId;
 	
 	$err = "";
 	$preMsg = "<br>";
 	$postMsg = "</br>";
 
-	if(($user_name=="")||(!hasPHPCode($user_name))){
+	if(($userName=="")||(!hasPHPCode($userName))){
 		$err.=$preMsg."Enter valid Username.".$postMsg;
-	}else if(($email_id=="")||(!isEmail($email_id))){
+	}else if(($emailId=="")||(!isEmail($emailId))){
 		$err.=$preMsg."Enter valid Email ID.".$postMsg;
 	}else if(($password=="")||(!hasPHPCode($password))){
 		$err.=$preMsg."Enter valid Password.".$postMsg;
-	}else if($password!=$confirm_password){
+	}else if($password!=$confirmPassword){
 		$err.=$preMsg."Password mis-match.".$postMsg;
 	} 
 	return $err;   	

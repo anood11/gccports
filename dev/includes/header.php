@@ -49,9 +49,9 @@ var baseURLadmin='<?php echo $httpPathAdmin;?>';
 	<li><a href="">PORTS</a></li>
 	<li><a href="">ASSOCIATIONS</a>
 		<ul>
-			<li><a href="">Associations in GCC Countries</a></li>
-			<li><a href="">International Associations</a></li>
-			<li><a href="">Official Bodies</a></li>
+			<li><a href="<?php echo $httpPathSite;?>associations/list_associations.php?category=gccCountries">Associations in GCC Countries</a></li>
+			<li><a href="<?php echo $httpPathSite;?>associations/list_associations.php?category=international Associations">International Associations</a></li>
+			<li><a href="<?php echo $httpPathSite;?>associations/list_associations.php?category=officialBodies">Official Bodies</a></li>
 		</ul>
 	</li>
 	<li><a href="">USEFUL LINKS</a>

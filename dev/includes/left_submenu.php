@@ -21,7 +21,15 @@
 			<li><select id="airportCountry">
 					<option value="-1">Select Country</option>
 					<?php while($airport=$db->sql_fetchrow($airportCountryList)){?>
-					<option value="<?php echo $airport['countryAbbreviation'];?>" <?php if($airportCountry==$airport['countryAbbreviation']) echo "selected";?>><?php echo $airport['country'];?></option>
+					<option value="<?php echo $airport['country'];?>" <?php if($airportCountry==$airport['country']) echo "selected";?>><?php echo $airport['country'];?></option>
+					<?php } ?>
+				</select>
+			</li>
+			<li><label>Country Abbreviation</label></li>
+			<li><select id="airportAbbreviation">
+					<option value="-1">Select Abbreviation</option>
+					<?php while($abbreviation=$db->sql_fetchrow($airportCountryAbbreviations)){?>
+					<option value="<?php echo $abbreviation['countryAbbreviation'];?>" <?php if($airportCountryAbbreviation==$abbreviation['countryAbbreviation']) echo "selected";?>><?php echo $abbreviation['countryAbbreviation'];?></option>
 					<?php } ?>
 				</select>
 			</li>
@@ -49,6 +57,10 @@
 				</select></li>
 			<li><label>Port Code</label></li>
 			<li><input type="text" name="seaportCode" id="seaportCode" value="<?php echo $seaportCode;?>"/></li>
+			<li><label>Longitude</label></li>
+			<li><input type="text" name="seaportLongitude" id="seaportLongitude" value="<?php echo $seaportLongitude;?>"/></li>
+			<li><label>Latitude</label></li>
+			<li><input type="text" name="seaportLatitude" id="seaportLatitude" value="<?php echo $seaportLatitude;?>"/></li>
 			<li><input type="button" value="Seaport Search" onclick="seaportSearch();"/></li>
 		</ul>
 	</div>

@@ -13,37 +13,50 @@ function getairlineSearchResults($airlineName,$airlineCountry,$airlineIATA,$airl
 								 GetSQLValueString($airlineICAO, "text"),
                                  GetSQLValueString($awbPrefix, "int"),
 								 GetSQLValueString($airlineCountry, "text"),
-                                 GetSQLValueString($airlineSort, "text"));
+                                 GetSQLValueString($airlineSort, ""));
 	$rsResult = $db->sql_query($selectQyery);
 	return $rsResult;
 }
 function getCountryList($type){
 	global $db;
 	if($type=='airport'){
-		$countryDetails ="SELECT DISTINCT country,countryAbbreviation FROM tblairport"; 
+		$countryDetails ="SELECT DISTINCT country FROM tblairport ORDER BY country ASC"; 
 	}else if($type=='airline'){
-		$countryDetails ="SELECT DISTINCT country FROM tblairlines"; 
+		$countryDetails ="SELECT DISTINCT country FROM tblairlines ORDER BY country ASC"; 
 	}else if($type=='seaport'){
-		$countryDetails ="SELECT DISTINCT country FROM tblseaports"; 
+		$countryDetails ="SELECT DISTINCT country FROM tblseaports ORDER BY country ASC"; 
 	}
 	$rsResult = $db->sql_query($countryDetails);
 	return $rsResult;
 }
-function getAirportSearchResults($airportName,$airportCountry,$airportCity,$airportCode,$airportSort){
+function getCountryAbbreviations($type){
+	global $db;
+	if($type=='airport'){
+		$countryAbbreviations ="SELECT DISTINCT countryAbbreviation FROM tblairport ORDER BY countryAbbreviation ASC"; 
+	}else if($type=='airline'){
+		$countryAbbreviations ="SELECT DISTINCT countryAbbreviation FROM tblairlines ORDER BY countryAbbreviation ASC"; 
+	}else if($type=='seaport'){
+		$countryAbbreviations ="SELECT DISTINCT countryAbbreviation FROM tblseaports ORDER BY countryAbbreviation ASC"; 
+	}
+	$rsResult = $db->sql_query($countryAbbreviations);
+	return $rsResult;
+}
+function getAirportSearchResults($airportName,$airportCountry,$airportCountryAbbreviation,$airportCity,$airportCode,$airportSort){
 	global $db;
 	$airportName = $airportName."%";
-	$airportCountry=$airportCountry."%";
 	$airportCity=$airportCity."%";
 	$airportCode=$airportCode."%";
+	$airportCountry=$airportCountry."%";
+	$airportCountryAbbreviation=$airportCountryAbbreviation."%";
 	$selectQyery=sprintf("SELECT airportName,airportCode,cityName,country,countryAbbreviation FROM tblairport WHERE
-							 airportName LIKE %s AND country LIKE %s AND cityName LIKE %s AND airportCode LIKE %s ORDER BY %s ASC",
+							 airportName LIKE %s AND country LIKE %s AND countryAbbreviation LIKE %s AND cityName LIKE %s AND airportCode LIKE %s ORDER BY %s ASC",
                                  GetSQLValueString($airportName, "text"),
                                  GetSQLValueString($airportCountry, "text"),
+								 GetSQLValueString($airportCountryAbbreviation, "text"),
 								 GetSQLValueString($airportCity, "text"),
                                  GetSQLValueString($airportCode, "text"),
-                                 GetSQLValueString($airportSort, "text"));
+                                 GetSQLValueString($airportSort, ""));
 	$rsResult = $db->sql_query($selectQyery);
-	
 	return $rsResult;
 }
 function getSeaportSearchResults($seaportName,$seaportCountry,$seaportCode,$seaportLongitude,$seaportLatitude,$seaportSort){
@@ -59,7 +72,7 @@ function getSeaportSearchResults($seaportName,$seaportCountry,$seaportCode,$seap
 								 GetSQLValueString($seaportCode, "text"),
                                  GetSQLValueString($seaportLongitude, "text"),
                                  GetSQLValueString($seaportLatitude, "text"),
-								 GetSQLValueString($seaportSort, "text"));
+								 GetSQLValueString($seaportSort, ""));
 	$rsResult = $db->sql_query($selectQyery);
 	return $rsResult;
 }
