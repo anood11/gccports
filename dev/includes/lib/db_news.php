@@ -8,6 +8,17 @@ function getNewsList($start,$end){
 	
 	return $rsResult;
 }
+function getSubscribersList($start,$end){
+	global $db;
+  	$newsDetails =sprintf("SELECT s.subscriptionId,s.name,s.company,s.email,c.country
+	                       FROM tblsubscriptions s JOIN tblcountry c ON s.country=c.countryId
+						   LIMIT %s,%s",
+						   GetSQLValueString($start, "int"),
+						   GetSQLValueString($end, "int"));		 
+	$rsResult = $db->sql_query($newsDetails);
+	
+	return $rsResult;
+}
 function getNewsDetails($id){
 	global $db;
   	$newsDetails =sprintf("SELECT newsDate,newsHeading,newsMatter,newsImage FROM tblnews WHERE newsID=%s",
@@ -22,10 +33,27 @@ function getTotalNews(){
 	$rowRes=$db->sql_fetchrow($rsResult);
 	return $rowRes['cnt'];
 }
+function getTotalSubscribers(){
+	global $db;
+  	$newsDetails ="SELECT COUNT(newsID) AS cnt FROM tblsubscriptions";
+	$rsResult = $db->sql_query($newsDetails); 
+	$rowRes=$db->sql_fetchrow($rsResult);
+	return $rowRes['cnt'];
+}
 function deleteNews($id){
 	global $db;
 	$delete=0;
 	$deleteNews=sprintf("UPDATE tblnews SET newsStatus=0 WHERE newsID=%s",
+						   GetSQLValueString($id, "int"));
+	if($rsResult = $db->sql_query($deleteNews)){
+		$delete=1;
+	}
+	return $delete; 
+}
+function deleteSubscribers($id){
+	global $db;
+	$delete=0;
+	$deleteNews=sprintf("DELETE FROM tblsubscriptions WHERE subscriptionId=%s",
 						   GetSQLValueString($id, "int"));
 	if($rsResult = $db->sql_query($deleteNews)){
 		$delete=1;

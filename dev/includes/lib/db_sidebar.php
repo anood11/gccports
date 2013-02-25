@@ -25,6 +25,8 @@ function getCountryList($type){
 		$countryDetails ="SELECT DISTINCT country FROM tblairlines ORDER BY country ASC"; 
 	}else if($type=='seaport'){
 		$countryDetails ="SELECT DISTINCT country FROM tblseaports ORDER BY country ASC"; 
+	}else if($type=='telephone'){
+		$countryDetails ="SELECT DISTINCT country FROM tbltelephonecodes ORDER BY country ASC"; 
 	}
 	$rsResult = $db->sql_query($countryDetails);
 	return $rsResult;
@@ -76,5 +78,30 @@ function getSeaportSearchResults($seaportName,$seaportCountry,$seaportCode,$seap
 	$rsResult = $db->sql_query($selectQyery);
 	return $rsResult;
 }
-
+function getTelephoneSearchResults($telephoneCode,$internetIP,$telephoneCountry,$telephoneSort){
+	global $db;
+	$telephoneCode = $telephoneCode."%";
+	$internetIP=$internetIP."%";
+	$telephoneCountry=$telephoneCountry."%";
+	$selectQyery=sprintf("SELECT country,telephoneCode,internetIP FROM tbltelephonecodes WHERE telephoneCode LIKE %s AND internetIP LIKE %s AND country LIKE %s ORDER BY %s ASC",
+                                 GetSQLValueString($telephoneCode, "text"),
+                                 GetSQLValueString($internetIP, "text"),
+                                 GetSQLValueString($telephoneCountry, "text"),
+								 GetSQLValueString($telephoneSort, ""));
+	$rsResult = $db->sql_query($selectQyery);
+	return $rsResult;
+}
+function trackTraceCategories(){
+	global $db;
+	$selectQuery="SELECT DISTINCT category FROM tbltracktrace";
+	$rsResult = $db->sql_query($selectQuery);
+	return $rsResult;
+}
+function getTrackTraceSearchResults($category){
+	global $db;
+	$selectQyery=sprintf("SELECT companyName,url FROM tbltracktrace WHERE category=%s ORDER BY companyName ASC",
+                      			 GetSQLValueString($category, "text"));
+	$rsResult = $db->sql_query($selectQyery);
+	return $rsResult;
+}
 ?>

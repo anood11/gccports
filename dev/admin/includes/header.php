@@ -31,7 +31,8 @@ var baseURLadmin='<?php echo $httpPathAdmin;?>';
 <?php if($loginUser!=0){ ?>
 <ul class="topNav">
 	<li><a href="<?php echo $httpPathAdmin;?>user_account/admin.php">Admin</a></li>
-	<li><a href="<?php echo $httpPathAdmin;?>news/view_news.php">Manage News</a></li>
+	<li><a href="<?php echo $httpPathAdmin;?>news/subscriptions.php">News Subscribers</a></li>
+	<!--<li><a href="<?php echo $httpPathAdmin;?>news/view_news.php">Manage News</a></li>-->
 	<li><a href="<?php echo $httpPathAdmin;?>user_account/login.php?signout=1">Sign out</a></li>
 </ul>
 <?php } ?>
