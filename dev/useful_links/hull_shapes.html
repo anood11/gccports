@@ -1,0 +1,107 @@
+<html>
+<meta http-equiv=page-enter content=blendtrans(duration=0.5)>
+<meta http-equiv=page-exit content=blendtrans(duration=0.5)>
+<head>
+
+<script language="JavaScript1.1">
+<!--
+var ns4 = (document.layers)? true:false
+var ie4 = (document.all)? true:false
+function press(e) {
+  if ((ns4 && (e.which == 3 || e.which == 2)) || (ie4 && (event.button == 2 || event.button == 3))) return false
+  return true
+}
+for (var i=0; i<document.images.length; i++) document.images[i].onmousedown=press
+for (var i=0; i<document.links.length; i++) document.links[i].onmousedown=press
+document.onmousedown=press
+if (ns4) window.captureEvents(Event.MOUSEDOWN)
+window.onmousedown=press
+//-->
+</script>
+
+<script language="JavaScript1.2">
+
+function disableselect(e){
+return false
+}
+
+function reEnable(){
+return true
+}
+
+//if IE4+
+document.onselectstart=new Function ("return false")
+
+//if NS6
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+</script>
+
+<body oncontextmenu="return false" leftmargin="15" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+</head>
+
+
+<p><u><b><font face="Verdana" color="#008000">Hull Shapes</font></b></u><font face="Verdana">
+</font><font face="Verdana" size="2">
+<br><br>Ships and boats have different hulls that make the vessel more efficient at moving through the water and carrying cargo. The shapes also determines how far the vessel sinks into the water, or how stable it is against rolling.</font></p>
+<p align="left">
+<font face="Verdana" size="2">
+<u>
+
+<b>Keeled Yacht</b></u><br>
+A yacht has a rounded hull to help control the boat in strong winds. The keel is 
+filled with a heavy ballast, such as concrete, to stop the yacht tipping over 
+too far.</font><p align="center">
+<font face="Verdana" size="2">
+<img border="0" src="dangerous/hull1.gif" width="150" height="150"></font><p align="center">
+<font face="Verdana" size="2">
+<i>Keel</i><br>
+
+</font>
+
+<p>
+<font face="Verdana" size="2">
+<u><b>Cargo Ships</b></u><br>
+
+In the middle of a cargo ship, the hull is as large as possible so that it can contain heavy loads. The hull is more V-shaped towards the bow, and rounder at the stern.
+</font>
+
+<p align="center">
+<font face="Verdana" size="2">
+<img border="0" src="dangerous/hull2.gif" width="137" height="138"></font><p align="center">
+<font face="Verdana" size="2">
+<i>Central hull</i></font><p>
+<font face="Verdana" size="2"><u>
+<b>Speed Boats</b></u><br>
+
+The shape of speed boat’s hull helps keep air between the boat and the water, instead of cutting through it.
+
+As the boat speed up, the hull starts to skim across the water, instead of 
+cutting through it.</font></p>
+
+<p align="center">
+<font face="Verdana" size="2">
+<img border="0" src="dangerous/hull3.gif" width="150" height="150"></font><p align="center">
+<font face="Verdana" size="2">
+<i>Flat V-shape</i></font><p align="center">
+<p>
+<font face="Verdana" size="2"><u>
+<b>Catamaran </b> </u> <br>
+
+A Catamaran has two separate hulls, joined together with strong crossbeams. This shape is very stable because it is so wide.
+</font>
+
+<p align="center">
+<font face="Verdana" size="2">
+<img border="0" src="dangerous/hull4.gif" width="150" height="150"><br>
+<i>Crossbeam</i><br>
+
+<p><a href="#top"><u><font color="#0000FF">Go Top</font></u></a>&nbsp;&nbsp;&nbsp;
+<a href="../general.html">Go Back</fond></a> </font>
+</p>
+
+</body>
+
+</html>

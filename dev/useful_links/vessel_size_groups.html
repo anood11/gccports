@@ -1,0 +1,101 @@
+<html>
+<meta http-equiv=page-enter content=blendtrans(duration=0.5)>
+<meta http-equiv=page-exit content=blendtrans(duration=0.5)>
+<head>
+
+<script language="JavaScript1.1">
+<!--
+var ns4 = (document.layers)? true:false
+var ie4 = (document.all)? true:false
+function press(e) {
+  if ((ns4 && (e.which == 3 || e.which == 2)) || (ie4 && (event.button == 2 || event.button == 3))) return false
+  return true
+}
+for (var i=0; i<document.images.length; i++) document.images[i].onmousedown=press
+for (var i=0; i<document.links.length; i++) document.links[i].onmousedown=press
+document.onmousedown=press
+if (ns4) window.captureEvents(Event.MOUSEDOWN)
+window.onmousedown=press
+//-->
+</script>
+
+<script language="JavaScript1.2">
+
+function disableselect(e){
+return false
+}
+
+function reEnable(){
+return true
+}
+
+//if IE4+
+document.onselectstart=new Function ("return false")
+
+//if NS6
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+</script>
+
+<body oncontextmenu="return false" leftmargin="15" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+</head>
+
+<body>
+<p align="justify"><font color="#008000" face="Verdana"><u>
+<b>Vessel Sizes and Uses</b></u></font><br><br>
+<font size="2" face="Verdana">Tankers and barges come in all sizes from the small harbor/lake variety to the biggest things ever built by man that move. The size of any particular tanker depends on many factors. Use, cargo type, amount and demand, passage length and port restrictions at both loadport and the discharge port are among the most important of these. Tankers were generally classified as follows: <br><br>
+
+<u> 
+
+<b>Clean Tanker Categories</b></u><br>
+  Under 16,500 DWT - Coastal, Small, Harbor/Lake Tankers<br>
+  16,500 - 24,999 DWT - General Purpose Vessels<br>
+  25,000 - 49,999 DWT - Medium Range Vessels<br>
+  50,000 - 79,999 DWT - LR1 (Large Range 1) <br>
+  80,000 - 159,999 DWT - LR2 (Large Range 2) <br><br>
+
+ <u> 
+
+ <b>Crude Tanker Categories</b></u><br>
+  55,000 - 79,999 DWT - Panamax Crude Carrier<br>
+  80,000 - 119,000 DWT - Aframax Crude Carrier<br>
+  120,000 - 199,999 DWT - Suezmax Crude Carrier<br>
+  200,000-- 319,999 DWT - VLCC (Very Large Crude Carrier) <br>
+  320,000 DWT & above - ULCC (Ultra Large Crude Carrier) <br><br>
+
+ <b>Coastal, Small, Harbor/Lake Tankers: Under 16,500 DWT</b></u></b><br>
+ These small ships supply terminals with a variety of products from heating oils gasolines and kerosene, to more exotic fuels and chemicals. They are predominantly product carriers and are also are used extensively for bunkering service in harbors and busy ports. <br><br>
+
+<b>General Purpose Vessels: 16,500 - 24,999 DWT</b></u></b><br>
+On a worldwide basis, this class of vessel probably covers the largest range and variety of cargoes carried. This class of ship includes chemical carriers, special service product and crude oil vessels and serve mostly coastwise terminal trades. <br><br>
+
+<b>Medium Range Vessels: 25,000 - 49,999 DWT</b></u></b><br>
+ Medium sized tankers cover a broad range of vessel types. Ships of this size category are capable of carrying almost any kind of petroleum product. The smaller group will usually carry gasolines, jet fuels, chemicals and heating oils. The larger size of the group will carry heavier fuel oils and crude oils. <br><br>
+
+LR1 (Large Range 1): 50,000 - 79,999 DWT (Clean Products) <br>
+LR2 (Large Range 2): 80,000 - 159,999 DWT (Clean Products) <br><br>
+
+
+ Vessels in this class that are less than 100,000 dwt are divided into two basic categories namely, "Dirty " and "Clean". The "dirty" vessels carry the "black" or dirty cargoes such as crude oil , heavy fuel oils, asphalt etc. The "clean" vessels carry the refined "white" clean products such as gasoline, jet fuels, kerosene etc. Chemical carriers would also fall into the "clean" category. Because of the strict tank inspection requirements for clean products, most proprietary vessels or those on long term charter or do not routinely change their trading patterns from clean to dirty or vice versa. However market requirements and charter economics do require vessels to sometimes slip in and out of these clean and dirty trades. Vessels in this class that are over 100,000 dwt tend to be crude oil carriers only.<br><br>
+
+Because of their huge sizes these vessels have been almost exclusively only used for the carriage of crude oils. Only the smallest of this category has carried any type of refined products. Several of these ULCC classed vessels were over 500,000 and the biggest of these ships had a deadweight of 564,939 tons. <br><br>
+
+Small Handy size, carriers of 20,000-28,000 dwt<br>
+Handy size, carriers of 28,000-40,000 dwt <br>
+Handymax, carriers of 40,000-50,000 dwt <br>
+Seawaymax, the largest size which can traverse the St Lawrence Seaway <br>
+Malaccamax, the largest size which can traverse the Straits of Malacca <br>
+Capesize, vessels larger than Panamax and Suezmax, which must traverse the Cape of Good Hope
+and Cape Horn in order to travel between oceans</font></p>
+<p>
+<font face="Verdana" size="2">
+<a href="#top"><font color="#0000FF"><u>Go Top</u></font></a><font color="#0000FF"><u> </u>
+&nbsp;&nbsp;&nbsp; <a href="../general.html">Go Back</a></font></p>
+
+
+
+</body>
+
+</html>

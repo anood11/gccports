@@ -1,0 +1,84 @@
+<html>
+<meta http-equiv=page-enter content=blendtrans(duration=0.5)>
+<meta http-equiv=page-exit content=blendtrans(duration=0.5)>
+<head>
+<script language="JavaScript1.1">
+<!--
+var ns4 = (document.layers)? true:false
+var ie4 = (document.all)? true:false
+function press(e) {
+  if ((ns4 && (e.which == 3 || e.which == 2)) || (ie4 && (event.button == 2 || event.button == 3))) return false
+  return true
+}
+for (var i=0; i<document.images.length; i++) document.images[i].onmousedown=press
+for (var i=0; i<document.links.length; i++) document.links[i].onmousedown=press
+document.onmousedown=press
+if (ns4) window.captureEvents(Event.MOUSEDOWN)
+window.onmousedown=press
+//-->
+</script>
+
+<script language="JavaScript1.2">
+
+function disableselect(e){
+return false
+}
+
+function reEnable(){
+return true
+}
+
+//if IE4+
+document.onselectstart=new Function ("return false")
+
+//if NS6
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+</script>
+</head>
+<body oncontextmenu="return false" leftmargin="15" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+
+<p align="justify"><u><b><font color="#008000" face="Verdana">Ship Structure</font></b></u><p align="justify">
+<font size="2" face="Verdana">Ships are the conveyances running at sea. There are large-size and small-size ships. However, their structures are almost the same. They are mainly composed of such as follows:  
+
+  <p align="justify"><b><u>Shell</u></b></u><br>
+    Shell is just referred to the outer shell of ships, which is riveted or 
+  electrically welded with armor plates. It is composed of three parts: 
+  garboard, forniciform outer board and upper outer shipboard.  
+ 
+<p align="justify"><b> <u>Frame</u></b></u><br>
+    Frame means the total of all kinds of material that supported the shell. It 
+is divided into tow parts: longitudinal material and horizontal material. The 
+longitudinal material includes keel, base framework and side framework. And the 
+horizontal material includes rib, ship girder and cabin side.  
+ 
+  <p align="justify"><b><u>Deck</u></b></u><br>
+    Deck is referred to the armor plates paved on ship girder. It divided the 
+  ship body into upper floor, middle floor and lower floor. The number of deck 
+  floors of large ship may reach 6 or 7. It is used to reinforce ship framework. 
+  Also, with the constructed several deck floors, it is useful for distributing 
+  loads and carrying cargoes.  
+ 
+ <p align="justify"><b><u>Holds and Tanks</u></u></b><br>
+    Holds and tanks are referred to the various spaces below board: forepeak, 
+ sternward cabin, cargo cabin, machine cabin, boiler cabin and etc.  
+ 
+  <p align="justify"><b>Super Structure</b><br>
+    Super structure is referred to the buildings on the board. It is for 
+  sailor¡'s living and working use, and also for marine store. It is composed of 
+  forecabin, sternward room and bridge.  
+ </font>
+
+
+  <p align="justify">
+
+
+<font face="Verdana" size="2">
+
+<a href="#top"><font color="#0000FF"><u>Go Top</u></font></a><font color="#0000FF"><u> </u>
+&nbsp;&nbsp;&nbsp; <a href="../general.html">Go Back</a></font></font>&nbsp;
+</body>
+
+</html>

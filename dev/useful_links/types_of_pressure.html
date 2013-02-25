@@ -1,0 +1,68 @@
+<html>
+<meta http-equiv=page-enter content=blendtrans(duration=0.5)>
+<meta http-equiv=page-exit content=blendtrans(duration=0.5)>
+<head>
+
+<script language="JavaScript1.1">
+<!--
+var ns4 = (document.layers)? true:false
+var ie4 = (document.all)? true:false
+function press(e) {
+  if ((ns4 && (e.which == 3 || e.which == 2)) || (ie4 && (event.button == 2 || event.button == 3))) return false
+  return true
+}
+for (var i=0; i<document.images.length; i++) document.images[i].onmousedown=press
+for (var i=0; i<document.links.length; i++) document.links[i].onmousedown=press
+document.onmousedown=press
+if (ns4) window.captureEvents(Event.MOUSEDOWN)
+window.onmousedown=press
+//-->
+</script>
+
+<script language="JavaScript1.2">
+
+function disableselect(e){
+return false
+}
+
+function reEnable(){
+return true
+}
+
+//if IE4+
+document.onselectstart=new Function ("return false")
+
+//if NS6
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+</script>
+
+<body oncontextmenu="return false" leftmargin="15" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+</head>
+
+<body>
+<p align="justify"><font face="Verdana" color="#008000">
+<b><u>Types of Pressure</u></b></font><br><br>
+<font size="2" face="Verdana">The amount of force exerted on a unit of area by a fluid.<br><br>
+
+<b><u>Absolute Pressure</u></b> The pressure referenced to a perfect vacuum as zero pounds per square inch absolute. <br><br>
+<b><u>Atmospheric Pressure</u></b> The pressure exerted by the atmosphere. Although this pressure varies with altitude, barometric pressure and humidity, the atmospheric pressure can be defined in custody transfer contracts, or by state and federal authorities. Atmospheric pressure is most often stated as 14.696 pounds per square inch absolute. <br><br>
+<b><u>Back Pressure</u></b> The operating pressure level measured upstream from a control valve. <br><br>
+<b><u>Gauge Pressure</u></b> That pressure measured relative to atmospheric pressure as zero, usually designated psig. <br><br>
+<b><u>High Vapor Pressure</u></b> A fluid which, at the measurement or proving temperature, has a vapor pressure that is equal to or higher than atmospheric pressure. <br><br>
+<b><u>Low Vapor Pressure</u></b> A fluid which, at the measurement or proving temperature, has a vapor pressure that is less than atmospheric pressure. <br><br>
+<b><u>Reid Vapor Pressure</u></b> The vapor pressure of a fluid at 100 degrees Fahrenheit as determined by test method ASTM D 323-58. <br><br>
+<b><u>Static Pressure</u></b> The pressure in a fluid that is exerted normal to the surface. In a moving fluid, the static pressure is measured at right angles to the direction of flow.
+</font></p>
+<p align="justify">
+<font face="Verdana" size="2">
+<a href="#top"><font color="#0000FF"><u>Go Top</u></font></a><font color="#0000FF"><u> </u>
+&nbsp;&nbsp;&nbsp; <a href="../general.html">Go Back</a></font></font><br>
+
+</p>
+
+</body>
+
+</html>

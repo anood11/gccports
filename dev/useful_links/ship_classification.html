@@ -1,0 +1,75 @@
+<html>
+<meta http-equiv=page-enter content=blendtrans(duration=0.5)>
+<meta http-equiv=page-exit content=blendtrans(duration=0.5)>
+<head>
+
+<script language="JavaScript1.1">
+<!--
+var ns4 = (document.layers)? true:false
+var ie4 = (document.all)? true:false
+function press(e) {
+  if ((ns4 && (e.which == 3 || e.which == 2)) || (ie4 && (event.button == 2 || event.button == 3))) return false
+  return true
+}
+for (var i=0; i<document.images.length; i++) document.images[i].onmousedown=press
+for (var i=0; i<document.links.length; i++) document.links[i].onmousedown=press
+document.onmousedown=press
+if (ns4) window.captureEvents(Event.MOUSEDOWN)
+window.onmousedown=press
+//-->
+</script>
+
+<script language="JavaScript1.2">
+
+function disableselect(e){
+return false
+}
+
+function reEnable(){
+return true
+}
+
+//if IE4+
+document.onselectstart=new Function ("return false")
+
+//if NS6
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+</script>
+
+<body oncontextmenu="return false" leftmargin="15" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+</head>
+
+<body>
+ 
+  <font face="Verdana" color="#008000">
+ 
+  <b><u>Ships Classification</u></b></font><p align="justify">
+<font size="2" face="Verdana">Ship classification is the index denoting the ship technology status. In the international shipping filed, the marine ships registered with more than 100 tons of gross tonnage must be made under the supervision of certain shipping organized body or ship inspection organization. Before construction of ships, the specification of ship components must be approved by the shipping organized body or ship inspection organization. After construction of a ship, the shipping organized body or ship inspection organization verifies ship body, the devices in the ship, sea gauge mark and etc. If they are ok, a ship level certificate will be issued. The useful-life of the certificate is usually 4 years. After its expiration, the above-mentioned items must be re-verified. <br><br>
+Ship level approval can guarantee the safe of sailing ships. It is contributed to supervise ship technology for countries. And it can help renting and consigning persons to select the appropriate ships to meet the requirement of transporting imports and exports cargoes. Also, it can be used for insurance agents to determine the ships and cargoes cost. 
+The famous shipping organized bodies are such as follows: </font> 
+  <p align="justify">
+<font size="2" face="Verdana">1) Lloyds Register of Shipping <br> 
+2) Germanischer Lloyd <br>
+3) Norske Veritas <br>
+4) Bureau Veritas <br>
+5) Nippon Kaiji Kyokai<br> 
+6) American Bureau of Shipping </font>
+
+
+
+  <p align="justify">
+<font face="Verdana" size="2">
+
+<a href="#top"><font color="#0000FF"><u>Go Top</u></font></a><font color="#0000FF"><u> </u>
+&nbsp;&nbsp;&nbsp; <a href="../general.html">Go Back </a>
+</font>
+  </p>
+
+
+
+</body>
+
+</html>

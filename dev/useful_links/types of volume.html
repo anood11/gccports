@@ -1,0 +1,82 @@
+<html>
+<meta http-equiv=page-enter content=blendtrans(duration=0.5)>
+<meta http-equiv=page-exit content=blendtrans(duration=0.5)>
+<head>
+
+<script language="JavaScript1.1">
+<!--
+var ns4 = (document.layers)? true:false
+var ie4 = (document.all)? true:false
+function press(e) {
+  if ((ns4 && (e.which == 3 || e.which == 2)) || (ie4 && (event.button == 2 || event.button == 3))) return false
+  return true
+}
+for (var i=0; i<document.images.length; i++) document.images[i].onmousedown=press
+for (var i=0; i<document.links.length; i++) document.links[i].onmousedown=press
+document.onmousedown=press
+if (ns4) window.captureEvents(Event.MOUSEDOWN)
+window.onmousedown=press
+//-->
+</script>
+
+<script language="JavaScript1.2">
+
+function disableselect(e){
+return false
+}
+
+function reEnable(){
+return true
+}
+
+//if IE4+
+document.onselectstart=new Function ("return false")
+
+//if NS6
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+</script>
+
+<body oncontextmenu="return false" leftmargin="15" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+</head>
+<body>
+<p align="justify">
+<font face="Verdana"><font color="#008000">
+<b><u>Types of  Volume</u></b></font><font size="2"><br><br>
+The amount of space occupied by a fluid at certain conditions of temperature and pressure. Various types of VOLUMES used in marine custody transfer are defined as follows:<br><br>
+
+<u>
+
+<b>Gross Observed Volume (GOV)</b></u>The total volume of all petroleum liquids and sediment and water, excluding free water, at observed temperature and pressure.<br><br>
+<u>
+<b>Gross Standard Volume (GSV)</b></u> The total volume of all petroleum liquids and sediment and water, excluding free water, corrected by the appropriate volume correction factor (Ctl) for the observed temperature and API gravity, relative density, or density to a standard temperature such as 60?F or 15?C and also corrected by the applicable pressure correction factor (Cpl) and meter factor.<br><br>
+<u>
+<b>Indicated Volume </b></u>The change in meter reading that occurs during a receipt or delivery.<br><br>
+<b><u>Net Standard Volume (NSV)</u></b> The total volume of all petroleum liquids, excluding sediment and water and free water, corrected by the appropriate volume correction factor (Ctl) for the observed temperature and API Gravity, relative density, or density to a standard temperature such as 60?F or 15?C and also corrected by the applicable pressure correction factor (Cpl) and meter factor.<br><br>
+<u> 
+<b>On Board Quantity (OBQ)</b></u>The material remaining in vessel tanks, void spaces, and/or pipelines prior to loading. On-board quantity includes water, oil, slops, oil residue, oil/water emulsions, sludge, and sediment.<br><br>
+<b><u>  Remaining On Board (ROB) </u></b>  The material remaining in vessel 
+tanks, void spaces, and/or pipelines after discharge. Remaining on board 
+quantity includes water, oil, slops, oil residue, oil/water emulsions, sludge, 
+and sediment.<br><br>
+<b><u> Total Calculated Volume (TCV) </u></b>  The total volume of all petroleum liquids and sediment and water, corrected by the appropriate volume correction factor (Ctl) 
+for the observed temperature and API gravity, relative density, or density to a 
+standard temperature such as 60?F or 15?C and also corrected by the applicable 
+pressure factor (Cpl) and meter factor, and all free water measured at observed 
+temperature and pressure (gross standard volume plus free water).<br><br>
+<b><u> Total Observed Volume (TOV) </u></b>  The total measured volume of all 
+petroleum liquids, sediment and water, and free water at observed temperature 
+and pressure.<br><br>
+- NOTE: Where the term 60?F or 15?C is used, it is referring to two different reference standards and does indicate that the two temperatures are equal.
+</font></font>
+</p>
+<p>
+<font face="Verdana" size="2">
+<a href="#top"><font color="#0000FF"><u>Go Top</u></font></a><font color="#0000FF"><u> </u>
+&nbsp;&nbsp;&nbsp; <a href="../general.html">Go Back</a></font></p>
+
+</body>
+
+</html>

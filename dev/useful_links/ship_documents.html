@@ -1,0 +1,72 @@
+<html>
+<meta http-equiv=page-enter content=blendtrans(duration=0.5)>
+<meta http-equiv=page-exit content=blendtrans(duration=0.5)>
+<head>
+
+<script language="JavaScript1.1">
+<!--
+var ns4 = (document.layers)? true:false
+var ie4 = (document.all)? true:false
+function press(e) {
+  if ((ns4 && (e.which == 3 || e.which == 2)) || (ie4 && (event.button == 2 || event.button == 3))) return false
+  return true
+}
+for (var i=0; i<document.images.length; i++) document.images[i].onmousedown=press
+for (var i=0; i<document.links.length; i++) document.links[i].onmousedown=press
+document.onmousedown=press
+if (ns4) window.captureEvents(Event.MOUSEDOWN)
+window.onmousedown=press
+//-->
+</script>
+
+<script language="JavaScript1.2">
+
+function disableselect(e){
+return false
+}
+
+function reEnable(){
+return true
+}
+
+//if IE4+
+document.onselectstart=new Function ("return false")
+
+//if NS6
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+</script>
+
+<body oncontextmenu="return false" leftmargin="15" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+</head>
+
+<body>
+<font face="Verdana" color="#008000"><u>
+<b>Ships Documents</b></u></font><p align="justify">   
+ 
+ <font face="Verdana" size="2">
+  Ships documents are the total of various files that can prove ship ownership, performance, technology status and necessary working conditions. Only if ships is registered and approved of technology inspection to obtain the involved formal certificate, then they can be put into operation. The international sailing ships documents are mainly such as follows: <br><br>
+a) Certificate of Nationality <br>
+b) Certificate of Ownership <br>
+c) Certificate of Classification<br> 
+d) Tonnage Certificate <br>
+e) Certificate of Load Line <br>
+f) Crew List <br>
+g) Log Book <br><br>
+In addition, shifting log, sanitation log and wireless log are also required. According to current rules in our country, the imports and exports ships must be provided with all of the above-mentioned documents to the harbor service management department (harbor supervisor).  
+ 
+</font>
+
+</p>
+
+<p align="justify">
+<font face="Verdana" size="2">
+
+<a href="#top"><font color="#0000FF"><u>Go Top</u></font></a><font color="#0000FF"><u> </u>
+&nbsp;&nbsp;&nbsp; <a href="../general.html">Go Back</a></font></p>
+
+</body>
+
+</html>

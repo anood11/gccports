@@ -1,0 +1,485 @@
+<html>
+<meta http-equiv=page-enter content=blendtrans(duration=0.5)>
+<meta http-equiv=page-exit content=blendtrans(duration=0.5)>
+<head>
+
+<script language="JavaScript1.1">
+<!--
+var ns4 = (document.layers)? true:false
+var ie4 = (document.all)? true:false
+function press(e) {
+  if ((ns4 && (e.which == 3 || e.which == 2)) || (ie4 && (event.button == 2 || event.button == 3))) return false
+  return true
+}
+for (var i=0; i<document.images.length; i++) document.images[i].onmousedown=press
+for (var i=0; i<document.links.length; i++) document.links[i].onmousedown=press
+document.onmousedown=press
+if (ns4) window.captureEvents(Event.MOUSEDOWN)
+window.onmousedown=press
+//-->
+</script>
+
+<script language="JavaScript1.2">
+
+function disableselect(e){
+return false
+}
+
+function reEnable(){
+return true
+}
+
+//if IE4+
+document.onselectstart=new Function ("return false")
+
+//if NS6
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+</script>
+
+<body oncontextmenu="return false" leftmargin="15" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+</head>
+
+<body>
+
+<p><b><font face="Verdana" color="#008000"><u>Table of Packaging</u></font></b></p>
+<p><u><b><font face="Verdana" size="2">Types of Packing</font></b></u></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#FF0000" width="45%" id="AutoNumber1">
+  <tr>
+    <td width="17%" align="center"><font size="2" face="Verdana">&nbsp;1</font></td>
+    <td width="83%"><font size="2" face="Verdana">&nbsp;Drum</font></td>
+  </tr>
+  <tr>
+    <td width="17%" align="center"><font size="2" face="Verdana">&nbsp;2</font></td>
+    <td width="83%"><font size="2" face="Verdana">&nbsp;Wooden barrel</font></td>
+  </tr>
+  <tr>
+    <td width="17%" align="center"><font size="2" face="Verdana">&nbsp;3</font></td>
+    <td width="83%"><font size="2" face="Verdana">&nbsp;Jerrican</font></td>
+  </tr>
+  <tr>
+    <td width="17%" align="center"><font size="2" face="Verdana">&nbsp;4</font></td>
+    <td width="83%"><font size="2" face="Verdana">&nbsp;Box</font></td>
+  </tr>
+  <tr>
+    <td width="17%" align="center"><font size="2" face="Verdana">&nbsp;5</font></td>
+    <td width="83%"><font size="2" face="Verdana">&nbsp;Bag</font></td>
+  </tr>
+  <tr>
+    <td width="17%" align="center"><font size="2" face="Verdana">&nbsp;6</font></td>
+    <td width="83%"><font size="2" face="Verdana">&nbsp;Composite packaging</font></td>
+  </tr>
+</table>
+<p><u><b><font face="Verdana" size="2">Types of Material</font></b></u></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#FF0000" width="100%" id="AutoNumber2">
+  <tr>
+    <td width="7%" align="center"><font size="2" face="Verdana">&nbsp;A</font></td>
+    <td width="93%"><font size="2" face="Verdana">&nbsp;Steel (all types and surface treatments)</font></td>
+  </tr>
+  <tr>
+    <td width="7%" align="center"><font size="2" face="Verdana">&nbsp;B</font></td>
+    <td width="93%"><font size="2" face="Verdana">&nbsp;Aluminium</font></td>
+  </tr>
+  <tr>
+    <td width="7%" align="center"><font size="2" face="Verdana">&nbsp;C</font></td>
+    <td width="93%"><font size="2" face="Verdana">&nbsp;Natural wood</font></td>
+  </tr>
+  <tr>
+    <td width="7%" align="center"><font size="2" face="Verdana">&nbsp;D</font></td>
+    <td width="93%"><font size="2" face="Verdana">&nbsp;Plywood</font></td>
+  </tr>
+  <tr>
+    <td width="7%" align="center"><font size="2" face="Verdana">&nbsp;F</font></td>
+    <td width="93%"><font size="2" face="Verdana">&nbsp;Reconstituted wood</font></td>
+  </tr>
+  <tr>
+    <td width="7%" align="center"><font size="2" face="Verdana">&nbsp;G</font></td>
+    <td width="93%"><font size="2" face="Verdana">&nbsp;Fibreboard</font></td>
+  </tr>
+  <tr>
+    <td width="7%" align="center"><font size="2" face="Verdana">&nbsp;H</font></td>
+    <td width="93%"><font size="2" face="Verdana">&nbsp;Plastics material</font></td>
+  </tr>
+  <tr>
+    <td width="7%" align="center"><font size="2" face="Verdana">&nbsp;L</font></td>
+    <td width="93%"><font size="2" face="Verdana">&nbsp;Textile</font></td>
+  </tr>
+  <tr>
+    <td width="7%" align="center"><font size="2" face="Verdana">&nbsp;M</font></td>
+    <td width="93%"><font size="2" face="Verdana">&nbsp;Paper, multiwall</font></td>
+  </tr>
+  <tr>
+    <td width="7%" align="center"><font size="2" face="Verdana">&nbsp;N</font></td>
+    <td width="93%"><font size="2" face="Verdana">&nbsp;Metal (other than steel or aluminium)</font></td>
+  </tr>
+  <tr>
+    <td width="7%" align="center"><font size="2" face="Verdana">&nbsp;P</font></td>
+    <td width="93%"><font size="2" face="Verdana">&nbsp;Glass, porcelain or stoneware</font></td>
+  </tr>
+</table>
+<p><u><b><font size="2" face="Verdana">Packing Codes</font></b></u></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#FF0000" width="106%" id="AutoNumber3">
+  <tr>
+    <td width="28%" bgcolor="#FFCCCC" bordercolor="#FF0000"><b>
+    <font size="2" face="Verdana">Types</font></b></td>
+    <td width="38%" bgcolor="#FFCCCC" bordercolor="#FF0000"><b>
+    <font size="2" face="Verdana">&nbsp;Material</font></b></td>
+    <td width="31%" bgcolor="#FFCCCC" bordercolor="#FF0000"><b>
+    <font size="2" face="Verdana">&nbsp;Category</font></b></td>
+    <td width="7%" bgcolor="#FFCCCC" bordercolor="#FF0000"><b>
+    <font size="2" face="Verdana">&nbsp;Codes</font></b></td>
+  </tr>
+  <tr>
+    <td width="28%"><b><font size="2" face="Verdana">&nbsp;1.Drum</font></b></td>
+    <td width="38%"><font size="2" face="Verdana">&nbsp;A. Steel</font></td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Non-removable head</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;1A1</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Removable head</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;1A2</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%"><font size="2" face="Verdana">&nbsp;B. Aluminium</font></td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Non-removable head</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;1B1</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Removable head</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;1B2</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%"><font size="2" face="Verdana">&nbsp;D. Plywood</font></td>
+    <td width="31%">&nbsp;</td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;1D</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%"><font size="2" face="Verdana">&nbsp;G. Fibre</font></td>
+    <td width="31%">&nbsp;</td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;1G</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%"><font size="2" face="Verdana">&nbsp;H. Plastics</font></td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Non-removable head</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;1H1</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Removable head</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;1H2</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%"><font size="2" face="Verdana">&nbsp;N. Metal, other than steel or aluminium</font></td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Non-removable head</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;1N1</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Removable head</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;1N2</font></td>
+  </tr>
+  <tr>
+    <td width="28%"><strong><font size="2" face="Verdana">&nbsp;2. Barrels</font></strong></td>
+    <td width="38%"><font size="2" face="Verdana">&nbsp;C. Wooden</font></td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Bung type</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;2C1</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Removable head</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;2C2</font></td>
+  </tr>
+  <tr>
+    <td width="28%"><strong><font size="2" face="Verdana">&nbsp;3. Jerricans</font></strong></td>
+    <td width="38%"><font size="2" face="Verdana">&nbsp;A. Steel</font></td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Non-removable head</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;3A1</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Removable head</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;3A2</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%"><font size="2" face="Verdana">&nbsp;B. Aluminium</font></td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Non-removable head</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;3B1</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Removable head</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;3B2</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%"><font size="2" face="Verdana">&nbsp;H. Plastics</font></td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Non-removable head</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;3H1</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Removable head</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;3H2</font></td>
+  </tr>
+  <tr>
+    <td width="28%"><strong><font size="2" face="Verdana">&nbsp;4. Boxes</font></strong></td>
+    <td width="38%"><font size="2" face="Verdana">&nbsp;A. Steel</font></td>
+    <td width="31%">&nbsp;</td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;4A</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%"><font size="2" face="Verdana">&nbsp;B. Aluminium</font></td>
+    <td width="31%">&nbsp;</td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;4B </font> </td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%"><font size="2" face="Verdana">&nbsp;C. Natural wood</font></td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Ordinary</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;4C1</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;With sift-proof walls</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;4C2</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%"><font size="2" face="Verdana">&nbsp;D. Plywood</font></td>
+    <td width="31%">&nbsp;</td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;4D</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%"><font size="2" face="Verdana">&nbsp;F. Reconstituted wood</font></td>
+    <td width="31%">&nbsp;</td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;4F</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%"><font size="2" face="Verdana">&nbsp;G. Fibreboard</font></td>
+    <td width="31%">&nbsp;</td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;4G</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%"><font size="2" face="Verdana">&nbsp;H. Plastics</font></td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Expanded</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;4H1</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Solid</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;4H2</font></td>
+  </tr>
+  <tr>
+    <td width="28%"><strong><font size="2" face="Verdana">&nbsp;5. Bags</font></strong></td>
+    <td width="38%"><font size="2" face="Verdana">&nbsp;H. Woven plastics</font></td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Without inner liner or coating</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;5H1</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Sift-proof</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;5H2</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Water-resistant</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;5H3</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%"><font size="2" face="Verdana">&nbsp;H. Plastics film</font></td>
+    <td width="31%">&nbsp;</td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;5H4</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%"><font size="2" face="Verdana">&nbsp;L. Textile</font></td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Without inner liner or coating</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;5L1</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Sift-proof</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;5L2</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Water-resistant</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;5L3</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%"><font size="2" face="Verdana">&nbsp;M. Paper</font></td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Multiwall</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;5M1</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;Multiwall, water- resistant</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;5M2</font></td>
+  </tr>
+  <tr>
+    <td width="28%"><strong><font size="2" face="Verdana">&nbsp;6. Composite packagings</font></strong></td>
+    <td width="38%"><font size="2" face="Verdana">&nbsp;H. Plastics receptacle</font></td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;In steel drum</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;6HA1</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;In steel crate or box</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;6HA2</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;In aluminium drum</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;6HB1</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;In aluminium crate or box</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;6HA2</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;In wooden box</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;6HC</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;In plywood drum</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;6HD1</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;In plywood box</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;6HD2</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;In fibre drum</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;6HG1</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;In fibreboard box</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;6HG2</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;In plastics drum</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;6HH1</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;In solid plastics box</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;6HH2</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%"><font size="2" face="Verdana">&nbsp;P. Glass,&nbsp;porcelain</font></td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;In steel drum</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;6PA1</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;In steel crate or box</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;6PA2</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;In aluminium drum</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;6PB1</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;In aluminium crate or box</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;6PB2</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;In wooden box</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;6PC</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;In plywood drum</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;6PD1</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;In wickerwork hamper</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;6PD2</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;In fibre drum</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;6PG1</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;In fibreboard box</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;6PG2</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;In expanded plastics packaging</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;6PH1</font></td>
+  </tr>
+  <tr>
+    <td width="28%">&nbsp;</td>
+    <td width="38%">&nbsp;</td>
+    <td width="31%"><font size="2" face="Verdana">&nbsp;In solid plastics packaging</font></td>
+    <td width="7%"><font size="2" face="Verdana">&nbsp;6PH2</font></td>
+  </tr>
+  </table>
+<font face="Verdana" size="2">
+<p><a href="#top"><font color="#0000ff"><u>Go Top</u></font></a><font color="#0000ff"><u>
+</u>&nbsp;&nbsp;&nbsp; <a href="../general.html">Go Back</a></font></font></p>

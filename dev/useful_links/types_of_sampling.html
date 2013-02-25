@@ -1,0 +1,88 @@
+<html>
+<meta http-equiv=page-enter content=blendtrans(duration=0.5)>
+<meta http-equiv=page-exit content=blendtrans(duration=0.5)>
+<head>
+
+<script language="JavaScript1.1">
+<!--
+var ns4 = (document.layers)? true:false
+var ie4 = (document.all)? true:false
+function press(e) {
+  if ((ns4 && (e.which == 3 || e.which == 2)) || (ie4 && (event.button == 2 || event.button == 3))) return false
+  return true
+}
+for (var i=0; i<document.images.length; i++) document.images[i].onmousedown=press
+for (var i=0; i<document.links.length; i++) document.links[i].onmousedown=press
+document.onmousedown=press
+if (ns4) window.captureEvents(Event.MOUSEDOWN)
+window.onmousedown=press
+//-->
+</script>
+
+<script language="JavaScript1.2">
+
+function disableselect(e){
+return false
+}
+
+function reEnable(){
+return true
+}
+
+//if IE4+
+document.onselectstart=new Function ("return false")
+
+//if NS6
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+</script>
+
+<body oncontextmenu="return false" leftmargin="15" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+</head>
+
+<body>
+<p align="justify"><font face="Verdana"><u>
+<b><font color="#008000">Types of  Sampling</font></b></u><font size="2"><br><br>
+The process of obtaining a sample of the material in the tank, container or pipeline to use for testing or other purposes. This can be achieved by automatic or manual means. The following are the most common types of samples taken:<br><br>
+
+<u>
+
+<b>All-Levels Sample </b></u>A sample obtained by lowering a weighted, stoppered bottle or beaker or bottle to a point 1 foot (0.3 meter) above the free water level and then, with a sharp jerk of the line opening the sampler and raising it at a rate that it is about 75% full (a maximum of 85% full) as it emerges from the liquid. <br><br>
+<u>
+<b>Automatic Sample </b></u>A sample taken by automatic means. The two basic types of automatic samples are: <br><br>
+<u>
+<b>Flow-Proportional Sample </b></u>A sample taken by an automatic sampler from a pipeline at a rate that is proportional to the liquid flow rate. <br><br>
+<u>
+<b>Time-Proportional Sample</b></u> A sample taken from a pipeline at regular intervals during a batch transfer period. <br><br>
+<u>
+<b>Bottom Sample</b></u> A spot sample taken from the material at the bottom of the tank. <br><br>
+<u>
+<b>Lower Sample </b></u>A spot sample obtained at the midpoint of the lower third of the tank contents. <br><br>
+<u>
+<b>Middle Sample </b></u>A spot sample obtained at the midpoint of the middle of the tank contents. <br><br>
+<u>
+<b>Running Sample </b></u>A sample obtained by submerging an unstoppered beaker or bottle from the surface of the liquid to a point as near as possible to the shore tank draw off point or about one foot above the level of the free water in a ship tank, and then raising it without letting it rest, at a rate so that it will be about 75% full as it emerges from the liquid. <br><br>
+<u>
+<b>Spot Sample </b></u>A sample taken at a specific "spot" within a tank using a stoppered bottle or beaker and lowering it to the level of desired sample then opening it and allowing it to remain at that level until full. A thief or a zone sampler may also be used to obtain spot samples. <u> <br><br>
+<b>Tap Sample </b></u>A sample taken from a valve or connection on a tank or pipeline. <br><br>
+<u>
+<b>Upper Sample </b></u>A spot sample obtained at the midpoint of the upper of the tank contents. <br><br> 
+<u> 
+<b>Upper, Middle, Lower Samples</b></u> Spot samples taken from the upper third, the middle and lower thirds of the liquid in the tank. The samples so taken may then be composited or analyzed separately.
+</font></font>
+
+
+</p>
+
+
+<p align="justify">
+<font face="Verdana" size="2">
+<a href="#top"><font color="#0000FF"><u>Go Top</u></font></a><font color="#0000FF"><u> </u>
+&nbsp;&nbsp;&nbsp; <a href="../general.html">Go Back</a></font></font></p>
+
+
+</body>
+
+</html>

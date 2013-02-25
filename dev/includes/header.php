@@ -57,41 +57,41 @@ var baseURLadmin='<?php echo $httpPathAdmin;?>';
 	<li><a href="">USEFUL LINKS</a>
 		<ul class="wide">
 			
-			<li><a href="">Container Specification</a></li>
-			<li><a href="">Unit Converter</a></li>
-			<li><a href="">World Currency Details</a></li>
-			<li><a href="">Shipping Glossary</a></li>
-			<li><a href="">Shipping Abbreviations</a></li>
-			<li><a href="">Vessel Size Groups (DWT)</a></li>
-			<li><a href="">Maritime Signal Flags</a></li>
-			<li><a href="">Dangerous Goods</a></li>
-			<li><a href="">Liner Operators Abbreviations</a></li>
-			<li><a href="">Ship Structure</a></li>
-			<li><a href="">General Types of Ships</a></li>
-			<li><a href="">Ship Engine Type & Speed</a></li>
-			<li><a href="">Service and Vessel Routes</a></li>
-			<li><a href="">Flags of Registry</a></li>
-			<li><a href="">HS Code Reference</a></li>
-			<li><a href="">Ship Documents</a></li>
-			<li><a href="">BIC Codes</a></li>
-			<li><a href="">Ship Motions in Heavy Seaway</a></li>
-			<li><a href="">Ship Tonnage</a></li>
-			<li><a href="">Ship Load Line</a></li>
-			<li><a href="">Ship Nationality & Flag</a></li>
-			<li><a href="">Ship Classification</a></li>
-			<li><a href="">Unit Load Data</a></li>
-			<li><a href="">Hull Shapes</a></li>
-			<li><a href="">Ships Float	</a></li>
-			<li><a href="">Whether Symbols	</a></li>
-			<li><a href="">Pressure Conversion Table</a></li>
-			<li><a href="">Types Barges</a></li>
-			<li><a href="">Types of Charter</a></li>
-			<li><a href="">Types of Fumigants</a></li>
-			<li><a href="">Types of Sampling</a></li>
-			<li><a href="">Table of Packaging</a></li>
-			<li><a href="">Types Tug Boats</a></li>
-			<li><a href="">Container Parts</a></li>
-			<li><a href="">International Paper Sizes</a></li>
+			<li><a href="javascript:void(0);" id="container_specification">Container Specification</a></li>
+			<li><a href="javascript:void(0);" id="unit_converter">Unit Converter</a></li>
+			<li><a href="javascript:void(0);" id="world_currency_details">World Currency Details</a></li>
+			<li><a href="javascript:void(0);" id="shipping_glossary">Shipping Glossary</a></li>
+			<li><a href="javascript:void(0);" id="shipping_abbreviations">Shipping Abbreviations</a></li>
+			<li><a href="javascript:void(0);" id="vessel_size_groups">Vessel Size Groups (DWT)</a></li>
+			<li><a href="javascript:void(0);" id="maritime_signal_flags">Maritime Signal Flags</a></li>
+			<li><a href="javascript:void(0);" id="dangerous_goods">Dangerous Goods</a></li>
+			<li><a href="javascript:void(0);" id="linear_operator_abbreviations">Linear Operators Abbrev.</a></li>
+			<li><a href="javascript:void(0);" id="ship_structure">Ship Structure</a></li>
+			<li><a href="javascript:void(0);" id="general_types_of_ships">General Types of Ships</a></li>
+			<li><a href="javascript:void(0);" id="ship_engine_type_and_speed">Ship Engine Type &amp; Speed</a></li>
+			<li><a href="javascript:void(0);" id="service_and_vessel_routes">Service and Vessel Routes</a></li>
+			<li><a href="javascript:void(0);" id="flags_of_registry">Flags of Registry</a></li>
+			<li><a href="javascript:void(0);" id="hs_code_reference">HS Code Reference</a></li>
+			<li><a href="javascript:void(0);" id="ship_documents">Ship Documents</a></li>
+			<li><a href="javascript:void(0);" id="bic_codes">BIC Codes</a></li>
+			<li><a href="javascript:void(0);" id="ship_motions_in_heavy_seaway">Ship Motions in Heavy Seaway</a></li>
+			<li><a href="javascript:void(0);" id="ship_tonnage">Ship Tonnage</a></li>
+			<li><a href="javascript:void(0);" id="ship_loadline">Ship Load Line</a></li>
+			<li><a href="javascript:void(0);" id="ship_nationality_and_flag">Ship Nationality &amp; Flag</a></li>
+			<li><a href="javascript:void(0);" id="ship_classification">Ship Classification</a></li>
+			<li><a href="javascript:void(0);" id="unit_load_data">Unit Load Data</a></li>
+			<li><a href="javascript:void(0);" id="hull_shapes">Hull Shapes</a></li>
+			<li><a href="javascript:void(0);" id="ships_float">Ships Float</a></li>
+			<li><a href="javascript:void(0);" id="wheather_symbols">Whether Symbols</a></li>
+			<li><a href="javascript:void(0);" id="types_of_pressure">Types of Pressure</a></li>
+			<li><a href="javascript:void(0);" id="types_of_barges">Types Barges</a></li>
+			<li><a href="javascript:void(0);" id="types_of_charter">Types of Charter</a></li>
+			<li><a href="javascript:void(0);" id="types_of_fumigants">Types of Fumigants</a></li>
+			<li><a href="javascript:void(0);" id="types_of_sampling">Types of Sampling</a></li>
+			<li><a href="javascript:void(0);" id="table_of_packaging">Table of Packaging</a></li>
+			<li><a href="javascript:void(0);" id="types_of_tug_boats">Types of Tug Boats</a></li>
+			<li><a href="javascript:void(0);" id="container_parts">Container Parts</a></li>
+			<li><a href="javascript:void(0);" id="international_paper_sizes">International Paper Sizes</a></li>
 		</ul>
 		
 	</li>

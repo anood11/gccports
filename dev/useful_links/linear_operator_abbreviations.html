@@ -1,0 +1,549 @@
+<html>
+<meta http-equiv=page-enter content=blendtrans(duration=0.5)>
+<meta http-equiv=page-exit content=blendtrans(duration=0.5)>
+<head>
+
+<script language="JavaScript1.1">
+<!--
+var ns4 = (document.layers)? true:false
+var ie4 = (document.all)? true:false
+function press(e) {
+  if ((ns4 && (e.which == 3 || e.which == 2)) || (ie4 && (event.button == 2 || event.button == 3))) return false
+  return true
+}
+for (var i=0; i<document.images.length; i++) document.images[i].onmousedown=press
+for (var i=0; i<document.links.length; i++) document.links[i].onmousedown=press
+document.onmousedown=press
+if (ns4) window.captureEvents(Event.MOUSEDOWN)
+window.onmousedown=press
+//-->
+</script>
+
+<script language="JavaScript1.2">
+
+function disableselect(e){
+return false
+}
+
+function reEnable(){
+return true
+}
+
+//if IE4+
+document.onselectstart=new Function ("return false")
+
+//if NS6
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+</script>
+
+<body oncontextmenu="return false" leftmargin="15" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+</head>
+<body>
+<p><u><b><font color="#008000" face="Verdana">Liner Operator Abbrevations</font></b></u></p>
+<p><font size="2" face="Verdana">
+<b>AAA</b>&nbsp; :&nbsp; Australia Asia Alliance<br>
+<b>AACA</b>&nbsp; :&nbsp; Australia Asia Container Association<br>
+<b>AAL</b>&nbsp; :&nbsp; Austral Asia Line BV<br>
+<b>PAS</b>&nbsp; :&nbsp; Project Asia Service BV<br>
+<b>AAX</b>&nbsp; :&nbsp; Astralia Asia Express<br>
+<b>ACE</b>&nbsp; :&nbsp; Astralia China Express<br>
+<b>ACL</b>&nbsp; :&nbsp; Atlantic Container Line AB<br>
+<b>ACL Lines</b>&nbsp; :&nbsp; Advance Container Lines (Pte) Ltd.<br>
+<b>Acoreana</b>&nbsp; :&nbsp; Mutualista Acoreana de Transportes Maritimos SA<br>
+<b>Admiral</b>&nbsp; :&nbsp; Admiral Container Lines Inc<br>
+<b>Admiral Lines</b>&nbsp; :&nbsp; PT Pelayaran Samudera Admiral Lines<br>
+<b>AGS Shpp</b>&nbsp; :&nbsp; AGS Shipping<br>
+<b>AL</b>&nbsp; :&nbsp; Antilles Lloyd (Brrmuda) Ltd.<br>
+<b>Alcotrans</b>&nbsp; :&nbsp; Alcotrans Container Line GmbH<br>
+<b>Alderney Shpp</b>&nbsp; :&nbsp; Alderney Shipping Co. Ltd<br>
+<b>Alianca</b>&nbsp; :&nbsp; Aliance Navegacoa e Logistica Ltda<br>
+<b>Allied Coasters</b>&nbsp; :&nbsp; Allied Coasters Ltd.<br>
+<b>AML</b>&nbsp; :&nbsp; Alaska Marine Lines<br>
+<b>Ampac </b>&nbsp; :&nbsp; Ampac Consortium<br>
+<b>AMSE</b>&nbsp; :&nbsp; Antillean Marine Shipping Corp<br>
+<b>Anchor</b>&nbsp; :&nbsp; Anchor Transport Corp <br>
+<b>Angonave</b>&nbsp; :&nbsp; Angonave UEE<br>
+<b>ANL</b>&nbsp; :&nbsp; ANL Container Line Pty Ltd<br>
+<b>APL</b>&nbsp; :&nbsp; APL Ltd<br>
+<b>APM Saigon Shpp</b>&nbsp; :&nbsp; APM Saigon Shipping Co Ltd<br>
+<b>Aragua</b>&nbsp; :&nbsp; Maritima Aragua SA<br>
+<b>Armada Shpp</b>&nbsp; :&nbsp; Armada Shipping SA<br>
+<b>ARRC</b>&nbsp; :&nbsp; Atlantic Ro-Ro CarriersInc<br>
+<b>ASA</b>&nbsp; :&nbsp; Australia South Asia Consortium<br>
+<b>ASAX</b>&nbsp; :&nbsp; Asiatlantic Express Service <br>
+<b>ASMN</b>&nbsp; :&nbsp; Atlas SocieteMorocaine de Navigation SA<br>
+<b>ASSA</b>&nbsp; :&nbsp; New Good Hope Express<br>
+<b>Atlantic</b>&nbsp; :&nbsp; Atlantic Shipping Co. Inc<br>
+<b>Atlantic Carib</b>&nbsp; :&nbsp; Atlantic Caribbean Line<br>
+<b>Atlanticargo</b>&nbsp; :&nbsp; Atlantic Cargo Services AB<br>
+<b>AWS</b>&nbsp; :&nbsp; Andew Weir Shipping Ltd<br>
+<b>Baco</b>&nbsp; :&nbsp; Seereederei Baco-Liner GmbH<br>
+<b>Balt Con</b>&nbsp; :&nbsp; Baltic Container Lines Co Ltd<br>
+<b>Baltic</b>&nbsp; :&nbsp; Baltic Line AS<br>
+<b>Bangladesh</b>&nbsp; :&nbsp; Bangladesh Shipping Corp<br>
+<b>Bank</b>&nbsp; :&nbsp; Bank Line<br>
+<b>BCL</b>&nbsp; :&nbsp; Bermuda Container Line Ltd<br>
+<b>Bernuth</b>&nbsp; :&nbsp; Bernuth Lines Inc<br>
+<b>BG Freight</b>&nbsp; :&nbsp; BG Freight Lines BV<br>
+<b>BISL</b>&nbsp; :&nbsp; Bermuda International Shipping Ltd<br>
+<b>Blue Container</b>&nbsp; :&nbsp; Blue Container Line SA<br>
+<b>Borchard</b>&nbsp; :&nbsp; Borchard Lines Ltd<br>
+<b>Box Lines</b>&nbsp; :&nbsp; Boxlines Navegacao SA<br>
+<b>Boyer</b>&nbsp; :&nbsp; Boyer Alaska barge Lines Inc<br>
+<b>Brointermed</b>&nbsp; :&nbsp; Brointermed lines Ltd<br>
+<b>BTB</b>&nbsp; :&nbsp; Barge Terminal Born BV<br>
+<b>BTL</b>&nbsp; :&nbsp; Bengal Tiger Lines Ltd<br>
+<b>C&S Shpp</b>&nbsp; :&nbsp; C&S Shipping Australia Pty Ltd<br>
+<b>C2C</b>&nbsp; :&nbsp; C2C Shipping Lines Ltd<br>
+<b>Caltram</b>&nbsp; :&nbsp; Compagnie Algero Libyenne de transport Maritime<br>
+<b>Camellia</b>&nbsp; :&nbsp; Camellia Line Co. Ltd<br>
+<b>CCL</b>&nbsp; :&nbsp; Coasta Container Lines SpA<br>
+<b>CCL</b>&nbsp; :&nbsp; Concode Container Line Ltd<br>
+<b>CCNI</b>&nbsp; :&nbsp; Compania Chilena de Navegacion Interoceanica SA<br>
+<b>CCS</b>&nbsp; :&nbsp; Chief Container Service<br>
+<b>CCS</b>&nbsp; :&nbsp; CSS-Combined Container Service GmbH & Co. KG<br>
+<b>CEC</b>&nbsp; :&nbsp; CEC Lines Ltd<br>
+<b>CEC</b>&nbsp; :&nbsp; Clipper Elite Carriers Ltd<br>
+<b>CFNR</b>&nbsp; :&nbsp; Compagnie Fracaise de Navigation Rhenane<br>
+<b>CFSL</b>&nbsp; :&nbsp; Caribbean Feeder Services Ltd<br>
+<b>Chanel Seaways</b>&nbsp; :&nbsp; Chanel Seaways Ltd<br>
+<b>Cheng Lie</b>&nbsp; :&nbsp; Cheng Lie Navigation Co. Ltd<br>
+<b>China Express</b>&nbsp; :&nbsp; China Express Line Ltd<br>
+<b>CHINJIF</b>&nbsp; :&nbsp; China-Japan International Ferry Co.Ltd.<br>
+<b>Chipolbrok</b>&nbsp; :&nbsp; Chinese -Polish Joint Stock Shipping Co.<br>
+<b>CHKY Alliance</b>&nbsp; :&nbsp; Coscon/Hanjin/K-Line/Yang Ming Alliance<br>
+<b>CK Line</b>&nbsp; :&nbsp; CK Line Co. Ltd<br>
+<b>CLS</b>&nbsp; :&nbsp; Crowley Liner Service<br>
+<b>Clydeport</b>&nbsp; :&nbsp; Clydeport Operations Ltd<br>
+<b>CMA CGM</b>&nbsp; :&nbsp; CMA CGM SA<br>
+<b>CMNI</b>&nbsp; :&nbsp; CMN International SA<br>
+<b>CMNM</b>&nbsp; :&nbsp; Compagnie Mauritanienne de Navigation Maritime<br>
+<b>CNAN</b>&nbsp; :&nbsp; Compagnie Nationale Algerienne de Navigation<br>
+<b>CNCo</b>&nbsp; :&nbsp; China Navigation Co. Ltd<br>
+<b>Coastal</b>&nbsp; :&nbsp; Coastal Container Lines Ltd<br>
+<b>Cobelfret</b>&nbsp; :&nbsp; Cobelfret Ferries NV<br>
+<b>CoHeung</b>&nbsp; :&nbsp; CoHeung Shipping Co. Ltd<br>
+<b>Colombia Coastal</b>&nbsp; :&nbsp; Colombia Coastal Transport LLC<br>
+<b>Camanav</b>&nbsp; :&nbsp; Compagnie Marocaine de Navigation<br>
+<b>Condore Express</b>&nbsp; :&nbsp; Condor Express System<br>
+<b>Condor Ferries</b>&nbsp; :&nbsp; Condor Feries Freight Ltd<br>
+<b>Consortium Hispania</b>&nbsp; :&nbsp; Consortium Hispania Lines<br>
+<b>Containerships</b>&nbsp; :&nbsp; Containerships Ltd. Qy<br>
+<b>Contaz Line</b>&nbsp; :&nbsp; Contaz Line<br>
+<b>Conteba</b>&nbsp; :&nbsp; Conteba Container - Terminal Basel AG<br>
+<b>Contenemar</b>&nbsp; :&nbsp; Contenemar SA<br>
+<b>Conti-Lines</b>&nbsp; :&nbsp; Conti-Lines NV<br>
+<b>Coral</b>&nbsp; :&nbsp; Coral Container Lines SA<br>
+<b>Cosco</b>&nbsp; :&nbsp; Cosco Container Lines Ltd<br>
+<b>Cotunav</b>&nbsp; :&nbsp; Compagnie Tunisienne de Navigation<br>
+<b>CP Ship</b>&nbsp; :&nbsp; CP Ship<br>
+<b>Crocodile</b>&nbsp; :&nbsp; Crocodile Line<br>
+<b>CSAV</b>&nbsp; :&nbsp; Compania Sud Americana de Vapores<br>
+<b>CSC </b>&nbsp; :&nbsp; Ceylon Shipping Corporation Ltd<br>
+<b>CSCL</b>&nbsp; :&nbsp; China Shipping Container Lines Co Ltd<br>
+<b>CSPL</b>&nbsp; :&nbsp; Ceskoslovenska Plavba Labska as<br>
+<b>CSSL</b>&nbsp; :&nbsp; Coral Sea Shipping Lines Pty Ltd<br>
+<b>CSX Germersheim</b>&nbsp; :&nbsp; CSX World Terminals Germersheim BV<br>
+<b>CT Navigation</b>&nbsp; :&nbsp; CT Navigation SA<br>
+<b>CTE</b>&nbsp; :&nbsp; Compania Trasatlantica Espanola SA<br>
+<b>DAL</b>&nbsp; :&nbsp; DAL Deutsche Afrika-Linien Gmbh & Co<br>
+<b>Danser</b>&nbsp; :&nbsp; Danser Container Shipping Co Ltd<br>
+<b>Dart</b>&nbsp; :&nbsp; Dart Line Ltd<br>
+<b>DCS</b>&nbsp; :&nbsp; Dalian Container Shipping Co Ltd<br>
+<b>DeCeTe</b>&nbsp; :&nbsp; DeCeTe-Duisburger Container-TerminalGmbh<br>
+<b>Delmas</b>&nbsp; :&nbsp; Delmas<br>
+<b>Delom</b>&nbsp; :&nbsp; Delom SA<br>
+<b>Delphis</b>&nbsp; :&nbsp; Delphis NV<br>
+<b>Demline</b>&nbsp; :&nbsp; Demline Egypt for Maritime Transport<br>
+<b>DFDS Lys</b>&nbsp; :&nbsp; DFDS Lys-Line AS<br>
+<b>DFDS Tor Line</b>&nbsp; :&nbsp; DFDS Tor Line<br>
+<b>Djakarta Lloyd</b>&nbsp; :&nbsp; PT Djakarta Lloyd (Persero)<br>
+<b>DJSC</b>&nbsp; :&nbsp; Dong Jin Shipping Co.<br>
+<b>Docenave</b>&nbsp; :&nbsp; Navegacao Vale do Rio Doce SA<br>
+<b>Dole Ocean</b>&nbsp; :&nbsp; Dole Ocean Cargo Express<br>
+<b>Dong Young</b>&nbsp; :&nbsp; Dong Young Shipping Co Ltd<br>
+<b>Dongnama</b>&nbsp; :&nbsp; Dongnama Shipping Co Ltd<br>
+<b>Eastern</b>&nbsp; :&nbsp; Eastern Shipping Lines Inc<br>
+<b>ECL</b>&nbsp; :&nbsp; Europe Caribbean Line<br>
+<b>ECL</b>&nbsp; :&nbsp; Euroatlantic Container Line SA<br>
+<b>Eimskip</b>&nbsp; :&nbsp; Eimskip<br>
+<b>EISC</b>&nbsp; :&nbsp; Egyptian International Shipping Co<br>
+<b>EMES</b>&nbsp; :&nbsp; EMES Shipping & Transport SA<br>
+<b>ENC</b>&nbsp; :&nbsp; Egyptian Navigation Co<br>
+<b>EPIC</b>&nbsp; :&nbsp; Europe Pakistan India Consortium<br>
+<b>ESF</b>&nbsp; :&nbsp; ESF Euroservices BV<br>
+<b>ESL</b>&nbsp; :&nbsp; Ethiopian Shipping Lines<br>
+<b>ESL</b>&nbsp; :&nbsp; Euroafrica Shipping Lines Co Ltd<br>
+<b>Eucon</b>&nbsp; :&nbsp; Eucon Shipping & Transport Ltd<br>
+<b>Euro Cont Line</b>&nbsp; :&nbsp; Euro Container Line Ltd<br>
+<b>Eurobarge</b>&nbsp; :&nbsp; Eurobarge BV<br>
+<b>EuroFeeders</b>&nbsp; :&nbsp; EuroFeeders Ltd<br>
+<b>Eurosal</b>&nbsp; :&nbsp; Eurosal<br>
+<b>Eurosib SPb</b>&nbsp; :&nbsp; Eurosib SPb-Transporttation System<br>
+<b>Evergreen</b>&nbsp; :&nbsp; Evergreen Marine Corp (Taiwan) Ltd<br>
+<b>EWL</b>&nbsp; :&nbsp; Europe West-Indie Lijnen BV<br>
+<b>Famco</b>&nbsp; :&nbsp; Federal Arab Maritime Co<br>
+<b>Faroe Ship</b>&nbsp; :&nbsp; Faroe Ship Ltd<br>
+<b>Farrell</b>&nbsp; :&nbsp; Farrell Lines Inc<br>
+<b>FAS</b>&nbsp; :&nbsp; Feeder Associate SystemSarl<br>
+<b>Fast</b>&nbsp; :&nbsp; Fast Line<br>
+<b>Feederlink</b>&nbsp; :&nbsp; Feederlink Shipping & Trading BV<br>
+<b>Ferrimaroc</b>&nbsp; :&nbsp; Ferrimaroc<br>
+<b>Ferrylineas</b>&nbsp; :&nbsp; Ferrylineas Argentinas SA<br>
+<b>Ferryways</b>&nbsp; :&nbsp; Ferryways NV<br>
+<b>Fesco</b>&nbsp; :&nbsp; Far Eastern Shipping Co<br>
+<b>Finnlines</b>&nbsp; :&nbsp; Finnlines plc<br>
+<b>FLS</b>&nbsp; :&nbsp; Frontier Liner Services<br>
+<b>FOCS</b>&nbsp; :&nbsp; Fred Olsen Container Service<br>
+<b>Forcon</b>&nbsp; :&nbsp; Forcon Ltd<br>
+<b>Foss</b>&nbsp; :&nbsp; Foss Maritime Co<br>
+<b>Frankenbach</b>&nbsp; :&nbsp; Frankenbach Container Service GmbH<br>
+<b>FTI</b>&nbsp; :&nbsp; Fleet Trans International Co Ltd<br>
+<b>Fujian Shpp</b>&nbsp; :&nbsp; Fujian Shpping Co<br>
+<b>GAL</b>&nbsp; :&nbsp; Gulf Africa Line AG<br>
+<b>Galex</b>&nbsp; :&nbsp; Gulf Asia Line AG<br>
+<b>Geest</b>&nbsp; :&nbsp; Geest Line<br>
+<b>Gemartrans</b>&nbsp; :&nbsp; Gemartrans (Vietnam) Co Ltd<br>
+<b>Gezachart</b>&nbsp; :&nbsp; Gezairi Chartering & Shipping Co Ltd<br>
+<b>Global</b>&nbsp; :&nbsp; Global Container Lines Ltd<br>
+<b>Global Lines</b>&nbsp; :&nbsp; Global Transporte Oceanico<br>
+<b>GNMTC</b>&nbsp; :&nbsp; General National Maritime Transport Co<br>
+<b>GNSL</b>&nbsp; :&nbsp; Geest North Sea Line BV<br>
+<b>GPL</b>&nbsp; :&nbsp; Genshipping Pacific Line (Pte) Ltd<br>
+<b>Gracechurch</b>&nbsp; :&nbsp; Gracechurch Container Line Ltd<br>
+<b>Graceful</b>&nbsp; :&nbsp; Graceful Shipping Ltd<br>
+<b>Grand Alliance</b>&nbsp; :&nbsp; Grand Alliance<br>
+<b>Grandi</b>&nbsp; :&nbsp; Grandi Traghetti/Gilnavi<br>
+<b>Granferrry</b>&nbsp; :&nbsp; Grandi Traghetti SpA di Navigazione<br>
+<b>Great Ocean</b>&nbsp; :&nbsp; Great Ocean Shipping Co Ltd<br>
+<b>Greater Bali Hai</b>&nbsp; :&nbsp; Greater Bali Hai Service<br>
+<b>Grimaldi</b>&nbsp; :&nbsp; Grimaldi Group Naples<br>
+<b>GSL</b>&nbsp; :&nbsp; Gold Star Line Ltd<br>
+<b>GWF</b>&nbsp; :&nbsp; Great White Fleet (US) Ltd<br>
+<b>GWSC</b>&nbsp; :&nbsp; Great Western Steamship Co<br>
+<b>Hacklin Seacount</b>&nbsp; :&nbsp; Oy Hacklin Seacount Ltd<br>
+<b>Haeger & Schmidt</b>&nbsp; :&nbsp; Haeger & Schmidt International Gmbh<br>
+<b>Hamburg Sud</b>&nbsp; :&nbsp; Hamburg Sudamerikanische Dampfschiffahrts-Gesellschaft KG<br>
+<b>Hanjin</b>&nbsp; :&nbsp; Hanjin Shipping Co Ltd<br>
+<b>Hansa Star</b>&nbsp; :&nbsp; Hansa Star Lines<br>
+<b>Hanseatica</b>&nbsp; :&nbsp; Hanseatica Line Gmbh<br>
+<b>Hasco</b>&nbsp; :&nbsp; Shanghai Hai Hua Shipping Co Ltd<br>
+<b>Hatsu</b>&nbsp; :&nbsp; Hatsu Marine Ltd<br>
+<b>Heap Seng</b>&nbsp; :&nbsp; Heap Seng Trading & Shipping Pte Ltd<br>
+<b>Heung-A</b>&nbsp; :&nbsp; Heung-A Shipping Co Ltd<br>
+<b>HLCL</b>&nbsp; :&nbsp; Hapag-Lloyd Container Linie Gmbh<br>
+<b>HMCL</b>&nbsp; :&nbsp; Holland Maas Containerline BV<br>
+<b>HMM</b>&nbsp; :&nbsp; Hyundai Merchant Marine Co Ltd<br>
+<b>HMS</b>&nbsp; :&nbsp; Holland Maas Shipping BV<br>
+<b>Horizon</b>&nbsp; :&nbsp; Horizon Lines Inc<br>
+<b>Horn</b>&nbsp; :&nbsp; Horn-Linie<br>
+<b>HRC</b>&nbsp; :&nbsp; HRC Shipping Ltd<br>
+<b>Hubline</b>&nbsp; :&nbsp; Hubline<br>
+<b>Huelin-Renouf</b>&nbsp; :&nbsp; Huelin-Renouf Shipping<br>
+<b>Hybur</b>&nbsp; :&nbsp; Hybur Ltd<br>
+<b>ICL</b>&nbsp; :&nbsp; Independent Container Line Ltd<br>
+<b>Iino Lines</b>&nbsp; :&nbsp; Iino Kaiun Kaisha Ltd<br>
+<b>IMC (USA)</b>&nbsp; :&nbsp; Industrial Maritime Carriers(USA) Inc<br>
+<b>Imoto</b>&nbsp; :&nbsp; Imoto Lines Ltd<br>
+<b>IMTC</b>&nbsp; :&nbsp; International Maritime Transport Corp<br>
+<b>Indamex</b>&nbsp; :&nbsp; Indamex<br>
+<b>Industrial</b>&nbsp; :&nbsp; Industrial Maritime Carriers Worldwide LLC <br>
+<b>Interasia</b>&nbsp; :&nbsp; Interasia Lines Ltd<br>
+<b>Interfeeder </b>&nbsp; :&nbsp; Interfeeder  Container Lines BV<br>
+<b>Interlighter</b>&nbsp; :&nbsp; Interlighter International Shipping Co<br>
+<b>IOS</b>&nbsp; :&nbsp; Indian Ocean Vessel Sharing Agreement<br>
+<b>IPS</b>&nbsp; :&nbsp; Inter Pacific Shipping Pte Ltd<br>
+<b>Irano-Hind</b>&nbsp; :&nbsp; Irano-Hind Shipping Co<br>
+<b>IRISL</b>&nbsp; :&nbsp; Islamic Republic of Iran Shipping Lines<br>
+<b>Iscomar</b>&nbsp; :&nbsp; Compania Iscomar SA<br>
+<b>Iscont</b>&nbsp; :&nbsp; Iscont Lines Ltd<br>
+<b>ISES</b>&nbsp; :&nbsp; Indian Subcontinent Europe Service<br>
+<b>Jade Tees Line</b>&nbsp; :&nbsp; Jade Tees Line<br>
+<b>Jadroplov</b>&nbsp; :&nbsp; Jadroplov International Maritime Transport<br>
+<b>Jiangsu</b>&nbsp; :&nbsp; Jiangsu Marine Shipping Co<br>
+<b>JMCS</b>&nbsp; :&nbsp; Joint Mediterranean Canada Service<br>
+<b>Johan</b>&nbsp; :&nbsp; Johan Shipping Sdn Bhd<br>
+<b>Joo Tat</b>&nbsp; :&nbsp; Joo Tat Shipping Pte Ltd<br>
+<b>Jutha</b>&nbsp; :&nbsp; Jutha Maritime Public Co Ltd<br>
+<b>K Line</b>&nbsp; :&nbsp; Kawasaki Kisen Kaisha Ltd<br>
+<b>Kambara</b>&nbsp; :&nbsp; Kambara Kisen Co Ltd<br>
+<b>Karana Line</b>&nbsp; :&nbsp; PT Perusahaan Pelayaran Samudera Karana Line<br>
+<b>King Ocean</b>&nbsp; :&nbsp; King Ocean Services SA<br>
+<b>KKKK</b>&nbsp; :&nbsp; Kawasaki Kinkai Kisen Kaisha Ltd<br>
+<b>KM</b>&nbsp; :&nbsp; Kuang Ming Shipping<br>
+<b>KMTC</b>&nbsp; :&nbsp; Korea Marine Tansport Co Ltd<br>
+<b>Kook Yang</b>&nbsp; :&nbsp; Kook Yang Shipping Co Ltd<br>
+<b>Kursiu</b>&nbsp; :&nbsp; Kursiu Linija<br>
+<b>KYK</b>&nbsp; :&nbsp; Kinkai Yusen Kaisha Ltd<br>
+<b>Kyowa Line</b>&nbsp; :&nbsp; Kyowa Shipping Co Ltd<br>
+<b>Lauritzen Cool</b>&nbsp; :&nbsp; Lauritzen Cool AB<br>
+<b>LBS</b>&nbsp; :&nbsp; AB Lisco Baltic Service<br>
+<b>LF</b>&nbsp; :&nbsp; Lineas Feeder SA<br>
+<b>Libra-Montemar</b>&nbsp; :&nbsp; Libra-Montemar<br>
+<b>Lily Marine</b>&nbsp; :&nbsp; Lily Marine Services Pte Ltd<br>
+<b>Linea Peninsular</b>&nbsp; :&nbsp; Linea Peninsular Inc<br>
+<b>Lloyd Triestino</b>&nbsp; :&nbsp; Lloyd Triestino di Navigation Inc<br>
+<b>LNI</b>&nbsp; :&nbsp; Laurel Navigation Inc<br>
+<b>Lorenzo</b>&nbsp; :&nbsp; Lorenzo Shipping Corp<br>
+<b>Losinjska Plovidba</b>&nbsp; :&nbsp; Losinjska Plovidba<br>
+<b>Lucassen</b>&nbsp; :&nbsp; Lucassen<br>
+<b>MA.RE.SI</b>&nbsp; :&nbsp; MA.RE.SI Shipping Ltd<br>
+<b>MacAmdrews</b>&nbsp; :&nbsp; MacAmdrews & Co Ltd<br>
+<b>MACS</b>&nbsp; :&nbsp; MACS Maritime Carrier Shipping GmbH & Co.<br>
+<b>Maersk Sealand</b>&nbsp; :&nbsp; Maersk Sealand<br>
+<b>Malaysia Shpp</b>&nbsp; :&nbsp; Malaysia Shpping Corp Sdn Bhd<br>
+<b>Mann</b>&nbsp; :&nbsp; Mann Lines<br>
+<b>Marfret</b>&nbsp; :&nbsp; Compagnie Maritime Marfret<br>
+<b>Maruba</b>&nbsp; :&nbsp; Maruba SCA<br>
+<b>Mataroa Shpp</b>&nbsp; :&nbsp; Mataroa Shpping & Trading Ltd<br>
+<b>Matson</b>&nbsp; :&nbsp; Matson Navigation Co<br>
+<b>Maybank</b>&nbsp; :&nbsp; Maybank Shipping Co Inc<br>
+<b>MCL</b>&nbsp; :&nbsp; Magistral Container Lines<br>
+<b>MCL-Line</b>&nbsp; :&nbsp; Maghred/CL-Line<br>
+<b>Med Feeder</b>&nbsp; :&nbsp; Med Feeder Co Ltd<br>
+<b>Med Feeder</b>&nbsp; :&nbsp; Mediterranean Feedering Co Sarl<br>
+<b>Medex</b>&nbsp; :&nbsp; Medex Container Service Ltd<br>
+<b>Melfi</b>&nbsp; :&nbsp; Melfi Lines<br>
+<b>MELL</b>&nbsp; :&nbsp; Mariana Express Lines Ltd<br>
+<b>Mer Austral</b>&nbsp; :&nbsp; Mer Austral<br>
+<b>Mercosul</b>&nbsp; :&nbsp; Mercosul Line-Oceanica<br>
+<b>Messina Line</b>&nbsp; :&nbsp; Ignazio Messina & C SpA<br>
+<b>MFSL</b>&nbsp; :&nbsp; Myanma Five Star Line<br>
+<b>Ming Tat</b>&nbsp; :&nbsp; Ming Tat Navigation Ltd<br>
+<b>MISC</b>&nbsp; :&nbsp; Malaysia International Shipping Corp Bhd<br>
+<b>MISR</b>&nbsp; :&nbsp; MISR Shipping Co<br>
+<b>MNSL</b>&nbsp; :&nbsp; Maldives National Shipping Ltd<br>
+<b>MOL</b>&nbsp; :&nbsp; Mitsui OSK Lines Ltd<br>
+<b>Mozline</b>&nbsp; :&nbsp; Mozline Sarl<br>
+<b>MSC</b>&nbsp; :&nbsp; Mediterranean Shipping Co SA<br>
+<b>MUR</b>&nbsp; :&nbsp; Metall und Rohstoff Shipping (RSA) Pty Ltd<br>
+<b>Nam Sung</b>&nbsp; :&nbsp; Nam Sung Shipping Co Ltd<br>
+<b>Natural van Dam</b>&nbsp; :&nbsp; Natural van Dam AG<br>
+<b>Navibulgar</b>&nbsp; :&nbsp; Navigation Maritime Bulgare<br>
+<b>Naviera Fos</b>&nbsp; :&nbsp; Naviera Fos SL<br>
+<b>Navimed</b>&nbsp; :&nbsp; Societa di Navigazione Mediterranea SpA<br>
+<b>NCL</b>&nbsp; :&nbsp; North-Sea Container Line A/S<br>
+<b>NCS</b>&nbsp; :&nbsp; New Caribbean Service<br>
+<b>NDAL</b>&nbsp; :&nbsp; Nile Dutch Africa Line<br>
+<b>Nenaco</b>&nbsp; :&nbsp; Negros Navigation Co Inc<br>
+<b>Neptunia</b>&nbsp; :&nbsp; Neptunia Companhia de Navegacao<br>
+<b>Network</b>&nbsp; :&nbsp; Network Shipping Ltd<br>
+<b>New Econ</b>&nbsp; :&nbsp; New Econ Line Pte Ltd<br>
+<b>New Orient</b>&nbsp; :&nbsp; New Orient Line<br>
+<b>Newseas</b>&nbsp; :&nbsp; Shanghai Newseas Navigation Corp<br>
+<b>NGPL</b>&nbsp; :&nbsp; New Guinea Pacific Line<br>
+<b>Nirint</b>&nbsp; :&nbsp; Nirint Shipping BV<br>
+<b>Nisa</b>&nbsp; :&nbsp; Nisa Navigacion SA<br>
+<b>NISE</b>&nbsp; :&nbsp; Norfolk Island Shipping Services Pty Ltd<br>
+<b>Niver Lines</b>&nbsp; :&nbsp; Niver Lines Shipping Co SA<br>
+<b>Norasia</b>&nbsp; :&nbsp; Norasia Container Lines Ltd<br>
+<b>Nord</b>&nbsp; :&nbsp; NCS Nord Container Services<br>
+<b>Nordana</b>&nbsp; :&nbsp; Nordana Line<br>
+<b>Norfolkline</b>&nbsp; :&nbsp; Norfolkline BV<br>
+<b>Normed</b>&nbsp; :&nbsp; Normed International BV<br>
+<b>Norse Merchant</b>&nbsp; :&nbsp; Norse Merchant Ferries Ltd<br>
+<b>Northland</b>&nbsp; :&nbsp; Northland Services Inc<br>
+<b>Northlink</b>&nbsp; :&nbsp; Northlink Orkney & Shetland Ferries Ltd<br>
+<b>Nortrans</b>&nbsp; :&nbsp; Nortrans Shipping Pte Ltd<br>
+<b>NOSA</b>&nbsp; :&nbsp; Naviera del Odiel SA<br>
+<b>NSC</b>&nbsp; :&nbsp; Northern Shipping Co<br>
+<b>NSCSA</b>&nbsp; :&nbsp; National Shipping Co of Saudi Arabia<br>
+<b>NSL</b>&nbsp; :&nbsp; Neptune Shipping Line<br>
+<b>NTC</b>&nbsp; :&nbsp; Northern Transportation Co Ltd<br>
+<b>Nusa T</b>&nbsp; :&nbsp; PT Perusahaan Pelayaran Nusantara Nusa Tenggara<br>
+<b>NWA</b>&nbsp; :&nbsp; New World Alliance<br>
+<b>NWSC</b>&nbsp; :&nbsp; North-Western Shipping Co<br>
+<b>NYK</b>&nbsp; :&nbsp; NYK Line<br>
+<b>NYPSA</b>&nbsp; :&nbsp; Naviera Yuca Puma SA<br>
+<b>NZPCL</b>&nbsp; :&nbsp; New Zealand Pacific Container Line<br>
+<b>OACL</b>&nbsp; :&nbsp; Ocean Africa Container Lines (Pty) Ltd<br>
+<b>Oceanex</b>&nbsp; :&nbsp; Oceanex (1997) Inc<br>
+<b>OEL</b>&nbsp; :&nbsp; Orient Express Lines Inc<br>
+<b>OEL</b>&nbsp; :&nbsp; Orient Express Lines (Pte) Ltd<br>
+<b>OK</b>&nbsp; :&nbsp; OK Shipping Pte Ltd<br>
+<b>Oldendorff</b>&nbsp; :&nbsp; Oldendorff Carriers GmbH & Co KG<br>
+<b>OOCL</b>&nbsp; :&nbsp; Orient Overseas Container Line Ltd<br>
+<b>OPDR</b>&nbsp; :&nbsp; Oldenburg-Portugiesische Dampfschiffs-Rhederei GmbH & Co KG<br>
+<b>Osprey Line</b>&nbsp; :&nbsp; Osprey Line<br>
+<b>OSS</b>&nbsp; :&nbsp; Orient Shipping Services LLC<br>
+<b>OTAL</b>&nbsp; :&nbsp; OT Africa Line<br>
+<b>P&O Ferries</b>&nbsp; :&nbsp; P&O Ferries<br>
+<b>P&O Irish Sea</b>&nbsp; :&nbsp; P&O Irish Sea<br>
+<b>P&O Swire</b>&nbsp; :&nbsp; P&O Swire Container Ltd<br>
+<b>P&OSN</b>&nbsp; :&nbsp; P&O Steam Navigaton Co<br>
+<b>PACC</b>&nbsp; :&nbsp; PACC Container Line Pte Ltd<br>
+<b>Pacific Eagle</b>&nbsp; :&nbsp; Pacific Eagle Container Line Pte Ltd<br>
+<b>Pacifica</b>&nbsp; :&nbsp; Pacifica Shipping 1985 Ltd<br>
+<b>PAL</b>&nbsp; :&nbsp; Pan Africa Line<br>
+<b>Palau</b>&nbsp; :&nbsp; Palau Shipping Co Inc<br>
+<b>Paltrans</b>&nbsp; :&nbsp; Paltrans Shipping AB<br>
+<b>Pancon Shpp</b>&nbsp; :&nbsp; Pancon Shipping & Marine Services Pte Ltd<br>
+<b>PASC</b>&nbsp; :&nbsp; Pan Arab Shipping Co<br>
+<b>Patric Shpp</b>&nbsp; :&nbsp; Patric Shipping Pty Ltd<br>
+<b>PCSC</b>&nbsp; :&nbsp; Pan Continental Shipping Co Ltd<br>
+<b>PDL</b>&nbsp; :&nbsp; Pacific Direct Line Ltd<br>
+<b>PDZ</b>&nbsp; :&nbsp; Perkapalan Dai Zhun Sdn Bhd PDZ<br>
+<b>Pendulum</b>&nbsp; :&nbsp; Pendulum Express Lines<br>
+<b>Penta</b>&nbsp; :&nbsp; Penta Container Line AG<br>
+<b>Perdana</b>&nbsp; :&nbsp; PT Jayakusuma Perdana Lines<br>
+<b>Perkins</b>&nbsp; :&nbsp; Perkins Shipping Pty Ltd<br>
+<b>PFL</b>&nbsp; :&nbsp; Pacific Forum Line (NZ) Ltd<br>
+<b>PIL</b>&nbsp; :&nbsp; Pacific International Lines Pte Ltd<br>
+<b>Pinillos</b>&nbsp; :&nbsp; Naviera Pinillos SA<br>
+<b>PLS</b>&nbsp; :&nbsp; Pro Line Shipping Co Ltd<br>
+<b>PM&O Line</b>&nbsp; :&nbsp; Philippines, Micronesia & Orient Navigation Co<br>
+<b>PNSC</b>&nbsp; :&nbsp; Pakistan National Shipping Corp<br>
+<b>POL</b>&nbsp; :&nbsp; Polish Ocean Lines<br>
+<b>POL-Levant</b>&nbsp; :&nbsp; POL-Levant Shipping Lines Ltd<br>
+<b>Polynesia</b>&nbsp; :&nbsp; Polynesia Line Ltd<br>
+<b>PONL</b>&nbsp; :&nbsp; P&O Nedloyd Container Line Ltd<br>
+<b>Portline</b>&nbsp; :&nbsp; Portline-Transporters Maritimos Internacionais SA<br>
+<b>Portlink</b>&nbsp; :&nbsp; Portlink<br>
+<b>POSC</b>&nbsp; :&nbsp; Pan Ocean Shipping Co Ltd<br>
+<b>Pro Line</b>&nbsp; :&nbsp; Pro Line Ltd & Co GmbH<br>
+<b>QCCL</b>&nbsp; :&nbsp; QC Container Line Ltd<br>
+<b>QNNTC</b>&nbsp; :&nbsp; Qatar National Navigation & Transport Co Ltd<br>
+<b>RCL</b>&nbsp; :&nbsp; Regional Container Lines Public Co Ltd<br>
+<b>Reef Lines</b>&nbsp; :&nbsp; Reef Lines Ltd<br>
+<b>Rheintainer</b>&nbsp; :&nbsp; Rheintainer Linie<br>
+<b>Rhenus Alpina</b>&nbsp; :&nbsp; Rhenus Alpina AG<br>
+<b>Rhinecontainer</b>&nbsp; :&nbsp; Rhinecontainer BV<br>
+<b>Rickmers-Linie</b>&nbsp; :&nbsp; Rickmers-Linie GmbH & Cie KG<br>
+<b>Rix</b>&nbsp; :&nbsp; Rix Shipping Co Ltd<br>
+<b>Rova</b>&nbsp; :&nbsp; Rova Maritiem BV<br>
+<b>Royal Artic</b>&nbsp; :&nbsp; Royal Artic Line A/S<br>
+<b>Russo-Orient</b>&nbsp; :&nbsp; Russo-Orient Shipping Co Ltd<br>
+<b>SAECS</b>&nbsp; :&nbsp; Southern Africa Europe Container Service Ltd <br>
+<b>Safari</b>&nbsp; :&nbsp; Safari<br>
+<b>Safmarine</b>&nbsp; :&nbsp; Safmarine Container Lines NV<br>
+<b>SALCS</b>&nbsp; :&nbsp; South African Liner Container Services(Pty) Ltd<br>
+<b>Samskip</b>&nbsp; :&nbsp; Samskip hf<br>
+<b>Samudera</b>&nbsp; :&nbsp; Samudera Shipping Line Pte Ltd<br>
+<b>SASCO</b>&nbsp; :&nbsp; Sakhalin Shipping Co<br>
+<b>SBS</b>&nbsp; :&nbsp; SBS Samothrakitis Shipping Ltd<br>
+<b>Scandlines</b>&nbsp; :&nbsp; Scandlines AB<br>
+<b>Scandlines</b>&nbsp; :&nbsp; Scandlines Deutschland GmbH<br>
+<b>SCI</b>&nbsp; :&nbsp; Shipping Corp of India Ltd<br>
+<b>SCS</b>&nbsp; :&nbsp; Sarlis Container Services SA<br>
+<b>Sea Malta</b>&nbsp; :&nbsp; Sea Malta Co Ltd<br>
+<b>Sea Star </b>&nbsp; :&nbsp; Sea Star Line LLC<br>
+<b>Sea Swift</b>&nbsp; :&nbsp; Sea Swift Pty Ltd<br>
+<b>Seaboard</b>&nbsp; :&nbsp; Seaboard Marine Ltd<br>
+<b>Sea-Cargo</b>&nbsp; :&nbsp; Sea-Cargo AS<br>
+<b>Seacon</b>&nbsp; :&nbsp; Sea Consortium Pte Ltd<br>
+<b>SeaFreight</b>&nbsp; :&nbsp; SeaFreight Line Ltd<br>
+<b>Seagull</b>&nbsp; :&nbsp; Seagull Consortium<br>
+<b>Seatrans</b>&nbsp; :&nbsp; Seatrans Shipping Sarl<br>
+<b>Seatruck</b>&nbsp; :&nbsp; Seatruck Ferries<br>
+<b>Seawheel</b>&nbsp; :&nbsp; Seawheel Ltd<br>
+<b>SeaWind</b>&nbsp; :&nbsp; SeaWind Line Oy AB<br>
+<b>Secil</b>&nbsp; :&nbsp; Secil Maritima UEE<br>
+<b>Senator</b>&nbsp; :&nbsp; Senator Line GmbH<br>
+<b>Setramar</b>&nbsp; :&nbsp; Setramar Navigation SpA<br>
+<b>Seyang</b>&nbsp; :&nbsp; Seyang Shipping Co Ltd<br>
+<b>Shiama</b>&nbsp; :&nbsp; Shiama Line<br>
+<b>Shreyas</b>&nbsp; :&nbsp; Shreyas Shipping Ltd<br>
+<b>Silag</b>&nbsp; :&nbsp; Silag Rhein Terminal AG<br>
+<b>Simatech</b>&nbsp; :&nbsp; Simatech Shipping LLC<br>
+<b>Sinokor</b>&nbsp; :&nbsp; Sinokor Merchant Marine Co Ltd<br>
+<b>Sinotrans</b>&nbsp; :&nbsp; Sinotrans Container Lines Co Ltd<br>
+<b>Sirius</b>&nbsp; :&nbsp; Sirius Consortium<br>
+<b>Sisco</b>&nbsp; :&nbsp; Seaboard International Shipping Co Ltd<br>
+<b>SISL</b>&nbsp; :&nbsp; Somers Isles Shipping Ltd<br>
+<b>SITC</b>&nbsp; :&nbsp; SITC Container Lines Co Ltd<br>
+<b>SLCS</b>&nbsp; :&nbsp; St Lawrence Co-ordinated Service<br>
+<b>Sloman Neptun</b>&nbsp; :&nbsp; Sloman Neptun Shipping & Transport GmbH<br>
+<b>Sofrana NZ</b>&nbsp; :&nbsp; Sofrana Unilines (NZ) Ltd<br>
+<b>SolNiver</b>&nbsp; :&nbsp; SolNiver Lines KB<br>
+<b>Sovcomfolt</b>&nbsp; :&nbsp; OAO Sovcomfolt<br>
+<b>SPIC</b>&nbsp; :&nbsp; Siam Paetra International Co Ltd<br>
+<b>SPS</b>&nbsp; :&nbsp; South Pacific Shipping Co Ltd<br>
+<b>SSL</b>&nbsp; :&nbsp; Solid Shipping Lines Corp<br>
+<b>SSPL</b>&nbsp; :&nbsp; Sea Services (Pvt) Ltd<br>
+<b>SST</b>&nbsp; :&nbsp; Steamships Shipping & Transport<br>
+<b>Star Feeders</b>&nbsp; :&nbsp; Star Feeders LLC<br>
+<b>Star Shpp</b>&nbsp; :&nbsp; Star Shipping A/S<br>
+<b>Steamers </b>&nbsp; :&nbsp; Steamers Feederships (99) Pte Ltd<br>
+<b>Stena Line</b>&nbsp; :&nbsp; Stena Line BV<br>
+<b>Stena Line</b>&nbsp; :&nbsp; Stena Line Scandinavia AB<br>
+<b>Stena Line</b>&nbsp; :&nbsp; Stena Line Ltd<br>
+<b>Stena UK</b>&nbsp; :&nbsp; Stena Line UK Ltd<br>
+<b>Stinnes</b>&nbsp; :&nbsp; H-Stinnes Linien GmbH<br>
+<b>St-Pierre RoRo</b>&nbsp; :&nbsp; St-Pierre RoRo Service<br>
+<b>Streamline</b>&nbsp; :&nbsp; Streamline Shipping Group Ltd<br>
+<b>Sudan</b>&nbsp; :&nbsp; Sudan Shipping Line Ltd<br>
+<b>Sudcargos</b>&nbsp; :&nbsp; Sudcargos<br>
+<b>Sulpicio</b>&nbsp; :&nbsp; Sulpicio Lines Inc<br>
+<b>Sun Cypress</b>&nbsp; :&nbsp; Sun Cypress Shipping Co Ltd<br>
+<b>Swan</b>&nbsp; :&nbsp; Swan Container Line Ltd<br>
+<b>SYJOMAR</b>&nbsp; :&nbsp; Syro-Jordanian Shipping Co Shandong Yantai International Marine Shipping<br>
+<b>Tanto Intim</b>&nbsp; :&nbsp; Tanto Intim Line<br>
+<b>Tarraco</b>&nbsp; :&nbsp; Tarraco Line<br>
+<b>Tarron</b>&nbsp; :&nbsp; Tarron Sea Line<br>
+<b>Tarros</b>&nbsp; :&nbsp; Tarros International SpA<br>
+<b>TE</b>&nbsp; :&nbsp; PT Tempuran Emas<br>
+<b>Team Line</b>&nbsp; :&nbsp; Team Line Gmbh & Co KG<br>
+<b>TECO</b>&nbsp; :&nbsp; T&E ESCO Container Lines AS<br>
+<b>Thompson</b>&nbsp; :&nbsp; Thompson Line<br>
+<b>Tidewarter</b>&nbsp; :&nbsp; Tidewarter Barge Lines Inc<br>
+<b>Tirrenia</b>&nbsp; :&nbsp; Tirrenia di Navigazaione SpA<br>
+<b>TMSC</b>&nbsp; :&nbsp; Tianjin Marine Shipping Co Ltd<br>
+<b>TNC</b>&nbsp; :&nbsp; Transmares Naviera Chilena Ltda<br>
+<b>TOL</b>&nbsp; :&nbsp; Tasman Orient Line CV<br>
+<b>Toll</b>&nbsp; :&nbsp; Toll Shipping<br>
+<b>Tong Joo</b>&nbsp; :&nbsp; Tong Joo Shipping Pte Ltd<br>
+<b>Top Nation </b>&nbsp; :&nbsp; Top Nation Shipping Ltd<br>
+<b>TOTE</b>&nbsp; :&nbsp; Totem Ocean Trailer Express Inc<br>
+<b>Trailer Bridge</b>&nbsp; :&nbsp; Trailer Bridge Inc<br>
+<b>Transbalear</b>&nbsp; :&nbsp; Transbalear SA<br>
+<b>Transfennica</b>&nbsp; :&nbsp; Transfennica Ltd<br>
+<b>Transinsular</b>&nbsp; :&nbsp; Transporters Maritimos Insulares SA<br>
+<b>Transmediterranea</b>&nbsp; :&nbsp; Compania Transmediterranea SA<br>
+<b>Trinity</b>&nbsp; :&nbsp; Trinity Shipping Line SA<br>
+<b>Tropical</b>&nbsp; :&nbsp; Tropical Shipping Co Ltd<br>
+<b>TS Lines</b>&nbsp; :&nbsp; TS Lines Ltd<br>
+<b>TSK</b>&nbsp; :&nbsp; Tokyo Senpaku Kaisha Ltd<br>
+<b>Turkish Cargo</b>&nbsp; :&nbsp; Turkish Cargo Lines<br>
+<b>Turkon Line</b>&nbsp; :&nbsp; Turkon Line<br>
+<b>ULA</b>&nbsp; :&nbsp; Universal Africa Line<br>
+<b>UASC</b>&nbsp; :&nbsp; United Arab Shipping Co (SAG)<br>
+<b>UDSC</b>&nbsp; :&nbsp; Ukrainian Danube Shipping Co<br>
+<b>UFS</b>&nbsp; :&nbsp; United Feeder  Service Ltd<br>
+<b>Und Ro-Ro</b>&nbsp; :&nbsp; Und Ro-Ro SA<br>
+<b>Unifeeder</b>&nbsp; :&nbsp; Unifeeder Container Service A/S<br>
+<b>United Alliance</b>&nbsp; :&nbsp; United Alliance<br>
+<b>Unithai</b>&nbsp; :&nbsp; Unithai Line Public Co Ltd<br>
+<b>USL</b>&nbsp; :&nbsp; US Lines<br>
+<b>Valfajre</b>&nbsp; :&nbsp; Valfajre Shipping Co SA<br>
+<b>Valfracht</b>&nbsp; :&nbsp; Valfracht RoRo Line Ltd<br>
+<b>Van Uden</b>&nbsp; :&nbsp; Van Uden Maritime BV<br>
+<b>VCL</b>&nbsp; :&nbsp; Venezuela Container Line<br>
+<b>Ventlines</b>&nbsp; :&nbsp; Ventlines<br>
+<b>Vertraco</b>&nbsp; :&nbsp; Vertraco Shipping BV<br>
+<b>VSA4</b>&nbsp; :&nbsp; VSA4<br>
+<b>Wan Hai</b>&nbsp; :&nbsp; Wan Hai Lines Ltd<br>
+<b>WCT-MTA</b>&nbsp; :&nbsp; WCT-MTA BV<br>
+<b>WEC</b>&nbsp; :&nbsp; WEC Lines<br>
+<b>Westwood</b>&nbsp; :&nbsp; Westwood Shipping Lines Inc<br>
+<b>WG&A</b>&nbsp; :&nbsp; William Gothong & Aboitiz Inc<br>
+<b>Wilh Wilhelmsen</b>&nbsp; :&nbsp; Wilh Wilhelmsen ASA<br>
+<b>WSC</b>&nbsp; :&nbsp; Westwind Shipping Corp<br>
+<b>WW</b>&nbsp; :&nbsp; Wallenius Wilhelmsen <br>
+<b>XCIL</b>&nbsp; :&nbsp; Express Cook Island Line<br>
+<b>XHS</b>&nbsp; :&nbsp; Xiamen Harvest Shipping Ltd<br>
+<b>X-Press Container</b>&nbsp; :&nbsp; X-Press Container Line (UK) Ltd<br>
+<b>Yancheng</b>&nbsp; :&nbsp; Yancheng Marine Shipping Co<br>
+<b>Yang Ming</b>&nbsp; :&nbsp; Yang Ming Marine Transport Corp<br>
+<b>Ybarra</b>&nbsp; :&nbsp; Ybarra CGM Sud AEIE<br>
+<b>Yi Tong</b>&nbsp; :&nbsp; Yi Tong Container Line Ltd<br>
+<b>Zim</b>&nbsp; :&nbsp; Zim Integrated Shipping Services Ltd</font></p>
+<p>
+<font face="Verdana" size="2">
+<a href="#top"><font color="#0000FF"><u>Go Top</u></font></a><font color="#0000FF"><u> </u>
+&nbsp;&nbsp;&nbsp; <a href="../general.html">Go Back</a></font></p>
+</body>
+
+</html>

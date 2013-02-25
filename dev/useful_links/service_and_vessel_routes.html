@@ -1,0 +1,104 @@
+<html>
+<meta http-equiv=page-enter content=blendtrans(duration=0.5)>
+<meta http-equiv=page-exit content=blendtrans(duration=0.5)>
+<head>
+
+<script language="JavaScript1.1">
+<!--
+var ns4 = (document.layers)? true:false
+var ie4 = (document.all)? true:false
+function press(e) {
+  if ((ns4 && (e.which == 3 || e.which == 2)) || (ie4 && (event.button == 2 || event.button == 3))) return false
+  return true
+}
+for (var i=0; i<document.images.length; i++) document.images[i].onmousedown=press
+for (var i=0; i<document.links.length; i++) document.links[i].onmousedown=press
+document.onmousedown=press
+if (ns4) window.captureEvents(Event.MOUSEDOWN)
+window.onmousedown=press
+//-->
+</script>
+
+<script language="JavaScript1.2">
+
+function disableselect(e){
+return false
+}
+
+function reEnable(){
+return true
+}
+
+//if IE4+
+document.onselectstart=new Function ("return false")
+
+//if NS6
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+</script>
+
+<body oncontextmenu="return false" leftmargin="15" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+</head>
+
+<body>
+<u><b><font face="Verdana" color="#008000">Service and Vessel Routes</font></b></u><p>
+<font face="Verdana" size="2">
+
+<b>Af</b>&nbsp; :&nbsp; Africa<br>
+<b>Asia</b>&nbsp; :&nbsp; Asia<br>
+<b>At</b>&nbsp; :&nbsp; Atlantic Islands<br>
+<b>Aust</b>&nbsp; :&nbsp; Autraliasia<br>
+<b>CAm</b>&nbsp; :&nbsp; Central America<br>
+<b>Carib</b>&nbsp; :&nbsp; Caribbean<br>
+<b>EAf</b>&nbsp; :&nbsp; East Africa<br>
+<b>EAsia</b>&nbsp; :&nbsp; East Asia<br>
+<b>ECNA</b>&nbsp; :&nbsp; North America East Coast<br>
+<b>ECSA</b>&nbsp; :&nbsp; South America East Coast<br>
+<b>Emed</b>&nbsp; :&nbsp; East Med/Black Sea<br>
+<b>Eur</b>&nbsp; :&nbsp; Europe<br>
+<b>IndOc</b>&nbsp; :&nbsp; India Ocean<br>
+<b>IndSub</b>&nbsp; :&nbsp; Indian Subcontnent<br>
+<b>ME</b>&nbsp; :&nbsp; Mid-East<br>
+<b>Med</b>&nbsp; :&nbsp; Mediterranean<br>
+<b>MEI</b>&nbsp; :&nbsp; Mid-East Inland<br>
+<b>NA</b>&nbsp; :&nbsp; North America<br>
+<b>NAf</b>&nbsp; :&nbsp; North Africa<br>
+<b>NAl</b>&nbsp; :&nbsp; North Amerca Inland<br>
+<b>NAIW</b>&nbsp; :&nbsp; North Amerca Inland Waterway<br>
+<b>NCSA</b>&nbsp; :&nbsp; South America North Coast<br>
+<b>NEAsia</b>&nbsp; :&nbsp; North East Asia<br>
+<b>NEur</b>&nbsp; :&nbsp; Northern Europe<br>
+<b>NEurIW</b>&nbsp; :&nbsp; Northern Europe Inland Waterway<br>
+<b>NPac</b>&nbsp; :&nbsp; North Pacific<br>
+<b>Pac</b>&nbsp; :&nbsp; Pacific Island<br>
+<b>RSea</b>&nbsp; :&nbsp; RSea<br>
+<b>SA</b>&nbsp; :&nbsp; South America<br>
+<b>SAf</b>&nbsp; :&nbsp; Southern Africa<br>
+<b>Scan</b>&nbsp; :&nbsp; Scandanvia/Baltic<br>
+<b>SEAaia</b>&nbsp; :&nbsp; South East Asia<br>
+<b>SPac</b>&nbsp; :&nbsp; South Pacific<br>
+<b>USGC</b>&nbsp; :&nbsp; North America Gulf Coast<br>
+<b>WAf</b>&nbsp; :&nbsp; West Africa<br>
+<b>WCNA</b>&nbsp; :&nbsp; North America West Coast<br>
+<b>WCSA</b>&nbsp; :&nbsp; South Amerca West Coast<br>
+<b>WMed</b>&nbsp; :&nbsp; West Mediterranian</font></p>
+
+
+<p>
+<font face="Verdana" size="2">
+
+<br>
+
+
+<a href="#top"><font color="#0000FF"><u>Go Top</u></font></a><font color="#0000FF"><u> </u>
+&nbsp;&nbsp;&nbsp; <a href="../general.html">Go Back</a></font></p>
+
+
+</font>
+
+
+</body>
+
+</html>

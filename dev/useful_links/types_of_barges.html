@@ -1,0 +1,96 @@
+<html>
+<meta http-equiv=page-enter content=blendtrans(duration=0.5)>
+<meta http-equiv=page-exit content=blendtrans(duration=0.5)>
+<head>
+
+<script language="JavaScript1.1">
+<!--
+var ns4 = (document.layers)? true:false
+var ie4 = (document.all)? true:false
+function press(e) {
+  if ((ns4 && (e.which == 3 || e.which == 2)) || (ie4 && (event.button == 2 || event.button == 3))) return false
+  return true
+}
+for (var i=0; i<document.images.length; i++) document.images[i].onmousedown=press
+for (var i=0; i<document.links.length; i++) document.links[i].onmousedown=press
+document.onmousedown=press
+if (ns4) window.captureEvents(Event.MOUSEDOWN)
+window.onmousedown=press
+//-->
+</script>
+
+<script language="JavaScript1.2">
+
+function disableselect(e){
+return false
+}
+
+function reEnable(){
+return true
+}
+
+//if IE4+
+document.onselectstart=new Function ("return false")
+
+//if NS6
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+</script>
+
+<body oncontextmenu="return false" leftmargin="15" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+</head>
+
+<body>
+<font face="Verdana" color="#008000"><u>
+<b>Types of Barges</b></u></font><br><br>
+<font size="2" face="Verdana">-
+Barracks barge (living quarters)<br> 
+- 
+Car float <br>
+-
+Company barge <br>
+-
+Dutch barge <br>
+-
+Dry bulk cargo barge (coal, rock, grain, etc.) <br>
+-
+Hopper barge <br>
+-
+Jackup barge <br>
+-
+Lighter, Dumb steel lighter <br>
+-
+Liquid cargo barge (fresh water, finished petroleum products) <br>
+-
+Oil barge, Dumb steel oil barge <br>
+-
+Pleasure barge- providing a floating bedroom, dance floor, or viewing platform <br>
+-
+Railcar barge (with tracks and using special loading/offloading facilities such as a barge slip) <br>
+-
+Royal barge (ceremonial) (e.g. Thailand's Royal Barges) <br>
+-
+Row barge <br>
+-
+Sand barge <br>
+-
+Severn trow <br>
+-
+Tom Pudding <br>
+-
+Vehicular barge, often used to transport vehicles to natural shorelines such as beaches <br>
+-
+Ware barge <br>
+-
+West country barge</font><p>
+<font face="Verdana" size="2">
+<a href="#top"><font color="#0000FF"><u>Go Top</u></font></a><font color="#0000FF"><u> </u>
+&nbsp;&nbsp;&nbsp; <a href="../general.html">Go Back</a></font></font><br> 
+
+</p>
+
+</body>
+
+</html>

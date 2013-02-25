@@ -1,0 +1,84 @@
+<html>
+<meta http-equiv=page-enter content=blendtrans(duration=0.5)>
+<meta http-equiv=page-exit content=blendtrans(duration=0.5)>
+<head>
+
+<script language="JavaScript1.1">
+<!--
+var ns4 = (document.layers)? true:false
+var ie4 = (document.all)? true:false
+function press(e) {
+  if ((ns4 && (e.which == 3 || e.which == 2)) || (ie4 && (event.button == 2 || event.button == 3))) return false
+  return true
+}
+for (var i=0; i<document.images.length; i++) document.images[i].onmousedown=press
+for (var i=0; i<document.links.length; i++) document.links[i].onmousedown=press
+document.onmousedown=press
+if (ns4) window.captureEvents(Event.MOUSEDOWN)
+window.onmousedown=press
+//-->
+</script>
+
+<script language="JavaScript1.2">
+
+function disableselect(e){
+return false
+}
+
+function reEnable(){
+return true
+}
+
+//if IE4+
+document.onselectstart=new Function ("return false")
+
+//if NS6
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+</script>
+
+<body oncontextmenu="return false" leftmargin="15" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+</head>
+
+<body>
+<p align="justify"><u>
+<font face="Verdana" color="#008000"><b>Charter Party  & Types of Charter</b></font></u><br><br>
+
+<font face="Verdana"><u>
+
+<b><font size="2">Charterer</font></b></u><font size="2"><br>
+The company or person given the use of the vessel for the transportation of cargo or passengers for a specified time. <br><br>
+
+
+<b><u>Charter Party  </u></b><br>
+A document of contract, or agreement, by which a ship- owner agrees to lease, and a charterer agrees to hire, an entire ship, or all or part of the cargo space to carry cargo for an agreed sum under certain conditions.<br><br>
+
+<font color="#800000"><u>Bareboat Charter:</u> </font>Owner lets an unmanned ship for a long period at a rate that covers any depreciation and nominal return.<br>Charterer mans the vessel and pays all operating expenses.<br>
+<font color="#800000"><u>To Fix A Charter:</u></font> To reach final agreement on the terms of a charter party.<br>
+<font color="#800000"><u>Charter Rates:</u> </font>The tariff applied for chartering tonnage in a particular trade.<br>
+<font color="#800000"><u>Disponent Owner:</u></font> Charterer who has sublet the vessel and is acting as the owner per the terms of the contract. <br><br>
+
+
+<u>
+
+
+<b>Charter Types</b></u><br><br>
+
+<font color="#800000"><u>Contract of Affreightment (COA):</u></font> A service contract under which a ship owner agrees to transport a specified quantity of fuel products or specialty products, at a specified rate per ton between designated loading and discharge ports. This type contract differs from a spot or consecutive voyage charter in that no particular vessel is specified. (Rates are usually discounted below other forms of contracts.) <br><br>
+<font color="#800000"><u>Period Charter:</u></font> Refers to consecutive voyage (C/V) exceeding four voyages, time charters (T/C) and bareboat charters. - Note: Loose term may have other connotations. <br><br>
+<u><font color="#800000">Spot (Voyage) Charter:</font><b> </b></u>A charter for a particular vessel to move a single cargo between specified loading port(s) and discharge port(s) in the immediate future. Contract rate (spot rate) covers total operating expenses such as port charges, bunkering, crew expenses, insurance, repairs, and canal tolls. The charterer will generally pay all cargo-related costs. <br><br>
+<u><font color="#800000">Time Charter (T/C):</font><b> </b></u>A charter for varying periods of time, usually between two and ten years, under which the owner hires out the vessel to the shipper fully manned, provisioned, stored and insured. The charterer is usually responsible for bunkers, port charges, canal tolls and any crew overtime connected with the cargo. The charter rate (hire) is quoted in terms of a cost per month per deadweight ton. <br><br>
+
+</font></font></p>
+<p align="justify">
+<font face="Verdana" size="2">
+<a href="#top"><font color="#0000FF"><u>Go Top</u></font></a><font color="#0000FF"><u> </u>
+&nbsp;&nbsp;&nbsp; <a href="../general.html">Go Back</a></font></font></p>
+
+
+
+</body>
+
+</html>

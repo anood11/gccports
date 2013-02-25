@@ -1,0 +1,126 @@
+<html>
+<meta http-equiv=page-enter content=blendtrans(duration=0.5)>
+<meta http-equiv=page-exit content=blendtrans(duration=0.5)>
+<head>
+
+<script language="JavaScript1.1">
+<!--
+var ns4 = (document.layers)? true:false
+var ie4 = (document.all)? true:false
+function press(e) {
+  if ((ns4 && (e.which == 3 || e.which == 2)) || (ie4 && (event.button == 2 || event.button == 3))) return false
+  return true
+}
+for (var i=0; i<document.images.length; i++) document.images[i].onmousedown=press
+for (var i=0; i<document.links.length; i++) document.links[i].onmousedown=press
+document.onmousedown=press
+if (ns4) window.captureEvents(Event.MOUSEDOWN)
+window.onmousedown=press
+//-->
+</script>
+
+<script language="JavaScript1.2">
+
+function disableselect(e){
+return false
+}
+
+function reEnable(){
+return true
+}
+
+//if IE4+
+document.onselectstart=new Function ("return false")
+
+//if NS6
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+</script>
+
+<body oncontextmenu="return false" leftmargin="15" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+</head>
+
+<body>
+<font color="#008000" face="Verdana"><u>
+<b>Ships Tonnage</b></u></font><p align="justify">
+<font face="Verdana" size="2">
+
+Ship tonnage is the unit of calculating ship size, which can be divided into two classes: weight tonnage and dimension tonnage.<p align="justify">
+
+<u>
+
+<b>A) Weight Tonnage</b></u><br>
+Ship weight tonnage is the unit for calculating ship weight. It is used 1,000 kilograms as 1 metric ton, 2,240 pounds as 1 long ton, or 2,000 pounds as 1 short ton. Presently, the metric system is usually applied for calculating unit. Ship weight tonnage can also be divided into two classes: displacement tonnage and dead weight tonnage.<p align="justify">
+
+<u>
+
+<b>1. Displacement Tonnage</b></u><br>
+Displacement tonnage is the number of tons of water weight that a ship in the water displaces, which are also the tons of the ship weight. The displacement tonnage can also be divided into 3 classes: light displacement, full load displacement and actual displacement.<p align="justify">
+
+i) <b>Light Displacement:</b> it is also called as empty-ship displacement. It is the total of the weight of the ship itself, sailors and necessary supply. And it is also the minimum weight of a ship.<p align="justify">
+
+ii)<b> Light Displacement:</b> it is also called as empty-ship displacement. It is the total of the weight of the ship itself, sailors and necessary supply. And it is also the minimum weight of a ship.<p align="justify">
+
+iii) <b>Actual Displacement:</b> It refers to the actual displacement water amount when the ship is loaded with cargoes.<p align="justify">
+
+The formula of computing displacement water is such as follows: 
+<p align="justify">
+
+Displacement amount (long ton) = Length * width * model coefficient (cubic foot) / 35 (for seawater) or 36 (for freshwater) (cubic foot) 
+<p align="justify">
+
+Displacement amount (metric ton) = Length * width * sea gauge * model coefficient (cubic meter) / 0.9756 (for seawater) or 1 (for freshwater) (cubic meter)<p align="justify">
+ 
+The displacement tonnage can be used to calculate the ship loaded tons. While making ships, the weight of ships can be determined according to displacement tonnage. When estimating the size of galleys and marines, it is usually determined with the light displacement. In the case of marines passing through Panama Canal, actual displacement is used as the basis of taxation.<p align="justify">
+
+
+
+
+
+
+
+
+<u>
+
+
+
+
+
+
+
+
+<b>2. Dead Weight Tonnage (D.W.T)</b></u><br>
+D.W.T. is referred to the carrying capacity in transportation. It can be divided into 2 classes: total D.W.T. and net D.W.T.<p align="justify">
+
+i) <b>Gross Dead Weight Tonnage: </b>It refers to the maximum loaded weight that is restricted with the loaded line. It is the total of the weight of loaded cargoes, necessary fuel, freshwater and other spare material. 
+<p align="justify">
+ii)<b> Dead Weight Cargo Tonnage: </b>It refers to the maximum weight of loaded cargoes that a ship is capable of transporting. It is also called as loaded-cargo tonnage. It is the margin of the amount of necessary storage of fuel, freshwater and other spare material subtracted from the total of shipload.<p align="justify">
+
+Ship loaded tonnage can be used to estimate the cargoes. Also, it can be used for computing the month cost of renting a ship and denoting the transporting capacity of a ship. In addition, it can be used as the unit of a newly made ship cost and an old ship selling-price.<p align="justify">
+
+<b><u>B) Registered Tonnage</u></b><br>
+
+Ships dimension tonnage is the unit of calculating ship dimension. It is also called as registered tonnage. It is the unit that used in ship registration in marine countries, which takes ton as the computing unit. One registered ton is equal to 100 cubic feet or 2.83 cubic meters. Ships dimension tonnage can also be divided into two classes: gross registered tonnage and net registered tonnage<p align="justify">
+
+<u>
+
+<b>1. Gross Registered Tonnage (GRT)</b></u><br>
+It is also called as gross dimension tonnage. It refers to the total inner space or volume of all closed sites in the cabins and on the board. And it is the quotient that takes 100 cubic feet or 2.83 cubic meters as one ton. <br><br>
+Gross registered tonnage is widely used in many fields. It can be used for the country to estimate the argosies. Also, it can used to denote the ship size. It can be used for ship registration. And it can be used for government to determine the ship or ship-making allowance. It can be used to compute insurance cost, ship-making cost, ship compensation and so on.<p align="justify">
+<u>
+<b>2. Net Registered Tonnage (NRT)</b></u><br>
+It is also called as net dimension tonnage. It refers to the margin that the amount of room, which is not for business, is subtracted from gross registered tonnage. And it is the equivalent cargo tonnage that the ship can be loaded.<p align="justify">
+
+Net registered tonnage is usually used for ship applying to customs and ending customs. And it is the basis of ships paying for various taxes and cost to ports. Also, it can be used as the basis of paying canal cost when ships pass through canals.
+
+</font>
+<p align="justify">
+<font face="Verdana" size="2">
+
+<a href="#top"><font color="#0000FF"><u>Go Top</u></font></a><font color="#0000FF"><u> </u>
+&nbsp;&nbsp;&nbsp; <a href="../general.html">Go Back</a></font></p>
+</body>
+
+</html>

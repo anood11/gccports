@@ -1,0 +1,92 @@
+<html>
+<meta http-equiv=page-enter content=blendtrans(duration=0.5)>
+<meta http-equiv=page-exit content=blendtrans(duration=0.5)>
+<head>
+
+<script language="JavaScript1.1">
+<!--
+var ns4 = (document.layers)? true:false
+var ie4 = (document.all)? true:false
+function press(e) {
+  if ((ns4 && (e.which == 3 || e.which == 2)) || (ie4 && (event.button == 2 || event.button == 3))) return false
+  return true
+}
+for (var i=0; i<document.images.length; i++) document.images[i].onmousedown=press
+for (var i=0; i<document.links.length; i++) document.links[i].onmousedown=press
+document.onmousedown=press
+if (ns4) window.captureEvents(Event.MOUSEDOWN)
+window.onmousedown=press
+//-->
+</script>
+
+<script language="JavaScript1.2">
+
+function disableselect(e){
+return false
+}
+
+function reEnable(){
+return true
+}
+
+//if IE4+
+document.onselectstart=new Function ("return false")
+
+//if NS6
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+</script>
+
+<body oncontextmenu="return false" leftmargin="15" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+</head>
+<body>
+
+<p><u><font face="Verdana" color="#008000"><b>Ship Motion in Heavy Saeway</b></font></u></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#FF0000" width="100%" id="AutoNumber1" height="438">
+  <tr>
+    <td width="50%" height="16" bgcolor="#FFCCCC">
+    <p align="center"><b><font size="2" face="Verdana">Rotational</font></b></td>
+    <td width="50%" height="16" bgcolor="#FFCCCC">
+    <p align="center"><b><font size="2" face="Verdana">Linear</font></b></td>
+  </tr>
+  <tr>
+    <td width="50%" height="141">
+    <p align="center">
+    <img border="0" src="dangerous/ship1.gif" width="196" height="106"></p>
+    <p align="center"><font size="2" face="Verdana">Rolling</font></td>
+    <td width="50%" height="141">
+    <p align="center">
+    <img border="0" src="dangerous/ship2.gif" width="196" height="106"></p>
+    <p align="center"><font size="2" face="Verdana">Swaying</font></td>
+  </tr>
+  <tr>
+    <td width="50%" height="141">
+    <p align="center">
+    <img border="0" src="dangerous/ship3.gif" width="196" height="106"></p>
+    <p align="center"><font size="2" face="Verdana">Pitching</font></td>
+    <td width="50%" height="141">
+    <p align="center">
+    <img border="0" src="dangerous/ship4.gif" width="196" height="106"></p>
+    <p align="center"><font size="2" face="Verdana">Surging</font></td>
+  </tr>
+  <tr>
+    <td width="50%" height="137">
+    <p align="center">
+    <img border="0" src="dangerous/ship5.gif" width="196" height="106"></p>
+    <p align="center"><font size="2" face="Verdana">Yawing</font></td>
+    <td width="50%" height="137">
+    <p align="center">
+    <img border="0" src="dangerous/ship6.gif" width="196" height="106"></p>
+    <p align="center"><font size="2" face="Verdana">Heaving</font></td>
+  </tr>
+</table>
+<font face="Verdana" size="2">
+<p><a href="#top"><font color="#0000ff"><u>Go Top</u></font></a><font color="#0000ff"><u>
+</u>&nbsp;&nbsp;&nbsp; <a href="../general.html">Go Back</a></font></p>
+</font>
+
+</body>
+
+</html>

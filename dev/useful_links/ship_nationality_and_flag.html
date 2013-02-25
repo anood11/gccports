@@ -1,0 +1,69 @@
+<html>
+<meta http-equiv=page-enter content=blendtrans(duration=0.5)>
+<meta http-equiv=page-exit content=blendtrans(duration=0.5)>
+<head>
+
+<script language="JavaScript1.1">
+<!--
+var ns4 = (document.layers)? true:false
+var ie4 = (document.all)? true:false
+function press(e) {
+  if ((ns4 && (e.which == 3 || e.which == 2)) || (ie4 && (event.button == 2 || event.button == 3))) return false
+  return true
+}
+for (var i=0; i<document.images.length; i++) document.images[i].onmousedown=press
+for (var i=0; i<document.links.length; i++) document.links[i].onmousedown=press
+document.onmousedown=press
+if (ns4) window.captureEvents(Event.MOUSEDOWN)
+window.onmousedown=press
+//-->
+</script>
+
+<script language="JavaScript1.2">
+
+function disableselect(e){
+return false
+}
+
+function reEnable(){
+return true
+}
+
+//if IE4+
+document.onselectstart=new Function ("return false")
+
+//if NS6
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+</script>
+
+<body oncontextmenu="return false" leftmargin="15" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+</head>
+
+<body>
+   
+ 
+<font color="#008000" face="Verdana"><u>
+   
+ 
+<b>Ships Nationality and Flag</b></u></font><p align="justify">
+<font size="2" face="Verdana">Ships nationality is referred to the nationality of ships. The owner of commerce ships must apply to the involved ship management department in local country or foreign country for proprietary registration to obtain the nationality in local country or foreign country. Then ships nationality can be obtained. <br><br>
+Ships flag is referred to the swing belonged-country flag when ships are in sail. Ships flag is the flag of ships nationality. According to the rules of law of nations, commerce ships are the movable territory of ship-flag involved country. Whether sailed in public sea or the sea of other countries, the ships flag of ships nationality country must be suspended. Ships are in duty bound to the rules of ships nationality country laws, and also have the right of protection with ships nationality country laws. <br><br>
+Flag of convenience are referred to the ships that are registered overseas, suspended with foreign flag, and perform transporting business in international market. Since the days after World War Two, the number of flag of convenience has increased rapidly. The ships suspended with convenience flag are mainly from some countries that are strong with ocean shipping, such as USA, Greece, Japan, Hong Kong and Korea. Their ship-owners register the ships overseas to obviate country heavy tax and military requisition. And in such way, they can make transport price freely without the restriction of country, manage ships and make use of foreign exchange freely, engage foreign sailors at liberty to pay lower salary, lower the ship standard to save repairing cost, reduce operation cost to enhance competitive capability and etc. The so-called open register countries, which allow foreign ships to register in their countries, are mainly such as Liberia, Panama, Cyprus, Singapore, Bermuda etc. The registered countries can increase foreign exchange income with such registration.
+</font>
+
+ 
+
+<p align="justify">
+<font face="Verdana" size="2">
+
+<a href="#top"><font color="#0000FF"><u>Go Top</u></font></a><font color="#0000FF"><u> </u>
+&nbsp;&nbsp;&nbsp; <a href="../general.html">Go Back</a></font></p>
+
+ 
+
+</body>
+
+</html>

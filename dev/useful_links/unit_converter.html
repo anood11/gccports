@@ -1,0 +1,639 @@
+<html>
+<meta http-equiv=page-enter content=blendtrans(duration=0.5)>
+<meta http-equiv=page-exit content=blendtrans(duration=0.5)>
+<head>
+
+<script language="JavaScript1.1">
+<!--
+var ns4 = (document.layers)? true:false
+var ie4 = (document.all)? true:false
+function press(e) {
+  if ((ns4 && (e.which == 3 || e.which == 2)) || (ie4 && (event.button == 2 || event.button == 3))) return false
+  return true
+}
+for (var i=0; i<document.images.length; i++) document.images[i].onmousedown=press
+for (var i=0; i<document.links.length; i++) document.links[i].onmousedown=press
+document.onmousedown=press
+if (ns4) window.captureEvents(Event.MOUSEDOWN)
+window.onmousedown=press
+//-->
+</script>
+
+<script language="JavaScript1.2">
+
+function disableselect(e){
+return false
+}
+
+function reEnable(){
+return true
+}
+
+//if IE4+
+document.onselectstart=new Function ("return false")
+
+//if NS6
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+</script>
+
+<body oncontextmenu="return false" leftmargin="15" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+</head>
+<body>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td>
+                      <table width="681" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top" width="141">
+    <u><font face="Verdana" color="#008000"><b>Unit 
+                      Covertor</b></font></u></td>
+    <td valign="top" width="500">&nbsp;</td>
+    <td align="right" valign="top" width="40">&nbsp;</td>
+  </tr>
+</table>
+                        </td>
+                    </tr>
+                    <tr> 
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td valign="top" class="innertxt" align="justify"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr> 
+                                  <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                      <tr> 
+                                        <td><table width=100% border=0 cellpadding="0" cellspacing="0">
+                                            <tr> 
+                                              <td><form name="frm1" id="frm1">
+                                                  <table width="100%" border="0" cellspacing="0" cellpadding="2">
+                                                    <tr> 
+                                                      <td colspan="10" class="blueheading"><strong><br>
+                                                        <u>
+                                                      <font face="Verdana" size="2">Length Convertor
+                                                      </font></u> </strong></td>
+                                                    </tr>
+                                                    <tr class="text"> 
+                                                      <td width="12%" class="innertxt">
+                                                      <font size="2" face="Verdana">Mm</font></td>
+                                                      <td width="12%" class="innertxt">
+                                                      <font size="2" face="Verdana">Cm</font></td>
+                                                      <td width="12%"> <div class="innertxt">
+                                                        <font size="2" face="Verdana">Meters</font></div></td>
+                                                      <td width="12%"> <div class="innertxt">
+                                                        <font size="2" face="Verdana">Inches</font></div></td>
+                                                      <td width="12%"> <div class="innertxt">
+                                                        <font size="2" face="Verdana">Feet</font></div></td>
+                                                      <td width="12%"> <div class="innertxt">
+                                                        <font size="2" face="Verdana">Yards</font></div></td>
+                                                      <td width="12%"> <div class="innertxt">
+                                                        <font size="2" face="Verdana">Miles</font></div></td>
+                                                      <td width="12%"> <div class="innertxt">
+                                                        <font size="2" face="Verdana">Nautical 
+                                                          Miles</font></div></td>
+                                                      <td width="13%">&nbsp;</td>
+                                                      <td width="13%">&nbsp;</td>
+                                                    </tr>
+                                                    <tr> 
+                                                      <td><input name="mm" type="text" id="mm" size="6" /></td>
+                                                      <td><input name="cm" type="text" id="cm" size="6" /></td>
+                                                      <td><input class="innertxt" name="mtr" type="text" id="mtr" size="6" /></td>
+                                                      <td><input class="innertxt" name="inch" type="text" id="inch2" size="6" /></td>
+                                                      <td><input class="innertxt" name="feet" type="text" id="feet2" size="6" /></td>
+                                                      <td><input class="innertxt" name="yards" type="text" id="yards2" size="6" /></td>
+                                                      <td><input class="innertxt" name="miles" type="text" id="miles2" size="6" /></td>
+                                                      <td><input class="innertxt" name="nmiles" type="text" id="nmiles2" size="6" /></td>
+                                                      <td><input class="innertxt" type="button" name="Submit3222" value="Calculate" onclick="calDistance()" /></td>
+                                                      <td><input class="innertxt" type="reset" name="Submit22222" value="Clear" /></td>
+                                                    </tr>
+                                                  </table>
+                                                </form></td>
+                                            </tr>
+                                            <tr> 
+                                              <td><form name="frm2" id="frm2">
+                                                  <table width="100%" border="0" cellspacing="0" cellpadding="2">
+                                                    <tr> 
+                                                      <td colspan="10" class="blueheading">
+                                                      <u><strong>
+                                                      <font size="2" face="Verdana">Weight 
+                                                        Convertor </font> </strong>
+                                                      </u></td>
+                                                    </tr>
+                                                    <tr class="text"> 
+                                                      <td width="13%" class="innertxt">
+                                                      <font size="2" face="Verdana">Grams</font></td>
+                                                      <td width="13%"> <div class="innertxt">
+                                                        <font size="2" face="Verdana">Kilograms</font></div></td>
+                                                      <td width="13%"> <div class="innertxt">
+                                                        <font size="2" face="Verdana">Ounces</font></div></td>
+                                                      <td width="13%"> <div class="innertxt">
+                                                        <font size="2" face="Verdana">Pounds</font></div></td>
+                                                      <td width="31%"> <div class="innertxt"> 
+                                                          <font size="2" face="Verdana">Tons</font></div></td>
+                                                      <td width="10%">&nbsp;</td>
+                                                      <td width="7%">&nbsp;</td>
+                                                    </tr>
+                                                    <tr> 
+                                                      <td><input class="innertxt" name="grms" type="text" id="grms" size="6" /></td>
+                                                      <td><input class="innertxt" name="kg" type="text" id="kg" size="6" /></td>
+                                                      <td><input class="innertxt" name="ounce" type="text" id="ounce2" size="6" /></td>
+                                                      <td><input class="innertxt" name="pounds" type="text" id="pounds2" size="6" /></td>
+                                                      <td><input class="innertxt" name="ltons" type="text" id="ltons2" size="6" /></td>
+                                                      <td><input class="innertxt" type="button" name="Submit322" value="Calculate" onclick="calWeight()" /></td>
+                                                      <td><input class="innertxt" type="reset" name="Submit2222" value="Clear" /></td>
+                                                    </tr>
+                                                  </table>
+                                                </form></td>
+                                            </tr>
+                                            <tr> 
+                                              <td><form name="frm3" id="frm3">
+                                                  <table width="100%" border="0" cellspacing="0" cellpadding="2">
+                                                    <tr> 
+                                                      <td colspan="7" class="innertxt">
+                                                      <u><font face="Verdana"><span class="blueheading"><strong>
+                                                      <font size="2">Liquid 
+                                                        Volume Converter</font></strong></span><font size="2">
+                                                      </font></font></u> 
+                                                      </td>
+                                                    </tr>
+                                                    <tr class="text"> 
+                                                      <td width="14%"> <div class="innertxt">
+                                                        <font size="2" face="Verdana">Litre</font></div></td>
+                                                      <td width="14%"> <div class="innertxt">
+                                                        <font size="2" face="Verdana">Fluid 
+                                                          Ounces</font></div></td>
+                                                      <td width="14%"> <div class="innertxt">
+                                                        <font size="2" face="Verdana">Quarts</font></div></td>
+                                                      <td width="14%"> <div class="innertxt">
+                                                        <font size="2" face="Verdana">Gallons</font></div></td>
+                                                      <td width="27%"> <div class="innertxt">
+                                                        <font size="2" face="Verdana">Imperial 
+                                                          Gallons</font></div></td>
+                                                      <td width="10%">&nbsp;</td>
+                                                      <td width="7%">&nbsp;</td>
+                                                    </tr>
+                                                    <tr> 
+                                                      <td><input class="innertxt" name="ltr" type="text" id="ltr" size="6" /></td>
+                                                      <td><input class="innertxt" name="founce" type="text" id="founce" size="6" /></td>
+                                                      <td><input class="innertxt" name="quarts" type="text" id="quarts" size="6" /></td>
+                                                      <td><input class="innertxt" name="gallons" type="text" id="gallons" size="6" /></td>
+                                                      <td><input class="innertxt" name="impgallons" type="text" id="impgallons" size="6" /></td>
+                                                      <td><input class="innertxt" type="button" name="Submit32" value="Calculate" onclick="calLiquid()" /></td>
+                                                      <td><input class="innertxt" type="reset" name="Submit222" value="Clear" /></td>
+                                                    </tr>
+                                                  </table>
+                                                </form></td>
+                                            </tr>
+                                          </table></td>
+                                      </tr>
+                                      <tr> 
+                                        <td></td>
+                                      </tr>
+                                      <tr> 
+                                        <td><form name="frm4" id="frm4">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="2">
+                                              <tr> 
+                                                <td colspan="8" class="blueheading">
+                                                <u><strong>
+                                                <font size="2" face="Verdana">Cubic 
+                                                  Meter Converter </font> </strong>
+                                                </u></td>
+                                              </tr>
+                                              <tr class="text"> 
+                                                <td width="10%"> <div class="innertxt">
+                                                  <font size="2" face="Verdana">Height</font></div></td>
+                                                <td width="10%"> <div class="innertxt">
+                                                  <font size="2" face="Verdana">Width</font></div></td>
+                                                <td width="10%"> <div class="innertxt">
+                                                  <font size="2" face="Verdana">Length</font></div></td>
+                                                <td width="13%"> <div class="innertxt">
+                                                  <font size="2" face="Verdana">Unit</font></div></td>
+                                                <td width="10%" class="innertxt"><div align="center">
+                                                  <font size="2" face="Verdana">Qty.</font></div></td>
+                                                <td width="30%" class="innertxt"><div align="center">
+                                                  <font size="2" face="Verdana">Cu. 
+                                                    Meter</font></div></td>
+                                                <td width="10%">&nbsp;</td>
+                                                <td width="7%">&nbsp;</td>
+                                              </tr>
+                                              <tr> 
+                                                <td><input class="innertxt" name="h" type="text" id="h" size="6" /></td>
+                                                <td><input class="innertxt" name="w" type="text" id="w" size="6" /></td>
+                                                <td><input class="innertxt" name="l" type="text" id="l" size="6" /></td>
+                                                <td><select name="unit" id="unit">
+                                                    <option value="I" selected="selected">Inch</option>
+                                                    <option value="C">Centi Meter</option>
+                                                    <option value="F">Feet</option>
+                                                    <option value="M">Meter</option>
+                                                  </select></td>
+                                                <td><div align="center"> 
+                                                    <input name="q" type="text" class="newscnt" id="q" value="1" size="6" />
+                                                  </div></td>
+                                                <td><div align="center"> 
+                                                    <input name="cumtr" type="text" id="cumtr" size="10" />
+                                                  </div></td>
+                                                <td><input name="SubmitFrm4" type="button" class="innertxt" id="SubmitFrm4" onclick="calCMeter()" value="Calculate" /></td>
+                                                <td><input name="ClearFrm4" type="reset" class="innertxt" id="ClearFrm4" value="Clear" /></td>
+                                              </tr>
+                                            </table>
+                                          </form></td>
+                                      </tr>
+                                      <tr> 
+                                        <td></td>
+                                      </tr>
+                                      <tr> 
+                                        <td><script language="JavaScript">
+	
+
+function calDistance(){
+//alert(frm1.mtr.value + "");
+//frm1.mtr.value = isNaN(frm1.mtr.value)
+//alert(isNaN(frm1.mtr.value) + "");
+if (frm1.mtr.value != ""){
+	if (isNaN(frm1.mtr.value) == false){ 
+	
+		frm1.mm.value = frm1.mtr.value * 1000
+		frm1.cm.value = frm1.mtr.value * 100
+		frm1.inch.value = frm1.mtr.value * 39.3701
+		frm1.feet.value = frm1.mtr.value * 3.28084
+		frm1.yards.value = frm1.mtr.value * 1.09361
+		frm1.miles.value = frm1.mtr.value * 0.00062137
+		frm1.nmiles.value = frm1.mtr.value * 0.000547
+	}else{
+		alert ("please enter numeric value")
+		frm1.mtr.value = "";
+	}
+}
+else if (frm1.mm.value != ""){
+	if (isNaN(frm1.mm.value) == false){ 
+		frm1.mtr.value = frm1.mm.value / 1000
+	
+
+		frm1.cm.value = frm1.mtr.value * 100
+		frm1.inch.value = frm1.mtr.value * 39.3701
+		frm1.feet.value = frm1.mtr.value * 3.28084
+		frm1.yards.value = frm1.mtr.value * 1.09361
+		frm1.miles.value = frm1.mtr.value * 0.00062137
+		frm1.nmiles.value = frm1.mtr.value * 0.000547
+	}else{
+		alert ("please enter numeric value")
+		frm1.mm.value = "";
+	}
+}
+else if (frm1.cm.value != ""){
+	if (isNaN(frm1.cm.value) == false){ 
+		frm1.mtr.value = frm1.cm.value / 100
+	
+
+		frm1.mm.value = frm1.mtr.value * 1000
+		frm1.inch.value = frm1.mtr.value * 39.3701
+		frm1.feet.value = frm1.mtr.value * 3.28084
+		frm1.yards.value = frm1.mtr.value * 1.09361
+		frm1.miles.value = frm1.mtr.value * 0.00062137
+		frm1.nmiles.value = frm1.mtr.value * 0.000547
+	}else{
+		alert ("please enter numeric value")
+		frm1.cm.value = "";
+	}
+}
+else if (frm1.inch.value != ""){
+	if (isNaN(frm1.inch.value) == false){ 
+		frm1.mtr.value = frm1.inch.value / 39.3701
+		
+		frm1.mm.value = frm1.mtr.value * 1000
+		frm1.cm.value = frm1.mtr.value * 100
+		frm1.feet.value = frm1.mtr.value * 3.28084
+		frm1.yards.value = frm1.mtr.value * 1.09361
+		frm1.miles.value = frm1.mtr.value * 0.00062137
+		frm1.nmiles.value = frm1.mtr.value * 0.000547
+	}else{
+		alert ("please enter numeric value")
+		frm1.inch.value = "";
+	}
+}
+else if (frm1.feet.value != ""){
+	if (isNaN(frm1.feet.value) == false){ 
+		frm1.mtr.value = frm1.feet.value / 3.28084
+		
+		frm1.mm.value = frm1.mtr.value * 1000
+		frm1.cm.value = frm1.mtr.value * 100
+		frm1.inch.value = frm1.mtr.value * 39.3701
+		frm1.yards.value = frm1.mtr.value * 1.09361
+		frm1.miles.value = frm1.mtr.value * 0.00062137
+		frm1.nmiles.value = frm1.mtr.value * 0.000547
+	}else{
+		alert ("please enter numeric value")
+		frm1.feet.value = "";
+	}
+}
+else if (frm1.yards.value != ""){
+	if (isNaN(frm1.yards.value) == false){ 
+		frm1.mtr.value = frm1.yards.value / 1.09361
+		
+		frm1.mm.value = frm1.mtr.value * 1000
+		frm1.cm.value = frm1.mtr.value * 100
+		frm1.inch.value = frm1.mtr.value * 39.3701
+		frm1.feet.value = frm1.mtr.value * 3.28084 
+		frm1.miles.value = frm1.mtr.value * 0.00062137
+		frm1.nmiles.value = frm1.mtr.value * 0.000547
+	}else{
+		alert ("please enter numeric value")
+		frm1.yards.value = "";
+	}
+}
+else if (frm1.miles.value != ""){
+	if (isNaN(frm1.miles.value) == false){ 
+		frm1.mtr.value = frm1.miles.value / 0.00062137
+		
+		frm1.mm.value = frm1.mtr.value * 1000
+		frm1.cm.value = frm1.mtr.value * 100
+		frm1.inch.value = frm1.mtr.value * 39.3701
+		frm1.feet.value = frm1.mtr.value * 3.28084 
+		frm1.yards.value = frm1.mtr.value * 1.09361 
+		frm1.nmiles.value = frm1.mtr.value * 0.000547
+	}else{
+		alert ("please enter numeric value")
+		frm1.miles.value = "";
+	}
+}
+else if (frm1.nmiles.value != ""){
+	if (isNaN(frm1.nmiles.value) == false){ 
+		frm1.mtr.value = frm1.nmiles.value / 0.000547
+		
+		frm1.mm.value = frm1.mtr.value * 1000
+		frm1.cm.value = frm1.mtr.value * 100
+		frm1.inch.value = frm1.mtr.value * 39.3701
+		frm1.feet.value = frm1.mtr.value * 3.28084 
+		frm1.yards.value = frm1.mtr.value * 1.09361 
+		frm1.miles.value = frm1.mtr.value * 0.00062137 
+	}else{
+		alert ("please enter numeric value")
+		frm1.nmiles.value = "";
+	}
+}
+}
+
+function calWeight(){
+if (frm2.kg.value != ""){
+	if (isNaN(frm2.kg.value) == false){ 
+		frm2.grms.value = frm2.kg.value * 1000
+		frm2.ounce.value = frm2.kg.value * 35.274
+		frm2.pounds.value = frm2.kg.value * 2.2046
+		/*frm2.tpounds.value = frm2.kg.value * 2.6793
+		frm2.stones.value = frm2.kg.value * 0.1378
+		frm2.stons.value = frm2.kg.value * 0.0011*/
+		frm2.ltons.value = frm2.kg.value * 0.001
+	}else{
+		alert ("please enter numeric value")
+		frm2.kg.value = "";
+	}
+}
+else if (frm2.grms.value != ""){
+	if (isNaN(frm2.grms.value) == false){ 
+	
+		frm2.kg.value = frm2.grms.value / 1000
+		
+		
+		frm2.pounds.value = frm2.kg.value * 2.2046
+		frm2.ounce.value = frm2.kg.value * 35.274
+		/*frm2.tpounds.value = frm2.kg.value * 2.6793
+		frm2.stones.value = frm2.kg.value * 0.1378
+		frm2.stons.value = frm2.kg.value * 0.0011*/
+		frm2.ltons.value = frm2.kg.value * 0.001
+	}else{
+		alert ("please enter numeric value")
+		frm2.grms.value = "";
+	}
+}
+
+else if (frm2.ounce.value != ""){
+	if (isNaN(frm2.ounce.value) == false){ 
+		frm2.kg.value = frm2.ounce.value / 35.274
+		
+		frm2.grms.value = frm2.kg.value * 1000
+		frm2.pounds.value = frm2.kg.value * 2.2046
+		/*frm2.tpounds.value = frm2.kg.value * 2.6793
+		frm2.stones.value = frm2.kg.value * 0.1378
+		frm2.stons.value = frm2.kg.value * 0.0011*/
+		frm2.ltons.value = frm2.kg.value * 0.001
+	}else{
+		alert ("please enter numeric value")
+		frm2.ounce.value = "";
+	}
+}
+
+else if (frm2.pounds.value != ""){
+	if (isNaN(frm2.pounds .value) == false){ 
+		frm2.kg.value = frm2.pounds.value / 2.2046
+		
+		frm2.grms.value = frm2.kg.value * 1000
+		frm2.ounce.value = frm2.kg.value * 35.274
+		/*frm2.tpounds.value = frm2.kg.value * 2.6793
+		frm2.stones.value = frm2.kg.value * 0.1378
+		frm2.stons.value = frm2.kg.value * 0.0011*/
+		frm2.ltons.value = frm2.kg.value * 0.001
+	}else{
+		alert ("please enter numeric value")
+		frm2.pounds.value = "";
+	}
+}
+
+/*else if (frm2.tpounds.value != ""){
+	if (isNaN(frm2.tpounds .value) == false){ 
+		frm2.kg.value = frm2.tpounds.value / 2.6793
+		
+		
+		frm2.ounce.value = frm2.kg.value * 35.274
+		frm2.pounds.value = frm2.kg.value * 2.2046 
+
+		frm2.stones.value = frm2.kg.value * 0.1378
+		frm2.stons.value = frm2.kg.value * 0.0011
+		frm2.ltons.value = frm2.kg.value * 0.001
+	}else{
+		alert ("please enter numeric value")
+		frm2.tpounds.value = "";
+	}
+}
+
+else if (frm2.stones.value != ""){
+	if (isNaN(frm2.stones .value) == false){ 
+		frm2.kg.value = frm2.stones.value / 0.1378
+		
+		
+		frm2.ounce.value = frm2.kg.value * 35.274
+		frm2.pounds.value = frm2.kg.value * 2.2046 
+		frm2.tpounds.value = frm2.kg.value * 2.6793
+		frm2.stons.value = frm2.kg.value * 0.0011
+		frm2.ltons.value = frm2.kg.value * 0.001
+	}else{
+		alert ("please enter numeric value")
+		frm2.stones.value = "";
+	}
+}
+
+else if (frm2.stons.value != ""){
+	if (isNaN(frm2.stons .value) == false){ 
+		frm2.kg.value = frm2.stons.value / 0.0011
+		
+		
+		frm2.ounce.value = frm2.kg.value * 35.274
+		frm2.pounds.value = frm2.kg.value * 2.2046 
+		frm2.tpounds.value = frm2.kg.value * 2.6793
+		frm2.stones.value = frm2.kg.value * 0.1378 
+		frm2.ltons.value = frm2.kg.value * 0.001
+	}else{
+		alert ("please enter numeric value")
+		frm2.stons.value = "";
+	}
+}
+*/
+else if (frm2.ltons.value != ""){
+	if (isNaN(frm2.ltons .value) == false){ 
+		frm2.kg.value = frm2.ltons.value / 0.001
+		
+		frm2.grms.value = frm2.kg.value * 1000
+		frm2.ounce.value = frm2.kg.value * 35.274
+		frm2.pounds.value = frm2.kg.value * 2.2046 
+		/*frm2.tpounds.value = frm2.kg.value * 2.6793
+		frm2.stones.value = frm2.kg.value * 0.1378 
+		frm2.stons.value = frm2.kg.value * 0.0011 */
+	}else{
+		alert ("please enter numeric value")
+		frm2.ltons.value = "";
+	}
+}
+
+}
+
+
+function calLiquid(){
+if (frm3.ltr.value != ""){
+	if (isNaN(frm3.ltr.value) == false){ 
+		frm3.founce.value = frm3.ltr.value * 33.824
+		frm3.quarts.value = frm3.ltr.value * 1.057
+		frm3.gallons.value = frm3.ltr.value * 0.2642
+		frm3.impgallons.value = frm3.ltr.value * 0.22
+	}else{
+		alert ("please enter numeric value")
+		frm3.ltr.value = "";
+	}
+}
+else if (frm3.founce.value != ""){
+	if (isNaN(frm3.founce.value) == false){ 
+		frm3.ltr.value = frm3.founce.value / 33.824
+		
+		
+		frm3.quarts.value = frm3.ltr.value * 1.057
+		frm3.gallons.value = frm3.ltr.value * 0.2642
+		frm3.impgallons.value = frm3.ltr.value * 0.22
+	}else{
+		alert ("please enter numeric value")
+		frm3.founce.value = "";
+	}
+}
+
+else if (frm3.quarts.value != ""){
+	if (isNaN(frm3.quarts.value) == false){ 
+		frm3.ltr.value = frm3.quarts.value / 1.057
+		
+		frm3.founce.value = frm3.ltr.value * 33.824 
+		frm3.gallons.value = frm3.ltr.value * 0.2642
+		frm3.impgallons.value = frm3.ltr.value * 0.22
+	}else{
+		alert ("please enter numeric value")
+		frm3.quarts.value = "";
+	}
+}
+
+else if (frm3.gallons.value != ""){
+	if (isNaN(frm3.gallons.value) == false){ 
+		frm3.ltr.value = frm3.gallons.value / 0.2642
+		
+		frm3.founce.value = frm3.ltr.value * 33.824 
+		frm3.quarts.value = frm3.ltr.value * 1.057
+		frm3.impgallons.value = frm3.ltr.value * 0.22
+	}else{
+		alert ("please enter numeric value")
+		frm3.gallons.value = "";
+	}
+}
+
+else if (frm3.impgallons.value != ""){
+	if (isNaN(frm3.impgallons.value) == false){ 
+		frm3.ltr.value = frm3.impgallons.value / 0.22
+		
+		frm3.founce.value = frm3.ltr.value * 33.824 
+		frm3.quarts.value = frm3.ltr.value * 1.057
+		frm3.gallons.value = frm3.ltr.value * 0.2642 
+	}else{
+		alert ("please enter numeric value")
+		frm3.impgallons.value = "";
+	}
+}
+
+}
+
+function calCMeter(){
+//alert(frm4.unit.value);
+if (frm4.h.value != "" && frm4.w.value != "" && frm4.l.value != "" && frm4.q.value != ""){
+	if (isNaN(frm4.h.value) == false && isNaN(frm4.w.value) == false && isNaN(frm4.l.value) == false && isNaN(frm4.q.value) == false){ 
+	q = frm4.q.value
+		if (frm4.unit.value == "I"){
+			mh = frm4.h.value * 0.0254
+			mw = frm4.w.value * 0.0254
+			ml = frm4.l.value * 0.0254
+			
+		}
+		if (frm4.unit.value == "F") {
+			mh = ((frm4.h.value) * 12 * 0.0254)
+			mw = ((frm4.w.value) * 12 * 0.0254)
+			ml = ((frm4.l.value) * 12 * 0.0254)
+
+		}
+		if (frm4.unit.value == "C"){
+			mh = frm4.h.value / 100
+			mw = frm4.w.value / 100
+			ml = frm4.l.value / 100
+		}
+		if (frm4.unit.value == "M"){
+			mh = frm4.h.value
+			mw = frm4.w.value
+			ml = frm4.l.value
+		}
+		//alert(mh + "," + mw + "," + ml);
+		frm4.cumtr.value = (mh * mw * ml * q)
+		
+	}
+	else
+	{
+		alert ("please enter numeric value")
+
+	}
+}
+
+}
+
+		                                </script></td>
+                                      </tr>
+                                    </table></td>
+                                </tr>
+                                <tr> 
+                                  <td class="newscnt"><p align="justify" class="newscnt"  style="margin-right:10;margin-left:10">&nbsp; 
+                                    </p></td>
+                                </tr>
+                                <tr> 
+                                  <td>
+<font face="Verdana" size="2">
+
+<a href="#top"><font color="#0000FF"><u>Go Top</u></font></a><font color="#0000FF"><u> </u>
+&nbsp;&nbsp;&nbsp; <a href="../general.html">Go Back</a></font></td>
+                                </tr>
+                              </table></td>
+                    </tr>
+                  </table>
+
+</body>
+
+</html>

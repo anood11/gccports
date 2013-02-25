@@ -1,0 +1,292 @@
+<html>
+<meta http-equiv=page-enter content=blendtrans(duration=0.5)>
+<meta http-equiv=page-exit content=blendtrans(duration=0.5)>
+<head>
+
+<script language="JavaScript1.1">
+<!--
+var ns4 = (document.layers)? true:false
+var ie4 = (document.all)? true:false
+function press(e) {
+  if ((ns4 && (e.which == 3 || e.which == 2)) || (ie4 && (event.button == 2 || event.button == 3))) return false
+  return true
+}
+for (var i=0; i<document.images.length; i++) document.images[i].onmousedown=press
+for (var i=0; i<document.links.length; i++) document.links[i].onmousedown=press
+document.onmousedown=press
+if (ns4) window.captureEvents(Event.MOUSEDOWN)
+window.onmousedown=press
+//-->
+</script>
+
+<script language="JavaScript1.2">
+
+function disableselect(e){
+return false
+}
+
+function reEnable(){
+return true
+}
+
+//if IE4+
+document.onselectstart=new Function ("return false")
+
+//if NS6
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+</script>
+
+<body oncontextmenu="return false" leftmargin="15" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+</head>
+<body>
+
+<p><font face="Verdana" color="#008000"><u><b>Maritime Signal Flags</b></u></font></p>
+<div align="center">
+  <center>
+<table cellSpacing="0" cellPadding="3" width="80%" bgColor="#cccccc" border="1" style="border-collapse: collapse" bordercolor="#FF0000">
+  <tr bgColor="#ffffff">
+    <td width="48%" bordercolor="#FF0000">
+    <div align="center">
+      <font face="Verdana" size="2">
+      <img src="a-icon.gif" border="2" width="70" height="60"><br>
+      <br>
+      </font><font color="#333366" size="2" face="Verdana">A - Diver below (when stationary); I 
+      am undergoing a speed trial</font><font face="Verdana" size="2">
+      </font>
+    </div>
+    </td>
+    <td width="52%" bordercolor="#FF0000">
+    <p align="center"><font color="#333366" size="2" face="Verdana">
+    <img src="b-icon.gif" border="2" width="70" height="60"> <br>
+    <br>
+    B - I am taking on or discharging explosives</font></td>
+  </tr>
+  <tr bgColor="#ffffff">
+    <td bordercolor="#FF0000">
+    <div align="center">
+      <font color="#333366" size="2" face="Verdana">
+      <img src="c-icon.gif" border="2" width="70" height="60"> <br>
+      C - (affirmative)</font></div>
+    </td>
+    <td bordercolor="#FF0000">
+    <div align="center">
+      <font color="#333366" size="2" face="Verdana">
+      <img src="d-icon.gif" border="2" width="70" height="60"> <br>
+      D - keep clear of me, I am manoevering with difficulty</font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffff">
+    <td bordercolor="#FF0000">
+    <div align="center">
+      <font color="#333366" size="2" face="Verdana">
+      <img src="e-icon.gif" border="2" width="70" height="60"><br>
+      E - I am altering my course to starboard</font></div>
+    </td>
+    <td bordercolor="#FF0000">
+    <div align="center">
+      <font color="#333366" size="2" face="Verdana">
+      <img src="f-icon.gif" border="2" width="70" height="60"><br>
+      F - I am disabled, communicate with me</font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffff">
+    <td bordercolor="#FF0000">
+    <div align="center">
+      <font color="#333366" size="2" face="Verdana">
+      <img src="g-icon.gif" border="2" width="70" height="60"><br>
+      G - I require a pilot</font></div>
+    </td>
+    <td bordercolor="#FF0000">
+    <div align="center">
+      <font color="#333366" size="2" face="Verdana">
+      <img src="h-icon.gif" border="2" width="70" height="60"><br>
+      H - I have a pilot on board</font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffff">
+    <td bordercolor="#FF0000">
+    <div align="center">
+      <font color="#333366" size="2" face="Verdana">
+      <img src="i-icon.gif" border="2" width="70" height="60"><br>
+      I - I am altering my course to port</font></div>
+    </td>
+    <td bordercolor="#FF0000">
+    <div align="center">
+      <font color="#333366" size="2" face="Verdana">
+      <img src="j-icon.gif" border="2" width="70" height="60"><br>
+      J - I am going to send a message by semaphore</font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffff">
+    <td bordercolor="#FF0000">
+    <div align="center">
+      <font color="#333366" size="2" face="Verdana">
+      <img src="k-icon.gif" border="2" width="70" height="60"><br>
+      K - you should stop your vessel instantly</font></div>
+    </td>
+    <td bordercolor="#FF0000">
+    <div align="center">
+      <font color="#333366" size="2" face="Verdana">
+      <img src="l-icon.gif" border="2" width="70" height="60"><br>
+      L - you should stop, I have something important to communicate</font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffff">
+    <td bordercolor="#FF0000">
+    <div align="center">
+      <font color="#333366" size="2" face="Verdana">
+      <img src="m-icon.gif" border="2" width="70" height="60"><br>
+      M - I have a doctor on board</font></div>
+    </td>
+    <td bordercolor="#FF0000">
+    <div align="center">
+      <font color="#333366" size="2" face="Verdana">
+      <img src="n-icon.gif" border="2" width="70" height="60"><br>
+      N - no (negative)</font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffff">
+    <td bordercolor="#FF0000">
+    <div align="center">
+      <font face="Verdana">
+      <font color="#808080" size="2">
+      <a href="file:///C|/WINDOWS/Desktop/jobs/trans-inst/web_site/old/o.gif">
+      <font color="#333366"><img src="o-icon.gif" width="70" height="60"></font></a></font><font color="#333366" size="2"><br>
+      O - man overboard</font></font></div>
+    </td>
+    <td bordercolor="#FF0000">
+    <div align="center">
+      <font color="#333366" size="2" face="Verdana">
+      <img src="p-icon.gif" border="2" width="70" height="60"><br>
+      P - the Blue Peter - all aboard, vessel is about to proceed sea. (At sea) 
+      your lights are out or burning badly</font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffff">
+    <td bordercolor="#FF0000">
+    <div align="center">
+      <font color="#333366" size="2" face="Verdana">
+      <img src="q-icon.gif" border="2" width="70" height="60"><br>
+      Q - my vessel is healthy and I request free practique</font></div>
+    </td>
+    <td bordercolor="#FF0000">
+    <div align="center">
+      <font color="#333366" size="2" face="Verdana">
+      <img src="r-icon.gif" border="2" width="70" height="60"><br>
+      R - the way is off my ship. You may feel you way past me</font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffff">
+    <td bordercolor="#FF0000">
+    <div align="center">
+      <font color="#333366" size="2" face="Verdana">
+      <img src="s-icon.gif" border="2" width="70" height="60"><br>
+      S - my engines are going full speed astern</font></div>
+    </td>
+    <td bordercolor="#FF0000">
+    <div align="center">
+      <font color="#333366" size="2" face="Verdana">
+      <img src="t-icon.gif" border="2" width="70" height="60"><br>
+      T - do not pass ahead of me</font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffff">
+    <td bordercolor="#FF0000">
+    <div align="center">
+      <font color="#333366" size="2" face="Verdana">
+      <img src="u-icon.gif" border="2" width="70" height="60"><br>
+      U - you are standing into danger</font></div>
+    </td>
+    <td bordercolor="#FF0000">
+    <div align="center">
+      <font color="#333366" size="2" face="Verdana">
+      <img src="v-icon.gif" border="2" width="70" height="60"><br>
+      V - I require assistance (not distress)</font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffff">
+    <td bordercolor="#FF0000">
+    <p align="center"><font color="#333366" size="2" face="Verdana">
+    <img src="w-icon.gif" border="2" width="70" height="60"><br>
+    W - I require medical assistance</font></td>
+    <td bordercolor="#FF0000">
+    <p align="center"><font color="#333366" size="2" face="Verdana">
+    <img src="x-icon.gif" border="2" width="70" height="60"><br>
+    X - stop carrying out your intentions and watch for my signals</font></td>
+  </tr>
+  <tr bgColor="#ffffff">
+    <td bordercolor="#FF0000">
+    <p align="center">&nbsp;</p>
+    <p align="center"><font color="#333366" size="2" face="Verdana">
+    <img src="y-icon.gif" border="2" width="70" height="60"><br>
+    Y - I am carrying mails</font></td>
+    <td bordercolor="#FF0000">
+    <p align="center">&nbsp;</p>
+    <p align="center"><font color="#333366" size="2" face="Verdana">
+    <img src="z-icon.gif" border="2" width="70" height="60"><br>
+    Z - to be used to address or call shore stations</font></td>
+  </tr>
+  <tr bgColor="#ffffff">
+    <td bordercolor="#FF0000">
+    <h3 align="center"><font color="#333366" size="2" face="Verdana">Answering Pennant</font></h3>
+    <p align="center"><font color="#333366" size="2" face="Verdana">
+    <img src="answer-icon.gif" border="2" width="110" height="50"><br>
+    Code and answering pennant. <br>
+    <br>
+&nbsp;</font></p>
+    <h3 align="center"><font color="#333366" size="2" face="Verdana">Substitute Pennants</font></h3>
+    <p align="center"><font color="#333366" size="2" face="Verdana">
+    <img src="sub1-icon.gif" border="2" width="70" height="60"> <br>
+    substitute 1;</font></p>
+    <p align="center"><font color="#333366" size="2" face="Verdana">
+    <img src="sub2-icon.gif" border="2" width="70" height="60"> <br>
+    substitute 2;</font></p>
+    <p align="center"><font color="#333366" size="2" face="Verdana">
+    <img src="sub3-icon.gif" border="2" width="70" height="60"> <br>
+    substitute 3;</font></p>
+    <h3 align="center"><font color="#333366" size="2" face="Verdana">Distress</font></h3>
+    <p align="center"><font color="#333366" size="2" face="Verdana">
+    <img src="n-icon.gif" border="2" width="70" height="60"></font></p>
+    <p align="center"><font color="#333366" size="2" face="Verdana">
+    <img src="c-icon.gif" border="2" width="70" height="60"> <br>
+    N + C - I am in distress</font></p>
+    <p align="center">&nbsp;</td>
+    <td bordercolor="#FF0000">
+    <h3 align="center"><font color="#333366" size="2" face="Verdana">Numeric Pennants</font></h3>
+    <p align="center"><font color="#333366" size="2" face="Verdana">
+    <img src="0-icon.gif" border="2" width="110" height="50"> 0</font></p>
+    <p align="center"><font color="#333366" size="2" face="Verdana">
+    <img src="1-icon.gif" width="110" height="50"> 1</font></p>
+    <p align="center"><font color="#333366" size="2" face="Verdana">
+    <img src="2-icon.gif" border="2" width="110" height="50"> 2</font></p>
+    <p align="center"><font color="#333366" size="2" face="Verdana">
+    <img src="3-icon.gif" border="2" width="110" height="50"> 3</font></p>
+    <p align="center"><font color="#333366" size="2" face="Verdana">
+    <img src="4-icon.gif" border="2" width="110" height="50"> 4</font></p>
+    <p align="center"><font color="#333366" size="2" face="Verdana">
+    <img src="5-icon.gif" border="2" width="110" height="50"> 5</font></p>
+    <p align="center"><font color="#333366" size="2" face="Verdana">
+    <img src="6-icon.gif" border="2" width="110" height="50"> 6</font></p>
+    <p align="center"><font color="#333366" size="2" face="Verdana">
+    <img src="7-icon.gif" border="2" width="110" height="50"> 7</font></p>
+    <p align="center"><font color="#333366" size="2" face="Verdana">
+    <img src="8-icon.gif" border="2" width="110" height="50"> 8</font></p>
+    <p align="center"><font color="#333366" size="2" face="Verdana">
+    <img src="9-icon.gif" border="2" width="110" height="50"> 9</font></td>
+  </tr>
+  </table>
+
+  </center>
+</div>
+
+<font face="Verdana" size="2">
+<p><a href="#top"><font color="#0000ff"><u>Go Top</u></font></a><font color="#0000ff"><u>
+</u>&nbsp;&nbsp;&nbsp; <a href="../../general.html">Go Back</a></font></p>
+</font>
+
+</body>
+
+</html>

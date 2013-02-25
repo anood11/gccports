@@ -1,0 +1,76 @@
+<html>
+<meta http-equiv=page-enter content=blendtrans(duration=0.5)>
+<meta http-equiv=page-exit content=blendtrans(duration=0.5)>
+<head>
+
+<script language="JavaScript1.1">
+<!--
+var ns4 = (document.layers)? true:false
+var ie4 = (document.all)? true:false
+function press(e) {
+  if ((ns4 && (e.which == 3 || e.which == 2)) || (ie4 && (event.button == 2 || event.button == 3))) return false
+  return true
+}
+for (var i=0; i<document.images.length; i++) document.images[i].onmousedown=press
+for (var i=0; i<document.links.length; i++) document.links[i].onmousedown=press
+document.onmousedown=press
+if (ns4) window.captureEvents(Event.MOUSEDOWN)
+window.onmousedown=press
+//-->
+</script>
+
+<script language="JavaScript1.2">
+
+function disableselect(e){
+return false
+}
+
+function reEnable(){
+return true
+}
+
+//if IE4+
+document.onselectstart=new Function ("return false")
+
+//if NS6
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+</script>
+
+<body oncontextmenu="return false" leftmargin="15" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+</head>
+<body>
+
+<p><b><u><font color="#008000" face="Verdana">Ship Engine Types &amp; Ship's Speed</font></u></b></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="39%" id="AutoNumber1">
+  <tr>
+    <td width="40%" align="center"><font face="Verdana" size="2"><b>G</b></font></td>
+    <td width="60%"><font face="Verdana" size="2">Gas Turbine</font></td>
+  </tr>
+  <tr>
+    <td width="40%" align="center"><font face="Verdana" size="2"><b>M</b></font></td>
+    <td width="60%"><font face="Verdana" size="2">Diesel</font></td>
+  </tr>
+  <tr>
+    <td width="40%" align="center"><font face="Verdana" size="2"><b>S</b></font></td>
+    <td width="60%"><font face="Verdana" size="2">Steam Turbine</font></td>
+  </tr>
+</table>
+
+<p align="justify"><font size="2" face="Verdana">Ships speed is expressed with 
+&quot;section&quot;. The ships speed varies with the type of ship. For instance, the speed 
+of dry cargo ships and tankers is slow, which is usually 13 sections to 17 
+sections. And the speed of container ships is fast, which can reach 24.5 
+sections at most presently. The speed of passenger ship is also fast. </font>
+</p>
+
+<p align="justify"><font color="#0000FF" face="Verdana" size="2">
+<a href="../general.html">Go Back </a>
+</font>
+</p>
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<html>
+<meta http-equiv=page-enter content=blendtrans(duration=0.5)>
+<meta http-equiv=page-exit content=blendtrans(duration=0.5)>
+<head>
+
+<script language="JavaScript1.1">
+<!--
+var ns4 = (document.layers)? true:false
+var ie4 = (document.all)? true:false
+function press(e) {
+  if ((ns4 && (e.which == 3 || e.which == 2)) || (ie4 && (event.button == 2 || event.button == 3))) return false
+  return true
+}
+for (var i=0; i<document.images.length; i++) document.images[i].onmousedown=press
+for (var i=0; i<document.links.length; i++) document.links[i].onmousedown=press
+document.onmousedown=press
+if (ns4) window.captureEvents(Event.MOUSEDOWN)
+window.onmousedown=press
+//-->
+</script>
+
+<script language="JavaScript1.2">
+
+function disableselect(e){
+return false
+}
+
+function reEnable(){
+return true
+}
+
+//if IE4+
+document.onselectstart=new Function ("return false")
+
+//if NS6
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+</script>
+
+<body oncontextmenu="return false" leftmargin="15" link="#0000FF" vlink="#0000FF" alink="#0000FF">
+</head>
+
+<body>
+<p align="justify"><font face="Verdana" color="#008000"><u>
+<b>Ships Load Line</b></u></font></p>
+<p align="justify">
+
+<font size="2" face="Verdana">Ship load line is the maximum waterline when ships are fully loaded. It is marked on the both sides of shipboard and the center of the ship. It denotes the limitation of ship in water. According to used material structure of ship, ship type, shipping applicability, anti-sinking character and so on, as well as the shipping zone and season, the shipping organized body or ship inspection office makes the ship load line mark. It is for the safe of ship and the loading possession and passengers. And it has been accepted by the counties all over the world. The violators will be punished with the involved laws. Ship load line marks include such as follows: deck line, load line disc and all load lines relevant with the disc. The meaning of the load lines in the figure is such as follows:
+</font> <p align="justify">
+<font face="Verdana">
+<b><u><font size="2">1. TF (Tropical Fresh Water Load Line) </font> </u></b>
+<font size="2"><br>
+It denotes tropical fresh water load line. When a ship is sailed in tropical fresh water, the loaded total cargoes cannot make the ship body in water over this line.
+</font></font> <p align="justify">
+
+<font face="Verdana"><u>
+
+<b><font size="2">2. F ( Fresh Water Load Line)</font></b></u><font size="2"><br>
+It denotes fresh water load line. When a ship is sailed in fresh water, the loaded total cargoes cannot make the ship body in water over this line.
+</font></font> <p align="justify">
+
+<font face="Verdana"><u>
+
+<b><font size="2">3. T(Tropical Load Line) </font> </b></u><font size="2"><br>
+It denotes tropical load line. When a ship is sailed in tropical zone, the loaded total cargoes cannot make the ship body in water over this line.
+</font></font> <p align="justify"><p align="justify">
+
+<font face="Verdana"><u>
+
+<b><font size="2">4. S (Summer Load Line) </font> </b></u><font size="2"><br>
+It denotes summer load line. When a ship is sailed in summer, the loaded total cargoes cannot make the ship body in water over this line.
+</font></font> <p align="justify">
+
+<font face="Verdana"><u>
+
+<b><font size="2">5. W (Winter Load Line) </font> </b></u><font size="2"><br>
+It denotes winter load line. When a ship is sailed in winter, the loaded total cargoes cannot make the ship body in water over this line.
+</font></font> <p align="justify">
+
+<font face="Verdana">
+
+<u><b><font size="2">6. WNA (Winter North Atlantic Load Line) </font> </b></u>
+<font size="2"><br>
+It denotes winter North Atlantic load line. When a ship, whose length is less 
+than 100.5 meters, is sailed in North Atlantic (north to north latitude degree) 
+in winter, the loaded total cargoes cannot make the ship body in water over this 
+line. </font></font> <p align="justify">
+
+ 
+<font size="2" face="Verdana">In the ship-renting service, the rent cost is usually calculated with the loaded tonnage equivalent to the load line in summer.</font><p align="justify">
+<font face="Verdana" size="2">
+
+<a href="#top"><font color="#0000FF"><u>Go Top</u></font></a><font color="#0000FF"><u> </u>
+&nbsp;&nbsp;&nbsp; <a href="../general.html">Go Back</a></font></p>
+
+
+</body>
+
+</html>
