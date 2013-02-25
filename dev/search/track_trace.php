@@ -9,7 +9,7 @@ include("../includes/left_submenu.php");
 
 <div class="center">
 	<h1 class="newsHead">Track and Trace &raquo; <?php echo $category;?></h1>
-	<form method="post" name="frmTrackTrace" action="track_and_trace.php">
+	<form method="post" name="frmTrackTrace" action="track_trace.php">
 	<ul class="modifySearch">
 		<li><label>Sort By</label></li>
 		<li>
