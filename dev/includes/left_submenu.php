@@ -43,7 +43,7 @@
 	<div class="sideInner left">
 		<img src="<?php echo $httpPathSite;?>resources/images/sailing-schedules.gif" width="100%" alt="" />
 	</div>
-	<div class="sideInner left"><a href="<?php echo $httpPathSite;?>search/telephone_codes.php">Telephone Codes</a></div>
+	<div class="sideInner left"><a href="<?php echo $httpPathSite;?>search/telephone_codes.php"><img src="<?php echo $httpPathSite;?>resources/images/telephoneCodes.jpg" width="100%" alt="" /></a></div>
 	<div class="sideInner left">
 		<h1 class="newsHead">Seaport Search</h1>
 		<ul>
