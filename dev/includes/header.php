@@ -17,6 +17,14 @@
 var baseURLsite='<?php echo $httpPathSite;?>';
 var baseURLadmin='<?php echo $httpPathAdmin;?>';
 </script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("ul.wide li a").click(function(){
+		var useful_link = 'useful_links/' + $(this).attr("id") + '.html';
+		$("div.center").html("<iframe src='<?php echo $httpPathSite;?>" + useful_link + "' class='usefulLinks'></iframe>");
+	});
+});
+</script>
 </head>
 
 <body>

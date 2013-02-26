@@ -22,11 +22,5 @@ $(document).ready(function() {
 	$("#frominfo").parent("td").parent("tr").next("tr").css("display","none");
 	$("#frominfo").parent("td").parent("tr").parent("tbody").parent("table").css("width","100%");
 	
-	$("ul.wide li a").click(function(){
-		var useful_link = 'useful_links/' + $(this).attr("id") + '.html';
-		//alert(useful_link);
-		//$("div.center").html("");
-		$("div.center").html("<iframe src='" + useful_link + "' class='usefulLinks'></iframe>");
-
-	});
+	
 });
