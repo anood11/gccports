@@ -34,7 +34,7 @@ include("../includes/left_submenu.php");
 		</tr> 	
 		<?php } else{ while($search=$db->sql_fetchrow($trackTraceSearchResults)){ ?>
 		<tr>
-			<td><a href="<?php echo $search['url'];?>" target="_blank" ><?php echo  $search['companyName'];?></a></td>
+			<td><a href="javascript:void(0);" name="<?php echo $search['url'];?>" class="trackAndTraceLink" ><?php echo  $search['companyName'];?></a></td>
 		</tr>
 		<?php }}?>
 	</table>

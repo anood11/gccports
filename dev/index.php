@@ -16,14 +16,14 @@ include("includes/left_submenu.php");
 				<h1><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $main['newsID'];?>"><?php echo $main['newsHeading'];?></a></h1>
 				<h5><?php echo $main['newsDate'];?></h5>
 				<span> <img src="<?php echo $httpPathSite;?>resources/news_images/<?php echo $main['newsImage'];?>.jpg" alt="" />
-				<p><?php echo substr($main['newsMatter'],0,1000);?></p>
+				<p><?php echo substr($main['newsMatter'],0,500);?></p>
 				<h6><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $main['newsID'];?>">read more &raquo;</a></h6>
 				</span></td>
 			<?php while($right=$db->sql_fetchrow($rightSmallNews)){?>
 			<td class="small"><h1><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $right['newsID'];?>"><?php echo $right['newsHeading'];?></a></h1>
 				<h5><?php echo $right['newsDate'];?></h5>
 				<span> <img src="<?php echo $httpPathSite;?>resources/news_images/<?php echo $right['newsImage'];?>.jpg" alt="" />
-				<p><?php echo substr($right['newsMatter'],0,120);?> </p>
+				<p><?php echo substr($right['newsMatter'],0,80);?> </p>
 				<h6><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $right['newsID'];?>">read more &raquo;</a></h6>
 				</span></td>
 			<?php } ?>
@@ -35,7 +35,7 @@ include("includes/left_submenu.php");
 			<td class="small"><h1><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $bottom['newsID'];?>"><?php echo $bottom['newsHeading'];?></a></h1>
 				<h5><?php echo $bottom['newsDate'];?></h5>
 				<span> <img src="<?php echo $httpPathSite;?>resources/news_images/<?php echo $bottom['newsImage'];?>.jpg" alt="" />
-				<p><?php echo substr($bottom['newsMatter'],0,100);?></p>
+				<p><?php echo substr($bottom['newsMatter'],0,80);?></p>
 				<h6><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $bottom['newsID'];?>">read more &raquo;</a></h6>
 				</span></td>
 			<?php } ?>

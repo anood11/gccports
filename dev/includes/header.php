@@ -21,7 +21,11 @@ var baseURLadmin='<?php echo $httpPathAdmin;?>';
 $(document).ready(function() {
 	$("ul.wide li a").click(function(){
 		var useful_link = 'useful_links/' + $(this).attr("id") + '.html';
-		$("div.center").html("<iframe src='<?php echo $httpPathSite;?>" + useful_link + "' class='usefulLinks'></iframe>");
+		$("div.wrapper").html("<iframe src='<?php echo $httpPathSite;?>" + useful_link + "' class='usefulLinks'></iframe>");
+	});
+	$("a.trackAndTraceLink").click(function(){
+		var trackAndTraceLink =  $(this).attr("name");
+		$("div.wrapper").html("<iframe src='" + trackAndTraceLink + "' class='usefulLinks'></iframe>");
 	});
 });
 </script>
@@ -54,7 +58,17 @@ $(document).ready(function() {
 <ul class="topNav">
 	<li><a href="<?php echo $httpPathSite;?>">HOME</a></li>
 	<li><a href="">DIRECTORY</a></li>
-	<li><a href="">PORTS</a></li>
+	<li><a href="">PORTS</a>
+		<ul>
+			<li><a href="<?php echo $httpPathSite;?>">Seaport Search</a></li>
+			<li><a href="<?php echo $httpPathSite;?>">Airport Search</a></li>
+			<li><a href="<?php echo $httpPathSite;?>">Seaport Directory</a></li>
+			<li><a href="<?php echo $httpPathSite;?>">Airport Directory</a></li>
+			<li><a href="<?php echo $httpPathSite;?>">Seaport in GCC Countries</a></li>
+			<li><a href="<?php echo $httpPathSite;?>">Airport in GCC Countries</a></li>
+			<li><a href="<?php echo $httpPathSite;?>">Longitude &amp; Latitude</a></li>
+		</ul>
+	</li>
 	<li><a href="">ASSOCIATIONS</a>
 		<ul>
 			<li><a href="<?php echo $httpPathSite;?>associations/list_associations.php?category=gccCountries">Associations in GCC Countries</a></li>
