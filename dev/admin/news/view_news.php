@@ -11,7 +11,7 @@ include("../includes/header.php");
 		<input type="hidden" name="pageNumber" value="<?php echo $page;?>">
 		<ul class="newsSection">
 			<li class="large displayMessage"><?php echo $displayMessage;?></li>
-			<li><a href="<?php echo $httpPathAdmin;?>news/add_news.php">Add news</a></li>
+			<li><a href="<?php echo $httpPathAdmin;?>news/edit_news.php?newsId=0">Add news</a></li>
 			<li class="large">
 				<table>
 					<tr>

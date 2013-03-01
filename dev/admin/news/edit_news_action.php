@@ -9,17 +9,27 @@ $newsId=0;
 
 if(isset($_REQUEST['btnSaveNews'])){
 	getValuesFromForm();
-	saveImages();
 	$display_message=validateForm();
 	if($display_message==""){
 		if($newsId==0){
-			$add=addNews();
+			$newsId=addNews($newsHead,$newsMatter,$newsDate,$newsCategory,$newsActive);
+			if($newsId==1) {
+				saveImages();
+				$display_message="News added Successfully";
+				}
+			else $display_message="Unable to add news";
+			$categoryList=getNewsCategories();
 		}else{
-			
+			$update=updateNews($newsHead,$newsMatter,$newsDate,$newsCategory,$newsActive,$newsId);
+			if($update==1) $display_message="Update Successfull";
+			else $display_message="Unable to update";
+			$categoryList=getNewsCategories();
 		}
 	}
+	$categoryList=getNewsCategories();
 }else{
 	getValuesFromForm();
+	$categoryList=getNewsCategories();
 	$newsDetails=getNewsDetails($newsId);
 	assignDBValuesToForm($newsDetails);
 	setValuesToForm();
@@ -105,8 +115,11 @@ function assignDBValuesToForm($rsResult){
 	$newsImage=$news['newsImage'];
 	$newsActive=$news['newsStatus'];
 	$newsCategory=$news['newsCategoryId'];
-	$date=explode('-',$news['newsDate']);
-	$newsDate=$date[2].'-'.$date[1].'-'.$date[0];
+	if($newsId!=0){
+		$date=explode('-',$news['newsDate']);
+		$newsDate=$date[2].'-'.$date[1].'-'.$date[0];
+	}else $newsDate="";
+	
 	
 }
 function saveImages(){

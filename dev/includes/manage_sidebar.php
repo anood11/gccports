@@ -41,7 +41,7 @@ $airportCountryList=getCountryList('airport');
 $airportCountryAbbreviations=getCountryAbbreviations('airport');
 $airlineCountryList=getCountryList('airline');
 $seaportCountryList=getCountryList('seaport');
-
+$countryList=listAllCountries();
 /******************************************* Control flow ends ****************************************************************/
 /******************************************* Page level functions starts ******************************************************/
 

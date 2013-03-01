@@ -12,8 +12,10 @@
 			<li><input type="text" name="subscribeCompany" id="subscribeCompany" value="" /></li>
 			<li><label>Country</label></li>
 			<li><select name="subscribeCountry" id="subscribeCountry">
-				<option value="-1">Select Country</option>
-				<option value="1">India</option>
+				<option value="-1">Select Country</option> 
+				<?php while($country=$db->sql_fetchrow($countryList)){?>
+				<option value="<?php echo $country['countryId'];?>"><?php echo $country['countryName'];?></option>
+				<?php } ?>
 				</select>
 			</li>
 			<li><label>Email</label></li>

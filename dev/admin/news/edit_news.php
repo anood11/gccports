@@ -8,7 +8,7 @@ include("../includes/header.php");
 <div class="left">&nbsp; </div>
 <div class="center">
 <h1 class="newsHead">Add News</h1>
-<form name="frmEditNews" action="edit_news.php" method="post">
+<form name="frmEditNews" action="edit_news.php" method="post" enctype="multipart/form-data">
 <input type="hidden" name="newsId" value="<?php echo $newsId;?>">
 		<ul class="newsSection">
 			<li class="large">
@@ -33,7 +33,7 @@ include("../includes/header.php");
 				<select name="newsCategory">
 					<option value="-1">--Select--</option>
 					<?php while($category=$db->sql_fetchrow($categoryList)) {?>
-					<option value="<?php echo $category[''];?>" <?php if($newsCategory=$category['']) echo 'selected';?>><?php echo $category[''];?></option>
+					<option value="<?php echo $category['categoryId'];?>" <?php if($newsCategory=$category['categoryId']) echo 'selected';?>><?php echo $category['newsCategory'];?></option>
 					<?php } ?>
 				</select>
 			</li>

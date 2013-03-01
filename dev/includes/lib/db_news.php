@@ -73,4 +73,42 @@ function addSubscription($subscribeName,$subscribeCompany,$subscribeCountry,$sub
 	}
 	return $add;
 }
+function addNews($newsHead,$newsMatter,$newsDate,$newsCategory,$newsActive){
+	global $db;
+	$next_id=0;
+  	$addNews =sprintf("INSERT INTO tblnews(newsHeading,newsMatter,newsDate,newsStatus)VALUES(%s,%s,%s,%s)",
+						   GetSQLValueString($newsHead, "text"),
+						   GetSQLValueString($newsMatter, "text"),
+						   GetSQLValueString($newsDate, "date"),
+						   GetSQLValueString($newsCategory, "int"),
+						   GetSQLValueString($newsActive, "int"));		 
+	if($rsResult = $db->sql_query($addNews)){
+		$next_id = $db->sql_nextid();
+	}
+	$addImage =sprintf("INSERT INTO tblnews(newsImage)VALUES(%s)",
+						   GetSQLValueString($next_id, "int"));
+	$rsImg = $db->sql_query($addImage);
+	return $next_id;
+}
+function updateNews($newsHead,$newsMatter,$newsDate,$newsCategory,$newsActive,$newsId){
+	global $db;
+	$next_id=0;
+  	$updateNews =sprintf("UPDATE tblnews SET newsHeading=%s,newsMatter=%s,newsCategoryId=%s,newsDate=%s,newsStatus=%s WHERE newsID=%s",
+						   GetSQLValueString($newsHead, "text"),
+						   GetSQLValueString($newsMatter, "text"),
+						   GetSQLValueString($newsCategory, "int"),
+						   GetSQLValueString($newsDate, "date"),
+						   GetSQLValueString($newsActive, "int"),
+						   GetSQLValueString($newsId, "int"));		 
+	if($rsResult = $db->sql_query($updateNews)){
+		$next_id = $newsId;
+	}
+	return $next_id;
+}
+function getNewsCategories(){
+	global $db;
+	$categoryList="SELECT categoryId,newsCategory FROM tblcategory";
+	$rsResult = $db->sql_query($categoryList);
+	return $rsResult;
+}
 ?>

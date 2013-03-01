@@ -104,4 +104,10 @@ function getTrackTraceSearchResults($category){
 	$rsResult = $db->sql_query($selectQyery);
 	return $rsResult;
 }
+function listAllCountries(){
+	global $db;
+	$selectQyery="SELECT countryId,countryName,countryCode FROM tblcountry";
+	$rsResult = $db->sql_query($selectQyery);
+	return $rsResult;
+}
 ?>
