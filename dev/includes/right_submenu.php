@@ -3,6 +3,9 @@
 	<a href="<?php echo $httpPathSite;?>search/track_trace.php"><img src="<?php echo $httpPathSite;?>resources/images/track-and-trace.png" width="100%" alt=""/></a>
 	</div>
 	<div class="sideInner right">
+	<a href="<?php echo $httpPathSite;?>job/job.php"><img src="<?php echo $httpPathSite;?>resources/images/job.jpg" width="100%" alt=""/></a>
+	</div>
+	<div class="sideInner right">
 		<h1 class="newsHead">Subscribe News</h1>
 		<ul>
 			<li class="displayMessage" id="subscrbeRes">	</li>	

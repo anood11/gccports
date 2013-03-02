@@ -17,7 +17,7 @@ include("../includes/header.php");
 			</li>
 			<li class="large">
 				<label>Date</label>
-				<input type="text" id="datepicker" />
+				<input type="text" id="datepicker" readonly="readonly" />
 			</li>
 			<li class="large">
 				<label>Activate</label>

@@ -146,7 +146,7 @@ ul.leftNav li a:hover {
 	text-align:right;
 	float:left;
 }
-.newsSection li.large input[type="text"], .newsSection li.large input[type="file"], .newsSection li.large textarea, .newsSection li.large input[type="password"] {
+.newsSection li.large input[type="text"], .newsSection li.large input[type="file"], .newsSection li.large textarea, .newsSection li.large input[type="password"],select {
 	width:400px;
 	padding:2px;
 	margin-left:10px;

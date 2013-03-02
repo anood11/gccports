@@ -6,11 +6,13 @@
 <link href="<?php echo $httpPathAdmin;?>resources/styles/reset.css" rel="stylesheet" type="text/css" />
 <link href="<?php echo $httpPathAdmin;?>resources/styles/main.css" rel="stylesheet" type="text/css" />
 <link href="<?php echo $httpPathAdmin;?>resources/styles/currency.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
 <!--[if IE 7]>
 	<link href="resources/styles/IE7.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 
 <script src="<?php echo $httpPathAdmin;?>resources/scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
 <script src="<?php echo $httpPathAdmin;?>resources/scripts/jquery.ui.rcarousel.js" type="text/javascript"></script>
 <script src="<?php echo $httpPathAdmin;?>resources/scripts/jquery.ui.widget.js" type="text/javascript"></script>
 <script src="<?php echo $httpPathAdmin;?>resources/scripts/paging.js" type="text/javascript"></script>
@@ -18,6 +20,11 @@
 var baseURLsite='<?php echo $httpPathSite;?>';
 var baseURLadmin='<?php echo $httpPathAdmin;?>';
 </script>
+<script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+  });
+  </script>
 <script src="<?php echo $httpPathAdmin;?>resources/scripts/basic_script.js" type="text/javascript"></script>
 </head>
 <body>
