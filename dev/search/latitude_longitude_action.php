@@ -35,4 +35,4 @@ function getAirportKeys(){
 	if($seaportCountry=='-1')$seaportCountry="";
 }
 /******************************************* Page level functions ends ********************************************************/
-?>   
+?>

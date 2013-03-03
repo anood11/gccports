@@ -58,10 +58,6 @@
 				</select></li>
 			<li><label>Port Code</label></li>
 			<li><input type="text" name="seaportCode" id="seaportCode" value="<?php echo $seaportCode;?>"/></li>
-			<li><label>Longitude</label></li>
-			<li><input type="text" name="seaportLongitude" id="seaportLongitude" value="<?php echo $seaportLongitude;?>"/></li>
-			<li><label>Latitude</label></li>
-			<li><input type="text" name="seaportLatitude" id="seaportLatitude" value="<?php echo $seaportLatitude;?>"/></li>
 			<li><input type="button" value="Seaport Search" onclick="seaportSearch();"/></li>
 		</ul>
 	</div>

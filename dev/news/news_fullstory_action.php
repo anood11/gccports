@@ -35,7 +35,7 @@ function assignDBValuesToForm($rsResult){
 	$newsHead=$details['newsHeading'];
 	$newsImg=$details['newsImage'];
 	$newsMatter=$details['newsMatter'];
-	$newsDate=$details['newsDate'];
+	$newsDate=date("d-m-Y", strtotime($details['newsDate']));
 }
 /******************************************* Page level functions ends ********************************************************/
 

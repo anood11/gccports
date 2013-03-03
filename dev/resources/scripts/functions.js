@@ -30,11 +30,11 @@ function seaportSearch(){
 	var name=$('#seaportName').val();
 	var country=$('#seaportCountry').val();
 	var code=$('#seaportCode').val();
-	var longi=$('#seaportLongitude').val();
-	var lati=$('#seaportLatitude').val();
-	if((name=="")&&(country=="-1")&&(code=="")&&(longi=="")&&(lati==""))alert('Please enter atleast one search key');
+	/*var longi=$('#seaportLongitude').val();
+	var lati=$('#seaportLatitude').val(); &&(longi=="")&&(lati=="")
+	*/if((name=="")&&(country=="-1")&&(code==""))alert('Please enter atleast one search key');
 	else {
-		var queryString="?seaportSearch=1&name="+name+"&country="+country+"&code="+code+"&longitude="+longi+"&latitude="+lati;
+		var queryString="?seaportSearch=1&name="+name+"&country="+country+"&code="+code+"&searchType=seaport";
 		window.location.href=baseURLsite+'search/seaport_search.php'+queryString;
 	}
 }

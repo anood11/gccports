@@ -57,23 +57,28 @@ $(document).ready(function() {
 </div>
 <ul class="topNav">
 	<li><a href="<?php echo $httpPathSite;?>">HOME</a></li>
-	<li><a href="">DIRECTORY</a></li>
+	<li><a href="">DIRECTORY</a>
+		<ul>
+			<li><a href="<?php echo $httpPathSite;?>search/seaport_directory.php">Seaport Directory</a></li>
+			<li><a href="<?php echo $httpPathSite;?>search/airport_directory.php">Airport Directory</a></li>
+		</ul>
+	</li>
 	<li><a href="">PORTS</a>
 		<ul>
-			<li><a href="<?php echo $httpPathSite;?>">Seaport Search</a></li>
-			<li><a href="<?php echo $httpPathSite;?>">Airport Search</a></li>
-			<li><a href="<?php echo $httpPathSite;?>">Seaport Directory</a></li>
-			<li><a href="<?php echo $httpPathSite;?>">Airport Directory</a></li>
+			<li><a href="<?php echo $httpPathSite;?>search/seaport_search.php">Seaport Search</a></li>
+			<li><a href="<?php echo $httpPathSite;?>search/airport_search.php">Airport Search</a></li>
+			<li><a href="<?php echo $httpPathSite;?>search/seaport_directory.php">Seaport Directory</a></li>
+			<li><a href="<?php echo $httpPathSite;?>search/airport_directory.php">Airport Directory</a></li>
 			<li><a href="<?php echo $httpPathSite;?>">Seaport in GCC Countries</a></li>
 			<li><a href="<?php echo $httpPathSite;?>">Airport in GCC Countries</a></li>
-			<li><a href="<?php echo $httpPathSite;?>">Longitude &amp; Latitude</a></li>
+			<li><a href="<?php echo $httpPathSite;?>search/latitude_longitude.php">Longitude &amp; Latitude</a></li>
 		</ul>
 	</li>
 	<li><a href="">ASSOCIATIONS</a>
 		<ul>
-			<li><a href="<?php echo $httpPathSite;?>associations/list_associations.php?category=gccCountries">Associations in GCC Countries</a></li>
+			<li><a href="<?php echo $httpPathSite;?>associations/list_associations.php?category=Associations in GCC Countries">Associations in GCC Countries</a></li>
 			<li><a href="<?php echo $httpPathSite;?>associations/list_associations.php?category=international Associations">International Associations</a></li>
-			<li><a href="<?php echo $httpPathSite;?>associations/list_associations.php?category=officialBodies">Official Bodies</a></li>
+			<li><a href="<?php echo $httpPathSite;?>associations/list_associations.php?category=Official Bodies">Official Bodies</a></li>
 		</ul>
 	</li>
 	<li><a href="">USEFUL LINKS</a>

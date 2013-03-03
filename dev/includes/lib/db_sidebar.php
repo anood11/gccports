@@ -27,6 +27,10 @@ function getCountryList($type){
 		$countryDetails ="SELECT DISTINCT country FROM tblseaports ORDER BY country ASC"; 
 	}else if($type=='telephone'){
 		$countryDetails ="SELECT DISTINCT country FROM tbltelephonecodes ORDER BY country ASC"; 
+	}else if($type=='airportDirectory'){
+		$countryDetails ="SELECT DISTINCT country FROM tblairportdirectory ORDER BY country ASC";
+	}else if($type=='seaportDirectory'){
+		$countryDetails ="SELECT DISTINCT country FROM tblseaportdirectory ORDER BY country ASC"; 
 	}
 	$rsResult = $db->sql_query($countryDetails);
 	return $rsResult;
@@ -58,6 +62,38 @@ function getAirportSearchResults($airportName,$airportCountry,$airportCountryAbb
 								 GetSQLValueString($airportCity, "text"),
                                  GetSQLValueString($airportCode, "text"),
                                  GetSQLValueString($airportSort, ""));
+	$rsResult = $db->sql_query($selectQyery);
+	return $rsResult;
+}
+function getAirportDirectorySearchResults($airportName,$airportCountry,$airportAddress,$airportPhone,$airportSort){
+	global $db;
+	$airportName = $airportName."%";
+	$airportAddress=$airportAddress."%";
+	$airportPhone=$airportPhone."%";
+	$airportCountry=$airportCountry."%";
+	$selectQyery=sprintf("SELECT country,name,address,phone,fax,email,website FROM tblairportdirectory WHERE
+							 name LIKE %s AND country LIKE %s AND address LIKE %s AND phone LIKE %s ORDER BY %s ASC",
+                                 GetSQLValueString($airportName, "text"),
+                                 GetSQLValueString($airportCountry, "text"),
+								 GetSQLValueString($airportAddress, "text"),
+								 GetSQLValueString($airportPhone, "text"),
+								 GetSQLValueString($airportSort, ""));
+	$rsResult = $db->sql_query($selectQyery);
+	return $rsResult;
+}
+function getSeaportDirectorySearchResults($seaportName,$seaportCountry,$seaportAddress,$seaportLocation,$seaportSort){
+	global $db;
+	$seaportName = $seaportName."%";
+	$seaportCountry=$seaportCountry."%";
+	$seaportAddress=$seaportAddress."%";
+	$seaportLocation=$seaportLocation."%";
+	$selectQyery=sprintf("SELECT location,country,name,address,phone,fax,email,website FROM tblseaportdirectory WHERE
+							 name LIKE %s AND country LIKE %s AND address LIKE %s AND location LIKE %s ORDER BY %s ASC",
+                                 GetSQLValueString($seaportName, "text"),
+                                 GetSQLValueString($seaportCountry, "text"),
+								 GetSQLValueString($seaportAddress, "text"),
+								 GetSQLValueString($seaportLocation, "text"),
+								 GetSQLValueString($seaportSort, ""));
 	$rsResult = $db->sql_query($selectQyery);
 	return $rsResult;
 }

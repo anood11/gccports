@@ -1,12 +1,12 @@
 <?php
 include("../includes/lib/globals.php");
 include("../includes/manage_sidebar.php");
-include("seaport_search_action.php");
+include("latitude_longitude_action.php");
 include("../includes/header.php");
 include("../includes/ads.php");
 include("../includes/left_submenu.php");
 ?>
-<form action="seaport_search.php" method="post" name="formSearchSeaport">
+<form action="latitude_longitude.php" method="post" name="formSearchSeaport">
 <div class="center">
 	<h1 class="newsHead">Search Results &raquo;</h1>
 	<ul class="modifySearch">
@@ -14,6 +14,11 @@ include("../includes/left_submenu.php");
 		<li><input type="text" name="name" value="<?php echo $seaportName;?>"/></li>
 		<li><label>Seaport Code</label></li>
 		<li><input type="text" name="code" value="<?php echo $seaportCode;?>" /></li>
+		<li><label>Latitude</label></li>
+		<li><input type="text" name="latitude" value="<?php echo $seaportLatitude;?>"/></li>
+		<li><label>Longitude</label></li>
+		<li><input type="text" name="longitude" value="<?php echo $seaportLongitude;?>" /></li>
+		
 		<li><label>Country</label></li>
 		<li><select name="country">
 			<option value="-1">Select Country</option>
@@ -31,6 +36,7 @@ include("../includes/left_submenu.php");
 		</li>
 		<li><input type="submit" value="Modify" name="btnSeaportSearch"/></li>
 	</ul>
+	
 	<h1 class="newsHead marginTop">Search Results &raquo;</h1>
 	<table class="searchResult">
 		<?php if($seaportSort=='country') {?>
@@ -38,6 +44,8 @@ include("../includes/left_submenu.php");
 			<th>Country</th>
 			<th>Seaport Name</th>
 			<th>Seaport Code</th>
+			<th>Latitude</th>
+			<th>Longitude</th>
 		</tr>
 		<?php if($db->sql_numrows($seaportSearchResults)<=0){?>
 		<tr>
@@ -48,12 +56,17 @@ include("../includes/left_submenu.php");
 			<td><?php echo $search['country'];?></td>
 			<td><?php echo $search['seaportName'];?></td>
 			<td><?php echo $search['code'];?></td>
+			<td><?php echo $search['latitude'];?></td>
+			<td><?php echo $search['longitude'];?></td>
 		</tr> 
+		
 		<?php }}} else if($seaportSort=='code') {?>
 		<tr>
 			<th>Seaport Code</th>
 			<th>Seaport Name</th>
 			<th>Country</th>
+			<th>Latitude</th>
+			<th>Longitude</th>
 		</tr>
 		<?php if($db->sql_numrows($seaportSearchResults)<=0){?>
 		<tr>
@@ -64,12 +77,17 @@ include("../includes/left_submenu.php");
 			<td><?php echo $search['code'];?></td>
 			<td><?php echo $search['seaportName'];?></td>
 			<td><?php echo $search['country'];?></td>
+			<td><?php echo $search['latitude'];?></td>
+			<td><?php echo $search['longitude'];?></td>
 		</tr> 
+		
 		<?php }}} else { ?>
 		<tr>
 			<th>Seaport Name</th>
 			<th>Seaport Code</th>
 			<th>Country</th>
+			<th>Latitude</th>
+			<th>Longitude</th>
 		</tr>
 		<?php if($db->sql_numrows($seaportSearchResults)<=0){?>
 		<tr>
@@ -80,6 +98,8 @@ include("../includes/left_submenu.php");
 			<td><?php echo $search['seaportName'];?></td>
 			<td><?php echo $search['code'];?></td>
 			<td><?php echo $search['country'];?></td>
+			<td><?php echo $search['latitude'];?></td>
+			<td><?php echo $search['longitude'];?></td>
 		</tr> 
 		<?php } }?>
 	</table>
