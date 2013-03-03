@@ -83,7 +83,6 @@ $(document).ready(function() {
 	</li>
 	<li><a href="">USEFUL LINKS</a>
 		<ul class="wide">
-			
 			<li><a href="javascript:void(0);" id="container_specification">Container Specification</a></li>
 			<li><a href="javascript:void(0);" id="unit_converter">Unit Converter</a></li>
 			<li><a href="javascript:void(0);" id="world_currency_details">World Currency Details</a></li>
@@ -123,7 +122,7 @@ $(document).ready(function() {
 		
 	</li>
 	<li><a href="">JOBS</a></li>
-	<li><a href="">CONTACT US</a></li>
+	<li><a href="<?php echo $httpPathSite;?>contact/contact.php">CONTACT US</a></li>
 	<li class="topSearch">
 		<select name="">
 			<option>Select Category</option>
