@@ -47,5 +47,84 @@ function checkUserExists($uname,$password){
 	$rowRes=$db->sql_fetchrow($rsResult);
 	return $rowRes['cnt'];
 }
+function addFreelistUserDetails($company,$address,$telephone,$fax,$email,$website,$organizationHead,$designation,$mobile,$employeeCount){
+	global $db;
+	$insertId=0;
+	$addFreelist=sprintf("INSERT INTO tblfreelistuser(companyName,address,telephone,fax,email,website,organizationHead,designation,mobile,employeeCount,createdOn,status) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,DATE(NOW()),0)",
+						  GetSQLValueString($company, "text"),
+						  GetSQLValueString($address, "text"),
+						  GetSQLValueString($telephone, "text"),
+						  GetSQLValueString($fax, "text"),
+						  GetSQLValueString($email, "text"),
+						  GetSQLValueString($website, "text"),
+						  GetSQLValueString($organizationHead, "text"),
+						  GetSQLValueString($designation, "text"),
+						  GetSQLValueString($mobile, "text"),
+						  GetSQLValueString($employeeCount, "int"));
+	if($rsResult = $db->sql_query($addFreelist)){
+		$insertId = $db->sql_nextid();
+	}
+	return $insertId;
+}
+function addFreeListBranch($branch,$bAddress,$bPhone,$bFax,$bEmail,$bWebsite,$userId){
+	global $db;
+	$insertId=0;
+	$addBranch=sprintf("INSERT INTO tblfreelistbranch(userId,branch,address,telephone,fax,email,website) VALUES(%s,%s,%s,%s,%s,%s,%s)",
+						  GetSQLValueString($userId, "int"),
+						  GetSQLValueString($branch, "text"),
+						  GetSQLValueString($bAddress, "text"),
+						  GetSQLValueString($bPhone, "text"),
+						  GetSQLValueString($bFax, "text"),
+						  GetSQLValueString($bEmail, "text"),
+						  GetSQLValueString($bWebsite, "text"));
+	if($rsResult = $db->sql_query($addFreelist)){
+		$insertId = $db->sql_nextid();
+	}
+	return $insertId;
+}
+function addFreeListCategory($chkShipOwners,$chkShippingAgnts,$chkFreight,$chkAirlines,$chkAirCargo,$chkAirCraft,$chkShipbuilders,$chkEnginBuilders,$chkShipCharters,$chkShipBrokers,$chkBunkers,$chkShipChandler,$chkStevedores,$chkWarehousing,$chkMarineContainer,$chkMaritime,$chkContainerTrucking,$chkEquipmentOwners,$chkCourier,$chkLashing,$chkLogistics,$chkPacking,$chkPestControl,$chkProjectCargo,$chkSupplyChain,$chkConsultants,$chkShipManagers,$chkMaritimeSchool,$chkMarineInsurance,$chkMaritimeLawyers,$chkClassification,$chkTowage,$chkOffshore,$userId){
+	
 
+	global $db;
+	$insertId=0;
+	$addCategories=sprintf("INSERT INTO tblfreelistcategory(userId,shipOwners,airlines,shipBuilders,shipBrokers,stevedores,maritimeOrganisations,courierServices,packingRemovals,supplyChain,maritimeSchools,classificationSocieties,shippingAgents,airCargoAgents,engineBuilders,bunkers,wareHouse,containerTrucking,lashSecure,pestControl,consultants,marineInsurance,towage,freightForwarding,airCraft,shipCharters,shipChandler,marineContainer,equipmentOwners,logistics,projectCargo,shipManagers,maritimeLawyers,offshoreOnshore) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+						  GetSQLValueString($userId, "int"),
+						  GetSQLValueString($chkShipOwners, "int"),
+						  GetSQLValueString($chkAirlines, "int"),
+						  GetSQLValueString($chkShipbuilders, "int"),
+						  GetSQLValueString($chkShipBrokers, "int"),
+						  GetSQLValueString($chkStevedores, "int"),
+						  GetSQLValueString($chkMaritime, "int"),
+						  GetSQLValueString($chkCourier, "int"),
+						  GetSQLValueString($chkPacking, "int"),
+						  GetSQLValueString($chkSupplyChain, "int"),
+						  GetSQLValueString($chkMaritimeSchool, "int"),
+						  GetSQLValueString($chkClassification, "int"),
+						  GetSQLValueString($chkShippingAgnts, "int"),
+						  GetSQLValueString($chkAirCargo, "int"),
+						  GetSQLValueString($chkEnginBuilders, "int"),
+						  GetSQLValueString($chkBunkers, "int"),
+						  GetSQLValueString($chkWarehousing, "int"),
+						  GetSQLValueString($chkContainerTrucking, "int"),
+						  GetSQLValueString($chkLashing, "int"),
+						  GetSQLValueString($chkPestControl, "int"),
+						  GetSQLValueString($chkConsultants, "int"),
+						  GetSQLValueString($chkMarineInsurance, "int"),
+						  GetSQLValueString($chkTowage, "int"),
+						  GetSQLValueString($chkFreight, "int"),
+						  GetSQLValueString($chkAirCraft, "int"),
+						  GetSQLValueString($chkShipCharters, "int"),
+						  GetSQLValueString($chkShipChandler, "int"),
+						  GetSQLValueString($chkMarineContainer, "int"),
+						  GetSQLValueString($chkEquipmentOwners, "int"),
+						  GetSQLValueString($chkLogistics, "int"),
+						  GetSQLValueString($chkProjectCargo, "int"),
+						  GetSQLValueString($chkShipManagers, "int"),
+						  GetSQLValueString($chkMaritimeLawyers, "int"),
+						  GetSQLValueString($chkOffshore, "int"));
+	if($rsResult = $db->sql_query($addCategories)){
+		$insertId = $db->sql_nextid();
+	}
+	return $insertId;
+}
 ?>

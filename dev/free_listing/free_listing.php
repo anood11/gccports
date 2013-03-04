@@ -1,6 +1,6 @@
 <?php
 include("../includes/lib/globals.php");
-include("../includes/lib/db_associations.php");
+include("../includes/lib/db_users.php");
 include("../includes/manage_sidebar.php");
 include("free_listing_action.php");
 include("../includes/header.php");
@@ -209,7 +209,7 @@ include("../includes/left_submenu.php");
 			</table></td>
 	</tr>
 	<tr>
-		<td colspan="4"><input type="submit" value="Submit &amp; Get Listed" /></td>
+		<td colspan="4"><input type="submit" value="Submit &amp; Get Listed" name="btnSubmit"/></td>
 	</tr>
 	</table>
 </div>

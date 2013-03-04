@@ -5,18 +5,27 @@ global $display_message;
 $display_message="";
 /*********************************************** Control flow starts **********************************************************/
 
-if(isset($_REQUEST['btnSaveNews'])){
+if(isset($_REQUEST['btnSubmit'])){
 	getValuesFromForm();
 	$display_message=validateForm();
 	if($display_message==""){
-		
-	}
-	
+		$userId=addFreelistUserDetails($company,$address,$telephone,$fax,$email,$website,$organizationHead,$designation,$mobile,$employeeCount);
+		if($userId!=0){
+			addFreeListCategory($chkShipOwners,$chkShippingAgnts,$chkFreight,$chkAirlines,$chkAirCargo,$chkAirCraft,$chkShipbuilders,$chkEnginBuilders,$chkShipCharters,$chkShipBrokers,$chkBunkers,$chkShipChandler,$chkStevedores,$chkWarehousing,$chkMarineContainer,$chkMaritime,$chkContainerTrucking,$chkEquipmentOwners,$chkCourier,$chkLashing,$chkLogistics,$chkPacking,$chkPestControl,$chkProjectCargo,$chkSupplyChain,$chkConsultants,$chkShipManagers,$chkMaritimeSchool,$chkMarineInsurance,$chkMaritimeLawyers,$chkClassification,$chkTowage,$chkOffshore,$userId);
+			for($i=1;$i<=6;$i++){
+				if(($branch.$i)!=""){
+					addFreeListBranch($branch.$i,$bAddress.$i,$bPhone.$i,$bFax.$i,$bEmail.$i,$bWebsite.$i,$userId);
+				}
+			}
+		}else{
+			$display_message="Unable to add details. Please try again later.";
+		}
+	}setValuesToForm();	
 }else{
 	getValuesFromForm();
 	setValuesToForm();
 }
-/*********************************************** Control flow ends ************************************************************/
+/*********************$************************** Control flow ends ************************************************************/
 /*********************************************** Page level functions start ***************************************************/
 function getValuesFromForm(){
 	global $company;
@@ -106,7 +115,7 @@ function getValuesFromForm(){
 	$email=isset($_REQUEST['email'])?$_REQUEST['email']:"";
 	$website=isset($_REQUEST['website'])?$_REQUEST['website']:"";
 	$organizationHead=isset($_REQUEST['organizationHead'])?$_REQUEST['organizationHead']:"";
-	$designation=isset($_REQUEST['designation'])?$_REQUEST['']:"";
+	$designation=isset($_REQUEST['designation'])?$_REQUEST['designation']:"";
 	$mobile=isset($_REQUEST['mobile'])?$_REQUEST['mobile']:"";
 	$employeeCount=isset($_REQUEST['employeeCount'])?$_REQUEST['employeeCount']:"";
 	$branch1=isset($_REQUEST['branch1'])?$_REQUEST['branch1']:"";
@@ -427,21 +436,165 @@ function validateForm(){
 	return $err;
 }
 function setValuesToForm(){
-	global $newsId;
-	global $newsHead;
-	global $newsMatter;
-	global $newsDate;
-	global $newsCategory;
-	global $newsImage;
-	global $newsActive;
+global $company;
+	global $address;
+	global $telephone;
+	global $fax;
+	global $email;
+	global $website;
+	global $organizationHead;
+	global $designation;
+	global $mobile;
+	global $employeeCount;
+	global $branch1;
+	global $bAddress1;
+	global $bPhone1;
+	global $bFax1;
+	global $bEmail1;
+	global $bWebsite1; 
+	global $branch2;
+	global $bAddress2;
+	global $bPhone2;
+	global $bFax2;
+	global $bEmail2;
+	global $bWebsite2;
+	global $branch3;
+	global $bAddress3;
+	global $bPhone3;
+	global $bFax3;
+	global $bEmail3;
+	global $bWebsite3;
+	global $branch4;
+	global $bAddress4;
+	global $bPhone4;
+	global $bFax4;
+	global $bEmail4;
+	global $bWebsite4;
+	global $branch5;
+	global $bAddress5;
+	global $bPhone5;
+	global $bFax5;
+	global $bEmail5;
+	global $bWebsite5;
+	global $branch6;
+	global $bAddress6;
+	global $bPhone6;
+	global $bFax6;
+	global $bEmail6;
+	global $bWebsite6; 
+	global $chkShipOwners;
+	global $chkShippingAgnts;
+	global $chkFreight;
+	global $chkAirlines;
+	global $chkAirCargo;
+	global $chkAirCraft;
+	global $chkShipbuilders;
+	global $chkEnginBuilders;
+	global $chkShipCharters;
+	global $chkShipBrokers;
+	global $chkBunkers;
+	global $chkShipChandler;
+	global $chkStevedores;
+	global $chkWarehousing;
+	global $chkMarineContainer;
+	global $chkMaritime;
+	global $chkContainerTrucking;
+	global $chkEquipmentOwners;
+	global $chkCourier;
+	global $chkLashing;
+	global $chkLogistics;
+	global $chkPacking;
+	global $chkPestControl;
+	global $chkProjectCargo;
+	global $chkSupplyChain;
+	global $chkConsultants;
+	global $chkShipManagers;
+	global $chkMaritimeSchool;
+	global $chkMarineInsurance;
+	global $chkMaritimeLawyers;
+	global $chkClassification;
+	global $chkTowage;
+	global $chkOffshore;	
 	
-	$newsId=formatDisplayText($newsId);
-	$newsHead=formatDisplayText($newsHead);
-	$newsMatter=formatDisplayText($newsMatter);
-	$newsDate=formatDisplayText($newsDate);
-	$newsCategory=formatDisplayText($newsCategory);
-	$newsImage=formatDisplayText($newsImage);
-	$newsActive=formatDisplayText($newsActive);
+	$company=formatDisplayText($company);
+	$address=formatDisplayText($address);
+	$telephone=formatDisplayText($telephone);
+	$fax=formatDisplayText($fax);
+	$email=formatDisplayText($email);
+	$website=formatDisplayText($website);
+	$organizationHead=formatDisplayText($organizationHead);
+	$designation=formatDisplayText($designation);
+	$mobile=formatDisplayText($mobile);
+	$employeeCount=formatDisplayText($employeeCount);
+	$branch1=formatDisplayText($branch1);
+	$bAddress1=formatDisplayText($bAddress1);
+	$bPhone1=formatDisplayText($bPhone1);
+	$bFax1=formatDisplayText($bFax1);
+	$bEmail1=formatDisplayText($bEmail1);
+	$bWebsite1=formatDisplayText($bWebsite1); 
+	$branch2=formatDisplayText($branch2);
+	$bAddress2=formatDisplayText($bAddress2);
+	$bPhone2=formatDisplayText($bPhone2);
+	$bFax2=formatDisplayText($bFax2);
+	$bEmail2=formatDisplayText($bEmail2);
+	$bWebsite2=formatDisplayText($bWebsite2);
+	$branch3=formatDisplayText($branch3);
+	$bAddress3=formatDisplayText($bAddress3);
+	$bPhone3=formatDisplayText($bPhone3);
+	$bFax3=formatDisplayText($bFax3);
+	$bEmail3=formatDisplayText($bEmail3);
+	$bWebsite3=formatDisplayText($bWebsite3);
+	$branch4=formatDisplayText($branch4);
+	$bAddress4=formatDisplayText($bAddress4);
+	$bPhone4=formatDisplayText($bPhone4);
+	$bFax4=formatDisplayText($bFax4);
+	$bEmail4=formatDisplayText($bEmail4);
+	$bWebsite4=formatDisplayText($bWebsite4);
+	$branch5=formatDisplayText($branch5);
+	$bAddress5=formatDisplayText($bAddress5);
+	$bPhone5=formatDisplayText($bPhone5);
+	$bFax5=formatDisplayText($bFax5);
+	$bEmail5=formatDisplayText($bEmail5);
+	$bWebsite5=formatDisplayText($bWebsite5);
+	$branch6=formatDisplayText($branch6);
+	$bAddress6=formatDisplayText($bAddress6);
+	$bPhone6=formatDisplayText($bPhone6);
+	$bFax6=formatDisplayText($bFax6);
+	$bEmail6=formatDisplayText($bEmail6);
+	$bWebsite6=formatDisplayText($bWebsite6); 
+	$chkShipOwners=formatDisplayText($chkShipOwners);
+	$chkShippingAgnts=formatDisplayText($chkShippingAgnts);
+	$chkFreight=formatDisplayText($chkFreight);
+	$chkAirlines=formatDisplayText($chkAirlines);
+	$chkAirCargo=formatDisplayText($chkAirCargo);
+	$chkAirCraft=formatDisplayText($chkAirCraft);
+	$chkShipbuilders=formatDisplayText($chkShipbuilders);
+	$chkEnginBuilders=formatDisplayText($chkEnginBuilders);
+	$chkShipCharters=formatDisplayText($chkShipCharters);
+	$chkShipBrokers=formatDisplayText($chkShipBrokers);
+	$chkBunkers=formatDisplayText($chkBunkers);
+	$chkShipChandler=formatDisplayText($chkShipChandler);
+	$chkStevedores=formatDisplayText($chkStevedores);
+	$chkWarehousing=formatDisplayText($chkWarehousing);
+	$chkMarineContainer=formatDisplayText($chkMarineContainer);
+	$chkMaritime=formatDisplayText($chkMaritime);
+	$chkContainerTrucking=formatDisplayText($chkContainerTrucking);
+	$chkEquipmentOwners=formatDisplayText($chkEquipmentOwners);
+	$chkCourier=formatDisplayText($chkCourier);
+	$chkLashing=formatDisplayText($chkLashing);
+	$chkLogistics=formatDisplayText($chkLogistics);
+	$chkPacking=formatDisplayText($chkPacking);
+	$chkPestControl=formatDisplayText($chkPestControl);
+	$chkProjectCargo=formatDisplayText($chkProjectCargo);
+	$chkSupplyChain=formatDisplayText($chkSupplyChain);
+	$chkConsultants=formatDisplayText($chkConsultants);
+	$chkShipManagers=formatDisplayText($chkShipManagers);
+	$chkMaritimeSchool=formatDisplayText($chkMaritimeSchool);
+	$chkMarineInsurance=formatDisplayText($chkMarineInsurance);
+	$chkMaritimeLawyers=formatDisplayText($chkMaritimeLawyers);
+	$chkClassification=formatDisplayText($chkClassification);
+	$chkTowage=formatDisplayText($chkTowage);
+	$chkOffshore=formatDisplayText($chkOffshore);
 }
 /*********************************************** Page level functions ends ****************************************************/
 
