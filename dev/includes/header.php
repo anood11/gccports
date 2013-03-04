@@ -36,7 +36,7 @@ $(document).ready(function() {
 <div class="topStrip blue"></div>
 
 <!-- HEADER STARTS -->
-<div class="header"> <img src="<?php echo $httpPathSite;?>resources/images/logo.png" class="logo" alt="" />
+<div class="header"> <a href="<?php echo $httpPathSite;?>"><img src="<?php echo $httpPathSite;?>resources/images/logo.png" class="logo" alt="" /></a>
 	
 	
 	<!-- SOCIAL MEDIA STARTS -->
@@ -121,7 +121,7 @@ $(document).ready(function() {
 		</ul>
 		
 	</li>
-	<li><a href="">JOBS</a></li>
+	<li><a href="<?php echo $httpPathSite;?>job/job.php">JOBS</a></li>
 	<li><a href="<?php echo $httpPathSite;?>contact/contact.php">CONTACT US</a></li>
 	<li class="topSearch">
 		<select name="">

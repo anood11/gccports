@@ -50,24 +50,53 @@ a img {
 	padding:10px 10px 0 0;
 }
 .topNav {
-	background:	#3299CC;
+	background:	#333;
 	width:100%;
 	overflow:auto;
 }
-.topNav li {
+.topNav > li {
 	float:left;
 }
-.topNav li a {
+.topNav > li > a {
 	float:left;
 	padding: 5px 20px;
 	text-decoration: none;
 	font-size:11px;
 	color:#FFFFFF;
-	border-right: 1px solid #2f8fbe;
-	border-left: 1px solid #37a5db;
+	border-right: 1px solid #222;
+	border-left: 1px solid #444;
 }
-.topNav li a:hover {
-	background:	#37a5db;
+.topNav > li > a:hover {
+	background:	#666;
+}
+.topNav li ul {
+	position:absolute;
+	display:none;
+	margin-top:30px;
+	background:	#333;
+}
+.topNav li ul.wide {
+	width:576px;
+}
+.topNav li:hover ul {
+	display:block;
+}
+.topNav li ul.wide li a {
+	float:left;
+}
+.topNav li ul li a {
+	width:150px;
+	display:block;
+	padding: 5px 20px;
+	text-decoration: none;
+	font-size:11px;
+	color:#FFFFFF;
+	border-right: 1px solid #222;
+	border-left: 1px solid #444;
+	border-bottom:1px solid #444;
+}
+.topNav li ul li a:hover {
+	background:	#666;
 }
 .left {
 	float:left;

@@ -17,14 +17,14 @@ include("includes/left_submenu.php");
 				<h5><?php echo date("d-m-Y", strtotime($main['newsDate']));?></h5>
 				<span> <img src="<?php echo $httpPathSite;?>resources/news_images/<?php echo $main['newsImage'];?>.jpg" alt="" />
 				<p><?php echo substr($main['newsMatter'],0,500);?></p>
-				<h6><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $main['newsID'];?>">read more &raquo;</a></h6>
+				
 				</span></td>
 			<?php while($right=$db->sql_fetchrow($rightSmallNews)){?>
 			<td class="small"><h1><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $right['newsID'];?>"><?php echo $right['newsHeading'];?></a></h1>
 				<h5><?php echo date("d-m-Y", strtotime($right['newsDate']));?></h5>
 				<span> <img src="<?php echo $httpPathSite;?>resources/news_images/<?php echo $right['newsImage'];?>.jpg" alt="" />
 				<p><?php echo substr($right['newsMatter'],0,80);?> </p>
-				<h6><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $right['newsID'];?>">read more &raquo;</a></h6>
+				
 				</span></td>
 			<?php } ?>
 		</tr>
@@ -36,7 +36,7 @@ include("includes/left_submenu.php");
 				<h5><?php echo date("d-m-Y", strtotime($bottom['newsDate']));?></h5>
 				<span> <img src="<?php echo $httpPathSite;?>resources/news_images/<?php echo $bottom['newsImage'];?>.jpg" alt="" />
 				<p><?php echo substr($bottom['newsMatter'],0,80);?></p>
-				<h6><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $bottom['newsID'];?>">read more &raquo;</a></h6>
+				
 				</span></td>
 			<?php } ?>
 		</tr>
@@ -46,7 +46,7 @@ include("includes/left_submenu.php");
 				<h5><?php echo date("d-m-Y", strtotime($bottom1['newsDate']));?></h5>
 				<span> <img src="<?php echo $httpPathSite;?>resources/news_images/<?php echo $bottom1['newsImage'];?>.jpg" alt="" />
 				<p><?php echo substr($bottom1['newsMatter'],0,100);?></p>
-				<h6><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $bottom1['newsID'];?>">read more &raquo;</a></h6>
+				<!--<h6><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $bottom1['newsID'];?>">read more &raquo;</a></h6> -->
 				</span></td>
 			<?php } ?>
 		</tr>

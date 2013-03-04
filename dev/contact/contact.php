@@ -12,7 +12,7 @@ include("../includes/left_submenu.php");
 <h1 class="newsHead">Contact Us &raquo;</h1>
 <form name="frmContact" action="contact.php" method="post">
 <div class="displayMessage"><?php echo $displayMessage;?></div>
-<table class="newsSection">
+<table class="searchResult">
 <tr>
 	<td colspan="2">Fields marked with * are mandatory</td>
 </tr>

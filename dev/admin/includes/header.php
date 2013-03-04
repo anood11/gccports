@@ -40,6 +40,19 @@ var baseURLadmin='<?php echo $httpPathAdmin;?>';
 	<li><a href="<?php echo $httpPathAdmin;?>user_account/admin.php">Admin</a></li>
 	<li><a href="<?php echo $httpPathAdmin;?>news/subscriptions.php">News Subscribers</a></li>
 	<li><a href="<?php echo $httpPathAdmin;?>news/view_news.php">Manage News</a></li>
+	<li><a href="#">Ports</a>
+		<ul>
+			<li><a href="#">Manage Sea Ports</a></li>
+			<li><a href="#">Manage Air Ports</a></li>
+		</ul>
+	</li>
+	<li><a href="#">Directory</a>
+		<ul>
+			<li><a href="#">Manage Sea Port Directory</a></li>
+			<li><a href="#">Manage Air Port Directory</a></li>
+		</ul>
+	</li>
+	<li><a href="#">Footer</a></li>
 	<li><a href="<?php echo $httpPathAdmin;?>user_account/login.php?signout=1">Sign out</a></li>
 </ul>
 <?php } ?>

@@ -43,7 +43,7 @@ a img {
 }
 .topAd img {
 	float:left;
-	padding:10px 10px 0 0;
+	padding:10px 30px 0 0;
 }
 .topNav {
 	background:	#333;
@@ -252,7 +252,7 @@ ul.leftNav li a:hover {
 	border-bottom: none;
 }
 .newsSection td.small {
-	padding:20px 0 5px 0;
+	padding:10px 0 5px 0;
 	width:33%;
 }
 .newsSection td h1 {
