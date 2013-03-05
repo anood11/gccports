@@ -1,6 +1,6 @@
 <div class="footer">
-<span class="left">Copyright &copy; 2011 GCC Ports.com. All Rights Reserved.</span>
-<span class="right">Powered by ENH Media &amp; Communications L.L.C</span>
+<span class="left"><?php echo $footerLeft;?></span>
+<span class="right"><?php echo $footerRight;?></span>
 </div>
 </body>
 </html>

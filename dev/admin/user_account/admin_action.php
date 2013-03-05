@@ -30,12 +30,15 @@ if(isset($_REQUEST['btnUpdate'])){
 		
 	}
 	setValuesToForm();
-
+	$footerLeft=formatDisplayText(getFooter('left'));
+	$footerRight=formatDisplayText(getFooter('right'));
 }else{
 	//Default Event
 	getValuesFromForm();
 	$adminDetails=getAdminDetails();
 	assignDBValuesToForm($adminDetails);
+	$footerLeft=formatDisplayText(getFooter('left'));
+	$footerRight=formatDisplayText(getFooter('right'));
 	setValuesToForm();
 }
 /******************************************* Control flow ends ****************************************************************/

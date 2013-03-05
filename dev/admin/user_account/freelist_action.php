@@ -9,22 +9,22 @@ $startRow = 0;
 /******************************************* Control flow starts **************************************************************/
 if(isset($_REQUEST['delId'])){
     getValuesFromForm();
-    $deleteId=deleteNews($newsId);
-    if($deleteId==1){
-        $displayMessage="News successfully deleted";
+    $deleteId=deleteFreelist($freelistId);
+    if($deleteId==3){
+        $displayMessage="Freelist successfully deleted";
     }else{
-        $displayMessage="Failed to delete News";
+        $displayMessage="Failed to delete Freelist";
     }
 	$pageCount=getCountPages();
 	$startRow=getPageStart();
-	$newsList = getNewsList($startRow,$pageLimit);
+	$freeList = getFreelistList($startRow,$pageLimit);
 	$footerLeft=formatDisplayText(getFooter('left'));
 	$footerRight=formatDisplayText(getFooter('right'));
 }else{
     getValuesFromForm();
     $pageCount=getCountPages();
 	$startRow=getPageStart();
-    $newsList = getNewsList($startRow,$pageLimit);
+    $freeList = getFreelistList($startRow,$pageLimit);
 	$footerLeft=formatDisplayText(getFooter('left'));
 	$footerRight=formatDisplayText(getFooter('right'));
 }
@@ -36,10 +36,10 @@ if(isset($_REQUEST['delId'])){
  */
 function getValuesFromForm(){
 
-    global $newsId;
+    global $freelistId;
 	global $page;
 
-    $newsId=isset($_REQUEST['delId'])?$_REQUEST['delId']:0;
+    $freelistId=isset($_REQUEST['delId'])?$_REQUEST['delId']:0;
     $page=isset($_REQUEST['page'])?$_REQUEST['page']:1;
 	if($page==1)$page=isset($_REQUEST['pageNumber'])?$_REQUEST['pageNumber']:1;
  }
@@ -61,7 +61,7 @@ function getCountPages(){
     
     global $pageLimit;
    
-    $count=getTotalNews();
+    $count=getTotalFreelist();
     $pages=round($count/$pageLimit);
       if($count > ($pages*$pageLimit))
       $pages+=1;

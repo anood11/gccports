@@ -5,18 +5,20 @@ global $display_message;
 $display_message="";
 /*********************************************** Control flow starts **********************************************************/
 
-if(isset($_REQUEST['btnSubmit'])){
+if(isset($_REQUEST['btnSubmit'])){ 
 	getValuesFromForm();
 	$display_message=validateForm();
 	if($display_message==""){
 		$userId=addFreelistUserDetails($company,$address,$telephone,$fax,$email,$website,$organizationHead,$designation,$mobile,$employeeCount);
 		if($userId!=0){
 			addFreeListCategory($chkShipOwners,$chkShippingAgnts,$chkFreight,$chkAirlines,$chkAirCargo,$chkAirCraft,$chkShipbuilders,$chkEnginBuilders,$chkShipCharters,$chkShipBrokers,$chkBunkers,$chkShipChandler,$chkStevedores,$chkWarehousing,$chkMarineContainer,$chkMaritime,$chkContainerTrucking,$chkEquipmentOwners,$chkCourier,$chkLashing,$chkLogistics,$chkPacking,$chkPestControl,$chkProjectCargo,$chkSupplyChain,$chkConsultants,$chkShipManagers,$chkMaritimeSchool,$chkMarineInsurance,$chkMaritimeLawyers,$chkClassification,$chkTowage,$chkOffshore,$userId);
-			for($i=1;$i<=6;$i++){
-				if(($branch.$i)!=""){
-					addFreeListBranch($branch.$i,$bAddress.$i,$bPhone.$i,$bFax.$i,$bEmail.$i,$bWebsite.$i,$userId);
-				}
-			}
+			if($branch1!="")addFreeListBranch($branch1,$bAddress1,$bPhone1,$bFax1,$bEmail1,$bWebsite1,$userId);
+			if($branch2!="")addFreeListBranch($branch2,$bAddress2,$bPhone2,$bFax2,$bEmail2,$bWebsite2,$userId);
+			if($branch3!="")addFreeListBranch($branch3,$bAddress3,$bPhone3,$bFax3,$bEmail3,$bWebsite3,$userId);
+			if($branch4!="")addFreeListBranch($branch4,$bAddress4,$bPhone3,$bFax4,$bEmail4,$bWebsite4,$userId);
+			if($branch5!="")addFreeListBranch($branch5,$bAddress5,$bPhone3,$bFax5,$bEmail5,$bWebsite5,$userId);
+			if($branch6!="")addFreeListBranch($branch6,$bAddress6,$bPhone3,$bFax6,$bEmail6,$bWebsite6,$userId);
+			$display_message="Details are successfully added and waiting for Admin's approval.";
 		}else{
 			$display_message="Unable to add details. Please try again later.";
 		}
@@ -280,6 +282,8 @@ function validateForm(){
 		$err.=$preMsg."Enter valid Address.".$postMsg;
 	}else if(!hasPHPCode($telephone)){
 		$err.=$preMsg."Enter valid Telephone number.".$postMsg;
+	}else if((!isNumeric($telephone))&&($telephone!="")){
+		$err.=$preMsg."Telephone number must be integer.".$postMsg;
 	}else if(!hasPHPCode($fax)){
 		$err.=$preMsg."Enter valid Fax.".$postMsg;
 	}else if((!hasPHPCode($email))||($email=="")||(!isEmail($email))){
@@ -291,9 +295,13 @@ function validateForm(){
 	}else if(!hasPHPCode($designation)){
 		$err.=$preMsg."Select valid Destination.".$postMsg;
 	}else if(!hasPHPCode($mobile)){
-		$err.=$preMsg."Select valid Mobile number.".$postMsg;
+		$err.=$preMsg."Enter valid Mobile number.".$postMsg;
+	}else if((!isNumeric($mobile))&&($mobile!="")){
+		$err.=$preMsg."Mobile number must be Integer.".$postMsg;
 	}else if(!hasPHPCode($employeeCount)){
 		$err.=$preMsg."Select valid Number of Employees.".$postMsg;
+	}else if((!isNumeric($employeeCount))&&($employeeCount!="")){
+		$err.=$preMsg."Number of Employees must be an integer value.".$postMsg;
 	}else if((!hasPHPCode($branch1))&&($branch1!="")){
 		$err.=$preMsg."Select valid data in 1st Branch.".$postMsg;
 	}else if((!hasPHPCode($branch2))&&($branch2!="")){

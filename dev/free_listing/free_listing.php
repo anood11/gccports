@@ -10,6 +10,7 @@ include("../includes/left_submenu.php");
 <form action="free_listing.php" method="post" name="formFreeListing">
 <div class="center">
 	<h1 class="newsHead">Free Listing &raquo;</h1>
+	<div class="displayMessage"><?php echo $display_message;?></div>
 	<table class="searchResult">
 	<tr>
 		<td colspan="4"><strong style="font-weight:bold;">Please fill out the below form.</strong></td>

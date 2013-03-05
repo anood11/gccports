@@ -10,13 +10,12 @@ function getNewsList($start,$end){
 }
 function getSubscribersList($start,$end){
 	global $db;
-  	$newsDetails =sprintf("SELECT s.subscriptionId,s.name,s.company,s.email,c.country
+  	$newsDetails =sprintf("SELECT s.subscriptionId,s.name,s.company,s.email,c.countryName
 	                       FROM tblsubscriptions s JOIN tblcountry c ON s.country=c.countryId
 						   LIMIT %s,%s",
 						   GetSQLValueString($start, "int"),
 						   GetSQLValueString($end, "int"));		 
 	$rsResult = $db->sql_query($newsDetails);
-	
 	return $rsResult;
 }
 function getNewsDetails($id){

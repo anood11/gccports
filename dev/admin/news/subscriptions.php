@@ -1,6 +1,7 @@
 <?php
 include("../includes/globals.php");
 include("../../includes/lib/db_news.php");
+include("../../includes/lib/db_sidebar.php");
 include("subscriptions_action.php");
 include("../includes/header.php");
 ?>
@@ -26,16 +27,16 @@ include("../includes/header.php");
 					<tr>
 						<td><?php echo $subscribers['name'];?></td>
 						<td><?php echo $subscribers['company'];?></td>
-						<td><?php echo $subscribers['country'];?></td>
+						<td><?php echo $subscribers['countryName'];?></td>
 						<td><?php echo $subscribers['email'];?></td>
-						<td><a href="<?php echo $httpPathAdmin;?>news/subscriptions.php?delId=<?php echo $subscribers['subscriptionId'];?>"><img src="<?php echo $httpPathAdmin;?>resources/images/close.png" alt="Delete" onclick="return confirm('Do you want to delete this user?');" /></a></td>
+						<td><a href="<?php echo $httpPathAdmin;?>news/subscriptions.php?delId=<?php echo $subscribers['subscriptionId'];?>"><img src="<?php echo $httpPathAdmin;?>resources/images/close.png" alt="Delete" title="Delete" onclick="return confirm('Do you want to delete this user?');" /></a></td>
 					</tr>
 					<?php } ?>
 					<tr>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
 						<td>
-							<select id="newsPage">
+							<select id="newsPage" style="width: 50px">
 								<?php for($j=1;$j<=$pageCount;$j++) {?>
 								<option value="<?php echo $j;?>" <?php if($page==$j) echo 'selected'; ?>><?php echo $j;?></option>
 								<?php } ?>

@@ -146,4 +146,27 @@ function listAllCountries(){
 	$rsResult = $db->sql_query($selectQyery);
 	return $rsResult;
 }
+function getFooter($type){
+	global $db;
+	$selectQyery=sprintf("SELECT footerText FROM tblfooter WHERE footerSide=%s",
+						  GetSQLValueString($type, "text"));
+	$rsResult = $db->sql_query($selectQyery);
+	$rowRes=$db->sql_fetchrow($rsResult);
+	return $rowRes['footerText'];
+}
+function updateFooter($leftFooter,$rightFooter){
+	global $db;
+	$update=0;
+	$updateQyeryLeft=sprintf("UPDATE tblfooter SET footerText=%s WHERE footerSide='left'",
+						  GetSQLValueString($leftFooter, "text"));
+	$updateQyeryRight=sprintf("UPDATE tblfooter SET footerText=%s WHERE footerSide='right'",
+						  GetSQLValueString($rightFooter, "text"));
+	if($rsResult = $db->sql_query($updateQyeryLeft)){
+		$update=1;
+	}
+	if($rsResult = $db->sql_query($updateQyeryRight)){
+		$update=2;
+	}
+	return $update;
+}
 ?>

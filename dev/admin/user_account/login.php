@@ -1,6 +1,7 @@
 <?php
 include("../includes/globals.php");
 include("../../includes/lib/db_users.php");
+include("../../includes/lib/db_sidebar.php");
 include("login_action.php");
 include("../includes/header.php");
 ?>

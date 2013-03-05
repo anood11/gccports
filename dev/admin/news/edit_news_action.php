@@ -27,11 +27,15 @@ if(isset($_REQUEST['btnSaveNews'])){
 		}
 	}
 	$categoryList=getNewsCategories();
+	$footerLeft=formatDisplayText(getFooter('left'));
+	$footerRight=formatDisplayText(getFooter('right'));
 }else{
 	getValuesFromForm();
 	$categoryList=getNewsCategories();
 	$newsDetails=getNewsDetails($newsId);
 	assignDBValuesToForm($newsDetails);
+	$footerLeft=formatDisplayText(getFooter('left'));
+	$footerRight=formatDisplayText(getFooter('right'));
 	setValuesToForm();
 }
 /*********************************************** Control flow ends ************************************************************/

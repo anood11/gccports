@@ -1,6 +1,7 @@
 <?php
 include("../includes/globals.php");
 include("../../includes/lib/db_news.php");
+include("../../includes/lib/db_sidebar.php");
 include("view_news_action.php");
 include("../includes/header.php");
 ?>

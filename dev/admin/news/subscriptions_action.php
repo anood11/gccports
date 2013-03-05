@@ -17,11 +17,15 @@ if(isset($_REQUEST['delId'])){
     }
 	$pageCount=getCountPages();
 	$startRow=getPageStart();
+	$footerLeft=formatDisplayText(getFooter('left'));
+	$footerRight=formatDisplayText(getFooter('right'));
 	$subscribersList = getSubscribersList($startRow,$pageLimit);
 }else{
     getValuesFromForm();
     $pageCount=getCountPages();
 	$startRow=getPageStart();
+	$footerLeft=formatDisplayText(getFooter('left'));
+	$footerRight=formatDisplayText(getFooter('right'));
     $subscribersList = getSubscribersList($startRow,$pageLimit);
 }
 

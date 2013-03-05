@@ -52,7 +52,8 @@ var baseURLadmin='<?php echo $httpPathAdmin;?>';
 			<li><a href="#">Manage Air Port Directory</a></li>
 		</ul>
 	</li>
-	<li><a href="#">Footer</a></li>
+	<li><a href="<?php echo $httpPathAdmin;?>footer/footer.php">Footer</a></li>
+	<li><a href="<?php echo $httpPathAdmin;?>user_account/freelist.php">Freelisting</a></li>
 	<li><a href="<?php echo $httpPathAdmin;?>user_account/login.php?signout=1">Sign out</a></li>
 </ul>
 <?php } ?>

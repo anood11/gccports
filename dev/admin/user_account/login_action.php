@@ -16,13 +16,18 @@ if(isset($_REQUEST['btnLogin'])){
 		}else{
 			$displayMessage="Invalid login Credentials";
 		}
-	}setValuesToForm();
+	}
+	$footerLeft=formatDisplayText(getFooter('left'));
+	$footerRight=formatDisplayText(getFooter('right'));
+	setValuesToForm();
 }else if(isset($_REQUEST['signout'])){
 	session_destroy();
 	header("Location:".$httpPathAdmin."user_account/login.php");
 }else{
 	getValuesFromForm();
 	setValuesToForm();
+	$footerLeft=formatDisplayText(getFooter('left'));
+	$footerRight=formatDisplayText(getFooter('right'));
 }
 /*****************************Control flow ends************************************************************************/
 /*****************************Page level function starts***************************************************************/

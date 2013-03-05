@@ -2,6 +2,7 @@
 include("../includes/globals.php");
 include("../../includes/lib/resize-class.php ");
 include("../../includes/lib/db_news.php");
+include("../../includes/lib/db_sidebar.php");
 include("edit_news_action.php");
 include("../includes/header.php");
 ?>

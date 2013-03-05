@@ -77,7 +77,7 @@ function addFreeListBranch($branch,$bAddress,$bPhone,$bFax,$bEmail,$bWebsite,$us
 						  GetSQLValueString($bFax, "text"),
 						  GetSQLValueString($bEmail, "text"),
 						  GetSQLValueString($bWebsite, "text"));
-	if($rsResult = $db->sql_query($addFreelist)){
+	if($rsResult = $db->sql_query($addBranch)){
 		$insertId = $db->sql_nextid();
 	}
 	return $insertId;
@@ -126,5 +126,65 @@ function addFreeListCategory($chkShipOwners,$chkShippingAgnts,$chkFreight,$chkAi
 		$insertId = $db->sql_nextid();
 	}
 	return $insertId;
+}
+function deleteFreelist($id){
+	global $db;
+	$delete=0;
+	$deleteQueryBranch=sprintf("DELETE FROM tblfreelistbranch WHERE userId=%s",
+						  GetSQLValueString($id, "int"));
+	$deleteQueryCat=sprintf("DELETE FROM tblfreelistcategory WHERE userId=%s",
+						  GetSQLValueString($id, "int"));
+	$deleteQueryUser=sprintf("DELETE FROM tblfreelistuser WHERE freelistId=%s",
+						  GetSQLValueString($id, "int"));
+	if($rsResult1 = $db->sql_query($deleteQueryBranch)){
+		$delete=1;
+	}
+	if($rsResult2 = $db->sql_query($deleteQueryCat)){
+		$delete=2;
+	}
+	if($rsResult3 = $db->sql_query($deleteQueryUser)){
+		$delete=3;
+	}
+	return $delete;
+}
+function getFreelistList($start,$end){
+	global $db;
+	$listDetails =sprintf("SELECT freelistId,companyName,address,status FROM tblfreelistuser LIMIT %s,%s",
+						   GetSQLValueString($start, "int"),
+						   GetSQLValueString($end, "int"));		 
+	$rsResult = $db->sql_query($listDetails);
+	return $rsResult;
+}
+function getTotalFreelist(){
+	global $db;
+	$selectQuery="SELECT COUNT(*) AS cnt FROM tblfreelistuser";
+	$rsResult = $db->sql_query($selectQuery);
+	$rowRes=$db->sql_fetchrow($rsResult);
+	return $rowRes['cnt'];
+}
+function activateFreelist($id){
+	global $db;
+	$active=0;
+	$updateQuery=sprintf("UPDATE tblfreelistuser SET status=1 WHERE freelistId=%s",
+						 GetSQLValueString($id, "int"));	
+	if($rsResult = $db->sql_query($updateQuery)){
+		$active=1;
+	}
+	return $active;
+}
+function getFreeListDetails($id){
+	global $db;
+	$selectQuery=sprintf("SELECT * FROM tblfreelistuser JOIN tblfreelistcategory ON
+						  tblfreelistuser.freelistId=tblfreelistcategory.userId AND tblfreelistuser.freelistId=%s",
+						  GetSQLValueString($id, "int"));
+	$rsResult = $db->sql_query($selectQuery);
+	return $rsResult;
+}
+function getFreelistBranches($id){
+	global $db;
+	$selectQuery=sprintf("SELECT * FROM tblfreelistbranch WHERE userId=%s",
+						  GetSQLValueString($id, "int"));
+	$rsResult = $db->sql_query($selectQuery);
+	return $rsResult;
 }
 ?>
