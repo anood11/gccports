@@ -52,17 +52,12 @@ $(document).ready(function() {
 	
 	<div class="topAd"> 
 		<img src="<?php echo $httpPathSite;?>resources/images/ad1.gif" alt="" />
-		<img src="<?php echo $httpPathSite;?>resources/images/ad2.jpg" alt="" /> 
+		<img src="<?php echo $httpPathSite;?>resources/images/ad2.jpg" class="secondBanner" alt="" /> 
 	</div>
 </div>
 <ul class="topNav">
 	<li><a href="<?php echo $httpPathSite;?>">HOME</a></li>
-	<li><a href="">DIRECTORY</a>
-		<ul>
-			<li><a href="<?php echo $httpPathSite;?>search/seaport_directory.php">Seaport Directory</a></li>
-			<li><a href="<?php echo $httpPathSite;?>search/airport_directory.php">Airport Directory</a></li>
-		</ul>
-	</li>
+	<li><a href="">GCC DIRECTORY</a></li>
 	<li><a href="">PORTS</a>
 		<ul>
 			<li><a href="<?php echo $httpPathSite;?>search/seaport_search.php">Seaport Search</a></li>

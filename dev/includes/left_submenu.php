@@ -37,13 +37,24 @@
 			<li><input type="text" id="airportCity" value="<?php echo $airportCity;?>" /></li>
 			<li><label>Airport Code</label></li>
 			<li><input type="text" id="airportCode" value="<?php echo $airportCode;?>"/></li>
-			<li><input type="submit" value="Airport Search" id="airportSearch" onclick="airportSearch();"/></li>
+			<li><input type="submit" value="Search" id="airportSearch" onclick="airportSearch();"/></li>
 		</ul>
 	</div>
 	<div class="sideInner left">
 		<img src="<?php echo $httpPathSite;?>resources/images/sailing-schedules.gif" width="100%" alt="" />
 	</div>
-	<div class="sideInner left"><a href="<?php echo $httpPathSite;?>search/telephone_codes.php"><img src="<?php echo $httpPathSite;?>resources/images/telephoneCodes.jpg" width="100%" alt="" /></a></div>
+	
+	<div class="sideInner left">
+		<h1 class="newsHead">Track &amp; Trace</h1>
+		<ul>
+			<li><label>Select Category</label></li>
+			<li><select>
+					<option value="-1">Select Category</option>
+				</select></li>
+			<li><input type="button" value="Track &amp; Trace" /></li>
+		</ul>
+	</div>
+	
 	<div class="sideInner left">
 		<h1 class="newsHead">Seaport Search</h1>
 		<ul>
@@ -58,7 +69,22 @@
 				</select></li>
 			<li><label>Port Code</label></li>
 			<li><input type="text" name="seaportCode" id="seaportCode" value="<?php echo $seaportCode;?>"/></li>
-			<li><input type="button" value="Seaport Search" onclick="seaportSearch();"/></li>
+			<li><input type="button" value="Search" onclick="seaportSearch();"/></li>
 		</ul>
 	</div>
+	
+	<div class="sideInner left"><a href="<?php echo $httpPathSite;?>search/telephone_codes.php"><img src="<?php echo $httpPathSite;?>resources/images/telephoneCodes.jpg" width="100%" alt="" /></a>
+		<ul>
+			<li><label>Telephone Code</label></li>
+			<li><input type="text" /></li>
+			<li><label>Country</label></li>
+			<li><select>
+					<option value="-1">Select Country</option>
+				</select></li>
+			<li><label>Internet IP</label></li>
+			<li><input type="text" /></li>
+			<li><input type="button" value="Search" /></li>
+		</ul>
+	</div>
+	
 	</div>
