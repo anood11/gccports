@@ -57,7 +57,11 @@ $(document).ready(function() {
 </div>
 <ul class="topNav">
 	<li><a href="<?php echo $httpPathSite;?>">HOME</a></li>
-	<li><a href="">GCC DIRECTORY</a></li>
+	<li><a href="">GCC DIRECTORY</a>
+		<ul>
+			<li><a href="<?php echo $httpPathSite;?>free_listing/view_freelist.php">Freelist</a></li>
+		</ul>
+	</li>
 	<li><a href="">PORTS</a>
 		<ul>
 			<li><a href="<?php echo $httpPathSite;?>search/seaport_search.php">Seaport Search</a></li>

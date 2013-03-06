@@ -110,4 +110,37 @@ function getNewsCategories(){
 	$rsResult = $db->sql_query($categoryList);
 	return $rsResult;
 }
+function getTelephoneCodes($code,$ip,$tpCountry){
+	global $db;
+	
+	if(($code!="")&&($ip!="")&&($tpCountry!="")){
+		$selectQuery=sprintf("SELECT country,telephoneCode,internetIP FROM tbltelephonecodes WHERE country=%s AND telephoneCode=%s AND internetIP=%s LIMIT 1",
+						GetSQLValueString($tpCountry, "text"),
+						GetSQLValueString($code, "text"),
+						GetSQLValueString($ip, "text"));
+	}else if(($code!="")&&($ip!="")&&($tpCountry=="")){
+		$selectQuery=sprintf("SELECT country,telephoneCode,internetIP FROM tbltelephonecodes WHERE telephoneCode=%s AND internetIP=%s LIMIT 1",
+						GetSQLValueString($code, "text"),
+						GetSQLValueString($ip, "text"));
+	}else if(($code!="")&&($ip=="")&&($tpCountry!="")){
+		$selectQuery=sprintf("SELECT country,telephoneCode,internetIP FROM tbltelephonecodes WHERE country=%s AND telephoneCode=%s LIMIT 1",
+						GetSQLValueString($tpCountry, "text"),
+						GetSQLValueString($code, "text"));
+	}else if(($code=="")&&($ip!="")&&($tpCountry!="")){
+		$selectQuery=sprintf("SELECT country,telephoneCode,internetIP FROM tbltelephonecodes WHERE country=%s AND internetIP=%s LIMIT 1",
+						GetSQLValueString($tpCountry, "text"),
+						GetSQLValueString($ip, "text"));
+	}else if(($code!="")&&($ip=="")&&($tpCountry=="")){
+		$selectQuery=sprintf("SELECT country,telephoneCode,internetIP FROM tbltelephonecodes WHERE telephoneCode=%s LIMIT 1",
+						GetSQLValueString($code, "text"));
+	}else if(($code=="")&&($ip!="")&&($tpCountry=="")){
+		$selectQuery=sprintf("SELECT country,telephoneCode,internetIP FROM tbltelephonecodes WHERE  internetIP=%s LIMIT 1",
+						GetSQLValueString($ip, "text"));
+	}else if(($code=="")&&($ip=="")&&($tpCountry!="")){
+		$selectQuery=sprintf("SELECT country,telephoneCode,internetIP FROM tbltelephonecodes WHERE country=%s LIMIT 1",
+						GetSQLValueString($tpCountry, "text"));
+	}
+	$rsResult = $db->sql_query($selectQuery);
+	return $rsResult;
+}
 ?>

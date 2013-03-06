@@ -47,6 +47,8 @@ $seaportCountryList=getCountryList('seaport');
 $countryList=listAllCountries();
 $footerLeft=formatDisplayText(getFooter('left'));
 $footerRight=formatDisplayText(getFooter('right'));
+$categoryLists=trackTraceCategories();
+$telephoneCountryList=getCountryList('telephone');
 
 /******************************************* Control flow ends ****************************************************************/
 /******************************************* Page level functions starts ******************************************************/

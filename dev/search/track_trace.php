@@ -9,20 +9,6 @@ include("../includes/left_submenu.php");
 
 <div class="center">
 	<h1 class="newsHead">Track and Trace &raquo; <?php echo $category;?></h1>
-	<form method="post" name="frmTrackTrace" action="track_trace.php">
-	<ul class="modifySearch">
-		<li><label>Sort By</label></li>
-		<li>
-			<select name="category">
-			<option value="-1">--Select--</option>
-			<?php while($track=$db->sql_fetchrow($categoryList)){?>
-				<option value="<?php echo $track['category'];?>" <?php if($track['category']==$category)echo 'selected';?>><?php echo $track['category'];?></option>
-			<?php } ?>
-			</select>
-		</li>
-		<li><input type="submit" name="btnSearch" value="Search"/></li>
-	</ul>
-	</form>
 	<h1 class="newsHead marginTop">Search Results &raquo;</h1>
 	<table class="searchResult">
 		<tr>

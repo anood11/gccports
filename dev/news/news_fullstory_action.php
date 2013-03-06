@@ -1,4 +1,4 @@
-<?php
+ <?php
 /******************************************* Initialise/Declare variables *****************************************************/
 global $displayMessage;
 global $db;
@@ -35,7 +35,11 @@ function assignDBValuesToForm($rsResult){
 	$newsHead=$details['newsHeading'];
 	$newsImg=$details['newsImage'];
 	$newsMatter=$details['newsMatter'];
-	$newsDate=date("d-m-Y", strtotime($details['newsDate']));
+	$date=date("d-M-Y", strtotime($details['newsDate']));
+	$date=explode('-',$date);
+	if($date[0]==1) $newsDate='1st - '.$date[1].' - '.$date[2];
+	else if($date[0]==2) $newsDate='2nd - '.$date[1].' - '.$date[2];
+	else $newsDate=$date[0].'th - '.$date[1].' - '.$date[2];
 }
 /******************************************* Page level functions ends ********************************************************/
 

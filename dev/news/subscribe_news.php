@@ -1,6 +1,7 @@
 <?php
 include("../includes/lib/globals.php");
 include("../includes/lib/db_news.php");
+
 /******************************************* Initialise/Declare variables *****************************************************/
 global $displayMessage;
 global $db;
@@ -13,6 +14,15 @@ if(isset($_REQUEST['subscribeNews'])){
 		if($add==1) echo 'You are subscribed';
 		else echo 'Error ! Please try again';
 	}else echo $displayMessage;
+}if((isset($_REQUEST['telephoneCodes']))&&($_REQUEST['telephoneCodes']==1)){
+	getValuesTCFromForm();
+	$displayMessage=validateTCForm();
+	if($displayMessage==""){
+		$teleCode=getTelephoneCodes($code,$ip,$tpCountry);
+		$code=$db->sql_fetchrow($teleCode);
+		echo $code['country'].'-'.$code['telephoneCode'].'-'.$code['internetIP'];
+	}else echo $displayMessage;
+	
 }
 /******************************************* Control flow ends **************************************************************/
 /******************************************* Page level function starts *****************************************************/
@@ -48,6 +58,33 @@ function validateSubscriptions(){
 	}else if(!isEmail($subscribeEmail)){
 		$err.=$preMsg."Please enter valid Email Id.".$postMsg;
 	}return $err;
+}
+function getValuesTCFromForm(){
+	global $code;
+	global $ip;
+	global $tpCountry;
+	
+	$code=isset($_REQUEST['code'])?$_REQUEST['code']:"";
+	$ip=isset($_REQUEST['ip'])?$_REQUEST['ip']:"";
+	$tpCountry=isset($_REQUEST['tpCountry'])?$_REQUEST['tpCountry']:"";
+}
+function validateTCForm(){
+	global $code;
+	global $ip;
+	global $tpCountry;
+	
+	$err = "";
+	$preMsg = "<br>";
+	$postMsg = "</br>";
+	 
+	if(!hasPHPCode($code)){
+		$err.=$preMsg."Enter valid Telephone code.".$postMsg;
+	}else if(!hasPHPCode($ip)){
+		$err.=$preMsg."Enter valid IP.".$postMsg;
+	}else if(!hasPHPCode($tpCountry)){
+		$err.=$preMsg."Select valid Country.".$postMsg;
+	}
+	return $err; 
 }
 /******************************************* Page level functions ends ******************************************************/
 ?>

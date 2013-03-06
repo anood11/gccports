@@ -23,6 +23,7 @@ include("../includes/left_submenu.php");
 				</td>
 </tr>
 </table>
+<div><a href="<?php echo $httpPathSite;?>"><input type="button" name="btnBack" value="Back"/></a></div>
 </div>
 </form>
 <?php 

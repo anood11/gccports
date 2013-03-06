@@ -48,10 +48,14 @@
 		<h1 class="newsHead">Track &amp; Trace</h1>
 		<ul>
 			<li><label>Select Category</label></li>
-			<li><select>
-					<option value="-1">Select Category</option>
-				</select></li>
-			<li><input type="button" value="Track &amp; Trace" /></li>
+			<li><select id="tCategory">
+			<option value="-1">--Select--</option>
+			<?php while($track=$db->sql_fetchrow($categoryLists)){?>
+				<option value="<?php echo $track['category'];?>"><?php echo $track['category'];?></option>
+			<?php } ?>
+			</select></li>
+			<li><input type="button" name="btnTrackTrace" value="Track &amp; Trace" onClick="trackTrace();"/>	
+			</li>
 		</ul>
 	</div>
 	
@@ -76,14 +80,17 @@
 	<div class="sideInner left"><a href="<?php echo $httpPathSite;?>search/telephone_codes.php"><img src="<?php echo $httpPathSite;?>resources/images/telephoneCodes.jpg" width="100%" alt="" /></a>
 		<ul>
 			<li><label>Telephone Code</label></li>
-			<li><input type="text" /></li>
+			<li><input type="text" value="" id="telephoneCodez"/></li>
 			<li><label>Country</label></li>
-			<li><select>
-					<option value="-1">Select Country</option>
-				</select></li>
+			<li><select id="telephoneCountrys">
+				<option value="">--Select Country--</option>
+				<?php while($telephone=$db->sql_fetchrow($telephoneCountryList)){?>
+				<option value="<?php echo $telephone['country'];?>"><?php echo $telephone['country'];?></option>
+				<?php } ?>
+		</select></li>
 			<li><label>Internet IP</label></li>
-			<li><input type="text" /></li>
-			<li><input type="button" value="Search" /></li>
+			<li><input type="text" value="" id="internetIPs"/></li>
+			<li><input type="button" name="btnSearchTC" value="Search" onclick="telephoneCodes();"/></li>
 		</ul>
 	</div>
 	

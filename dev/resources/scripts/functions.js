@@ -68,4 +68,31 @@ function isMailId($email) {
 	  } else {
 	    return true;
 	  }
+}
+function trackTrace(){
+	var category=$("#tCategory").val();
+	window.location.href=baseURLsite+"search/track_trace.php?category="+category;
+}
+function telephoneCodes(){
+	var code=$("#telephoneCodez").val();
+	var ip=$("#internetIPs").val();
+	var country=$('#telephoneCountrys').val();
+	//$("#telephoneCountry").val('Canada ');
+	if((code=='')&&(ip=='')&&(country=='')){
+		alert('Please fill atleast one field');
 	}
+	else {
+		queryString='code='+code+'&ip='+ip+'&tpCountry='+country;
+		$.post(
+				baseURLsite+"news/subscribe_news.php?telephoneCodes=1&"+queryString,
+				function(data) { 
+					$("#telephoneCodez").attr('value','');
+					$("#internetIPs").attr('value','');
+					res=data.split('-');
+					$("#telephoneCountrys").val(res[0]);
+					$("#telephoneCodez").attr('value',res[1]);
+					$("#internetIPs").attr('value',res[2]);
+				}
+			);
+	}
+}
