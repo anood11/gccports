@@ -135,13 +135,19 @@ function telephoneCodes(){
 		$.post(
 				baseURLsite+"news/subscribe_news.php?telephoneCodes=1&"+queryString,
 				function(data) {
-					$("#telephoneCodez").attr('value','');
-					$("#internetIPs").attr('value','');
+					
 					res=data.split('-');
 					$("#telephoneCountrys").val(res[0]);
-					$("#telephoneCodez").attr('value',res[1]);
-					$("#internetIPs").attr('value',res[2]);
+					$("#telephoneCodez").val(res[1]);
+					$("#internetIPs").val(res[2]);
+					//$("#telephoneCodez").attr('value',res[1]);
+					//$("#internetIPs").attr('value',res[2]);
 				}
 			);
 	}
+}
+function clearTelephoneCode(){
+	$("#telephoneCodez").val('');
+	$("#internetIPs").val('');
+	$("#telephoneCountrys").val('');
 }

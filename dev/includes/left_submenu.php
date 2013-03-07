@@ -76,7 +76,10 @@
 		</select></li>
 			<li><label>Internet IP</label></li>
 			<li><input type="text" value="" id="internetIPs"/></li>
-			<li><input type="button" name="btnSearchTC" value="Search" onclick="telephoneCodes();"/></li>
+			<li>
+			<input type="button" name="btnSearchTC" value="Search" onclick="telephoneCodes();"/>
+			<input type="button" value="New" onclick="clearTelephoneCode();"/>
+			</li>
 		</ul>
 	</div>
 	

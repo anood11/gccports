@@ -135,7 +135,7 @@ function trackTraceCategories(){
 }
 function getTrackTraceSearchResults($category){
 	global $db;
-	$selectQyery=sprintf("SELECT companyName,url FROM tbltracktrace WHERE category=%s ORDER BY companyName ASC",
+	$selectQyery=sprintf("SELECT companyName,url FROM tbltracktrace WHERE category=%s AND status=1 ORDER BY companyName ASC",
                       			 GetSQLValueString($category, "text"));
 	$rsResult = $db->sql_query($selectQyery);
 	return $rsResult;
@@ -168,5 +168,17 @@ function updateFooter($leftFooter,$rightFooter){
 		$update=2;
 	}
 	return $update;
+}
+function addTrackTrace($newCategory,$newCompany,$newWebsite){
+	global $db;
+	$add=0;
+	$insertQuery=sprintf("INSERT INTO tbltracktrace(category,companyName,url,status)VALUES(%s,%s,%s,0)",
+				GetSQLValueString($newCategory, "text"),
+				GetSQLValueString($newCompany, "text"),
+				GetSQLValueString($newWebsite, "text"));
+	if($rsResult = $db->sql_query($insertQuery)){
+			$add=1;	
+	}
+	return $add;
 }
 ?>
