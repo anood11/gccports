@@ -14,30 +14,18 @@
 	<div class="sideInner left">
 		<h1 class="newsHead">Airport Search</h1>
 		<ul>
-			<li><label>Airport Name</label></li>
-			
-			<li><input type="text" id="airportName" value="<?php echo $airportName;?>"/></li>
-			<li><label>Country</label></li>
-			<li><select id="airportCountry">
-					<option value="-1">Select Country</option>
-					<?php while($airport=$db->sql_fetchrow($airportCountryList)){?>
-					<option value="<?php echo $airport['country'];?>" <?php if($airportCountry==$airport['country']) echo "selected";?>><?php echo $airport['country'];?></option>
-					<?php } ?>
-				</select>
+			<li><label>Sort by</label></li>
+			<li>
+			<select id="airportCategorys">
+				<option value="airportID">None</option>
+				<option value="airportName">Airport Name</option>
+				<option value="airportCode">Airport Code</option>
+				<option value="cityName">City Name</option>
+				<option value="country">Country</option>
+				<option value="countryAbbreviation">Country Abbreviation</option>
+			</select>
 			</li>
-			<li><label>Country Abbreviation</label></li>
-			<li><select id="airportAbbreviation">
-					<option value="-1">Select Abbreviation</option>
-					<?php while($abbreviation=$db->sql_fetchrow($airportCountryAbbreviations)){?>
-					<option value="<?php echo $abbreviation['countryAbbreviation'];?>" <?php if($airportCountryAbbreviation==$abbreviation['countryAbbreviation']) echo "selected";?>><?php echo $abbreviation['countryAbbreviation'];?></option>
-					<?php } ?>
-				</select>
-			</li>
-			<li><label>City Name</label></li>
-			<li><input type="text" id="airportCity" value="<?php echo $airportCity;?>" /></li>
-			<li><label>Airport Code</label></li>
-			<li><input type="text" id="airportCode" value="<?php echo $airportCode;?>"/></li>
-			<li><input type="submit" value="Search" id="airportSearch" onclick="airportSearch();"/></li>
+			<li><input type="submit" value="Airport Search" id="airportSearch" onclick="airportSearch();"/></li>
 		</ul>
 	</div>
 	<div class="sideInner left">
@@ -62,18 +50,16 @@
 	<div class="sideInner left">
 		<h1 class="newsHead">Seaport Search</h1>
 		<ul>
-			<li><label>Seaport Name</label></li>
-			<li><input type="text" name="seaportName" value="<?php echo $seaportName;?>" id="seaportName"/></li>
-			<li><label>Country</label></li>
-			<li><select id="seaportCountry">
-					<option value="-1">Select Country</option>
-					<?php while($seaport=$db->sql_fetchrow($seaportCountryList)){?>
-					<option value="<?php echo $seaport['country'];?>" <?php if($seaportCountry==$seaport['country']) echo "selected";?>><?php echo $seaport['country'];?></option>
-					<?php } ?>
-				</select></li>
-			<li><label>Port Code</label></li>
-			<li><input type="text" name="seaportCode" id="seaportCode" value="<?php echo $seaportCode;?>"/></li>
-			<li><input type="button" value="Search" onclick="seaportSearch();"/></li>
+			<li><label>Sort by</label></li>
+			<li>
+				<select id="seaportCategorys">
+					<option value="seaportId">None</option>
+					<option value="seaportName">Seaport Name</option>
+					<option value="country">Country</option>
+					<option value="code">Seaport Code</option>
+			</select>
+			</li>
+			<li><input type="button" value="Seaport Search" onclick="seaportSearch();"/></li>
 		</ul>
 	</div>
 	

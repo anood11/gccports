@@ -445,3 +445,7 @@ iframe.usefulLinks {
 	border:none;
 	height:950px;	
 }
+.lettersAP,.lettersAL,.lettersSP{
+	color: #a42225;
+	font-weight: bold;
+}

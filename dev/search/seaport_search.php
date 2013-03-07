@@ -11,18 +11,18 @@ include("../includes/left_submenu.php");
 	<h1 class="newsHead">Search Results &raquo;</h1>
 	<ul class="modifySearch">
 		<li><label>Seaport Name</label></li>
-		<li><input type="text" name="name" value="<?php echo $seaportName;?>"/></li>
+		<li><input type="text" name="name" id="name" value="<?php echo $seaportName;?>"/></li>
 		<li><label>Seaport Code</label></li>
-		<li><input type="text" name="code" value="<?php echo $seaportCode;?>" /></li>
+		<li><input type="text" name="code" id="code" value="<?php echo $seaportCode;?>" /></li>
 		<li><label>Country</label></li>
-		<li><select name="country">
+		<li><select name="country" id="country">
 			<option value="-1">Select Country</option>
 			<?php while($seaport=$db->sql_fetchrow($seaportCountryList1)){?>
 					<option value="<?php echo $seaport['country'];?>" <?php if($seaportCountry==$seaport['country']) echo "selected";?>><?php echo $seaport['country'];?></option>
 					<?php } ?>
 		</select></li>
 		<li><label>Sort By</label></li>
-		<li><select name="seaportCategory">
+		<li><select name="seaportCategory" id="seaportCategory">
 			<option value="seaportId" <?php if($seaportSort=='seaportId') echo "selected";?>>None</option>
 			<option value="seaportName"  <?php if($seaportSort=='seaportName') echo "selected";?>>Seaport Name</option>
 			<option value="country"  <?php if($seaportSort=='country') echo "selected";?>>Country</option>
@@ -30,7 +30,20 @@ include("../includes/left_submenu.php");
 			</select>
 		</li>
 		<li><input type="submit" value="Modify" name="btnSeaportSearch"/></li>
-	</ul>
+	</ul><br/>
+	<a id="a" class="lettersSP" href="javascript:void(0);"> A </a><a id="b" class="lettersSP" href='javascript:void(0);'> B </a>
+	<a id="c" class="lettersSP" href='javascript:void(0);'> C </a><a id="d" class="lettersSP" href='javascript:void(0);'> D </a>
+	<a id="e" class="lettersSP" href='javascript:void(0);'> E </a><a id="f" class="lettersSP" href='javascript:void(0);'> F </a>
+	<a id="g" class="lettersSP" href='javascript:void(0);'> G </a><a id="h" class="lettersSP" href='javascript:void(0);'> H </a>
+	<a id="i" class="lettersSP" href='javascript:void(0);'> I </a><a id="j" class="lettersSP" href='javascript:void(0);'> J </a>
+	<a id="k" class="lettersSP" href='javascript:void(0);'> K </a><a id="l" class="lettersSP" href='javascript:void(0);'> L </a>
+	<a id="m" class="lettersSP" href='javascript:void(0);'> M </a><a id="n" class="lettersSP" href='javascript:void(0);'> N </a>
+	<a id="o" class="lettersSP" href='javascript:void(0);'> O </a><a id="p" class="lettersSP" href='javascript:void(0);'> P </a>
+	<a id="q" class="lettersSP" href='javascript:void(0);'> Q </a><a id="r" class="lettersSP" href='javascript:void(0);'> R </a>
+	<a id="s" class="lettersSP" href='javascript:void(0);'> S </a><a id="t" class="lettersSP" href='javascript:void(0);'> T </a>
+	<a id="u" class="lettersSP" href='javascript:void(0);'> U </a><a id="v" class="lettersSP" href='javascript:void(0);'> V </a>
+	<a id="w" class="lettersSP" href='javascript:void(0);'> W </a><a id="x" class="lettersSP" href='javascript:void(0);'> X </a>
+	<a id="y" class="lettersSP" href='javascript:void(0);'> Y </a><a id="z" class="lettersSP" href='javascript:void(0);'> Z </a>
 	<h1 class="newsHead marginTop">Search Results &raquo;</h1>
 	<table class="searchResult">
 		<?php if($seaportSort=='country') {?>

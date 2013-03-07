@@ -18,6 +18,7 @@ global $seaportLongitude;
 global $seaportLatitude;
 global $footerLeft;
 global $footerRight;
+global $category;
 global $db;
 
 $displayMessage="";
@@ -38,6 +39,7 @@ $seaportLongitude="";
 $seaportLatitude="";
 $footerLeft="";
 $footerRight="";
+$category="";
 /******************************************* Control flow starts **************************************************************/
 
 $airportCountryList=getCountryList('airport');
@@ -52,6 +54,5 @@ $telephoneCountryList=getCountryList('telephone');
 
 /******************************************* Control flow ends ****************************************************************/
 /******************************************* Page level functions starts ******************************************************/
-
 /******************************************* Page level functions ends ********************************************************/
 ?>

@@ -1,8 +1,58 @@
 $(document).ready(function() {
-	
+	$(".lettersAP").click(function(){
+	var name=($(this).attr('id'));
+	var city=$("#city").val();
+	var code=$("#code").val();
+	var country=$("#country").val();
+	var abbr=$("#abbrv").val();
+	var sort=$("#airportCategory").val();
+	var queryString="?airportSearch=1&name="+name+"&city="+city+"&country="+country+"&code="+code+"&abbrv="+abbr+"&airportCategory="+sort;
+	window.location.href=baseURLsite+'search/airport_search.php'+queryString;
 });
-
+$(".lettersAL").click(function(){
+	var name=($(this).attr('id'));
+	var iata=$("#iata").val();
+	var icao=$("#icao").val();
+	var awb=$("#awb").val();
+	var country=$("#country").val();
+	var airlineCategory=$("#airlineCategory").val();
+	var queryString="?airlineSearch=1&name="+name+"&iata="+iata+"&country="+country+"&icao="+icao+"&airlineCategory="+airlineCategory+"&awb="+awb;
+		window.location.href=baseURLsite+'search/airline_search.php'+queryString;
+});
+$(".lettersSP").click(function(){
+	var name=($(this).attr('id'));
+	var country=$('#country').val();
+	var code=$('#code').val();
+	var sort=$('#seaportCategory').val();
+	var queryString="?seaportSearch=1&name="+name+"&country="+country+"&code="+code+"&seaportCategory="+sort+"&searchType=seaport";
+	window.location.href=baseURLsite+'search/seaport_search.php'+queryString;
+});
+});
 function airportSearch(){
+	var sort=$('#airportCategorys').val();
+	if(sort==""){ alert('Please select one sort option'); }
+	else {
+		var queryString="?airportSearch=1&airportCategory="+sort+"&name=a";
+		window.location.href=baseURLsite+'search/airport_search.php'+queryString;
+	}
+}
+function airlineSearch(){
+	var sort=$("#airlineCategorys").val();
+	if(sort=="")alert('Please select one sort option');
+	else {
+		var queryString="?airlineSearch=1&name=a&airlineCategory="+sort;
+		window.location.href=baseURLsite+'search/airline_search.php'+queryString;
+	}
+}
+function seaportSearch(){
+	var sort=$('#seaportCategorys').val();
+	if(sort=="")alert('Please select one sort option');
+	else {
+		var queryString="?seaportSearch=1&name=a&seaportCategory="+sort;
+		window.location.href=baseURLsite+'search/seaport_search.php'+queryString;
+	}
+}
+/*function airportSearch(){
 	var name=$('#airportName').val();
 	var country=$('#airportCountry').val();
 	var city=$('#airportCity').val();
@@ -30,14 +80,13 @@ function seaportSearch(){
 	var name=$('#seaportName').val();
 	var country=$('#seaportCountry').val();
 	var code=$('#seaportCode').val();
-	/*var longi=$('#seaportLongitude').val();
-	var lati=$('#seaportLatitude').val(); &&(longi=="")&&(lati=="")
-	*/if((name=="")&&(country=="-1")&&(code==""))alert('Please enter atleast one search key');
+	if((name=="")&&(country=="-1")&&(code==""))alert('Please enter atleast one search key');
 	else {
 		var queryString="?seaportSearch=1&name="+name+"&country="+country+"&code="+code+"&searchType=seaport";
 		window.location.href=baseURLsite+'search/seaport_search.php'+queryString;
 	}
-}
+}*/
+
 function subscribeNews(){
 	var name=$("#subscribeName").val();
 	var company=$("#subscribeCompany").val();
@@ -85,7 +134,7 @@ function telephoneCodes(){
 		queryString='code='+code+'&ip='+ip+'&tpCountry='+country;
 		$.post(
 				baseURLsite+"news/subscribe_news.php?telephoneCodes=1&"+queryString,
-				function(data) { 
+				function(data) {
 					$("#telephoneCodez").attr('value','');
 					$("#internetIPs").attr('value','');
 					res=data.split('-');

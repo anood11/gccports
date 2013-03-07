@@ -1,30 +1,19 @@
 	<div class="right"> 
-	<!--<div class="sideInner right">
-	<a href="<?php //echo $httpPathSite;?>search/track_trace.php"><img src="<?php //echo $httpPathSite;?>resources/images/track-and-trace.png" width="100%" alt=""/></a>
-	</div>-->
-	
-	
 	<div class="sideInner right">
 		<h1 class="newsHead">Airline Search</h1>
 		<ul>
-			<li><label>Airline Name</label></li>
-			<li><input type="text" id="airlineName" value="<?php echo $airlineName; ?>"/></li>
-			<li><label>Country</label></li>
+			<li><label>Sort by</label></li>
 			<li>
-				<select id="airlineCountry">
-					<option value="-1">Select Country</option>
-					<?php while($airline=$db->sql_fetchrow($airlineCountryList)){?>
-					<option value="<?php echo $airline['country'];?>" <?php if($airlineCountry==$airline['country']) echo "selected";?>><?php echo $airline['country'];?></option>
-					<?php } ?>
+				<select name="airlineCategory" id="airlineCategorys">
+					<option value="airlineId">None</option>
+					<option value="airlineName">Airline Name</option>
+					<option value="iata">IATA Code</option>
+					<option value="icao">ICAO Code</option>
+					<option value="awbPrefix">AWB Prefix</option>
+					<option value="country">Country</option>
 				</select>
 			</li>
-			<li><label>IATA Code</label></li>
-			<li><input type="text"id="airlineIATA" value="<?php echo $airlineIATA;?>"/></li>
-			<li><label>ICAO</label></li>
-			<li><input type="text" id="airlineICAO" value="<?php echo $airlineICAO;?>"/></li>
-			<li><label>AWB Prefix</label></li>
-			<li><input type="text" id="awbPrefix" value="<?php echo $awbPrefix;?>"/></li>
-			<li><input type="button" value="Search" name="airlineSearch" onclick="airlineSearch();"/></li>
+			<li><input type="button" value="Airline Search" name="airlineSearch" onclick="airlineSearch();"/></li>
 		</ul>
 	</div>
 	

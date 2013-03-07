@@ -11,27 +11,27 @@ include("../includes/left_submenu.php");
 	<h1 class="newsHead">Search Airports &raquo;</h1>
 	<ul class="modifySearch">
 		<li><label>Airport Name</label></li>
-		<li><input type="text" name="name" value="<?php echo $airportName;?>"/></li>
+		<li><input type="text" name="name" id="name" value="<?php echo $airportName;?>"/></li>
 		<li><label>City Name</label></li>
-		<li><input type="text" name="city" value="<?php echo $airportCity;?>"/></li>
+		<li><input type="text" name="city" id="city" value="<?php echo $airportCity;?>"/></li>
 		<li><label>Airport Code</label></li>
-		<li><input type="text" name="code" value="<?php echo $airportCode;?>" /></li>
+		<li><input type="text" name="code" id="code" value="<?php echo $airportCode;?>" /></li>
 		<li><label>Country</label></li>
-		<li><select name="country">
+		<li><select name="country" id="country">
 			<option value="-1">Select Country</option>
 			<?php while($airport=$db->sql_fetchrow($airportCountryList1)){?>
-					<option value="<?php echo $airport['country'];?>" <?php if($airportCountry==$airport['country']) echo "selected";?>><?php echo $airport['country'];?></option>
+					<option value="<?php echo $airport['country'];?>"><?php echo $airport['country'];?></option>
 					<?php } ?>
 		</select></li>
 		<li><label>Country Abbreviation</label></li>
-		<li><select name="abbrv">
+		<li><select name="abbrv" id="abbrv">
 			<option value="-1">Select Abbreviation</option>
 			<?php while($abbrv=$db->sql_fetchrow($airportCountryAbbreviations1)){?>
-					<option value="<?php echo $abbrv['countryAbbreviation'];?>" <?php if($airportCountryAbbreviation==$abbrv['countryAbbreviation']) echo "selected";?>><?php echo $abbrv['countryAbbreviation'];?></option>
-					<?php } ?>
+					<option value="<?php echo $abbrv['countryAbbreviation'];?>"><?php echo $abbrv['countryAbbreviation'];?></option>
+			<?php } ?>
 		</select></li>
 		<li><label>Sort By</label></li>
-		<li><select name="airportCategory">
+		<li><select name="airportCategory" id="airportCategory">
 			<option value="airportID" <?php if($airportSort=='airportID') echo "selected";?>>None</option>
 			<option value="airportName"  <?php if($airportSort=='airportName') echo "selected";?>>Airport Name</option>
 			<option value="airportCode"  <?php if($airportSort=='airportCode') echo "selected";?>>Airport Code</option>
@@ -41,8 +41,20 @@ include("../includes/left_submenu.php");
 			</select>
 		</li>
 		<li><input type="submit" value="Modify" name="btnAirPortSearch"/></li>
-	</ul>
-	
+	</ul><br/>
+	<a id="a" class="lettersAP" href="javascript:void(0);"> A </a><a id="b" class="lettersAP" href='javascript:void(0);'> B </a>
+	<a id="c" class="lettersAP" href='javascript:void(0);'> C </a><a id="d" class="lettersAP" href='javascript:void(0);'> D </a>
+	<a id="e" class="lettersAP" href='javascript:void(0);'> E </a><a id="f" class="lettersAP" href='javascript:void(0);'> F </a>
+	<a id="g" class="lettersAP" href='javascript:void(0);'> G </a><a id="h" class="lettersAP" href='javascript:void(0);'> H </a>
+	<a id="i" class="lettersAP" href='javascript:void(0);'> I </a><a id="j" class="lettersAP" href='javascript:void(0);'> J </a>
+	<a id="k" class="lettersAP" href='javascript:void(0);'> K </a><a id="l" class="lettersAP" href='javascript:void(0);'> L </a>
+	<a id="m" class="lettersAP" href='javascript:void(0);'> M </a><a id="n" class="lettersAP" href='javascript:void(0);'> N </a>
+	<a id="o" class="lettersAP" href='javascript:void(0);'> O </a><a id="p" class="lettersAP" href='javascript:void(0);'> P </a>
+	<a id="q" class="lettersAP" href='javascript:void(0);'> Q </a><a id="r" class="lettersAP" href='javascript:void(0);'> R </a>
+	<a id="s" class="lettersAP" href='javascript:void(0);'> S </a><a id="t" class="lettersAP" href='javascript:void(0);'> T </a>
+	<a id="u" class="lettersAP" href='javascript:void(0);'> U </a><a id="v" class="lettersAP" href='javascript:void(0);'> V </a>
+	<a id="w" class="lettersAP" href='javascript:void(0);'> W </a><a id="x" class="lettersAP" href='javascript:void(0);'> X </a>
+	<a id="y" class="lettersAP" href='javascript:void(0);'> Y </a><a id="z" class="lettersAP" href='javascript:void(0);'> Z </a>
 	<h1 class="newsHead marginTop">Search Results &raquo;</h1>
 	<table class="searchResult">
 		<?php if($airportSort=='airportCode') {?>
