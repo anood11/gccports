@@ -2,7 +2,7 @@
 include("../includes/globals.php");
 include("../../includes/lib/db_users.php");
 include("../../includes/lib/db_sidebar.php");
-include("freelist_action.php");
+include("track_trace_action.php");
 include("../includes/header.php");
 ?>
 <div class="left">&nbsp; </div>
@@ -15,27 +15,32 @@ include("../includes/header.php");
 			<li class="large">
 				<table>
 					<tr>
-						<th>Company name</th>
-						<th>Address</th>
+						<th>Category</th>
+						<th>Company Name</th>
+						<th>Url</th>
 						<th>Status</th>
 						<th colspan="2">Actions</th>
 					</tr>
 					<?php 
-					while($list=$db->sql_fetchrow($freeList)) {
+					while($list=$db->sql_fetchrow($tracktrace)) {
 					?>
 					<tr>
+						<td><?php echo $list['category'];?></td>
 						<td><?php echo $list['companyName'];?></td>
-						<td><?php echo $list['address'];?></td>
-						<td><a href=""><?php if($list['status']==0) echo 'Inactive'; else echo 'Active';?></a></td>
-						<td><a href="<?php echo $httpPathAdmin;?>user_account/freelist_edit.php?editId=<?php echo $list['freelistId'];?>"><img src="<?php echo $httpPathAdmin;?>resources/images/edit.png" alt="Edit" /></a></td>
-						<td><a href="<?php echo $httpPathAdmin;?>user_account/freelist.php?delId=<?php echo $list['freelistId'];?>"><img src="<?php echo $httpPathAdmin;?>resources/images/close.png" alt="Delete News" onclick="return confirm('Do you want to delete this Freelist?');" /></a></td>
+						<td><?php echo $list['url']?></td>
+						<td><?php if($list['status']==1) echo 'Active'; else echo 'Inactive'; ?></td>
+						<?php if($list['status']==1){?>
+						<td><a href="<?php echo $httpPathAdmin;?>search/track_trace.php?deactivateId=<?php echo $list['trackTraceId'];?>"><img src="<?php echo $httpPathAdmin;?>resources/images/close.png" alt="Deactvate" /></a></td>
+						<?php } else{ ?>
+						<td><a href="<?php echo $httpPathAdmin;?>search/track_trace.php?activateId=<?php echo $list['trackTraceId'];?>"><img src="<?php echo $httpPathAdmin;?>resources/images/tick.png" alt="Activate"/></a></td>
+						<?php } ?>
 					</tr>
 					<?php } ?>
 					<tr>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
 						<td>
-							<select id="freelist" style="width: 50px;">
+							<select id="trackTrace" style="width: 50px;">
 								<?php for($j=1;$j<=$pageCount;$j++) {?>
 								<option value="<?php echo $j;?>" <?php if($page==$j) echo 'selected'; ?>><?php echo $j;?></option>
 								<?php } ?>

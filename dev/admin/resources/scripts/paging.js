@@ -3,4 +3,12 @@ $(document).ready(function(){
 	page=($("#newsPage").val());
 	window.location.href=baseURLadmin+'news/view_news.php?page='+page;
 	});
+	$("#freelist").change(function(){
+	page=($("#freelist").val());
+	window.location.href=baseURLadmin+'user_account/freelist.php?page='+page;
+	});
+	$("#trackTrace").change(function(){
+	page=($("#trackTrace").val());
+	window.location.href=baseURLadmin+'search/track_trace.php?page='+page;
+	});
 });

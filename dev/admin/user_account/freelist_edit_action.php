@@ -164,6 +164,7 @@ function assignDBValuesToForm($rsResult){
 	global $chkClassification;
 	global $chkTowage;
 	global $chkOffshore;
+	global $status;
 	
 	$details=$db->sql_fetchrow($rsResult);
 	$company=$details['companyName'];
@@ -209,6 +210,7 @@ function assignDBValuesToForm($rsResult){
 	$chkClassification=$details['classificationSocieties'];
 	$chkTowage=$details['towage'];
 	$chkOffshore=$details['offshoreOnshore'];
+	$status=$details['status'];
 }
 function setValuesToForm(){
 	global $company;
@@ -254,6 +256,7 @@ function setValuesToForm(){
 	global $chkClassification;
 	global $chkTowage;
 	global $chkOffshore;
+	global $status;
 
 	$company=formatDisplayText($company);
 	$address=formatDisplayText($address);
@@ -298,6 +301,7 @@ function setValuesToForm(){
 	$chkClassification=formatDisplayText($chkClassification);
 	$chkTowage=formatDisplayText($chkTowage);
 	$chkOffshore=formatDisplayText($chkOffshore);
+	$status=formatDisplayText($status);
 }
 /******************************************* Page level functions ends *******************************************************/
 ?>

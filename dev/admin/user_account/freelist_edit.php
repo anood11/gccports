@@ -9,6 +9,7 @@ include("../includes/header.php");
 <div class="center">
 <h1 class="newsHead">Update Freelist</h1>
 <form name="frmFreelist" action="freelist_edit.php" method="post">
+<div class="displayMessage"><?php echo $displayMessage;?></div>
 <input type="hidden" name="editId" value="<?php echo $listId;?>">
 	<table class="searchResult">
 	<tr>
@@ -129,9 +130,11 @@ include("../includes/header.php");
 		<tr>
 			<td><input type="checkbox" <?php if($chkOffshore==1) echo 'checked';?>/>&nbsp;Offshore/Onshore Marine Equipment</td>
 		</tr>
+		<?php if($status==0){?>
 		<tr>
 			<td><input type="submit" name="btnActivate" value="Activate"/></td>
 		</tr>
+		<?php } ?>
 	</table>
 </form>
 </div>

@@ -181,4 +181,30 @@ function addTrackTrace($newCategory,$newCompany,$newWebsite){
 	}
 	return $add;
 }
+function listTrackTrace($start,$end){
+	global $db;
+	$selectQyery=sprintf("SELECT trackTraceId,category,companyName,url,status FROM tbltracktrace LIMIT %s,%s",
+						  GetSQLValueString($start, "int"),
+						  GetSQLValueString($end, "int"));
+	$rsResult = $db->sql_query($selectQyery);
+	return $rsResult;
+}
+function getTotalTrackTrace(){
+	global $db;
+	$selectQuery="SELECT COUNT(*) AS cnt FROM tbltracktrace";
+	$rsResult = $db->sql_query($selectQuery);
+	$rowRes=$db->sql_fetchrow($rsResult);
+	return $rowRes['cnt'];
+}
+function changeTrackTraceStatus($id,$status){
+	global $db;
+	$update=0;
+	$updateQuery=sprintf("UPDATE tbltracktrace SET status=%s WHERE trackTraceId=%s",
+						  GetSQLValueString($status, "int"),
+						  GetSQLValueString($id, "int"));
+	if($rsResult = $db->sql_query($updateQuery)){
+		$update=1;
+	}
+	return $update;
+}
 ?>
