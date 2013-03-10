@@ -8,4 +8,11 @@ function getAssociations($category,$name){
 	$rsResult = $db->sql_query($associationDetails);
 	return $rsResult;
 }
+function getAssociationDetails($id){
+	global $db;
+	$associationDetails=sprintf("SELECT category,companyName,address,country,telephoneAndFax,email,website FROM tblassociations WHERE associationId=%s ORDER BY companyName ASC",
+						   GetSQLValueString($id, "int"));		 
+	$rsResult = $db->sql_query($associationDetails);
+	return $rsResult;
+}
 ?>

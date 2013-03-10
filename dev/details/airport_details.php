@@ -6,7 +6,7 @@ include("../includes/header.php");
 include("../includes/ads.php");
 include("../includes/left_submenu.php");
 ?>
-<form action="seaport_directory.php" method="post" name="formSearchSeaport">
+<form action="airport_details.php" method="post" name="formSearchSeaport">
 <div class="center">
 	<h1 class="newsHead">Airport directory Details&raquo;</h1>
 	<form action="seaport_details.php" method="post" name="frmSeaportDetails">
