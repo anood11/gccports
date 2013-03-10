@@ -68,49 +68,36 @@ function getAirportSearchResults($airportName,$airportCountry,$airportCountryAbb
 function getAirportDirectorySearchResults($airportName,$airportCountry,$airportAddress,$airportPhone,$airportSort){
 	global $db;
 	$airportName = $airportName."%";
-	$airportAddress=$airportAddress."%";
-	$airportPhone=$airportPhone."%";
 	$airportCountry=$airportCountry."%";
-	$selectQyery=sprintf("SELECT country,name,address,phone,fax,email,website FROM tblairportdirectory WHERE
-							 name LIKE %s AND country LIKE %s AND address LIKE %s AND phone LIKE %s ORDER BY %s ASC",
+	$selectQyery=sprintf("SELECT airportDirectoryId,name FROM tblairportdirectory WHERE
+							 name LIKE %s AND country LIKE %s",
                                  GetSQLValueString($airportName, "text"),
                                  GetSQLValueString($airportCountry, "text"),
-								 GetSQLValueString($airportAddress, "text"),
-								 GetSQLValueString($airportPhone, "text"),
-								 GetSQLValueString($airportSort, ""));
+								 GetSQLValueString($airportName, ""));
 	$rsResult = $db->sql_query($selectQyery);
 	return $rsResult;
 }
-function getSeaportDirectorySearchResults($seaportName,$seaportCountry,$seaportAddress,$seaportLocation,$seaportSort){
+function getSeaportDirectorySearchResults($seaportName,$seaportCountry){
 	global $db;
 	$seaportName = $seaportName."%";
 	$seaportCountry=$seaportCountry."%";
-	$seaportAddress=$seaportAddress."%";
-	$seaportLocation=$seaportLocation."%";
-	$selectQyery=sprintf("SELECT location,country,name,address,phone,fax,email,website FROM tblseaportdirectory WHERE
-							 name LIKE %s AND country LIKE %s AND address LIKE %s AND location LIKE %s ORDER BY %s ASC",
+	$selectQyery=sprintf("SELECT seaportDirectoryId,name FROM tblseaportdirectory WHERE
+							 name LIKE %s AND country LIKE %s ORDER BY name ASC",
                                  GetSQLValueString($seaportName, "text"),
-                                 GetSQLValueString($seaportCountry, "text"),
-								 GetSQLValueString($seaportAddress, "text"),
-								 GetSQLValueString($seaportLocation, "text"),
-								 GetSQLValueString($seaportSort, ""));
+                                 GetSQLValueString($seaportCountry, "text"));
 	$rsResult = $db->sql_query($selectQyery);
 	return $rsResult;
 }
-function getSeaportSearchResults($seaportName,$seaportCountry,$seaportCode,$seaportLongitude,$seaportLatitude,$seaportSort){
+function getSeaportSearchResults($seaportName,$seaportCountry,$seaportCode,$seaportSort){
 	global $db;
 	$seaportName = $seaportName."%";
 	$seaportCountry=$seaportCountry."%";
 	$seaportCode=$seaportCode."%";
-	$seaportLongitude=$seaportLongitude."%";
-	$seaportLatitude=$seaportLatitude."%";
-	$selectQyery=sprintf("SELECT seaportName,country,code,longitude,latitude FROM tblseaports WHERE seaportName LIKE %s AND country LIKE %s AND code LIKE %s AND longitude LIKE %s AND latitude LIKE %s ORDER BY %s ASC",
+	$selectQyery=sprintf("SELECT seaportName,country,code,longitude,latitude FROM tblseaports WHERE seaportName LIKE %s AND country LIKE %s AND code LIKE %s ORDER BY %s ASC",
                                  GetSQLValueString($seaportName, "text"),
                                  GetSQLValueString($seaportCountry, "text"),
 								 GetSQLValueString($seaportCode, "text"),
-                                 GetSQLValueString($seaportLongitude, "text"),
-                                 GetSQLValueString($seaportLatitude, "text"),
-								 GetSQLValueString($seaportSort, ""));
+                                 GetSQLValueString($seaportSort, ""));
 	$rsResult = $db->sql_query($selectQyery);
 	return $rsResult;
 }
@@ -142,7 +129,7 @@ function getTrackTraceSearchResults($category){
 }
 function listAllCountries(){
 	global $db;
-	$selectQyery="SELECT countryId,countryName,countryCode FROM tblcountry";
+	$selectQyery="SELECT countryId,countryName,countryCode FROM tblcountry ORDER BY countryName ASC";
 	$rsResult = $db->sql_query($selectQyery);
 	return $rsResult;
 }
@@ -206,5 +193,27 @@ function changeTrackTraceStatus($id,$status){
 		$update=1;
 	}
 	return $update;
+}
+function getSailingScheduleSearchResults($name){
+	global $db;
+	$name=$name.'%';
+	$selectQyery=sprintf("SELECT companyName,ssURL FROM tblsailingschedule WHERE companyName LIKE %s",
+						  GetSQLValueString($name, "text"));
+	$rsResult = $db->sql_query($selectQyery);
+	return $rsResult;
+}
+function getSeaportDirectoryDetails($id){
+	global $db;
+	$selectQuery=sprintf("SELECT location,country,name,address,phone,fax,email,website FROM tblseaportdirectory WHERE seaportDirectoryId=%s",
+	                      GetSQLValueString($id, "int"));
+	$rsResult = $db->sql_query($selectQuery);
+	return $rsResult;
+}
+function getAirportDirectoryDetails($id){
+	global $db;
+	$selectQuery=sprintf("SELECT country,name,address,phone,fax,email,website FROM tblairportdirectory WHERE airportDirectoryId=%s",
+	                      GetSQLValueString($id, "int"));
+	$rsResult = $db->sql_query($selectQuery);
+	return $rsResult;
 }
 ?>

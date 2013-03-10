@@ -51,6 +51,7 @@ $footerLeft=formatDisplayText(getFooter('left'));
 $footerRight=formatDisplayText(getFooter('right'));
 $categoryLists=trackTraceCategories();
 $telephoneCountryList=getCountryList('telephone');
+//$telephoneCountryList=listAllCountries();
 
 /******************************************* Control flow ends ****************************************************************/
 /******************************************* Page level functions starts ******************************************************/

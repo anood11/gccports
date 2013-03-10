@@ -27,6 +27,23 @@ $(".lettersSP").click(function(){
 	var queryString="?seaportSearch=1&name="+name+"&country="+country+"&code="+code+"&seaportCategory="+sort+"&searchType=seaport";
 	window.location.href=baseURLsite+'search/seaport_search.php'+queryString;
 });
+$(".lettersSS").click(function(){
+	var name=($(this).attr('id'));
+	window.location.href=baseURLsite+'search/sailing_schedules.php?name='+name;
+});
+$(".lettersSD").click(function(){
+	var name=($(this).attr('id'));
+	window.location.href=baseURLsite+'search/seaport_directory.php?name='+name;
+});
+$(".lettersAD").click(function(){
+	var name=($(this).attr('id'));
+	window.location.href=baseURLsite+'search/airport_directory.php?name='+name;
+});
+$(".lettersLA").click(function(){
+	var name=($(this).attr('id'));
+	var category=$("#category").val();
+	window.location.href=baseURLsite+'associations/list_associations.php?category='+category+'&name='+name;
+});
 });
 function airportSearch(){
 	var sort=$('#airportCategorys').val();

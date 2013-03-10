@@ -1,10 +1,11 @@
 <?php
-function getAssociations($category,$type){
+function getAssociations($category,$name){
 	global $db;
-  	$associationDetails =sprintf("SELECT companyName,country,website FROM tblassociations WHERE category=%s ORDER BY %s ASC",
+	$name=$name.'%';
+	$associationDetails=sprintf("SELECT companyName,associationId FROM tblassociations WHERE category=%s AND companyName LIKE %s ORDER BY companyName ASC",
 						   GetSQLValueString($category, "text"),
-						   GetSQLValueString($type, ""));		 
-	$rsResult = $db->sql_query($associationDetails); 
+						   GetSQLValueString($name, "text"));		 
+	$rsResult = $db->sql_query($associationDetails);
 	return $rsResult;
 }
 ?>

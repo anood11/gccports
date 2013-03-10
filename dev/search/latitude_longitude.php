@@ -8,17 +8,12 @@ include("../includes/left_submenu.php");
 ?>
 <form action="latitude_longitude.php" method="post" name="formSearchSeaport">
 <div class="center">
-	<h1 class="newsHead">Search Results &raquo;</h1>
+	<h1 class="newsHead">Latitude & Longitude &raquo;</h1>
 	<ul class="modifySearch">
 		<li><label>Seaport Name</label></li>
 		<li><input type="text" name="name" value="<?php echo $seaportName;?>"/></li>
 		<li><label>Seaport Code</label></li>
 		<li><input type="text" name="code" value="<?php echo $seaportCode;?>" /></li>
-		<li><label>Latitude</label></li>
-		<li><input type="text" name="latitude" value="<?php echo $seaportLatitude;?>"/></li>
-		<li><label>Longitude</label></li>
-		<li><input type="text" name="longitude" value="<?php echo $seaportLongitude;?>" /></li>
-		
 		<li><label>Country</label></li>
 		<li><select name="country">
 			<option value="-1">Select Country</option>

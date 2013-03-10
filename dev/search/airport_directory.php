@@ -12,10 +12,6 @@ include("../includes/left_submenu.php");
 	<ul class="modifySearch">
 		<li><label>Name</label></li>
 		<li><input type="text" name="name" value="<?php echo $airportName;?>"/></li>
-		<li><label>Address</label></li>
-		<li><input type="text" name="address" value="<?php echo $airportAddress;?>"/></li>
-		<li><label>Phone</label></li>
-		<li><input type="text" name="phone" value="<?php echo $airportPhone;?>" /></li>
 		<li  style="width: 80px"><label>Country</label></li>
 		<li><select name="country">
 			<option value="-1">Select Country</option>
@@ -23,195 +19,35 @@ include("../includes/left_submenu.php");
 					<option value="<?php echo $airport['country'];?>" <?php if($airportCountry==$airport['country']) echo "selected";?>><?php echo $airport['country'];?></option>
 					<?php } ?>
 		</select></li>
-		<li><label>Sort By</label></li>
-		<li><select name="airportCategory">
-			<option value="airportDirectoryId" <?php if($airportSort=='airportDirectoryId') echo "selected";?>>None</option>
-			<option value="name"  <?php if($airportSort=='name') echo "selected";?>>Name</option>
-			<option value="country"  <?php if($airportSort=='country') echo "selected";?>>Country</option>
-			<option value="address"  <?php if($airportSort=='address') echo "selected";?>>Address</option>
-			<option value="phone"  <?php if($airportSort=='phone') echo "selected";?> >Phone</option>
-			<option value="email"  <?php if($airportSort=='email') echo "selected";?>>Email</option>
-			<option value="fax"  <?php if($airportSort=='phone') echo "selected";?> >Fax</option>
-			<option value="website"  <?php if($airportSort=='email') echo "selected";?>>Website</option>
-			</select>
-		</li>
 		<li><input type="submit" value="Modify" name="btnAirPortSearch"/></li>
 	</ul>
-	
+	<a id="a" class="lettersAD" href="javascript:void(0);"> A </a><a id="b" class="lettersAD" href='javascript:void(0);'> B </a>
+	<a id="c" class="lettersAD" href='javascript:void(0);'> C </a><a id="d" class="lettersAD" href='javascript:void(0);'> D </a>
+	<a id="e" class="lettersAD" href='javascript:void(0);'> E </a><a id="f" class="lettersAD" href='javascript:void(0);'> F </a>
+	<a id="g" class="lettersAD" href='javascript:void(0);'> G </a><a id="h" class="lettersAD" href='javascript:void(0);'> H </a>
+	<a id="i" class="lettersAD" href='javascript:void(0);'> I </a><a id="j" class="lettersAD" href='javascript:void(0);'> J </a>
+	<a id="k" class="lettersAD" href='javascript:void(0);'> K </a><a id="l" class="lettersAD" href='javascript:void(0);'> L </a>
+	<a id="m" class="lettersAD" href='javascript:void(0);'> M </a><a id="n" class="lettersAD" href='javascript:void(0);'> N </a>
+	<a id="o" class="lettersAD" href='javascript:void(0);'> O </a><a id="p" class="lettersAD" href='javascript:void(0);'> P </a>
+	<a id="q" class="lettersAD" href='javascript:void(0);'> Q </a><a id="r" class="lettersAD" href='javascript:void(0);'> R </a>
+	<a id="s" class="lettersAD" href='javascript:void(0);'> S </a><a id="t" class="lettersAD" href='javascript:void(0);'> T </a>
+	<a id="u" class="lettersAD" href='javascript:void(0);'> U </a><a id="v" class="lettersAD" href='javascript:void(0);'> V </a>
+	<a id="w" class="lettersAD" href='javascript:void(0);'> W </a><a id="x" class="lettersAD" href='javascript:void(0);'> X </a>
+	<a id="y" class="lettersAD" href='javascript:void(0);'> Y </a><a id="z" class="lettersAD" href='javascript:void(0);'> Z </a>
 	<h1 class="newsHead marginTop">Search Results &raquo;</h1>
 	<table class="searchResult">
-		<?php if($airportSort=='country') {?>
-		<tr>
+	<tr>
 			<th>Country</th>
-			<th>Name</th>
-			<th>Address</th>
-			<th>Phone</th>
-			<th>Fax</th>
-			<th>Email</th>
-			<th>Website</th>
-		</tr>
-		<?php if($db->sql_numrows($airportSearchResults)<=0){?>
+	</tr>
+	<?php if($db->sql_numrows($airportSearchResults)<=0){?>
 		<tr>
 			<td colspan="5">No data found</td>
 		</tr> 	
 		<?php } while($search=$db->sql_fetchrow($airportSearchResults)){ ?>
 		<tr>
-			<td><?php echo $search['country'];?></td>
-			<td><?php echo $search['name'];?></td>
-			<td><?php echo $search['address'];?></td>
-			<td><?php echo $search['phone'];?></td>
-			<td><?php echo $search['fax'];?></td>
-			<td><?php echo $search['email'];?></td>
-			<td><?php echo $search['website'];?></td>
-		</tr> 
-		
-		<?php }} else if($airportSort=='address') {?>
-		<tr>
-			<th>Address</th>
-			<th>Country</th>
-			<th>Name</th>
-			<th>Phone</th>
-			<th>Fax</th>
-			<th>Email</th>
-			<th>Website</th>
+			<td><a href="<?php echo $httpPathSite;?>details/airport_details.php?id=<?php echo $search['airportDirectoryId'];?>" target="_blank"><?php echo $search['name'];?></a></td>
 		</tr>
-		<?php if($db->sql_numrows($airportSearchResults)<=0){?>
-		<tr>
-			<td colspan="5">No data found</td>
-		</tr> 	
-		<?php } while($search=$db->sql_fetchrow($airportSearchResults)){ ?>
-		<tr>
-			<td><?php echo $search['address'];?></td>
-			<td><?php echo $search['country'];?></td>
-			<td><?php echo $search['name'];?></td>
-			<td><?php echo $search['phone'];?></td>
-			<td><?php echo $search['fax'];?></td>
-			<td><?php echo $search['email'];?></td>
-			<td><?php echo $search['website'];?></td>
-		</tr>
-		<?php }} else if($airportSort=='phone') {?>
-		<tr>
-			<th>Phone</th>
-			<th>Address</th>
-			<th>Country</th>
-			<th>Name</th>
-			<th>Fax</th>
-			<th>Email</th>
-			<th>Website</th>
-		</tr>
-		<?php if($db->sql_numrows($airportSearchResults)<=0){?>
-		<tr>
-			<td colspan="5">No data found</td>
-		</tr> 	
-		<?php } while($search=$db->sql_fetchrow($airportSearchResults)){ ?>
-		<tr>
-			<td><?php echo $search['phone'];?></td>
-			<td><?php echo $search['address'];?></td>
-			<td><?php echo $search['country'];?></td>
-			<td><?php echo $search['name'];?></td>
-			<td><?php echo $search['fax'];?></td>
-			<td><?php echo $search['email'];?></td>
-			<td><?php echo $search['website'];?></td>
-		</tr> 
-		
-		<?php }}  else if($airportSort=='fax') {?>
-		<tr>
-			<th>Fax</th>
-			<th>Phone</th>
-			<th>Address</th>
-			<th>Country</th>
-			<th>Name</th>
-			<th>Email</th>
-			<th>Website</th>
-		</tr>
-		<?php if($db->sql_numrows($airportSearchResults)<=0){?>
-		<tr>
-			<td colspan="5">No data found</td>
-		</tr> 	
-		<?php } while($search=$db->sql_fetchrow($airportSearchResults)){ ?>
-		<tr>
-			<td><?php echo $search['fax'];?></td>
-			<td><?php echo $search['phone'];?></td>
-			<td><?php echo $search['address'];?></td>
-			<td><?php echo $search['country'];?></td>
-			<td><?php echo $search['name'];?></td>
-			<td><?php echo $search['email'];?></td>
-			<td><?php echo $search['website'];?></td>
-		</tr>
-		<?php }}  else if($airportSort=='email') {?>
-		<tr>
-			<th>Email</th>
-			<th>Fax</th>
-			<th>Phone</th>
-			<th>Address</th>
-			<th>Country</th>
-			<th>Name</th>
-			<th>Website</th>
-		</tr>
-		<?php if($db->sql_numrows($airportSearchResults)<=0){?>
-		<tr>
-			<td colspan="5">No data found</td>
-		</tr> 	
-		<?php } while($search=$db->sql_fetchrow($airportSearchResults)){ ?>
-		<tr>
-			<td><?php echo $search['email'];?></td>
-			<td><?php echo $search['fax'];?></td>
-			<td><?php echo $search['phone'];?></td>
-			<td><?php echo $search['address'];?></td>
-			<td><?php echo $search['country'];?></td>
-			<td><?php echo $search['name'];?></td>
-			<td><?php echo $search['website'];?></td>
-		</tr>
-		<?php }}  else if($airportSort=='website') {?>
-		<tr>
-			<th>Website</th>
-			<th>Fax</th>
-			<th>Phone</th>
-			<th>Address</th>
-			<th>Country</th>
-			<th>Name</th>
-			<th>Email</th>
-		</tr>
-		<?php if($db->sql_numrows($airportSearchResults)<=0){?>
-		<tr>
-			<td colspan="5">No data found</td>
-		</tr> 	
-		<?php } while($search=$db->sql_fetchrow($airportSearchResults)){ ?>
-		<tr>
-			<td><?php echo $search['website'];?></td>
-			<td><?php echo $search['fax'];?></td>
-			<td><?php echo $search['phone'];?></td>
-			<td><?php echo $search['address'];?></td>
-			<td><?php echo $search['country'];?></td>
-			<td><?php echo $search['name'];?></td>
-			<td><?php echo $search['email'];?></td>
-		</tr>
-		<?php }} else { ?>
-		
-		<tr>
-			<th>Name</th>
-			<th>Address</th>
-			<th>Website</th>
-			<th>Fax</th>
-			<th>Phone</th>
-			<th>Country</th>
-			<th>Email</th>
-		</tr>
-		<?php if($db->sql_numrows($airportSearchResults)<=0){?>
-		<tr>
-			<td colspan="5">No data found</td>
-		</tr> 	
-		<?php } while($search=$db->sql_fetchrow($airportSearchResults)){ ?>
-		<tr>
-			<td><?php echo $search['name'];?></td>
-			<td><?php echo $search['address'];?></td>
-			<td><?php echo $search['website'];?></td>
-			<td><?php echo $search['fax'];?></td>
-			<td><?php echo $search['phone'];?></td>
-			<td><?php echo $search['country'];?></td>
-			<td><?php echo $search['email'];?></td>
-		</tr> 
-		<?php } }?>
+		<?php } ?> 
 	</table>
 </div>
 </form>
