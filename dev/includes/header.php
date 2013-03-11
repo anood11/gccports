@@ -21,11 +21,11 @@ var baseURLadmin='<?php echo $httpPathAdmin;?>';
 $(document).ready(function() {
 	$("ul.wide li a").click(function(){
 		var useful_link = 'useful_links/' + $(this).attr("id") + '.html';
-		$("div.wrapper").html("<iframe src='<?php echo $httpPathSite;?>" + useful_link + "' class='usefulLinks'></iframe>");
+		$("div.centerRightContainer").html("<iframe src='<?php echo $httpPathSite;?>" + useful_link + "' class='usefulLinks'></iframe>");
 	});
 	$("a.trackAndTraceLink").click(function(){
 		var trackAndTraceLink =  $(this).attr("name");
-		$("div.wrapper").html("<iframe src='" + trackAndTraceLink + "' class='usefulLinks'></iframe>");
+		$("div.centerRightContainer").html("<iframe src='" + trackAndTraceLink + "' class='usefulLinks'></iframe>");
 	});
 });
 </script>

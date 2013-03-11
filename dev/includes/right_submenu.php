@@ -2,10 +2,10 @@
 	<div class="sideInner right">
 		<h1 class="newsHead">Airline Search</h1>
 		<ul>
-			<li><label>Sort by</label></li>
+		
 			<li>
 				<select name="airlineCategory" id="airlineCategorys">
-					<option value="airlineId">None</option>
+					<option value="airlineId">Sort by</option>
 					<option value="airlineName">Airline Name</option>
 					<option value="iata">IATA Code</option>
 					<option value="icao">ICAO Code</option>
@@ -13,7 +13,7 @@
 					<option value="country">Country</option>
 				</select>
 			</li>
-			<li><input type="button" value="Airline Search" name="airlineSearch" onclick="airlineSearch();"/></li>
+			<li><input type="button" value="Search" name="airlineSearch" onclick="airlineSearch();"/></li>
 		</ul>
 	</div>
 	
@@ -53,7 +53,7 @@
 		 </li>
 		</ul>-->
 		
-		<script src="resources/scripts/exchange_rates_api.asp" type="text/javascript"></script>
+		<script src="<?php echo $httpPathSite;?>resources/scripts/exchange_rates_api.asp" type="text/javascript"></script>
 		<noscript>
 		<br/>
 		<span style="color: red;">Please enable your javascript.</span>
@@ -62,6 +62,7 @@
 		 <!--End Currency Converter Code--> 
 	</div>
 	
+	</div>
 	</div>
 </div>
 <div class="topStrip blue"></div>

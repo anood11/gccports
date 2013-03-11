@@ -1,7 +1,9 @@
 $(document).ready(function() {
 	var screenWidth = $(window).width();
 	var actualWidth = (screenWidth - 470) + "px";
+	var centerRightContainerWidth = (screenWidth - 200) + "px";
 	$('.center').css('width',actualWidth);
+	$('.centerRightContainer').css('width',centerRightContainerWidth);
 
 	$('.moreOptions').toggle(function(){
 		$('.hideLI').fadeIn();
