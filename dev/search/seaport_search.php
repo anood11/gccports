@@ -8,6 +8,11 @@ include("../includes/left_submenu.php");
 ?>
 <form action="seaport_search.php" method="post" name="formSearchSeaport">
 <div class="center">
+
+	<div class="centerBanner">
+		<img src="<?php echo $httpPathSite;?>resources/images/ad1.gif" alt="" />
+	</div>
+
 	<h1 class="newsHead">Search Results &raquo;</h1>
 	<ul class="modifySearch">
 		<li><label>Seaport Name</label></li>

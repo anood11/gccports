@@ -8,6 +8,11 @@ include("../includes/left_submenu.php");
 ?>
 
 <div class="center">
+
+	<div class="centerBanner">
+		<img src="<?php echo $httpPathSite;?>resources/images/ad1.gif" alt="" />
+	</div>
+	
 	<h1 class="newsHead">Sailing Schedules &raquo; </h1>
 	<form name="frmTrackTrace" action="sailing_schedules.php" method="post">
 	<ul class="modifySearch">
@@ -41,7 +46,7 @@ include("../includes/left_submenu.php");
 		</tr> 	
 		<?php } else{ while($search=$db->sql_fetchrow($sailingScheduleSearchResults)){ ?>
 		<tr>
-			<td><a href="<?php echo 'http://'.$search['ssURL'];?>" target="_blank"><?php echo  $search['companyName'];?></a></td>
+			<td><a href="javascript:void(0);" name="<?php echo 'http://'.$search['ssURL'];?>" class="sailingSchedule"><?php echo  $search['companyName'];?></a></td>
 		</tr>
 		<?php }}?>
 	</table>

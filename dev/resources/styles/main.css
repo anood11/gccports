@@ -141,7 +141,7 @@ a img {
 .sideInner {
 	float:left;
 	overflow:auto;
-	margin-bottom:25px;
+	margin-bottom:15px;
 }
 .sideInner ul {
 	background: #CCCCCC; /* Old browsers */
@@ -153,6 +153,7 @@ a img {
 	/*background: linear-gradient(to bottom,  #ffffff 0%,#CCCCCC 100%); /* W3C */
 	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#CCCCCC',GradientType=0 ); /* IE6-9 */
 	padding-bottom:10px;
+	padding-top:10px;
 }
 
 .sideInner.right {
@@ -455,4 +456,8 @@ iframe.usefulLinks {
 .lettersAP,.lettersAL,.lettersSP,.lettersSS,.lettersAD,.lettersLA,.lettersSD{
 	color: #a42225;
 	font-weight: bold;
+}
+.centerBanner {
+	margin: 10px 0 0;
+	text-align: center;	
 }

@@ -64,6 +64,10 @@
 		</ul>
 	</div>
 	
+	<div class="sideInner left">
+	<a href="<?php echo $httpPathSite;?>time_zone/world_time_zone.php?"><img src="<?php echo $httpPathSite;?>resources/images/time_zone.png" width="100%" alt="" /></a>
+	</div>
+	
 	<div class="sideInner left"><img src="<?php echo $httpPathSite;?>resources/images/telephoneCodes.png" width="100%" alt="" class="marginBottom" />
 		<ul>
 			<li><label>Telephone Code</label></li>

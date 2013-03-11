@@ -8,6 +8,11 @@ include("../includes/left_submenu.php");
 ?>
 <form action="airline_search.php" method="post" name="formSearchairline">
 <div class="center">
+	
+	<div class="centerBanner">
+		<img src="<?php echo $httpPathSite;?>resources/images/ad1.gif" alt="" />
+	</div>
+	
 	<h1 class="newsHead">Search airlines &raquo;</h1>
 	<ul class="modifySearch">
 		<li><label>Airline Name</label></li>

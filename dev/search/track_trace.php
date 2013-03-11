@@ -8,6 +8,11 @@ include("../includes/left_submenu.php");
 ?>
 
 <div class="center">
+
+	<div class="centerBanner">
+		<img src="<?php echo $httpPathSite;?>resources/images/ad1.gif" alt="" />
+	</div>
+
 	<h1 class="newsHead">Track and Trace &raquo; <?php echo $category;?></h1>
 	<form name="frmTrackTrace" action="track_trace.php" method="post">
 	<input type="hidden" name="category" value="<?php echo $category;?>"/>

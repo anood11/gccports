@@ -13,6 +13,7 @@
 <script src="<?php echo $httpPathSite;?>resources/scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
 <script src="<?php echo $httpPathSite;?>resources/scripts/basic_script.js" type="text/javascript"></script>
 <script src="<?php echo $httpPathSite;?>resources/scripts/functions.js" type="text/javascript"></script>
+<script src="<?php echo $httpPathSite;?>resources/scripts/time_zone.js" type="text/javascript"></script>
 <script type="text/javascript">
 var baseURLsite='<?php echo $httpPathSite;?>';
 var baseURLadmin='<?php echo $httpPathAdmin;?>';
@@ -26,6 +27,10 @@ $(document).ready(function() {
 	$("a.trackAndTraceLink").click(function(){
 		var trackAndTraceLink =  $(this).attr("name");
 		$("div.centerRightContainer").html("<iframe src='" + trackAndTraceLink + "' class='usefulLinks'></iframe>");
+	});
+	$("a.sailingSchedule").click(function(){
+		var sailingScheduleLink =  $(this).attr("name");
+		$("div.centerRightContainer").html("<iframe src='" + sailingScheduleLink + "' class='usefulLinks'></iframe>");
 	});
 });
 </script>

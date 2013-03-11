@@ -90,6 +90,14 @@ include("includes/left_submenu.php");
 			<td class="small imageHolder"><a href="<?php echo $httpPathSite;?>free_listing/free_listing.php"><img src="<?php echo $httpPathSite;?>resources/images/freeListing.png" alt="" /></a></td>
 		</tr>
 	</table>
+</div>
+<?php 
+include("includes/right_submenu.php");
+
+?>
+
+
+<div class="wrapper">
 	<div style="overflow:auto;">
 		<ul class="categorySection">
 			<li>
@@ -151,7 +159,9 @@ include("includes/left_submenu.php");
 		</ul>
 	</div>
 </div>
-<?php 
-include("includes/right_submenu.php");
+
+<div class="topStrip blue"></div>
+
+<?php
 include("includes/footer.php");
 ?>
