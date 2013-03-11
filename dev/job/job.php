@@ -8,16 +8,41 @@ include("../includes/left_submenu.php");
 <div class="center">
 	<h1 class="newsHead">Job search &raquo;</h1>
 	
-	<h1 class="newsHead">Company names &raquo;</h1>
+	<h6 class="loginSignupLink"><input type="button" value="Login here" /> <input type="button" value="New user? signup for free!" /></h6>
 	
 	<table class="searchResult">
-		
 		<tr>
-			<th></th>
-			
+			<th>Search job by Country</th>
 		</tr>
+		<tr>
+			<td>&nbsp;</td>
+		</tr>
+	</table>
+	<table class="searchResult">
+		<tr>
+			<th>Search job by Company</th>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+		</tr>
+	</table>
 	
-		
+	<table class="searchResult">
+		<tr>
+			<th>Search job by Industry</th>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+		</tr>
+	</table>
+	
+	<table class="searchResult">
+		<tr>
+			<th>Search job by Designation</th>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+		</tr>
 	</table>
 </div>
 <?php 

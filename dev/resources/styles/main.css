@@ -470,6 +470,21 @@ ul.leftNav li a:hover {
 .searchDetails td {
 	color:#333;
 }
+.searchDetails input[type="text"], .searchDetails input[type="password"] {
+	width:250px;
+	padding:2px;
+	height:18px;
+	margin-left:10px;	
+}
+.searchDetails select {
+	width:257px;
+	padding:2px;
+	height:22px;	
+	margin-left:10px;
+}
+.searchDetails input[type="file"] {
+	margin-left:10px;
+}
 .displayMessage{
 	color: red;
 }
@@ -485,4 +500,10 @@ iframe.usefulLinks {
 .centerBanner {
 	margin: 10px 0 0;
 	text-align: center;	
+}
+h6.loginSignupLink {
+	color: #0012ff;
+	width: 100%;
+	padding: 5px 0 10px;
+	text-align: right;
 }
