@@ -11,12 +11,12 @@ include("../includes/left_submenu.php");
 	<h1 class="newsHead">Search Airport Directory &raquo;</h1>
 	<ul class="modifySearch">
 		<li><label>Name</label></li>
-		<li><input type="text" name="name" value="<?php echo $airportName;?>"/></li>
+		<li><input type="text" name="name" value=""/></li>
 		<li  style="width: 80px"><label>Country</label></li>
 		<li><select name="country">
 			<option value="-1">Select Country</option>
 			<?php while($airport=$db->sql_fetchrow($airportDirectoryCountryList)){?>
-					<option value="<?php echo $airport['country'];?>" <?php if($airportCountry==$airport['country']) echo "selected";?>><?php echo $airport['country'];?></option>
+					<option value="<?php echo $airport['country'];?>"><?php echo $airport['country'];?></option>
 					<?php } ?>
 		</select></li>
 		<li><input type="submit" value="Modify" name="btnAirPortSearch"/></li>

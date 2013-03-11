@@ -11,6 +11,7 @@ include("../includes/left_submenu.php");
 <input type="hidden" name="newsIds" value=""/>
 <div class="center">
 	<h1 class="newsHead">Fullstory &raquo;</h1>
+	<div><a href="<?php echo $httpPathSite;?>"><input type="button" name="btnBack" value="Back"/></a></div>
 	<table class="newsSection">
 		<tr>
 			<td class="full">

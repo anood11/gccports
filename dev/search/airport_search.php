@@ -16,11 +16,11 @@ include("../includes/left_submenu.php");
 	<h1 class="newsHead">Search Airports &raquo;</h1>
 	<ul class="modifySearch">
 		<li><label>Airport Name</label></li>
-		<li><input type="text" name="name" id="name" value="<?php echo $airportName;?>"/></li>
+		<li><input type="text" name="name" id="name" value=""/></li>
 		<li><label>City Name</label></li>
-		<li><input type="text" name="city" id="city" value="<?php echo $airportCity;?>"/></li>
+		<li><input type="text" name="city" id="city" value=""/></li>
 		<li><label>Airport Code</label></li>
-		<li><input type="text" name="code" id="code" value="<?php echo $airportCode;?>" /></li>
+		<li><input type="text" name="code" id="code" value="" /></li>
 		<li><label>Country</label></li>
 		<li><select name="country" id="country">
 			<option value="-1">Select Country</option>
@@ -35,7 +35,7 @@ include("../includes/left_submenu.php");
 					<option value="<?php echo $abbrv['countryAbbreviation'];?>"><?php echo $abbrv['countryAbbreviation'];?></option>
 			<?php } ?>
 		</select></li>
-		<li><label>Sort By</label></li>
+		<!--<li><label>Sort By</label></li>
 		<li><select name="airportCategory" id="airportCategory">
 			<option value="airportID" <?php if($airportSort=='airportID') echo "selected";?>>None</option>
 			<option value="airportName"  <?php if($airportSort=='airportName') echo "selected";?>>Airport Name</option>
@@ -44,7 +44,7 @@ include("../includes/left_submenu.php");
 			<option value="country"  <?php if($airportSort=='country') echo "selected";?>>Country</option>
 			<option value="countryAbbreviation"  <?php if($airportSort=='countryAbbreviation') echo "selected";?>>Country Abbreviation</option>
 			</select>
-		</li>
+		</li>-->
 		<li><input type="submit" value="Modify" name="btnAirPortSearch"/></li>
 	</ul><br/>
 	<a id="a" class="lettersAP" href="javascript:void(0);"> A </a><a id="b" class="lettersAP" href='javascript:void(0);'> B </a>

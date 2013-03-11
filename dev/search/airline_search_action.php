@@ -25,7 +25,8 @@ function getairlineKeys(){
 	$airlineCountry=(isset($_REQUEST['country']))?trim($_REQUEST['country']):"-1";
 	$airlineIATA=(isset($_REQUEST['iata']))?trim($_REQUEST['iata']):"";
 	$airlineICAO=(isset($_REQUEST['icao']))?trim($_REQUEST['icao']):"";
-	$airlineSort=(isset($_REQUEST['airlineCategory']))?trim($_REQUEST['airlineCategory']):"airlineID";
+	//$airlineSort=(isset($_REQUEST['airlineCategory']))?trim($_REQUEST['airlineCategory']):"airlineID";
+	$airlineSort="airlineID";
 	$awbPrefix=(isset($_REQUEST['awb']))?trim($_REQUEST['awb']):"";
 	if($airlineCountry=='-1') $airlineCountry="";
 }

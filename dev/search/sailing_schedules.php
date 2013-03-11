@@ -17,7 +17,7 @@ include("../includes/left_submenu.php");
 	<form name="frmTrackTrace" action="sailing_schedules.php" method="post">
 	<ul class="modifySearch">
 		<li><label>Company Name</label></li>
-		<li><input type="text" name="name" id="name" value="<?php echo $name;?>"/></li>
+		<li><input type="text" name="name" id="name" value=""/></li>
 		<li><input type="submit" value="Search" name="btnSailingScheduleSearch"/></li>
 	</ul>
 	</form>

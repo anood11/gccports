@@ -156,13 +156,16 @@ function updateFooter($leftFooter,$rightFooter){
 	}
 	return $update;
 }
-function addTrackTrace($newCategory,$newCompany,$newWebsite){
+function addTrackTrace($newCategory,$newCompany,$newWebsite,$contact,$email,$phone){
 	global $db;
 	$add=0;
-	$insertQuery=sprintf("INSERT INTO tbltracktrace(category,companyName,url,status)VALUES(%s,%s,%s,0)",
+	$insertQuery=sprintf("INSERT INTO tbltracktrace(category,companyName,url,status,contactPerson,email,phone)VALUES(%s,%s,%s,0,%s,%s,%s)",
 				GetSQLValueString($newCategory, "text"),
 				GetSQLValueString($newCompany, "text"),
-				GetSQLValueString($newWebsite, "text"));
+				GetSQLValueString($newWebsite, "text"),
+				GetSQLValueString($contact, "text"),
+				GetSQLValueString($email, "text"),
+				GetSQLValueString($phone, "text"));
 	if($rsResult = $db->sql_query($insertQuery)){
 			$add=1;	
 	}

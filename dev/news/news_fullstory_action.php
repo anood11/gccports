@@ -37,9 +37,9 @@ function assignDBValuesToForm($rsResult){
 	$newsMatter=$details['newsMatter'];
 	$date=date("d-M-Y", strtotime($details['newsDate']));
 	$date=explode('-',$date);
-	if($date[0]==1) $newsDate='1st - '.$date[1].' - '.$date[2];
-	else if($date[0]==2) $newsDate='2nd - '.$date[1].' - '.$date[2];
-	else $newsDate=$date[0].'th - '.$date[1].' - '.$date[2];
+	if($date[0]==1) $newsDate=$date[1].' 1st, '.$date[2];
+	else if($date[0]==2) $newsDate=$date[1].' 2nd, '.$date[2];
+	else $newsDate=$date[1].' '.$date[0].'th, '.$date[2];
 }
 /******************************************* Page level functions ends ********************************************************/
 

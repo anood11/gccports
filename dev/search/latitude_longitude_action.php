@@ -25,7 +25,8 @@ function getAirportKeys(){
 	$seaportName=(isset($_REQUEST['name']))?trim($_REQUEST['name']):"";
 	$seaportCountry=(isset($_REQUEST['country']))?trim($_REQUEST['country']):"-1";
 	$seaportCode=(isset($_REQUEST['code']))?trim($_REQUEST['code']):"";
-	$seaportSort=(isset($_REQUEST['seaportCategory']))?trim($_REQUEST['seaportCategory']):"seaportId";
+	//$seaportSort=(isset($_REQUEST['seaportCategory']))?trim($_REQUEST['seaportCategory']):"seaportId";
+	$seaportSort="seaportId";
 	if($seaportCountry=='-1')$seaportCountry="";
 }
 /******************************************* Page level functions ends ********************************************************/

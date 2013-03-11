@@ -42,7 +42,7 @@ include("../includes/left_submenu.php");
 		</tr>
 		<tr>
 			<th>Website</th>
-			<td><?php echo $website;?></td>
+			<td><a href="<?php echo $website;?>"><?php echo $website;?></a></td>
 		</tr>
 	</table>
 	</form>

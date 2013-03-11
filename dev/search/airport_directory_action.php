@@ -20,7 +20,8 @@ function getAirportKeys(){
 	$airportCountry=(isset($_REQUEST['country']))?trim($_REQUEST['country']):"";
 	$airportAddress=(isset($_REQUEST['address']))?trim($_REQUEST['address']):"";
 	$airportPhone=(isset($_REQUEST['phone']))?trim($_REQUEST['phone']):"";
-	$airportSort=(isset($_REQUEST['airportCategory']))?trim($_REQUEST['airportCategory']):"airportDirectoryId";
+	//$airportSort=(isset($_REQUEST['airportCategory']))?trim($_REQUEST['airportCategory']):"airportDirectoryId";
+	$airportSort="airportDirectoryId";
 	if($airportCountry=='-1')$airportCountry="";
 }
 /******************************************* Page level functions ends ********************************************************/

@@ -16,30 +16,30 @@ include("../includes/left_submenu.php");
 	<h1 class="newsHead">Search airlines &raquo;</h1>
 	<ul class="modifySearch">
 		<li><label>Airline Name</label></li>
-		<li><input type="text" name="name" id="name" value="<?php echo $airlineName;?>"/></li>
+		<li><input type="text" name="name" id="name" value=""/></li>
 		<li><label>IATA Code</label></li>
-		<li><input type="text" name="iata" id="iata" value="<?php echo $airlineIATA;?>"/></li>
+		<li><input type="text" name="iata" id="iata" value=""/></li>
 		<li><label>ICAO</label></li>
-		<li><input type="text" name="icao" id="icao" value="<?php echo $airlineICAO;?>" /></li>
+		<li><input type="text" name="icao" id="icao" value="" /></li>
 		<li><label>AWB Prefix</label></li>
-		<li><input type="text" name="awb" id="awb" value="<?php echo $awbPrefix;?>" /></li>
+		<li><input type="text" name="awb" id="awb" value="" /></li>
 		<li><label>Country</label></li>
 		<li><select name="country" id="country">
 			<option value="-1">Select Country</option>
 			<?php while($airline=$db->sql_fetchrow($airlineCountryList1)){?>
-					<option value="<?php echo $airline['country'];?>" <?php if($airlineCountry==$airline['country']) echo "selected";?>><?php echo $airline['country'];?></option>
+					<option value="<?php echo $airline['country'];?>"><?php echo $airline['country'];?></option>
 					<?php } ?>
 		</select></li>
-		<li><label>Sort By</label></li>
+		<!--<li><label>Sort By</label></li>
 		<li><select name="airlineCategory" id="airlineCategory">
-			<option value="airlineId" <?php if($airlineSort=='airlineId') echo "selected";?>>None</option>
-			<option value="airlineName"  <?php if($airlineSort=='airlineName') echo "selected";?>>Airline Name</option>
-			<option value="iata"  <?php if($airlineSort=='iata') echo "selected";?>>IATA Code</option>
-			<option value="icao"  <?php if($airlineSort=='icao') echo "selected";?> >ICAO Code</option>
-			<option value="awbPrefix"  <?php if($airlineSort=='awbPrefix') echo "selected";?>>AWB Prefix</option>
-			<option value="country"  <?php if($airlineSort=='country') echo "selected";?>>Country</option>
+			<option value="airlineId">None</option>
+			<option value="airlineName">Airline Name</option>
+			<option value="iata">IATA Code</option>
+			<option value="icao">ICAO Code</option>
+			<option value="awbPrefix">AWB Prefix</option>
+			<option value="country">Country</option>
 			</select>
-		</li>
+		</li>-->
 		<li><input type="submit" value="Modify" name="btnairlineSearch"/></li>
 	</ul><br/>
 	<a id="a" class="lettersAL" href="javascript:void(0);"> A </a><a id="b" class="lettersAL" href='javascript:void(0);'> B </a>

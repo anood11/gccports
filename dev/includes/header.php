@@ -69,13 +69,14 @@ $(document).ready(function() {
 	</li>
 	<li><a href="">PORTS</a>
 		<ul>
-			<li><a href="<?php echo $httpPathSite;?>search/seaport_search.php">Seaport Search</a></li>
-			<li><a href="<?php echo $httpPathSite;?>search/airport_search.php">Airport Search</a></li>
+			<li><a href="<?php echo $httpPathSite;?>search/seaport_search.php?name=a">Seaport Search</a></li>
+			<li><a href="<?php echo $httpPathSite;?>search/airport_search.php?name=a">Airport Search</a></li>
+			<li><a href="<?php echo $httpPathSite;?>search/airport_search.php?name=a">Airport Search</a></li>
 			<li><a href="<?php echo $httpPathSite;?>search/seaport_directory.php?name=a">Seaport Directory</a></li>
-			<li><a href="<?php echo $httpPathSite;?>search/airport_directory.php">Airport Directory</a></li>
+			<li><a href="<?php echo $httpPathSite;?>search/airport_directory.php?name=a">Airport Directory</a></li>
 			<li><a href="<?php echo $httpPathSite;?>">Seaport in GCC Countries</a></li>
 			<li><a href="<?php echo $httpPathSite;?>">Airport in GCC Countries</a></li>
-			<li><a href="<?php echo $httpPathSite;?>search/latitude_longitude.php">Longitude &amp; Latitude</a></li>
+			<li><a href="<?php echo $httpPathSite;?>search/latitude_longitude.php?name=a">Longitude &amp; Latitude</a></li>
 		</ul>
 	</li>
 	<li><a href="">ASSOCIATIONS</a>

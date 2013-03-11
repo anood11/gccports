@@ -31,7 +31,8 @@ function getAirportKeys(){
 	$seaportCode=(isset($_REQUEST['code']))?trim($_REQUEST['code']):"";
 	$seaportLongitude=(isset($_REQUEST['longitude']))?trim($_REQUEST['longitude']):"";
 	$seaportLatitude=(isset($_REQUEST['latitude']))?trim($_REQUEST['latitude']):"";
-	$seaportSort=(isset($_REQUEST['seaportCategory']))?trim($_REQUEST['seaportCategory']):"seaportId";
+	//$seaportSort=(isset($_REQUEST['seaportCategory']))?trim($_REQUEST['seaportCategory']):"seaportId";
+	$seaportSort="seaportId";
 	if($seaportCountry=='-1')$seaportCountry="";
 }
 /******************************************* Page level functions ends ********************************************************/

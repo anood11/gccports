@@ -32,6 +32,15 @@ include("../includes/left_submenu.php");
 		<li>URL :
 			<input type="text" name="newURL" value="<?php echo $newWebsite;?>"/>
 		</li>
+		<li>Contact Person :
+			<input type="text" name="contact" value="<?php echo $contact;?>"/>
+		</li>
+		<li>Email ID :
+			<input type="text" name="email" value="<?php echo $email;?>"/>
+		</li>
+		<li>Telephone :
+			<input type="text" name="phone" value="<?php echo $phone;?>"/>
+		</li>
 		<li><input type="submit" name="btnSubmit" value="Add"/></li>
 	</ul>
 	</form>
