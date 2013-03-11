@@ -14,21 +14,20 @@ include("includes/left_submenu.php");
 		<tr>
 			<td class="large" rowspan="2"><?php while($main=$db->sql_fetchrow($mainNews)){?>
 				<h1><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $main['newsID'];?>"><?php echo substr($main['newsHeading'],0,120);?>...</a></h1>
+				<h1><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $main['newsID'];?>"><?php if(strlen($main['newsHeading'])>72){ echo substr($main['newsHeading'],0,120).'...';} else{ echo substr($main['newsHeading'],0,120); }?></a></h1>
 				
 				<span> <img src="<?php echo $httpPathSite;?>resources/news_images/<?php echo $main['newsImage'];?>.jpg" alt="" />
 				<p>
-					
-						<strong><?php $date=explode('-',(date("d-M-Y", strtotime($main['newsDate']))));
-						if($date[0]==1) echo '1st-'.$date[1].'-'.$date[2];
-						else if($date[0]==2) echo '2nd-'.$date[1].'-'.$date[2];
-						else echo $date[0].'th-'.$date[1].'-'.$date[2];?>: </strong>
-					
-					<?php echo substr($main['newsMatter'],0,500);?>
+					<strong><?php $date=explode('-',(date("d-M-Y", strtotime($main['newsDate']))));
+					if($date[0]==1) echo '1st-'.$date[1].'-'.$date[2];
+					else if($date[0]==2) echo '2nd-'.$date[1].'-'.$date[2];
+					else echo $date[0].'th-'.$date[1].'-'.$date[2];?>: </strong>
+					<?php echo substr($main['newsMatter'],0,500).'...';?>
 				</p>
 				
 				</span></td>
 			<?php while($right=$db->sql_fetchrow($rightSmallNews)){?>
-			<td class="small"><h1><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $right['newsID'];?>"><?php echo substr($right['newsHeading'],0,50);?>...</a></h1>
+			<td class="small"><h1><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $right['newsID'];?>"><?php if(strlen($right['newsHeading'])){ echo substr($right['newsHeading'],0,50).'...';}else{echo substr($right['newsHeading'],0,50);}?></a></h1>
 				
 				<span> <img src="<?php echo $httpPathSite;?>resources/news_images/<?php echo $right['newsImage'];?>.jpg" alt="" />
 				<p>
