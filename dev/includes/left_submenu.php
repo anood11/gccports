@@ -74,7 +74,7 @@
 			<li><input type="text" value="" id="telephoneCodez"/></li>
 			<li><label>Country</label></li>
 			<li><select id="telephoneCountrys">
-				<option value="">--Select Country--</option>
+				<option value="">Select Country</option>
 				<?php while($telephone=$db->sql_fetchrow($telephoneCountryList)){?>
 				<option value="<?php echo $telephone['country'];?>"><?php echo $telephone['country'];?></option>
 				<?php } ?>

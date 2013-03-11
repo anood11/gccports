@@ -13,7 +13,7 @@ include("includes/left_submenu.php");
 	<table class="newsSection">
 		<tr>
 			<td class="large" rowspan="2"><?php while($main=$db->sql_fetchrow($mainNews)){?>
-				<h1><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $main['newsID'];?>"><?php echo substr($main['newsHeading'],0,120);?>...</a></h1>
+				
 				<h1><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $main['newsID'];?>"><?php if(strlen($main['newsHeading'])>72){ echo substr($main['newsHeading'],0,120).'...';} else{ echo substr($main['newsHeading'],0,120); }?></a></h1>
 				
 				<span> <img src="<?php echo $httpPathSite;?>resources/news_images/<?php echo $main['newsImage'];?>.jpg" alt="" />
@@ -97,64 +97,64 @@ include("includes/right_submenu.php");
 
 
 <div class="wrapper">
-	<div style="overflow:auto;">
+	<div style="overflow:auto; width:95%; margin:0 auto;">
 		<ul class="categorySection">
 			<li>
 				<h1 class="newsHead marginTop">Container</h1>
 			</li>
 			<li><img src="resources/images/noImage.png" alt="" width="100%" /></li>
-			<li> <a href="#">"K" Line and Noble form Joint Venture</a> <a href="#">"K" Line and Noble form Joint Venture</a> <a href="#">"K" Line and Noble form Joint Venture</a> <a href="#">"K" Line and Noble form Joint Venture</a> </li>
+			<li> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> </li>
 		</ul>
 		<ul class="categorySection">
 			<li>
 				<h1 class="newsHead marginTop">Ship Operation</h1>
 			</li>
 			<li><img src="resources/images/noImage.png" alt="" width="100%" /></li>
-			<li> <a href="#">"K" Line and Noble form Joint Venture</a> <a href="#">"K" Line and Noble form Joint Venture</a> <a href="#">"K" Line and Noble form Joint Venture</a> <a href="#">"K" Line and Noble form Joint Venture</a> </li>
+			<li> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> </li>
 		</ul>
 		<ul class="categorySection">
 			<li>
-				<h1 class="newsHead marginTop">Port and Terminals</h1>
+				<h1 class="newsHead marginTop">Ports / Terminals</h1>
 			</li>
 			<li><img src="resources/images/noImage.png" alt="" width="100%" /></li>
-			<li> <a href="#">"K" Line and Noble form Joint Venture</a> <a href="#">"K" Line and Noble form Joint Venture</a> <a href="#">"K" Line and Noble form Joint Venture</a> <a href="#">"K" Line and Noble form Joint Venture</a> </li>
+			<li> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> </li>
 		</ul>
 		<ul class="categorySection">
 			<li>
 				<h1 class="newsHead marginTop">Aviation</h1>
 			</li>
 			<li><img src="resources/images/noImage.png" alt="" width="100%" /></li>
-			<li> <a href="#">"K" Line and Noble form Joint Venture</a> <a href="#">"K" Line and Noble form Joint Venture</a> <a href="#">"K" Line and Noble form Joint Venture</a> <a href="#">"K" Line and Noble form Joint Venture</a> </li>
+			<li> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> </li>
 		</ul>
 	</div>
-	<div style="overflow:auto;">
+	<div style="overflow:auto; width:95%; margin:0 auto;">
 		<ul class="categorySection">
 			<li>
 				<h1 class="newsHead marginTop">Freight &amp; Logistics</h1>
 			</li>
 			<li><img src="resources/images/noImage.png" alt="" width="100%" /></li>
-			<li> <a href="#">"K" Line and Noble form Joint Venture</a> <a href="#">"K" Line and Noble form Joint Venture</a> <a href="#">"K" Line and Noble form Joint Venture</a> <a href="#">"K" Line and Noble form Joint Venture</a> </li>
+			<li> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> </li>
 		</ul>
 		<ul class="categorySection">
 			<li>
 				<h1 class="newsHead marginTop">Bulk / Tanker</h1>
 			</li>
 			<li><img src="resources/images/noImage.png" alt="" width="100%" /></li>
-			<li> <a href="#">"K" Line and Noble form Joint Venture</a> <a href="#">"K" Line and Noble form Joint Venture</a> <a href="#">"K" Line and Noble form Joint Venture</a> <a href="#">"K" Line and Noble form Joint Venture</a> </li>
+			<li> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> </li>
 		</ul>
 		<ul class="categorySection">
 			<li>
 				<h1 class="newsHead marginTop">Sea Saftey</h1>
 			</li>
 			<li><img src="resources/images/noImage.png" alt="" width="100%" /></li>
-			<li> <a href="#">"K" Line and Noble form Joint Venture</a> <a href="#">"K" Line and Noble form Joint Venture</a> <a href="#">"K" Line and Noble form Joint Venture</a> <a href="#">"K" Line and Noble form Joint Venture</a> </li>
+			<li> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> </li>
 		</ul>
 		<ul class="categorySection">
 			<li>
 				<h1 class="newsHead marginTop">Oil &amp; Gas</h1>
 			</li>
 			<li><img src="resources/images/noImage.png" alt="" width="100%" /></li>
-			<li> <a href="#">"K" Line and Noble form Joint Venture</a> <a href="#">"K" Line and Noble form Joint Venture</a> <a href="#">"K" Line and Noble form Joint Venture</a> <a href="#">"K" Line and Noble form Joint Venture</a> </li>
+			<li> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> <a href="#">"K" Line and Noble form Joint Venture <strong>[ Feb 19th, 2013 ]</strong></a> </li>
 		</ul>
 	</div>
 </div>

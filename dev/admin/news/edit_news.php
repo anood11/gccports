@@ -32,7 +32,7 @@ include("../includes/header.php");
 			<li class="large">
 				<label>Category</label>
 				<select name="newsCategory">
-					<option value="-1">--Select--</option>
+					<option value="-1">Select Category</option>
 					<?php while($category=$db->sql_fetchrow($categoryList)) {?>
 					<option value="<?php echo $category['categoryId'];?>" <?php if($newsCategory=$category['categoryId']) echo 'selected';?>><?php echo $category['newsCategory'];?></option>
 					<?php } ?>
