@@ -42,8 +42,8 @@ var baseURLadmin='<?php echo $httpPathAdmin;?>';
 	<li><a href="<?php echo $httpPathAdmin;?>news/view_news.php">Manage News</a></li>
 	<li><a href="#">Ports</a>
 		<ul>
-			<li><a href="#">Manage Sea Ports</a></li>
-			<li><a href="#">Manage Air Ports</a></li>
+			<li><a href="<?php echo $httpPathAdmin;?>ports/seaport.php">Manage Sea Ports</a></li>
+			<li><a href="<?php echo $httpPathAdmin;?>ports/airport.php">Manage Air Ports</a></li>
 		</ul>
 	</li>
 	<li><a href="<?php echo $httpPathAdmin;?>search/track_trace.php">Track and trace</a></li>

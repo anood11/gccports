@@ -173,7 +173,7 @@ function addTrackTrace($newCategory,$newCompany,$newWebsite,$contact,$email,$pho
 }
 function listTrackTrace($start,$end){
 	global $db;
-	$selectQyery=sprintf("SELECT trackTraceId,category,companyName,url,status FROM tbltracktrace LIMIT %s,%s",
+	$selectQyery=sprintf("SELECT trackTraceId,category,companyName,url,status,contactPerson,email,phone FROM tbltracktrace LIMIT %s,%s",
 						  GetSQLValueString($start, "int"),
 						  GetSQLValueString($end, "int"));
 	$rsResult = $db->sql_query($selectQyery);

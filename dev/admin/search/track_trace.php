@@ -18,6 +18,9 @@ include("../includes/header.php");
 						<th>Category</th>
 						<th>Company Name</th>
 						<th>Url</th>
+						<th>Contact Person</th>
+						<th>Email</th>
+						<th>Phone</th>
 						<th>Status</th>
 						<th colspan="2">Actions</th>
 					</tr>
@@ -28,6 +31,9 @@ include("../includes/header.php");
 						<td><?php echo $list['category'];?></td>
 						<td><?php echo $list['companyName'];?></td>
 						<td><?php echo $list['url']?></td>
+						<td><?php echo $list['contactPerson'];?></td>
+						<td><?php echo $list['email'];?></td>
+						<td><?php echo $list['phone']?></td>
 						<td><?php if($list['status']==1) echo 'Active'; else echo 'Inactive'; ?></td>
 						<?php if($list['status']==1){?>
 						<td><a href="<?php echo $httpPathAdmin;?>search/track_trace.php?deactivateId=<?php echo $list['trackTraceId'];?>"><img src="<?php echo $httpPathAdmin;?>resources/images/close.png" alt="Deactvate" /></a></td>

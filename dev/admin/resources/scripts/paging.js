@@ -11,4 +11,12 @@ $(document).ready(function(){
 	page=($("#trackTrace").val());
 	window.location.href=baseURLadmin+'search/track_trace.php?page='+page;
 	});
+	$("#seaportPage").change(function(){
+	page=($("#seaportPage").val());
+	window.location.href=baseURLadmin+'ports/seaport.php?page='+page;
+	});
+	$("#airportPage").change(function(){
+	page=($("#airportPage").val());
+	window.location.href=baseURLadmin+'ports/airport.php?page='+page;
+	});
 });
