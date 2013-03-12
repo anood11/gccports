@@ -470,11 +470,14 @@ ul.leftNav li a:hover {
 .searchDetails td {
 	color:#333;
 }
-.searchDetails input[type="text"], .searchDetails input[type="password"] {
+.searchDetails input[type="text"], .searchDetails input[type="password"], .searchDetails textarea {
 	width:250px;
 	padding:2px;
 	height:18px;
 	margin-left:10px;	
+}
+.searchDetails textarea {
+	height:35px;
 }
 .searchDetails select {
 	width:257px;
@@ -506,4 +509,18 @@ h6.loginSignupLink {
 	width: 100%;
 	padding: 5px 0 10px;
 	text-align: right;
+}
+
+.jobSearch td {
+	width:100%;
+	text-align:center;
+}
+.jobSearch td a {
+	padding:1%;
+	width:31%;
+	float:left;	
+	text-decoration:underline;
+}
+.jobSearch td a:hover {
+	background:#EAEAEA;
 }

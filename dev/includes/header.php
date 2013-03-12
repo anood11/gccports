@@ -126,7 +126,12 @@ $(document).ready(function() {
 		</ul>
 		
 	</li>
-	<li><a href="<?php echo $httpPathSite;?>job/job.php">JOBS</a></li>
+	<li><a href="javascript:void(0);">JOBS</a>
+		<ul>
+			<li><a href="<?php echo $httpPathSite;?>job/job.php">Search jobs</a></li>
+			<li><a href="<?php echo $httpPathSite;?>job/employer_job_add.php">Add a new requirement</a></li>
+		</ul>
+	</li>
 	<li><a href="<?php echo $httpPathSite;?>contact/contact.php">CONTACT US</a></li>
 	<li class="topSearch">
 		<select name="">
