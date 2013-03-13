@@ -132,6 +132,7 @@ $(document).ready(function() {
 			<li><a href="<?php echo $httpPathSite;?>job/employer_job_add.php">Add a new requirement</a></li>
 		</ul>
 	</li>
+	<li><a href="<?php echo $httpPathSite;?>job/login.php">LOGIN</a></li>
 	<li><a href="<?php echo $httpPathSite;?>contact/contact.php">CONTACT US</a></li>
 	<li class="topSearch">
 		<select name="">

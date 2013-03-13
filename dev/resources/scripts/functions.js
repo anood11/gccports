@@ -49,7 +49,13 @@ function airportSearch(){
 	var sort=$('#airportCategorys').val();
 	if(sort==""){ alert('Please select one sort option'); }
 	else {
-		var queryString="?airportSearch=1&airportCategory="+sort+"&name=a";
+		if(sort=='airportID') string='airportCategory=airportID&name=a';
+		if(sort=='airportName') string='airportCategory=airportName&name=a';
+		if(sort=='airportCode') string='airportCategory=airportCode&code=a';
+		if(sort=='cityName') string='airportCategory=cityName&city=a';
+		if(sort=='country') string='airportCategory=country&country=a';
+		if(sort=='countryAbbreviation') string='airportCategory=countryAbbreviation&abbrv=a';
+		var queryString="?airportSearch=1&"+string;
 		window.location.href=baseURLsite+'search/airport_search.php'+queryString;
 	}
 }
@@ -57,7 +63,13 @@ function airlineSearch(){
 	var sort=$("#airlineCategorys").val();
 	if(sort=="")alert('Please select one sort option');
 	else {
-		var queryString="?airlineSearch=1&name=a&airlineCategory="+sort;
+		if(sort=='airlineId') string='airlineCategory=airlineId&name=a';
+		if(sort=='airlineName') string='airlineCategory=airlineName&name=a';
+		if(sort=='iata') string='airlineCategory=iata&iata=a';
+		if(sort=='icao') string='airlineCategory=icao&icao=a';
+		if(sort=='awbPrefix') string='airlineCategory=awbPrefix&awb=a';
+		if(sort=='country') string='airlineCategory=country&country=a';
+		var queryString="?airlineSearch=1&"+string;
 		window.location.href=baseURLsite+'search/airline_search.php'+queryString;
 	}
 }
@@ -65,45 +77,14 @@ function seaportSearch(){
 	var sort=$('#seaportCategorys').val();
 	if(sort=="")alert('Please select one sort option');
 	else {
-		var queryString="?seaportSearch=1&name=a&seaportCategory="+sort;
+		if(sort=='seaportId') string='seaportCategory=seaportId&name=a';
+		if(sort=='seaportName') string='seaportCategory=seaportName&name=a';
+		if(sort=='country') string='seaportCategory=country&country=a';
+		if(sort=='code') string='seaportCategory=code&code=a';
+		var queryString="?seaportSearch=1&"+string;
 		window.location.href=baseURLsite+'search/seaport_search.php'+queryString;
 	}
 }
-/*function airportSearch(){
-	var name=$('#airportName').val();
-	var country=$('#airportCountry').val();
-	var city=$('#airportCity').val();
-	var code=$('#airportCode').val();
-	var abbr=$("#airportAbbreviation").val();
-	if((name=="")&&(country=="-1")&&(abbr=="-1")&&(city=="")&&(code=="")) alert('Please enter atleast one search key');
-	else {
-		var queryString="?airportSearch=1&name="+name+"&city="+city+"&code="+code+"&country="+country+"&abbrv="+abbr;
-		window.location.href=baseURLsite+'search/airport_search.php'+queryString;
-	}
-}
-function airlineSearch(){
-	var name=$('#airlineName').val();
-	var country=$('#airlineCountry').val();
-	var iata=$('#airlineIATA').val();
-	var icao=$('#airlineICAO').val();
-	var awb=$("#awbPrefix").val();
-	if((name=="")&&(country=="-1")&&(iata=="")&&(icao=="")&&(awb==""))alert('Please enter atleast one search key');
-	else {
-		var queryString="?airlineSearch=1&name="+name+"&iata="+iata+"&icao="+icao+"&country="+country+"&awb="+awb;
-		window.location.href=baseURLsite+'search/airline_search.php'+queryString;
-	}
-}
-function seaportSearch(){
-	var name=$('#seaportName').val();
-	var country=$('#seaportCountry').val();
-	var code=$('#seaportCode').val();
-	if((name=="")&&(country=="-1")&&(code==""))alert('Please enter atleast one search key');
-	else {
-		var queryString="?seaportSearch=1&name="+name+"&country="+country+"&code="+code+"&searchType=seaport";
-		window.location.href=baseURLsite+'search/seaport_search.php'+queryString;
-	}
-}*/
-
 function subscribeNews(){
 	var name=$("#subscribeName").val();
 	var company=$("#subscribeCompany").val();

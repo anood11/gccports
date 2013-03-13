@@ -187,4 +187,35 @@ function getFreelistBranches($id){
 	$rsResult = $db->sql_query($selectQuery);
 	return $rsResult;
 }
+function checklogin($email,$password){
+	global $db;
+	$type=0; // 1= For employee, 2=employer
+	$selectQuery1=sprintf("SELECT COUNT(employeeId) AS cnt FROM tblemployee WHERE email=%s AND password=%s",
+						  GetSQLValueString($email, "text"),
+						  GetSQLValueString($password, "text"));
+	$rsResult1 = $db->sql_query($selectQuery1);
+	$rowRes1=$db->sql_fetchrow($rsResult1);
+	if($rowRes1['cnt']!=0) $type=1;
+	else{
+		$selectQuery2=sprintf("SELECT COUNT(tblemployee) AS cnt FROM tblemployer WHERE email=%s AND password=%s",
+						  GetSQLValueString($email, "text"),
+						  GetSQLValueString($password, "text"));
+		$rsResult2 = $db->sql_query($selectQuery2);
+		$rowRes2=$db->sql_fetchrow($rsResult2);
+		if($rowRes2['cnt']!=0) $type=2;
+	}
+	return $type;
+}
+function listAllQualification(){
+	global $db;
+	$selectQuery="SELECT qualificationId,qualification FROM tblqualification";
+	$rsResult = $db->sql_query($selectQuery);
+	return $rsResult;
+}
+function listAllInstries(){
+	global $db;
+	$selectQuery="SELECT industryId,name FROM tblindistry";
+	$rsResult = $db->sql_query($selectQuery);
+	return $rsResult;
+}
 ?>
