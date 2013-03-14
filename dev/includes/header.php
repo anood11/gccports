@@ -7,7 +7,7 @@
 <link href="<?php echo $httpPathSite;?>resources/styles/main.css" rel="stylesheet" type="text/css" />
 <link href="<?php echo $httpPathSite;?>resources/styles/currency.css" rel="stylesheet" type="text/css" />
 <!--[if IE 7]>
-	<link href="resources/styles/IE7.css" rel="stylesheet" type="text/css" />
+	<link href="<?php echo $httpPathSite;?>resources/styles/IE7.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 
 <script src="<?php echo $httpPathSite;?>resources/scripts/jquery-1.9.1.min.js" type="text/javascript"></script>

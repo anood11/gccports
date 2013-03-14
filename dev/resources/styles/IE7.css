@@ -3,3 +3,21 @@
 .newsSection li {
 	width:48%;
 }
+.topNav li ul {
+	margin-left:-120px;
+}
+.smallAd {
+	overflow:hidden;
+}
+.smallAd li {
+	padding:5px 2px 5px 5px;
+}
+h1.newsHead {
+	color:#FFFFFF;
+	background: rgb(238,56,58); /* Old browsers */
+}
+input[type="button"], input[type="submit"] {
+	padding:3px 0px 3px 15px;
+	border-none;
+	outline:none;
+}

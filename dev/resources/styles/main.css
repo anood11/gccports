@@ -67,6 +67,10 @@ a img {
 	margin-top:30px;
 	background:	#333;
 }
+.topNav li ul.wide li {
+	width:192px;
+	float:left;
+}
 .topNav li ul.wide {
 	width:576px;
 }
