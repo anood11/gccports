@@ -108,6 +108,6 @@ include("../includes/left_submenu.php");
 	</table>
 </div>
 <?php 
-include("../includes/right_submenu.php");
+include("../includes/job_right_submenu.php");
 include("../includes/footer.php");
 ?>
