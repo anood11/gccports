@@ -132,7 +132,9 @@ $(document).ready(function() {
 			<li><a href="<?php echo $httpPathSite;?>job/employer_job_add.php">Add a new requirement</a></li>
 		</ul>
 	</li>
-	<li><a href="<?php echo $httpPathSite;?>job/login.php">LOGIN</a></li>
+	<?php if($loggedUser>0){?><li><a href="<?php echo $httpPathSite;?>job/login.php?logout=1">LOGOUT</a></li>
+	<?php } else{?>
+	<li><a href="<?php echo $httpPathSite;?>job/login.php">LOGIN</a></li><?php }?>
 	<li><a href="<?php echo $httpPathSite;?>contact/contact.php">CONTACT US</a></li>
 	<li class="topSearch">
 		<select name="">

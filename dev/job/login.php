@@ -7,8 +7,7 @@ include("../includes/header.php");
 include("../includes/ads.php");
 include("../includes/left_submenu.php");
 ?>
-<div class="center">
-	
+<div class="center">	
 	<h1 class="newsHead">Employee Login &raquo;</h1>
 	<form action="login.php" method="post" name="frmLogin">
 	<table class="searchDetails">

@@ -9,12 +9,25 @@ if(isset($_REQUEST['btnLogin'])){
 	getValuesFromForm();
 	$displayMessage=validateForm();
 	if($displayMessage==""){
-		$login=checklogin($email,encryptPassword($password));
-		if($login==1) $displayMessage="Successful login as Employee";
-		else if($login==2) $displayMessage="Successful login as Employer";
-		else $displayMessage="Invalid Username or Password";
-	}setValuesToForm();
+		$loginUser=checklogin($email,encryptPassword($password));
+		if($db->sql_numrows($loginUser)<=0) $displayMessage="Invalid Username or Password";
+		else{
+			$rowRes=$db->sql_fetchrow($loginUser);
+			$_SESSION['loggedUser']=$rowRes['id'];
+			/*if($rowRes['type']==1)$displayMessage="Successful login as Employee";
+			else if($rowRes['type']==2)$displayMessage="Successful login as Employer";*/
+			header("Location:login.php?msg=loginSuccess&type=".$rowRes['type']);
+			
+		}
+	}$displayMessage=getDisplayMessages();
+	setValuesToForm();
+}else if(isset($_REQUEST['logout'])){
+	session_start();
+    session_destroy();
+	header("Location:login.php?msg=logoutSuccess");	
 }else{
+	if(isset($_REQUEST['loginFailedEmployer']))$displayMessage="Please login as Employer to add Jobs";
+	$displayMessage=getDisplayMessages();
 	getValuesFromForm();
 	setValuesToForm();
 }
@@ -53,6 +66,21 @@ function validateForm(){
 	}else if(($password=="")||(!hasPHPCode($password))){
 		$err.=$preMsg."Enter valid Password.".$postMsg;
 	}return $err;
+}
+function getDisplayMessages(){
+	
+	$err="";
+	$user="User";
+	$msg=isset($_REQUEST['msg'])?$_REQUEST['msg']:"";
+	$type=isset($_REQUEST['type'])?$_REQUEST['type']:"";
+	if($type==1) $user='Employee';
+	else if($type==2) $user='Employer';
+	switch($msg){
+		case 'logoutSuccess': $err="Logout successful";break;
+		case 'loginSuccess': $err="Successfully logger in as ".$user;break;
+		case 'loginFailedEmployer':$err="Login as Employer to add Job";break;
+	}
+	return $err;
 }
 /******************************************* Page level functions ends ********************************************************/
 

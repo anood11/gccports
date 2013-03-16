@@ -1,6 +1,8 @@
 <?php
 include("../includes/lib/globals.php");
 include("../includes/manage_sidebar.php");
+include("../includes/lib/db_users.php");
+include("job_action.php");
 include("../includes/header.php");
 include("../includes/ads.php");
 include("../includes/left_submenu.php");
@@ -19,9 +21,13 @@ include("../includes/left_submenu.php");
 						<th>Search job by Country</th>
 					</tr>
 					<tr>
-						<td><a href="#">UAE</a> <a href="#">Bahrain</a> <a href="#">Kuwait</a>
-							<a href="#">Qatar</a> <a href="#">Oman</a> <a href="#">Saudi
-								Arabia</a>
+						<td>
+							<a href="<?php echo $httpPathSite;?>job/joblist.php?country=uae">UAE</a>
+							<a href="<?php echo $httpPathSite;?>job/joblist.php?country=bahrain">Bahrain</a>
+							<a href="<?php echo $httpPathSite;?>job/joblist.php?country=kuwait">Kuwait</a>
+							<a href="<?php echo $httpPathSite;?>job/joblist.php?country=qatar">Qatar</a>
+							<a href="<?php echo $httpPathSite;?>job/joblist.php?country=oman">Oman</a>
+							<a href="<?php echo $httpPathSite;?>job/joblist.php?country=saudiArabia">Saudi Arabia</a>
 						</td>
 					</tr>
 				</table>
@@ -30,17 +36,16 @@ include("../includes/left_submenu.php");
 						<th>Search job by Company</th>
 					</tr>
 					<tr>
-						<td><a href="#">Sharaf Logistics(5)</a> <a href="#">Khalidiaya
-								Shipping(3)</a> <a href="#">CMA CGM(3)</a> <a href="#">Sharaf
-								Logistics(5)</a> <a href="#">Khalidiaya Shipping(3)</a> <a
-							href="#">CMA CGM(3)</a> <a href="#">Sharaf Logistics(5)</a> <a
-							href="#">Khalidiaya Shipping(3)</a> <a href="#">CMA CGM(3)</a> <a
-							href="#">Sharaf Logistics(5)</a> <a href="#">Khalidiaya
-								Shipping(3)</a> <a href="#">CMA CGM(3)</a> <a href="#">Sharaf
-								Logistics(5)</a> <a href="#">Khalidiaya Shipping(3)</a> <a
-							href="#">CMA CGM(3)</a> <a href="#">Sharaf Logistics(5)</a> <a
-							href="#">Khalidiaya Shipping(3)</a> <a href="#">CMA CGM(3)</a>
-						</td>
+										<?php if($db->sql_numrows($companyList)==0){?>
+					<td><a href="javascript:void(0);">No data found</a></td>
+					<?php } else{?>
+					<td>
+						<?php while($company=$db->sql_fetchrow($companyList)){?>
+							<a href="<?php echo $httpPathSite;?>job/joblist.php?company=<?php echo $company['company'];?>"><?php echo $company['company']; echo '('.getJobCount($company['company']).')' ?></a>
+						<?php }?>
+					</td>
+					<?php }?>
+	
 					</tr>
 				</table>
 				<table class="searchResult jobSearch">

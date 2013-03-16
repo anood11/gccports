@@ -46,5 +46,6 @@ if (isset($_SESSION['timeout'])) {
     }
 }
 $_SESSION['timeout'] = time();*/
+$loggedUser=isset($_SESSION['loggedUser'])?$_SESSION['loggedUser']:0;
 include("db_sidebar.php");
 ?>

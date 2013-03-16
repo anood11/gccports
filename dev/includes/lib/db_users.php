@@ -190,21 +190,17 @@ function getFreelistBranches($id){
 function checklogin($email,$password){
 	global $db;
 	$type=0; // 1= For employee, 2=employer
-	$selectQuery1=sprintf("SELECT COUNT(employeeId) AS cnt FROM tblemployee WHERE email=%s AND password=%s",
+	$selectQuery1=sprintf("SELECT employeeId AS id,1 AS type FROM tblemployee WHERE email=%s AND password=%s",
 						  GetSQLValueString($email, "text"),
 						  GetSQLValueString($password, "text"));
-	$rsResult1 = $db->sql_query($selectQuery1);
-	$rowRes1=$db->sql_fetchrow($rsResult1);
-	if($rowRes1['cnt']!=0) $type=1;
-	else{
-		$selectQuery2=sprintf("SELECT COUNT(tblemployee) AS cnt FROM tblemployer WHERE email=%s AND password=%s",
+	$rsResult = $db->sql_query($selectQuery1);
+	if($db->sql_numrows($rsResult)<=0){
+		$selectQuery2=sprintf("SELECT employerId AS id,2 AS type FROM tblemployer WHERE email=%s AND password=%s",
 						  GetSQLValueString($email, "text"),
 						  GetSQLValueString($password, "text"));
-		$rsResult2 = $db->sql_query($selectQuery2);
-		$rowRes2=$db->sql_fetchrow($rsResult2);
-		if($rowRes2['cnt']!=0) $type=2;
+		$rsResult = $db->sql_query($selectQuery2);
 	}
-	return $type;
+	return $rsResult;
 }
 function listAllQualification(){
 	global $db;
@@ -217,5 +213,83 @@ function listAllInstries(){
 	$selectQuery="SELECT industryId,name FROM tblindistry";
 	$rsResult = $db->sql_query($selectQuery);
 	return $rsResult;
+}
+function listExperienceYear(){
+	global $db;
+	$selectQuery="SELECT experienceId,experienceYear FROM tblexperience";
+	$rsResult = $db->sql_query($selectQuery);
+	return $rsResult;
+}
+function addEmployee($name,$email,$password,$mobile,$phone,$countryId,$experience,$skills,$industryId,$qualificationId,$employeeCode){
+	global $db;
+	$employee=0;
+	$newQuery=sprintf("INSERT INTO tblemployee(name,email,password,mobile,telephone,country,experience,keySkills,currentIndustry,qualification,employeeCode,dateCreated,status)VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,DATE(NOW()),1)",
+						  GetSQLValueString($name, "text"),
+						  GetSQLValueString($email, "text"),
+						  GetSQLValueString($password, "text"),
+						  GetSQLValueString($mobile, "int"),
+						  GetSQLValueString($phone, "int"),
+						  GetSQLValueString($countryId, "int"),
+						  GetSQLValueString($experience, "text"),
+						  GetSQLValueString($skills, "text"),
+						  GetSQLValueString($industryId, "int"),
+						  GetSQLValueString($qualificationId, "int"),
+						  GetSQLValueString($employeeCode,"text"));
+	if($rsResult = $db->sql_query($newQuery)){
+		$employee=$db->sql_nextid();;
+	}
+	return $employee;
+	
+}
+function addEmployer($email,$password,$company,$industryId,$phone,$address,$countryId,$contactPerson,$employerCode){
+	global $db;
+	$employer=0;
+	$newQuery=sprintf("INSERT INTO tblemployer(email,password,companyName,industryId,address,countryId,phone,contactPerson,employerCode,dateCreated,status)VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,DATE(NOW()),1)",
+						  GetSQLValueString($email, "text"),
+						  GetSQLValueString($password, "text"),
+						  GetSQLValueString($company, "text"),
+						  GetSQLValueString($industryId, "int"),
+						  GetSQLValueString($address, "text"),
+						  GetSQLValueString($countryId, "int"),
+						  GetSQLValueString($phone, "int"),
+						  GetSQLValueString($contactPerson, "int"),
+						  GetSQLValueString($employerCode, "text"));
+	if($rsResult = $db->sql_query($newQuery)){
+		$employer=$db->sql_nextid();;
+	}
+	return $employer;
+}
+function addJobEmployer($company,$email,$phone,$requirement,$experienceId,$salary,$country,$companyProfile,$jobCode,$employerId){
+	global $db;
+	$job=0;
+	$newQuery=sprintf("INSERT INTO tbljob(company,email,phone,requirement,experienceId,salary,countryId,profile,jobCode,employerId,createdDate,status)VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,DATE(NOW()),1)",
+						  GetSQLValueString($company, "text"),
+						  GetSQLValueString($email, "text"),
+						  GetSQLValueString($phone, "int"),
+						  GetSQLValueString($requirement, "text"),
+						  GetSQLValueString($experienceId, "int"),
+						  GetSQLValueString($salary, "text"),
+						  GetSQLValueString($country, "text"),
+						  GetSQLValueString($companyProfile, "text"),
+						  GetSQLValueString($jobCode, "text"),
+						  GetSQLValueString($employerId, "int"));
+	if($rsResult = $db->sql_query($newQuery)){
+		$job=$db->sql_nextid();;
+	}
+	return $job;
+}
+function listCompany(){
+	global $db;
+	$selectQuery="SELECT DISTINCT company FROM tbljob";
+	$rsResult = $db->sql_query($selectQuery);
+	return $rsResult;
+}
+function getJobCount($job){
+	global $db;
+	$selectQuery=sprintf("SELECT COUNT(*)AS cnt FROM tbljob WHERE company=%s",
+						 GetSQLValueString($job, "text"));
+	$rsResult = $db->sql_query($selectQuery);
+	$rowResult=$db->sql_fetchrow($rsResult);
+	return $rowResult['cnt'];
 }
 ?>
