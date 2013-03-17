@@ -7,13 +7,9 @@ include("../includes/header.php");
 include("../includes/ads.php");
 include("../includes/left_submenu.php");
 ?>
-
 <div
 	class="center">
 	<h1 class="newsHead">Job search &raquo;</h1>
-
-	<!-- <h6 class="loginSignupLink"><input type="button" value="Login here" /> <input type="button" value="New user? signup for free!" /></h6> -->
-
 	<table class="newsSection">
 		<tr>
 			<td class="large"><table class="searchResult jobSearch">
@@ -53,18 +49,11 @@ include("../includes/left_submenu.php");
 						<th>Search job by Industry</th>
 					</tr>
 					<tr>
-						<td><a href="#">Ship Owners</a> <a href="#">Ship Lines / Agents</a>
-							<a href="#">Freight Forwarding</a> <a href="#">Logistics &
-								Distribuion</a> <a href="#">Air Cargo</a> <a href="#">Ship
-								Owners</a> <a href="#">Ship Lines / Agents</a> <a href="#">Freight
-								Forwarding</a> <a href="#">Logistics & Distribuion</a> <a
-							href="#">Air Cargo</a> <a href="#">Ship Owners</a> <a href="#">Ship
-								Lines / Agents</a> <a href="#">Freight Forwarding</a> <a
-							href="#">Logistics & Distribuion</a> <a href="#">Air Cargo</a> <a
-							href="#">Ship Owners</a> <a href="#">Ship Lines / Agents</a> <a
-							href="#">Freight Forwarding</a> <a href="#">Logistics &
-								Distribuion</a> <a href="#">Air Cargo</a>
-						</td>
+					 <td>
+						<?php while($industry=$db->sql_fetchrow($industryList)){?>
+						<a href="<?php echo $httpPathSite;?>job/joblist.php?industry=<?php echo $industry['name'];?>"><?php echo $industry['name'];?></a>
+						<?php } ?>
+					 </td>
 					</tr>
 				</table>
 				<table class="searchResult jobSearch">
@@ -72,19 +61,9 @@ include("../includes/left_submenu.php");
 						<th>Search job by Designation</th>
 					</tr>
 					<tr>
-						<td><a href="#">Accounts Asst.</a> <a href="#">Accountant</a> <a
-							href="#">Sr. Accountat</a> <a href="#">Finance Manager</a> <a
-							href="#">Business Development Manager</a> <a href="#">Accounts
-								Asst.</a> <a href="#">Accountant</a> <a href="#">Sr. Accountat</a>
-							<a href="#">Finance Manager</a> <a href="#">Business Development
-								Manager</a> <a href="#">Accounts Asst.</a> <a href="#">Accountant</a>
-							<a href="#">Sr. Accountat</a> <a href="#">Finance Manager</a> <a
-							href="#">Business Development Manager</a> <a href="#">Accounts
-								Asst.</a> <a href="#">Accountant</a> <a href="#">Sr. Accountat</a>
-							<a href="#">Finance Manager</a> <a href="#">Business Development
-								Manager</a> <a href="#">Accounts Asst.</a> <a href="#">Accountant</a>
-							<a href="#">Sr. Accountat</a> <a href="#">Finance Manager</a> <a
-							href="#">Business Development Manager</a>
+						<td><?php while($designation=$db->sql_fetchrow($designationList)){?>
+						<a href="<?php echo $httpPathSite;?>job/joblist.php?designation=<?php echo $designation['designation'];?>"><?php echo $designation['designation'];?></a>
+						<?php } ?>
 						</td>
 					</tr>
 				</table></td>

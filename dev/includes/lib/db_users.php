@@ -83,7 +83,6 @@ function addFreeListBranch($branch,$bAddress,$bPhone,$bFax,$bEmail,$bWebsite,$us
 	return $insertId;
 }
 function addFreeListCategory($chkShipOwners,$chkShippingAgnts,$chkFreight,$chkAirlines,$chkAirCargo,$chkAirCraft,$chkShipbuilders,$chkEnginBuilders,$chkShipCharters,$chkShipBrokers,$chkBunkers,$chkShipChandler,$chkStevedores,$chkWarehousing,$chkMarineContainer,$chkMaritime,$chkContainerTrucking,$chkEquipmentOwners,$chkCourier,$chkLashing,$chkLogistics,$chkPacking,$chkPestControl,$chkProjectCargo,$chkSupplyChain,$chkConsultants,$chkShipManagers,$chkMaritimeSchool,$chkMarineInsurance,$chkMaritimeLawyers,$chkClassification,$chkTowage,$chkOffshore,$userId){
-	
 
 	global $db;
 	$insertId=0;
@@ -259,10 +258,10 @@ function addEmployer($email,$password,$company,$industryId,$phone,$address,$coun
 	}
 	return $employer;
 }
-function addJobEmployer($company,$email,$phone,$requirement,$experienceId,$salary,$country,$companyProfile,$jobCode,$employerId){
+function addJobEmployer($company,$email,$phone,$requirement,$experienceId,$salary,$country,$companyProfile,$jobCode,$employerId,$industryName,$designationName){
 	global $db;
 	$job=0;
-	$newQuery=sprintf("INSERT INTO tbljob(company,email,phone,requirement,experienceId,salary,countryId,profile,jobCode,employerId,createdDate,status)VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,DATE(NOW()),1)",
+	$newQuery=sprintf("INSERT INTO tbljob(company,email,phone,requirement,experienceId,salary,country,profile,jobCode,employerId,industry,designation,createdDate,status)VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,DATE(NOW()),1)",
 						  GetSQLValueString($company, "text"),
 						  GetSQLValueString($email, "text"),
 						  GetSQLValueString($phone, "int"),
@@ -272,9 +271,11 @@ function addJobEmployer($company,$email,$phone,$requirement,$experienceId,$salar
 						  GetSQLValueString($country, "text"),
 						  GetSQLValueString($companyProfile, "text"),
 						  GetSQLValueString($jobCode, "text"),
-						  GetSQLValueString($employerId, "int"));
+						  GetSQLValueString($employerId, "int"),
+						  GetSQLValueString($industryName, "text"),
+						  GetSQLValueString($designationName, "text"));
 	if($rsResult = $db->sql_query($newQuery)){
-		$job=$db->sql_nextid();;
+		$job=$db->sql_nextid();
 	}
 	return $job;
 }
@@ -291,5 +292,33 @@ function getJobCount($job){
 	$rsResult = $db->sql_query($selectQuery);
 	$rowResult=$db->sql_fetchrow($rsResult);
 	return $rowResult['cnt'];
+}
+function getDesignationList(){
+	global $db;
+	$selectQuery="SELECT designationId,designation FROM tbldesignation";
+	$rsResult = $db->sql_query($selectQuery);
+	return $rsResult;
+}
+function getJobSearchResults($country,$company,$industry,$designation){
+	global $db;
+	$country = $country."%";
+	$company=$company."%";
+	$industry=$industry."%";
+	$designation=$designation."%";
+	$selectQyery=sprintf("SELECT jobId,requirement FROM tbljob WHERE
+							 country LIKE %s AND company LIKE %s AND industry LIKE %s AND designation LIKE %s",
+                                 GetSQLValueString($country, "text"),
+                                 GetSQLValueString($company, "text"),
+								 GetSQLValueString($industry, "text"),
+                                 GetSQLValueString($designation, "text"));
+	$rsResult = $db->sql_query($selectQyery);
+	return $rsResult;	
+}
+function getJobDetails($id){
+	global $db;
+	$selectQuery=sprintf("SELECT j.company,j.requirement,e.experienceYear,j.salary,j.country,j.profile,j.jobCode,j.industry,j.designation,j.createdDate FROM tbljob j JOIN tblexperience e ON j.experienceId=e.experienceId AND j.jobId=%s",
+						 GetSQLValueString($id, "int"));
+	$rsResult = $db->sql_query($selectQuery);
+	return $rsResult;
 }
 ?>

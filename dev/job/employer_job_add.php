@@ -40,10 +40,28 @@ include("../includes/left_submenu.php");
 				</select></td>
 		</tr>
 		<tr>
+			<th>Industry :*</th>
+			<td><select name="industryName">
+					<option value="-1">Select Experience</option>
+					<?php while($industry=$db->sql_fetchrow($industryList)){?>
+						<option value=<?php echo $industry['name'];?>" <?php if($industryName==$industry['name']) echo 'selected';?>><?php echo $industry['name'];?></option>
+						<?php } ?>
+				</select></td>
+		</tr>
+		<tr>
+			<th>Designation :*</th>
+			<td><select name="designationName">
+					<option value="-1">Select Experience</option>
+					<?php while($designation=$db->sql_fetchrow($designationList)){?>
+						<option value=<?php echo $designation['designation'];?>" <?php if($designationName==$designation['designation']) echo 'selected';?>><?php echo $designation['designation'];?></option>
+						<?php } ?>
+				</select></td>
+		</tr>
+		<tr>
 			<th>Salary range :</th>
 			<td><input type="text"  name="salary" value="<?php echo $salary;?>"/></td>
 		</tr>
-			<tr>
+		<tr>
 			<th>Country :</th>
 			<td><select name="country">
 					<option value="-1">Select Country</option>

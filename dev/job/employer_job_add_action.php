@@ -9,13 +9,15 @@ if(isset($_REQUEST['btnSubmit'])){
 	getValuesFromForm();
 	$displayMessage=validateForm();
 	if($displayMessage==""){
-		$employee=addJobEmployer($company,$email,$phone,$requirement,$experienceId,$salary,$country,$companyProfile,$jobCode,$employerId);
+		$employee=addJobEmployer($company,$email,$phone,$requirement,$experienceId,$salary,$country,$companyProfile,$jobCode,$employerId,$industryName,$designationName);
 		if($employee!=0) $displayMessage="Details inserted Successfully";
 		else $displayMessage="Failed to insert details. Please try again.";
 	}
 	setValuesToForm();
 	$countryList=listAllCountries();
 	$experienceYear=listExperienceYear();
+	$industryList=listAllInstries();
+	$designationList=getDesignationList();
 }else{
 	getValuesFromForm();
 	if($employerId==0){
@@ -23,7 +25,9 @@ if(isset($_REQUEST['btnSubmit'])){
 	}else{
 		setValuesToForm();
 		$countryList=listAllCountries();
-		$experienceYear=listExperienceYear();		
+		$experienceYear=listExperienceYear();
+		$industryList=listAllInstries();
+		$designationList=getDesignationList();		
 	}
 }
 
@@ -40,6 +44,8 @@ function getValuesFromForm(){
 	global $companyProfile;
 	global $jobCode;
 	global $employerId;
+	global $industryName;
+	global $designationName;
 		
 	$company=isset($_REQUEST['company'])?$_REQUEST['company']:"";
 	$email=isset($_REQUEST['email'])?$_REQUEST['email']:"";
@@ -47,10 +53,12 @@ function getValuesFromForm(){
 	$requirement=isset($_REQUEST['requirement'])?$_REQUEST['requirement']:"";
 	$experienceId=isset($_REQUEST['experienceId'])?$_REQUEST['experienceId']:"";
 	$salary=isset($_REQUEST['salary'])?$_REQUEST['salary']:"";
-	$country=isset($_REQUEST['countryId'])?$_REQUEST['countryId']:"";
+	$country=isset($_REQUEST['country'])?$_REQUEST['country']:"";
 	$companyProfile=isset($_REQUEST['companyProfile'])?$_REQUEST['companyProfile']:"";
 	$jobCode='EJ_'.random_gen(4);
 	$employerId=isset($_SESSION['loggedUser'])?$_SESSION['loggedUser']:0;
+	$industryName=isset($_REQUEST['industryName'])?$_REQUEST['industryName']:"-1";
+	$designationName=isset($_REQUEST['designationName'])?$_REQUEST['designationName']:"-1";
 }
 
 function setValuesToForm(){
@@ -62,6 +70,8 @@ function setValuesToForm(){
 	global $salary;
 	global $country;
 	global $companyProfile;
+	global $industryName;
+	global $designationName;
 	
 	$company=formatDisplayText($company);
 	$email=formatDisplayText($email);
@@ -71,6 +81,8 @@ function setValuesToForm(){
 	$salary=formatDisplayText($salary);
 	$country=formatDisplayText($country);
 	$companyProfile=formatDisplayText($companyProfile);
+	$industryName=formatDisplayText($industryName);
+	$designationName=formatDisplayText($designationName);
 }
 
 function validateForm(){
@@ -82,6 +94,8 @@ function validateForm(){
 	global $salary;
 	global $country;
 	global $companyProfile;
+	global $industryName;
+	global $designationName;
 	
 	$err = "";
 	$preMsg = "<br>";
@@ -99,6 +113,10 @@ function validateForm(){
 		$err.=$preMsg."Enter valid Job requirement.".$postMsg;
 	}else if(($experienceId=="")||(!hasPHPCode($experienceId))){
 		$err.=$preMsg."Enter valid mobile number.".$postMsg;
+	}else if((!hasPHPCode($industryName))||($industryName=="-1")){
+		$err.=$preMsg."Select your Industry.".$postMsg;
+	}else if((!hasPHPCode($designationName))||($designationName=="-1")){
+		$err.=$preMsg."Select designation.".$postMsg;
 	}else if(!hasPHPCode($salary)){
 		$err.=$preMsg."Enter valid Salry amount.".$postMsg;
 	}else if(!hasPHPCode($phone)){
