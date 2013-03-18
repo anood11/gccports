@@ -227,6 +227,10 @@ input[type="button"]:hover, input[type="submit"]:hover {
 	background: linear-gradient(to bottom,  #008bcc 0%,#3299cc 99%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008bcc', endColorstr='#3299cc',GradientType=0 ); /* IE6-8 */
 }
+input[type="submit"].small {
+	padding:1px 5px;
+	margin:0 0 0 5px;
+}
 .center {
 	width:50%;
 	float:left;

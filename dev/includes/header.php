@@ -140,17 +140,8 @@ $(document).ready(function() {
 	<li><a href="<?php echo $httpPathSite;?>job/login.php">LOGIN</a></li><?php }?>
 	<li><a href="<?php echo $httpPathSite;?>contact/contact.php">CONTACT US</a></li>
 	<li class="topSearch">
-		<select name="">
-			<option>Select Category</option>
-			<option>Container</option>
-			<option>Ship Operation</option>
-			<option>Port and Terminals</option>
-			<option>Aviation</option>
-			<option>Freight &amp; Logistics</option>
-			<option>Bulk / Tanker</option>
-			<option>Sea Saftey</option>
-			<option>Oil &amp; Gas</option>
-		</select>
+		<input type="text" value="Search keyword..." />
+		<input type="submit" value="Go" class="small" />
 	</li>
 </ul>
 <!-- HEADER ENDS --> 

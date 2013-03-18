@@ -11,6 +11,25 @@
 			<li><a href="">CONTACT US</a></li>
 		</ul>
 	 LEFTSIDE NAVIGATION ENDS --> 
+	 <div class="sideInner left">
+		<h1 class="newsHead">News Category</h1>
+		<ul>
+			<!-- <li><label>Sort by</label></li>-->
+			<li>
+				<select name="">
+					<option>Select Category</option>
+					<option>Container</option>
+					<option>Ship Operation</option>
+					<option>Port and Terminals</option>
+					<option>Aviation</option>
+					<option>Freight &amp; Logistics</option>
+					<option>Bulk / Tanker</option>
+					<option>Sea Saftey</option>
+					<option>Oil &amp; Gas</option>
+				</select>
+			</li>
+		</ul>
+	</div>
 	<div class="sideInner left">
 		<h1 class="newsHead">Airport Search</h1>
 		<ul>
