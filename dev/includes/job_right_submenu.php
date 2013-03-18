@@ -1,24 +1,50 @@
 	<div class="right"> 
 	<div class="sideInner right">
 		<h1 class="newsHead">Top Employers</h1>
-		<ul>
-		
-			<li>
-				Employer 1
-			</li>
-			<li>
-				Employer 2
-			</li>
-			<li>
-				Employer 3
-			</li>
-			<li>
-				Employer 4
-			</li>
-			<li>
-				Employer 5
-			</li>
-		</ul>
+	<table>
+    	<tr>
+        	<td rowspan="2" valign="top" width="80"><img src="<?php echo $httpPathSite;?>resources/images/img1.jpg" width="100%" /></td>
+           <th>Employer Name</th>
+        </tr>
+        <tr>
+        	<td>This employee is the first in top employers in this week.</td>
+            
+        </tr>
+        
+    </table>
+    <table>
+    	<tr>
+        	<td rowspan="2" valign="top" width="80"><img src="<?php echo $httpPathSite;?>resources/images/img1.jpg" width="100%" /></td>
+           <th>Employer Name</th>
+        </tr>
+        <tr>
+        	<td>This employee is the first in top employers in this week.</td>
+            
+        </tr>
+        
+    </table>
+    <table>
+    	<tr>
+        	<td rowspan="2" valign="top" width="80"><img src="<?php echo $httpPathSite;?>resources/images/img1.jpg" width="100%" /></td>
+           <th>Employer Name</th>
+        </tr>
+        <tr>
+        	<td>This employee is the first in top employers in this week.</td>
+            
+        </tr>
+        
+    </table>
+    <table>
+    	<tr>
+        	<td rowspan="2" valign="top" width="80"><img src="<?php echo $httpPathSite;?>resources/images/img1.jpg" width="100%" /></td>
+           <th>Employer Name</th>
+        </tr>
+        <tr>
+        	<td>This employee is the first in top employers in this week.</td>
+            
+        </tr>
+        
+    </table>
 	</div>
 	
 	<div class="sideInner right">

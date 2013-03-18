@@ -11,8 +11,14 @@ include("../includes/left_submenu.php");
 	<h1 class="newsHead">Employee Login &raquo;</h1>
 	<form action="login.php" method="post" name="frmLogin">
 	<table class="searchDetails">
+		
 		<tr>
-			<td colspan="2"><?php echo $displayMessage;?></td>
+			<td colspan="2">
+				<img src="<?php echo $httpPathSite;?>resources/images/job_head.jpg" alt="" width="100%" />
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" class="displayMessage"><?php echo $displayMessage;?></td>
 		</tr>
 		<tr>
 			<th>Email :</th>
@@ -30,12 +36,12 @@ include("../includes/left_submenu.php");
 			<td colspan="2">Not a member yet?&nbsp;</td>
 		</tr>
 		<tr>
-			<td><a href="<?php echo $httpPathSite;?>job/employee_registration.php">Register Employee</a>&nbsp;|&nbsp;<a href="<?php echo $httpPathSite;?>job/employer_registration.php">Register Employer</a></td>
+			<td colspan="2"><a class="registerButton" href="<?php echo $httpPathSite;?>job/employee_registration.php">Register Employee</a><a class="registerButton" href="<?php echo $httpPathSite;?>job/employer_registration.php">Register Employer</a></td>
 		</tr>
 	</table>
 	</form>
 </div>
 <?php 
-include("../includes/right_submenu.php");
+include("../includes/job_right_submenu.php");
 include("../includes/footer.php");
 ?>
