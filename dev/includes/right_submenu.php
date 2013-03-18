@@ -43,15 +43,12 @@
 		</ul>
 	</div>
 	
-	<div class="sideInner right"> 
-		<!--Begin Currency Converter Code--> 
+	<div class="sideInner right">
+	<a href="<?php echo $httpPathSite;?>currency_converter/currency_converter.php"><img src="<?php echo $httpPathSite;?>resources/images/currency_converter.jpg" width="100%" alt=""/></a>
+	</div>
+	
+	<!-- <div class="sideInner right"> 
 		
-		<!--<ul>
-			<li>
-			<a href="http://www.gocurrency.com/" id="gocurrency" style="text-decoration: initial; visibility: hidden; display: none;">.</a>
-		 <script src="http://www.gocurrency.com/v2/gocurrcalc_t.php?id=53"> </script><script src="http://gocurrency.com/v2/rcalculator.php"></script><link rel="stylesheet" href="http://gocurrency.com/v2/s.php?nazvanie=&amp;id=53" type="text/css">
-		 </li>
-		</ul>-->
 		
 		<script src="<?php echo $httpPathSite;?>resources/scripts/exchange_rates_api.asp" type="text/javascript"></script>
 		<noscript>
@@ -59,8 +56,8 @@
 		<span style="color: red;">Please enable your javascript.</span>
 		</noscript>
 		
-		 <!--End Currency Converter Code--> 
-	</div>
+		 <!--End Currency Converter Code
+	</div>--> 
 	
 	</div>
 	</div>
