@@ -32,6 +32,9 @@ $(document).ready(function() {
 		var sailingScheduleLink =  $(this).attr("name");
 		$("div.centerRightContainer").html("<iframe src='" + sailingScheduleLink + "' class='usefulLinks'></iframe>");
 	});
+	$("a.currencyConverter").click(function(){
+		$("div.centerRightContainer").html("<iframe src='http://www.xe.com' class='usefulLinks'></iframe>");
+	});
 });
 </script>
 </head>

@@ -44,7 +44,7 @@
 	</div>
 	
 	<div class="sideInner right">
-	<a href="<?php echo $httpPathSite;?>currency_converter/currency_converter.php"><img src="<?php echo $httpPathSite;?>resources/images/currency_converter.jpg" width="100%" alt=""/></a>
+	<a href="javascript:void(0);" class="currencyConverter"><img src="<?php echo $httpPathSite;?>resources/images/currency_converter.jpg" width="100%" alt=""/></a>
 	</div>
 	
 	<!-- <div class="sideInner right"> 
