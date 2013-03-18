@@ -35,7 +35,7 @@
 		<ul>
 			<!-- <li><label>Sort by</label></li>-->
 			<li>
-			<select id="airportCategorys">
+			<select id="airportCategorys" onchange="airportSearch();">
 				<option value="airportID">Sort by</option>
 				<option value="airportName">Airport Name</option>
 				<option value="airportCode">Airport Code</option>
@@ -44,7 +44,7 @@
 				<option value="countryAbbreviation">Country Abbreviation</option>
 			</select>
 			</li>
-			<li><input type="submit" value="Search" id="airportSearch" onclick="airportSearch();"/></li>
+			<!--<li><input type="submit" value="Search" id="airportSearch" onclick="airportSearch();"/></li>-->
 		</ul>
 	</div>
 	<div class="sideInner left">
@@ -56,14 +56,14 @@
 		<!-- <h1 class="newsHead">Track &amp; Trace</h1> -->
 		<ul>
 			
-			<li><select id="tCategory">
+			<li><select id="tCategory" onchange="trackTrace();">
 			<option value="-1">Select Category</option>
 			<?php while($track=$db->sql_fetchrow($categoryLists)){?>
 				<option value="<?php echo $track['category'];?>"><?php echo $track['category'];?></option>
 			<?php } ?>
 			</select></li>
-			<li><input type="button" name="btnTrackTrace" value="Go" onClick="trackTrace();"/>	
-			</li>
+			<!--<li><input type="button" name="btnTrackTrace" value="Go" onClick="trackTrace();"/>	
+			</li>-->
 		</ul>
 	</div>
 	
@@ -72,14 +72,14 @@
 		<ul>
 			
 			<li>
-				<select id="seaportCategorys">
+				<select id="seaportCategorys" onchange="seaportSearch();">
 					<option value="seaportId">Sort by</option>
 					<option value="seaportName">Seaport Name</option>
 					<option value="country">Country</option>
 					<option value="code">Seaport Code</option>
 			</select>
 			</li>
-			<li><input type="button" value="Search" onclick="seaportSearch();"/></li>
+			<!--<li><input type="button" value="Search" onclick="seaportSearch();"/></li>-->
 		</ul>
 	</div>
 	

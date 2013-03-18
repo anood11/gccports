@@ -22,7 +22,7 @@ function getairlineKeys(){
 	global $awbPrefix;
 	global $airlineSort;
 	$airlineName=(isset($_REQUEST['name']))?trim($_REQUEST['name']):"";
-	$airlineCountry=(isset($_REQUEST['country']))?trim($_REQUEST['country']):"-1";
+	$airlineCountry=(isset($_REQUEST['country']))?trim($_REQUEST['country']):"";
 	$airlineIATA=(isset($_REQUEST['iata']))?trim($_REQUEST['iata']):"";
 	$airlineICAO=(isset($_REQUEST['icao']))?trim($_REQUEST['icao']):"";
 	$airlineSort=(isset($_REQUEST['airlineCategory']))?trim($_REQUEST['airlineCategory']):"airlineID";

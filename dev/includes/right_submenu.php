@@ -4,7 +4,7 @@
 		<ul>
 		
 			<li>
-				<select name="airlineCategory" id="airlineCategorys">
+				<select name="airlineCategory" id="airlineCategorys" onchange="airlineSearch();">
 					<option value="airlineId">Sort by</option>
 					<option value="airlineName">Airline Name</option>
 					<option value="iata">IATA Code</option>
@@ -13,7 +13,7 @@
 					<option value="country">Country</option>
 				</select>
 			</li>
-			<li><input type="button" value="Search" name="airlineSearch" onclick="airlineSearch();"/></li>
+			<!--<li><input type="button" value="Search" name="airlineSearch" onclick="airlineSearch();"/></li>-->
 		</ul>
 	</div>
 	

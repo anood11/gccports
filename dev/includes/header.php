@@ -74,7 +74,6 @@ $(document).ready(function() {
 		<ul>
 			<li><a href="<?php echo $httpPathSite;?>search/seaport_search.php?name=a">Seaport Search</a></li>
 			<li><a href="<?php echo $httpPathSite;?>search/airport_search.php?name=a">Airport Search</a></li>
-			<li><a href="<?php echo $httpPathSite;?>search/airport_search.php?name=a">Airport Search</a></li>
 			<li><a href="<?php echo $httpPathSite;?>search/seaport_directory.php?name=a">Seaport Directory</a></li>
 			<li><a href="<?php echo $httpPathSite;?>search/airport_directory.php?name=a">Airport Directory</a></li>
 			<li><a href="<?php echo $httpPathSite;?>">Seaport in GCC Countries</a></li>

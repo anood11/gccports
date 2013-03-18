@@ -10,12 +10,14 @@ $(document).ready(function() {
 	window.location.href=baseURLsite+'search/airport_search.php'+queryString;
 });
 $(".lettersAL").click(function(){
-	var name=($(this).attr('id'));
+	var name=$(this).attr('id');
 	var iata=$("#iata").val();
 	var icao=$("#icao").val();
 	var awb=$("#awb").val();
 	var country=$("#country").val();
 	var airlineCategory=$("#airlineCategory").val();
+	/*if(airlineCategory=='iata') iata=name;
+	else if(airlineCategory=='iata') iata=name;*/
 	var queryString="?airlineSearch=1&name="+name+"&iata="+iata+"&country="+country+"&icao="+icao+"&airlineCategory="+airlineCategory+"&awb="+awb;
 		window.location.href=baseURLsite+'search/airline_search.php'+queryString;
 });

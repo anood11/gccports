@@ -13,6 +13,9 @@ include("../includes/left_submenu.php");
 	<form action="employee_registration.php" method="post">
 	<table class="searchDetails">
 		<tr>
+			<td colspan="2"><?php echo $displayMessage;?></td>
+		</tr>
+		<tr>
 			<th>Name :*</th>
 			<td><input type="text" name="name" value="<?php echo $name;?>"/></td>
 		</tr>
@@ -47,7 +50,7 @@ include("../includes/left_submenu.php");
 		</tr>
 		<tr>
 			<th>Total Experience :*</th>
-			<td><input type="text" name="experience" value="<?php echo $experience;?>"/></td>
+			<td><input type="text" name="experience" value="<?php echo $experienceId;?>"/></td>
 		</tr>
 		<tr>
 			<th>Key Skills :</th>

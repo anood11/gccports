@@ -11,7 +11,7 @@ function getairlineSearchResults($airlineName,$airlineCountry,$airlineIATA,$airl
                                  GetSQLValueString($airlineName, "text"),
                                  GetSQLValueString($airlineIATA, "text"),
 								 GetSQLValueString($airlineICAO, "text"),
-                                 GetSQLValueString($awbPrefix, "int"),
+                                 GetSQLValueString($awbPrefix, "text"),
 								 GetSQLValueString($airlineCountry, "text"),
                                  GetSQLValueString($airlineSort, ""));
 	$rsResult = $db->sql_query($selectQyery);

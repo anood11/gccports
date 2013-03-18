@@ -12,7 +12,7 @@ include("../includes/left_submenu.php");
 	<div class="centerBanner">
 		<img src="<?php echo $httpPathSite;?>resources/images/ad1.gif" alt="" />
 	</div>
-	
+	<input type="hidden" name="airlineCategory" value="<?php echo $airlineSort;?>" id="airlineCategory"/>
 	<h1 class="newsHead">Search airlines &raquo;</h1>
 	<ul class="modifySearch">
 		<li><label>Airline Name</label></li>
@@ -25,7 +25,7 @@ include("../includes/left_submenu.php");
 		<li><input type="text" name="awb" id="awb" value="" /></li>
 		<li><label>Country</label></li>
 		<li><select name="country" id="country">
-			<option value="-1">Select Country</option>
+			<option value="">Select Country</option>
 			<?php while($airline=$db->sql_fetchrow($airlineCountryList1)){?>
 					<option value="<?php echo $airline['country'];?>"><?php echo $airline['country'];?></option>
 					<?php } ?>
