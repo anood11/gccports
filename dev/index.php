@@ -18,9 +18,7 @@ include("includes/left_submenu.php");
 				<span> <img src="<?php echo $httpPathSite;?>resources/news_images/<?php echo $main['newsImage'];?>.jpg" alt="" />
 				<p>
 					<strong><?php $date=explode('-',(date("d-M-Y", strtotime($main['newsDate']))));
-					if($date[0]==1) echo $date[1].' 1st, '.$date[2];
-					else if($date[0]==2) echo $date[1].' 2nd, '.$date[2];
-					else echo $date[1].' '.$date[0].'th, '.$date[2];?>: </strong>
+					echo $date[1].' '.$date[0].', '.$date[2];?>: </strong>
 					<?php echo substr($main['newsMatter'],0,500).'...';?>
 				</p>
 				</span></td>
@@ -29,10 +27,8 @@ include("includes/left_submenu.php");
 				<span> <img src="<?php echo $httpPathSite;?>resources/news_images/<?php echo $right['newsImage'];?>.jpg" alt="" />
 				<p>
 					<strong><?php $date=explode('-',(date("d-M-Y", strtotime($right['newsDate']))));
-					if($date[0]==1) echo $date[1].' 1st,'.$date[2];
-					else if($date[0]==2) echo $date[1].' 2nd, '.$date[2];
-					else echo $date[1].' '.$date[0].'th, '.$date[2];?>: </strong>
-					<?php echo substr($right['newsMatter'],0,130).'...';?> 
+					echo $date[1].' '.$date[0].', '.$date[2];?>: </strong>
+					<?php echo substr($right['newsMatter'],0,90).'...';?> 
 				</p>
 				</span></td>
 			<?php } ?>
@@ -45,10 +41,8 @@ include("includes/left_submenu.php");
 				<span> <img src="<?php echo $httpPathSite;?>resources/news_images/<?php echo $bottom['newsImage'];?>.jpg" alt="" />
 				<p>
 					<strong><?php $date=explode('-',(date("d-M-Y", strtotime($bottom['newsDate']))));
-					if($date[0]==1) echo $date[1].' 1st, '.$date[2];
-					else if($date[0]==2) echo $date[1].' 2nd, '.$date[2];
-					else echo $date[1].' '.$date[0].'th, '.$date[2];?>: </strong>
-					<?php echo substr($bottom['newsMatter'],0,100).'...';?>
+					echo $date[1].' '.$date[0].', '.$date[2];?>: </strong>
+					<?php echo substr($bottom['newsMatter'],0,80).'...';?>
 				</p>
 				</span></td>
 			<?php } ?>
@@ -59,10 +53,8 @@ include("includes/left_submenu.php");
 				<span> <img src="<?php echo $httpPathSite;?>resources/news_images/<?php echo $bottom1['newsImage'];?>.jpg" alt="" />
 				<p>
 					<strong><?php $date=explode('-',(date("d-M-Y", strtotime($bottom1['newsDate']))));
-					if($date[0]==1) echo $date[1].' 1st, '.$date[2];
-					else if($date[0]==2) echo $date[1].' 2nd, '.$date[2];
-					else echo $date[1].' '.$date[0].'th, '.$date[2];?>: </strong>
-					<?php echo substr($bottom1['newsMatter'],0,100).'...';?>
+					echo $date[1].' '.$date[0].', '.$date[2];?>: </strong>
+					<?php echo substr($bottom1['newsMatter'],0,80).'...';?>
 				</p>
 				<!--<h6><a href="<?php echo $httpPathSite;?>news/news_fullstory.php?newsId=<?php echo $bottom1['newsID'];?>">read more &raquo;</a></h6> -->
 				</span></td>
